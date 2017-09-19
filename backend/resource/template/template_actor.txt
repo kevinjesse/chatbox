@@ -1,0 +1,3 @@
+actor ; What is your favorite actor?
+actor ; Can you tell me some actors you prefer to watch?
+actor ; Which actors or actresses do you find attractive?

@@ -1,0 +1,10 @@
+c1; yes; Have you seen this movie before?
+c2; no; Have you seen this movie before?
+c3; yes; Do you want to see this movie?
+c4; no; Do you want to see this movie?
+c5; yes ok okay; Do you want to search genres again?
+c6; no; Do you want to search genres again?
+c7; yes; Do you want to see what other movies in this genre I recommend?
+c8; no; Do you want to see what other movies in this genre I recommend?
+c9; yes ok okay; You can also search by movie title. Do you want to do that?
+c10 no;  You can also search by movie title. Do you want to do that?

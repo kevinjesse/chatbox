@@ -1,0 +1,22 @@
+title; Is there a movie you would like to see?
+title; Do you know of a movie you would care to see?
+title; I can help you find a movie.
+title; Have you seen it before?
+title; Ok let's look for another movie.
+title; Great, I heard that is a good movie.
+time; Does the length of the movie matter?
+time; The time doesn't nearly matter as much for good movies.
+time; Do you want a longer or shorter movie?
+time; Can you specify whether you want the movie to be longer or shorter?
+genre; Is there a genre you prefer?
+genre; That is a good genre.
+genre; I can find more movies like this.
+genre; I can find other movies that are similar?
+rating; Let's look by how the movies are rated?
+rating; Do you want the movie to be above a certain rating on Rotten Tomatoes?
+date; What day do you want to see the movie on?
+date; See the movie today?
+date; That is a good day to see a movie
+cast; He is a good actor.
+cast; She is a good actress.
+cast; Is there someone in the cast you wish to see?

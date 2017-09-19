@@ -1,0 +1,4 @@
+genre ; Tell me a genre you prefer?
+genre ; What are your movie interests?
+genre ; What is your favorite genre?
+genre ; What types of films do you like to see at the movies?

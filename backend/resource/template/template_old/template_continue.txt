@@ -1,0 +1,3 @@
+c0 ; To find a movie, do you want to chat about genres, stars, movies, or companies?
+c1 ; Want to keep talking about movies you might like?
+c2 ; Do you want to find a movie by a genre you are interested in?

@@ -1,0 +1,10 @@
+title ; Is there a movie you would like to see?
+title ; Do you know of a movie you would care to see?
+genre ; Is there a genre you prefer?
+genre ; What are your interests?
+genre ; Tell me what you like to watch!
+popular ; Let's find a time to see the latest trending movies.
+popular ; Would you like to know which popular movies are out?
+popular ; I can find out what is playing in theatres.
+rating ; Would you like me to look up the Motion Picture Rating?
+cast ; Do you want me to tell you who the stars are for this movie?

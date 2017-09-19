@@ -1,0 +1,13 @@
+m0 ; Want to keep talking about movies you might like?
+m1 ; Please tell me a movie that you previously enjoyed.
+m2 ; Are you curious about some movies that are now playing?
+m3 ; I can show you some upcoming films?
+m4 ; Do you want to see what movies were playing in a particular year?
+m5 ; Can I show you some showtimes?
+m6 ; Care to see some reviews?
+m7 ; Please tell me a movie that you previously enjoyed.
+m8 ; Are you satisfied with my selection?
+m9 ; Do you want to see another movie playing now?
+m10; Do you want to see another upcoming movie?
+m20 ; What movie do you want me to tell you about?
+m20 ; What movie do you want to look up?

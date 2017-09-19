@@ -1,0 +1,6 @@
+title; Is there a movie you would like to see?
+title; Do you know of a movie you would care to see?
+genre; Is there a genre you prefer?
+genre; What kind of movies are you into?
+popular; Do you want to know what movies are popular?
+popular; Let me show you what movies are popular.

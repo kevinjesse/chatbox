@@ -1,0 +1,14 @@
+g0 ; Please specify from any combination of the following genres: action, adventure, animation, biography, comedy, crime, drame, family, fantasy, film-noir, history, horror, music, musical, mystery, romance, sci-fi, sport, thriller, war, and western
+g1 ; Tell me a genre you prefer?
+g1 ; What are your movie interests?
+g1 ; What is your favorite genre?
+g1 ; What types of films do you like to see at the movies?
+g2 ; Will this be a new movie for you?
+g2 ; Do you think you will like this movie?
+g2 ; Do wish to keep this movie?
+g2 ; Does this movie look interesting?
+g3 ; Do you want to see what other movies in this genre I recommend?
+g4 ; Do you want to search genres again?
+g5 ; We don't have to just chat about genres. What to chat about other stuff to find movies?
+g6 ; Can I tell you more about this movie?
+g6 ; Do you want me to show you more about this movie

@@ -9,7 +9,7 @@
 #
 #     return userCache
 
-
+import re
 
 def ctrl(state, intent, entities, userCache):
     from pprint import pprint
@@ -31,19 +31,24 @@ def ctrl(state, intent, entities, userCache):
         return userCache, answered
     # elif intent['intent']=='Year':
     #     #default by setting year to
-
     for ent in entities:
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
         if dataType == 'year' or dataType == 'duration':
-
+            #for now we will do nothing with year and duration
             userCache[dataType] = year(ent)
+        elif dataType == 'mpaa':
+            pg13 = re.match('pg(-|\s?)13', ent['entity'].lower())
+            nc17 = re.match('nc(-|\s?)17', ent['entity'].lower())
+            if pg13: ent['entity']='PG-13'
+            elif nc17: ent['entity']='NC-17'
+        elif dataType =='person':
+            ent['entity'] = ent['entity'].title()
+        if userCache[dataType]:
+            if ent['entity'] not in userCache[entity_map[ent['type']]]:
+                userCache[dataType].append(ent['entity'])
         else:
-            if userCache[dataType]:
-                if ent['entity'] not in userCache[entity_map[ent['type']]]:
-                    userCache[dataType].append(ent['entity'])
-            else:
-                userCache[dataType] = [ent['entity']]
+            userCache[dataType] = [ent['entity']]
 
     return userCache, answered
 

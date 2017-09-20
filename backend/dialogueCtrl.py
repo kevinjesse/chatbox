@@ -16,9 +16,10 @@ import json
 from gensim import corpora, models, similarities
 
 import random
+import numpy as np
 # import imdb
 # import genreCtrl
-# import movieCtrl
+import movieCtrl
 # import continueCtrl
 import luisQuery
 import luisIntent
@@ -46,6 +47,7 @@ def dialogueCtrl(input_json):
     """
     dialogueCtrl takes in data (User input), sends to dailogue logic, gets response, and returns response back to socket
     """
+    scoreweights = np.array([.2, .05, .9, .4 , .05])
     if input_json is not "debug":
 
 
@@ -59,7 +61,7 @@ def dialogueCtrl(input_json):
             state[userid] = ["genre", ]
             qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []
-            data[userid] = []
+            #data[userid] = []
             cache_results[userid] = {'genre': None, 'person':None, 'mpaa': None, 'rating': None, 'year': None, 'duration': None}
             curr_movie[userid] = None
             history[userid].append(qtup)
@@ -85,7 +87,16 @@ def dialogueCtrl(input_json):
                         temp += ','.join(v).title() + " | \n "
                     else:
                         temp += 'No Preference' + " | \n "
-                qtup = ("Here is the information I have gathered in this conversation. " + temp, 'tell')
+                #qtup = ("Here is the information I have gathered in this conversation. " + temp, 'tell')
+                        mscores, mmap = candidates.find(cache_results[userid])
+                        movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1],
+                                                reverse=True)
+                        data = movieCtrl.moviebyID(movieWithScore[0][0])
+                        qtup = ("From our conversation, I can recommend the following film. " + data[1] + " (" + data[
+                            3] + ") is " + data[8] + " minutes and is a " + \
+                                  data[4].replace(' ', ', ') + " film. Produced by " + data[
+                                      7] + ", this film's rating is " + data[
+                                      6] + ". ", "tell")
                 ################################################################
 
         print '###################'
@@ -98,10 +109,19 @@ def dialogueCtrl(input_json):
         output += qtup[0]
         return output
     else:
-        user_data= {'rating': None, 'mpaa': [u'pg13'], 'duration': None, 'person': [u'tom hanks'], 'year': None, 'genre': [u'comedy', u'action']}
-        candidates.init()
-
-
+        user_data= {'rating': None, 'mpaa': [u'PG-13', u'R'], 'duration': None, 'person': [u'Tom Hanks'], 'year': None, 'genre': [u'comedy', u'action', u'adventure']}
+        mscores, mmap = candidates.find(user_data)
+        scoretotal = []
+        # for mscore in mscores:
+        #     print mscore
+        movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1], reverse=True)
+        data = movieCtrl.moviebyID(movieWithScore[0][0])
+        output = ''
+        output += "From our conversation, I can recommend the following film. " + data[1] + " (" + data[3] + ") is " + data[8] + " minutes and is a " + \
+                  data[4].replace(' ', ', ') + " film. Produced by " + data[7] + ", this film's rating is " + data[
+                      6] + ". "
+        #print movieWithScore[0]
+        print output
 
 
     # if state[userid][-1] == "genre":
@@ -264,10 +284,10 @@ def dialogueTest():
     print '[OK] End dialogue test'
     return
 
-dialogueTest()
-
 def stateCtrl(state):
     if state == 'genre': return 'actor'
     elif state == 'actor': return 'director'
     elif state == 'director': return 'mpaa'
     elif state == 'mpaa': return 'tell'
+
+# dialogueTest()

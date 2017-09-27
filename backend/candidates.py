@@ -19,28 +19,25 @@ def init():
     return np.zeros(s), map_array
 
 def gscore(mscores, mmap, genres):
-    total = len(genres)
-
-    for genre in genres:
-        sqlstring = """SELECT tconst FROM title WHERE genres LIKE '%""" + genre + """%'"""
-        cur.execute(sqlstring)
-        rows = cur.fetchall()
-        for tconst in rows:
-            mscores[mmap.index(tconst[0])][0] += 1.0/total
+    if genres is not None:
+        total = len(genres)
+        for genre in genres:
+            sqlstring = """SELECT tconst FROM title WHERE genres LIKE '%""" + genre + """%'"""
+            cur.execute(sqlstring)
+            rows = cur.fetchall()
+            for tconst in rows:
+                mscores[mmap.index(tconst[0])][0] += 1.0/total
     return mscores
 
 def mpaascore(mscores, mmap, mpaa):
-    # if mpaa == None:
-    #     for each in mscores:
-    #         mscores[each][1] = 1
-    # else:
-    sqlstring = """SELECT tconst FROM title WHERE mpaa ='""" + mpaa[0] +"""'"""
-    for each in mpaa[1:]:
-        sqlstring += """OR mpaa='""" + each + """'"""
-    cur.execute(sqlstring)
-    rows = cur.fetchall()
-    for tconst in rows:
-        mscores[mmap.index(tconst[0])][1] = 1
+    if mpaa is not None:
+        sqlstring = """SELECT tconst FROM title WHERE mpaa ='""" + mpaa[0] +"""'"""
+        for each in mpaa[1:]:
+            sqlstring += """OR mpaa='""" + each + """'"""
+        cur.execute(sqlstring)
+        rows = cur.fetchall()
+        for tconst in rows:
+            mscores[mmap.index(tconst[0])][1] = 1
     return mscores
 
 def ratingsscore(mscores, mmap) :
@@ -54,45 +51,47 @@ def ratingsscore(mscores, mmap) :
     return mscores
 
 def actorscore(mscores, mmap, people):
-    for actor in people:
-        sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ actor + """' LIMIT 1"""
-        cur.execute(sqlstring)
-        row = cur.fetchall()
-        if row:
-            nconst = row[0][0]
-            sqlstring = """SELECT tconst, principalcast FROM stars WHERE principalcast LIKE '%""" + nconst + """%'"""
+    if people is not None:
+        for actor in people:
+            sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ actor + """' LIMIT 1"""
             cur.execute(sqlstring)
-            rows = cur.fetchall()
-            #iterate through rows scoring the position of the actor in principal cast and
-            #storing in the mscores of tconst
-            for moviestartup in rows:
-                #get nconst position
-                # print moviestartup[1]
-                starlist = moviestartup[1].split(" ")
-                starlist.reverse()
-                pos = starlist.index(nconst)
-                # print nconst
-                # print starlist
-                # print pos+1
-                #print moviestartup[0]
-                mscores[mmap.index(moviestartup[0])][3] = (pos+1)*1.0/len(starlist)
+            row = cur.fetchall()
+            if row:
+                nconst = row[0][0]
+                sqlstring = """SELECT tconst, principalcast FROM stars WHERE principalcast LIKE '%""" + nconst + """%'"""
+                cur.execute(sqlstring)
+                rows = cur.fetchall()
+                #iterate through rows scoring the position of the actor in principal cast and
+                #storing in the mscores of tconst
+                for moviestartup in rows:
+                    #get nconst position
+                    # print moviestartup[1]
+                    starlist = moviestartup[1].split(" ")
+                    starlist.reverse()
+                    pos = starlist.index(nconst)
+                    # print nconst
+                    # print starlist
+                    # print pos+1
+                    #print moviestartup[0]
+                    mscores[mmap.index(moviestartup[0])][3] = (pos+1)*1.0/len(starlist)
     return mscores
 
 def directorscore(mscores, mmap, people):
-    for director in people:
-        sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ director + """' LIMIT 1"""
-        cur.execute(sqlstring)
-        row = cur.fetchall()
-        if row:
-            nconst = row[0][0]
-            sqlstring = """SELECT tconst, directors FROM crew WHERE directors LIKE '%""" + nconst + """%'"""
+    if people is not None:
+        for director in people:
+            sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ director + """' LIMIT 1"""
             cur.execute(sqlstring)
-            rows = cur.fetchall()
-            for moviedirtup in rows:
-                dirlist = moviedirtup[1].split(" ")
-                dirlist.reverse()
-                pos = dirlist.index(nconst)
-                mscores[mmap.index(moviedirtup[0])][4] = (pos+1)*1.0/len(dirlist)
+            row = cur.fetchall()
+            if row:
+                nconst = row[0][0]
+                sqlstring = """SELECT tconst, directors FROM crew WHERE directors LIKE '%""" + nconst + """%'"""
+                cur.execute(sqlstring)
+                rows = cur.fetchall()
+                for moviedirtup in rows:
+                    dirlist = moviedirtup[1].split(" ")
+                    dirlist.reverse()
+                    pos = dirlist.index(nconst)
+                    mscores[mmap.index(moviedirtup[0])][4] = (pos+1)*1.0/len(dirlist)
     return mscores
 
 def find (user_pref):
@@ -102,7 +101,7 @@ def find (user_pref):
     mscores = ratingsscore(mscores, mmap)
     mscores = actorscore(mscores, mmap, user_pref['person'])
     mscores = directorscore(mscores, mmap, user_pref['person'])
-    #print mscores
+    print mscores
     return mscores, mmap
 
 

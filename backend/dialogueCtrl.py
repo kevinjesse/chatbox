@@ -24,6 +24,7 @@ import movieCtrl
 import luisQuery
 import luisIntent
 import candidates
+import entityDetect
 
 # import database_connect
 #
@@ -47,7 +48,7 @@ def dialogueCtrl(input_json):
     """
     dialogueCtrl takes in data (User input), sends to dailogue logic, gets response, and returns response back to socket
     """
-    scoreweights = np.array([.2, .05, .9, .4 , .05])
+    scoreweights = np.array([.15, .5, .4, .3, .1])
     if input_json is not "debug":
 
 
@@ -70,6 +71,8 @@ def dialogueCtrl(input_json):
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
         if not answered:
+            #if do not understand utterance because intent is incorrect, try to find with entities
+            #entityDetect.detect(state[userid][-1], entity)
             output = "I do not understand your answer. "
             qtup = history[userid][-1]
         else:
@@ -289,5 +292,6 @@ def stateCtrl(state):
     elif state == 'actor': return 'director'
     elif state == 'director': return 'mpaa'
     elif state == 'mpaa': return 'tell'
+    elif state == 'tell': return 'satisfied'
 
-# dialogueTest()
+#dialogueTest()

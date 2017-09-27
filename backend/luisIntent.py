@@ -24,13 +24,13 @@ def ctrl(state, intent, entities, userCache):
                   }
     state2entity_map ={'genre': 'genre', 'role': 'role', 'mpaa':'mpaa', 'title': 'title', 'rating': 'rating',
                        'actor':'person', 'director': 'person', 'year': 'year'}
-    if intent['intent'] == 'None':
-        return userCache, answered
-    elif intent['intent']=='NoPreference':
-        answered = True
-        return userCache, answered
+
     # elif intent['intent']=='Year':
     #     #default by setting year to
+    if intent['intent'] == 'NoPreference':
+        answered = True
+        return userCache, answered
+    
     for ent in entities:
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
@@ -49,6 +49,10 @@ def ctrl(state, intent, entities, userCache):
                 userCache[dataType].append(ent['entity'])
         else:
             userCache[dataType] = [ent['entity']]
+
+        # if intent['intent'] == 'None':
+        #     return userCache, answered
+
 
     return userCache, answered
 

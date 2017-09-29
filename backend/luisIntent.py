@@ -27,7 +27,7 @@ def ctrl(state, intent, entities, userCache):
 
     # elif intent['intent']=='Year':
     #     #default by setting year to
-    if intent['intent'] == 'NoPreference':
+    if intent['intent'] == 'NoPreference' or intent['intent'] == 'Yes' or intent['intent'] == 'No':
         answered = True
         return userCache, answered
     

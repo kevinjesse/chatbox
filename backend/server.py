@@ -1,6 +1,6 @@
 import socket
 import threading
-from dialogueCtrl import dialogueCtrl, initResources
+from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle
 
 class ThreadingServer(object):
     """
@@ -31,13 +31,19 @@ class ThreadingServer(object):
                 if data:
                     try:
                     # Set the response to echo back the recieved data
-                        response = dialogueCtrl(data)
+                        response, userid = dialogueCtrl(data)
                     except Exception as e:
                         print e
                         import traceback
                         traceback.print_exc()
                     print response
                     client.send(response)
+                    try:
+                        dialogueIdle(userid)
+                    except Exception as e:
+                        print e
+                        import traceback
+                        traceback.print_exc()
                 else:
                     raise error('Client disconnected')
 

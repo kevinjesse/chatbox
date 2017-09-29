@@ -1,1 +1,5 @@
 rating ; How highly rated should the movie be?
+rating ; Let me know if the movie should be PG13, R, G, etc.
+rating ; If you are watching this movie with kids, I recommend entering a MPAA rating.
+rating ; Tell me what rating is appropriate for this movie selection.
+rating ; If you want a particularly rated movie you need to tell me what you preferences are. (R, PG13, PG, etc.)

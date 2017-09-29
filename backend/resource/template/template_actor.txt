@@ -1,3 +1,6 @@
-actor ; What is your favorite actor?
-actor ; Can you tell me some actors you prefer to watch?
-actor ; Which actors or actresses do you find attractive?
+actor ; What is your favorite actor or actress?
+actor ; Can you tell me some actors or actresses you prefer to watch?
+actor ; Can you tell me some actors or actresses you like?
+actor ; Tell me some actors you like.
+actor ; I'd like to get to know what your actor preferences are.
+actor ; Please tell me the people you like to see in a movie.

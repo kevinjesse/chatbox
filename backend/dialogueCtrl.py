@@ -25,16 +25,19 @@ import luisQuery
 import luisIntent
 import candidates
 import entityDetect
+import filterMovies
+import tellCtrl
 
-# import database_connect
-#
-# cur = database_connect.db_connect()
+import database_connect
+cur = database_connect.db_connect()
 
 state = {}
 history = {}
-data = {}
+recommend = {}
 cache_results = {}
 curr_movie = {}
+titles_user = {}
+q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 # ia = imdb.IMDb()  # might need to move object inside thread method for multiple users
 
 # Just TEMPORARY for debugging json and dictionaries
@@ -48,7 +51,9 @@ def dialogueCtrl(input_json):
     """
     dialogueCtrl takes in data (User input), sends to dailogue logic, gets response, and returns response back to socket
     """
-    scoreweights = np.array([.15, .5, .4, .3, .1])
+    scoreweights = np.array([.1, .1, .5, .2, .1])
+
+    # Dont worry input_json can never be set to "debug" unless done in code...
     if input_json is not "debug":
 
 
@@ -66,7 +71,7 @@ def dialogueCtrl(input_json):
             cache_results[userid] = {'genre': None, 'person':None, 'mpaa': None, 'rating': None, 'year': None, 'duration': None}
             curr_movie[userid] = None
             history[userid].append(qtup)
-            return qtup[0]
+            return qtup[0],userid
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
@@ -77,30 +82,46 @@ def dialogueCtrl(input_json):
             qtup = history[userid][-1]
         else:
             #will change state machine to class object
-            newState = stateCtrl(state[userid][-1])
-            state[userid].append(newState)
-            if newState is not "tell":
-                qtup = random.choice(filter(lambda x: x[1] == str(newState), qLib[newState]))
+            #titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
+            if not q_order.index(state[userid][-1]) == len(q_order) - 1:
+                newState = q_order[q_order.index(state[userid][-1])+1]
             else:
+                newState = state[userid][-1]
+            #newState = q_order[state[userid][-1] + 1]
+            state[userid].append(newState)
+            if newState is "tell":
+                output, qtup, state[userid] = tellCtrl.ctrl(intent, state[userid], cache_results[userid], titles_user[userid], scoreweights, history[userid], qLib)
+                if state[userid][-1] == "genre":
+                    titles_user[userid] = titles
                 # This is temporary for debugging ###########################
-                temp = ''
-                for k, v in cache_results[userid].iteritems():
-                    temp += k.title() + " : "
-                    if v:
-                        temp += ','.join(v).title() + " | \n "
-                    else:
-                        temp += 'No Preference' + " | \n "
-                #qtup = ("Here is the information I have gathered in this conversation. " + temp, 'tell')
-                        mscores, mmap = candidates.find(cache_results[userid])
-                        movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1],
-                                                reverse=True)
-                        data = movieCtrl.moviebyID(movieWithScore[0][0])
-                        qtup = ("From our conversation, I can recommend the following film. " + data[1] + " (" + data[
-                            3] + ") is " + data[8] + " minutes and is a " + \
-                                  data[4].replace(' ', ', ') + " film. Produced by " + data[
-                                      7] + ", this film's rating is " + data[
-                                      6] + ". ", "tell")
-                ################################################################
+                # temp = ''
+                # for k, v in cache_results[userid].iteritems():
+                #     temp += k.title() + " : "
+                #     if v:
+                #         temp += ','.join(v).title() + " | \n "
+                #     else:
+                #         temp += 'No Preference' + " | \n "
+                #         # qtup = ("Here is the information I have gathered in this conversation. " + temp, 'tell')
+                #         #mscores, mmap = candidates.find(cache_results[userid])
+                # mscores, mmap = candidates.find(titles_user[userid], cache_results[userid])
+                # movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1],
+                #                         reverse=True)
+                # data = movieCtrl.moviebyID(movieWithScore[0][0])
+                # output += ("From our conversation, I can recommend the following film. " + data[1] + " (" + data[
+                #     3] + ") is " + data[8] + " minutes and is a " + \
+                #         data[4].replace(' ', ', ') + " film. Produced by " + data[
+                #             7] + ", this film's rating is " + data[
+                #             6] + ". ", "tell")
+                        ################################################################
+            # #Ask next question
+            # elif newState is "satisfied":
+            #     print intent
+            #     state[userid].append("genre")
+            else:
+                qtup = random.choice(filter(lambda x: x[1] == str(newState), qLib[newState]))
+
+            #print titles_user
+
 
         print '###################'
         print cache_results[userid]
@@ -110,7 +131,7 @@ def dialogueCtrl(input_json):
         history[userid].append((text, state[userid][-1]))
         history[userid].append(qtup)
         output += qtup[0]
-        return output
+        return output, userid
     else:
         user_data= {'rating': None, 'mpaa': [u'PG-13', u'R'], 'duration': None, 'person': [u'Tom Hanks'], 'year': None, 'genre': [u'comedy', u'action', u'adventure']}
         mscores, mmap = candidates.find(user_data)
@@ -212,10 +233,11 @@ def dialogueCtrl(input_json):
 
 def initResources():
     global TemplateLib, TopicLib, TreeState, Template, dictionary_value, resource, q_table, table_state_strategy, model, database, tfidfmodel, tfidfdict
-    global qLib
+    global qLib, titles
     database = {}
     resource = {}
     qLib = {}
+    titles = []
 
     # listfile = None
     resource_root = 'resource'
@@ -268,12 +290,33 @@ def initResources():
     qLib['actor'] = loader.LoadQuestions(resource_root + '/template/template_actor.txt')
     qLib['director'] = loader.LoadQuestions(resource_root + '/template/template_director.txt')
     qLib['mpaa'] = loader.LoadQuestions(resource_root + '/template/template_mpaa.txt')
+    qLib['tell'] = loader.LoadQuestions(resource_root + '/template/template_tell.txt')
     #qLib['tell'] = loader.LoadQuestions(resource_root + '/template/template_tell.txt')
     #qLib['movies'] = loader.LoadQuestions(resource_root + '/template/template_movies.txt')
     #qLib['continue'] = loader.LoadQuestions(resource_root + '/template/template_continue.txt')
+
+    # Init list of candidate movies
+    sqlstring = """SELECT tconst FROM title"""
+    cur.execute(sqlstring)
+    rows = cur.fetchall()
+    for mov in rows:
+        titles.append(mov[0])
+
     print "[OK] Initialization of resources."
+
     return
 
+def dialogueIdle(userid):
+
+    print "in idle"
+    if not state[userid]:
+        return
+    elif len(state[userid]) < 2:
+        print state[userid]
+        titles_user[userid] = titles
+        return
+    titles_user[userid] = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])
+    print titles_user
 
 def dialogueTest():
     print '[OK] Start dialogue test'
@@ -287,11 +330,5 @@ def dialogueTest():
     print '[OK] End dialogue test'
     return
 
-def stateCtrl(state):
-    if state == 'genre': return 'actor'
-    elif state == 'actor': return 'director'
-    elif state == 'director': return 'mpaa'
-    elif state == 'mpaa': return 'tell'
-    elif state == 'tell': return 'satisfied'
 
 #dialogueTest()

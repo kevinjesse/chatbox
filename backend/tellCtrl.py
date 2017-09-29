@@ -24,7 +24,10 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
         mscores, mmap = candidates.find(titles_user, cache_results)
         movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1],
                                 reverse=True)
-        data = movieCtrl.moviebyID(movieWithScore[0][0])
+        try:
+            data = movieCtrl.moviebyID(movieWithScore[0][0])
+        except Exception as e:
+            print e
         output+= "From our conversation, I can recommend the following film. " + data[1] + " (" + data[
             3] + ") is " + data[8] + " minutes and is a " + \
                 data[4].replace(' ', ', ') + " film. Produced by " + data[

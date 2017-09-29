@@ -32,6 +32,8 @@ def ctrl(state, intent, entities, userCache):
         return userCache, answered
     
     for ent in entities:
+        print "ENTITY NEXT "
+        print ent['entity']
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
         if dataType == 'year' or dataType == 'duration':
@@ -44,6 +46,7 @@ def ctrl(state, intent, entities, userCache):
             elif nc17: ent['entity']='NC-17'
         elif dataType =='person':
             ent['entity'] = ent['entity'].title()
+
         if userCache[dataType]:
             if ent['entity'] not in userCache[entity_map[ent['type']]]:
                 userCache[dataType].append(ent['entity'])

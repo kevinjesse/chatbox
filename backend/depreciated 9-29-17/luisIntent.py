@@ -1,4 +1,9 @@
 #
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
+#
 # def genre(intent,entities, userCache):
 #     if intent['intent'] == "goodGenre":
 #         if userCache['genre']:

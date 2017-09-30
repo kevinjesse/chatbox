@@ -1,3 +1,8 @@
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
 def responseBinSim(input):
     """
     :param input: user input

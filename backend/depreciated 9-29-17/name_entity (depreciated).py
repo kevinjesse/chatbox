@@ -1,3 +1,8 @@
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
 # this is to detect the name entity of a sentence, the return value [['New York'],[Pittsburgh]]
 import nltk
 #import fileinput

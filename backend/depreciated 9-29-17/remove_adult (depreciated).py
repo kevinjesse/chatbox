@@ -1,3 +1,8 @@
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
 import database_connect
 import string
 def removeadult(cur):

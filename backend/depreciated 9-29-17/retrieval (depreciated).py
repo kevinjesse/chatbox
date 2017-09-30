@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
 
 """
 find answer in database and by search engine

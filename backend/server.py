@@ -1,3 +1,8 @@
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
 import socket
 import threading
 from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle

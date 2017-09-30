@@ -1,3 +1,8 @@
+#
+# @author Kevin Jesse
+# @email kevin.r.jesse@gmail.com
+#
+
 from nltk.sentiment import vader
 def get_sentiment(response):
     processed_response = response.replace('"','')

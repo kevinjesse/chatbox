@@ -1,1 +1,1 @@
-mpaa ; What MPAA rating should this movie be?
+mpaa ; What MPAA rating should this movie be (eg. PG-13, pg, G)?

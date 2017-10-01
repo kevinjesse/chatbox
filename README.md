@@ -12,7 +12,7 @@ To install for dev of Google ASR:
   For Windows:
   
   For Ubuntu:
-    Install Apache:
+    Install Apache
       sudo apt-get update
       sudo apt-get install apache2
       
@@ -22,7 +22,7 @@ To install for dev of Google ASR:
       sudo apt-get update
       sudo apt-get install -y php7.0
       
-    Checkout chatbox offline repo:
+    Checkout chatbox offline repo
       check out chatbox-offline and put in ~/
       copy frontend code for apache 
         sudo rm -rf /var/www/html/

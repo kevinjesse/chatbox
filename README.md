@@ -10,6 +10,7 @@
 **To install Chatbox Standalone**
 
 Checkout Repo:
+
         git clone https://github.com/kevinjesse/chatbox.git
         git checkout -b standalone
 

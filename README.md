@@ -9,6 +9,10 @@
 
 **To install Chatbox Standalone**
 
+Checkout Repo:
+        git clone https://github.com/kevinjesse/chatbox.git
+        git checkout -b standalone
+
 For Ubuntu:
 
         Install Apache:
@@ -38,6 +42,10 @@ For Ubuntu:
         Go to webpage:
           localhost/chatbox.php
 
+For Windows:
+
+        
+ 
 This page will function just like the movie recommendation but stop before recommending movies since it
 cannot access the database.
 

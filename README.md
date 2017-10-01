@@ -23,7 +23,7 @@ For Ubuntu:
 
         Copy frontend code for apache:
           sudo rm -rf /var/www/html/
-          sudo cp -r ~/chatbox-offline/frontend/* /var/www/
+          sudo cp -r ~/chatbox/frontend/* /var/www/
 
         Start Apache server:
           sudo /etc/init.d/apache2 start

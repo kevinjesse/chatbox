@@ -4,7 +4,10 @@
 Checkout Repo:
 
         git clone https://github.com/kevinjesse/chatbox.git
-        git checkout -b standalone
+        cd ./chatbox
+        git fetch
+        git checkout standalone
+
 
 For Ubuntu:
 
@@ -18,9 +21,6 @@ For Ubuntu:
           sudo apt-get update
           sudo apt-get install -y php7.0
 
-        Checkout chatbox offline repo:
-          check out chatbox-standalone and put in ~/
-
         Copy frontend code for apache:
           sudo rm -rf /var/www/html/
           sudo cp -r ~/chatbox-offline/frontend/* /var/www/
@@ -29,7 +29,7 @@ For Ubuntu:
           sudo /etc/init.d/apache2 start
 
         Run server.py:
-          cd ~/chatbox-offline/backend
+          cd ~/chatbox/backend
           python server.py
 
         Go to webpage:

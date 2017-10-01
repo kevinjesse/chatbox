@@ -42,10 +42,4 @@ To install for dev of Google ASR:
     cannot access the database.
       
 
-    
-    
-    
-    
-    
-      sudo /etc/init.d/apache2 start
   

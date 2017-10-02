@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Fetch Now Playing adds all the information necessary to populate the database for this weeks list of movies now playing
+"""
+
 import database_connect
 import requests
 import re

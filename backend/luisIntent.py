@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Luis intent assigns the entities to the user cache and processes the intents
+"""
+
 #
 # def genre(intent,entities, userCache):
 #     if intent['intent'] == "goodGenre":

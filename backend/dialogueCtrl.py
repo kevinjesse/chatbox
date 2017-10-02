@@ -4,6 +4,9 @@
 # import logging
 # import sys
 
+"""
+Controls the dialogue chatbox. Dialogue control is called from server.py
+"""
 
 
 # Imports
@@ -16,7 +19,6 @@ import movieCtrl
 import luisQuery
 import luisIntent
 import candidates
-import entityDetect
 import filterMovies
 import tellCtrl
 

@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Filter movies reduces the available movies based on the dialogue selections
+"""
+
 import database_connect
 cur = database_connect.db_connect()
 

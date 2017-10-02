@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Loader loads the configuration settings for parts of speech and loads the questions for Qlib
+"""
+
 import nltk
 from collections import defaultdict
 import json

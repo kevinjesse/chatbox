@@ -3,6 +3,11 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Database Connect serves to connect to the database postgres, as the master user. Autocommit has been turned on so
+all inserts, updates, and deletes will be enforced atomically
+"""
+
 import psycopg2
 
 def db_connect():

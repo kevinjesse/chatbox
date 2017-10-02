@@ -13,6 +13,7 @@ $UUID = uniqid();
 <html>
 <head>
     <title>Chatbox</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/chat.css">
     <script src="/css/jquery.js"></script>
 </head>
@@ -96,7 +97,7 @@ $UUID = uniqid();
 
     function sendChatText(chatText) {
         var request;
-        var id = <?php echo json_encode($UUID)?>;
+        var id = <?php echo json_encode($UUID);?>;
         var chatInput = chatText;
         request = $.ajax({
             type: "GET",

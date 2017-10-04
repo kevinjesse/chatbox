@@ -16,6 +16,8 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
     prev_qtup = history[-1]
     output = ''
     qtup = None
+    print "Previous qtup"
+    print prev_qtup
     if prev_qtup[1] == "mpaa":
         temp = ''
         for k, v in cache_results.iteritems():
@@ -44,8 +46,9 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
                 3] + ")? " + data[1] + " stars " + ", ".join(actorNameList[:3]) + "and is directed by " + \
                       directorNameList[0] + ". This film is " + data[8] + " minutes is a " + \
                       data[4].replace(' ', ', ') + " and rated " + data[
-                          6] + " film."
+                          6] + " film.\n"
 
+            qtup = random.choice(filter(lambda x: x[1] == 't0', qLib[state[-1]]))
         except Exception as e:
             print e
 
@@ -55,7 +58,8 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
         #           data[4].replace(' ', ', ') + " and rated " + data[
         #               6] + " film."
 
-        qtup = random.choice(filter(lambda x: x[1] == 't0', qLib[state[-1]]))
+        # qtup = random.choice(filter(lambda x: x[1] == 't0', qLib[state[-1]]))
+        # print qtup
     elif prev_qtup[1] == "t0":
         if intent['intent'] == "No":
             state.append("genre")
@@ -64,5 +68,6 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
             output += "Ok, Bye!"
             qtup = ("", "")
 
-    print prev_qtup
+    print "final qtup"
+    print qtup
     return output, qtup, state

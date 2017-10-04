@@ -19,17 +19,23 @@ import candidates
 import entityDetect
 import filterMovies
 import tellCtrl
+import ChatLogger
 
 import database_connect
 cur = database_connect.db_connect()
 
+
+
 state = {}
 history = {}
+textHistory = {}
 recommend = {}
 cache_results = {}
 curr_movie = {}
 titles_user = {}
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
+hasRecommendedMovie = False
+
 
 import pprint
 pp = pprint.PrettyPrinter(depth=6)
@@ -45,19 +51,22 @@ def dialogueCtrl(input_json):
     if input_json is not "debug":
 
 
-        global state, history, data, cache_results, curr_movie
+        global state, history, textHistory, data, cache_results, curr_movie, hasRecommendedMovie
         js = json.loads(input_json)
         userid = js['id']
         text = js['text']
         output = ''
         qtup = None
         if userid not in state:
+            # First time the user visits the page
             state[userid] = ["genre", ]
             qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []
+            textHistory[userid] = []
             #data[userid] = []
             cache_results[userid] = {'genre': None, 'person':None, 'mpaa': None, 'rating': None, 'year': None, 'duration': None}
             curr_movie[userid] = None
+            textHistory[userid].append(("C", qtup[0]))
             history[userid].append(qtup)
             return qtup[0],userid
 
@@ -75,7 +84,12 @@ def dialogueCtrl(input_json):
                 newState = state[userid][-1]
             state[userid].append(newState)
             if newState is "tell":
+                # The sentence of the movie suggestion
+                # TODO: append to history (AND CHECK History tuple)
                 output, qtup, state[userid] = tellCtrl.ctrl(intent, state[userid], cache_results[userid], titles_user[userid], scoreweights, history[userid], qLib)
+                print "dialogueCtrl qtup @ line 90: {}".format(qtup)
+                hasRecommendedMovie = True
+                print "boolFlag @ 92: {}".format(hasRecommendedMovie)
                 if state[userid][-1] == "genre":
                     titles_user[userid] = titles
             else:
@@ -85,8 +99,14 @@ def dialogueCtrl(input_json):
         history[userid].append((text, state[userid][-1]))
         history[userid].append(qtup)
         output += qtup[0]
+
+        # Append to text file
+        textHistory[userid].append(("U", text))
+        textHistory[userid].append(("C", output))
+
         return output, userid
     else:
+
         user_data= {'rating': None, 'mpaa': [u'PG-13', u'R'], 'duration': None, 'person': [u'Tom Hanks'], 'year': None, 'genre': [u'comedy', u'action', u'adventure']}
         mscores, mmap = candidates.find(user_data)
         movieWithScore = sorted(zip(mmap, np.dot(mscores, scoreweights)), key=lambda tup: tup[1], reverse=True)
@@ -126,11 +146,21 @@ def dialogueIdle(userid):
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
-        print state[userid]
+        print "state[userid]: {}".format(state[userid])
         titles_user[userid] = titles
         return
     titles_user[userid] = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])
-    print titles_user
+
+    print "titles_user count: {}".format(len(titles_user[userid]))
+    print "HasRecommendedMovie: {}".format(hasRecommendedMovie)
+
+    #print "HEREHEREHERE"
+    #print "State: {} \nCache: {} \nTitles: {}".format(state[userid][-2], cache_results[userid], titles_user[userid])
+
+    if hasRecommendedMovie:
+        ChatLogger.logToFile(textHistory[userid], userid)
+    #print "HEREHEREHEREMMMMMMMMM"
+    #print "State: {} \nCache: {} \nTitles: {}".format(state[userid][-2], cache_results[userid], titles_user[userid])
 
 def dialogueTest():
     print '[OK] Start dialogue test'

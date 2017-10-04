@@ -34,7 +34,7 @@ cache_results = {}
 curr_movie = {}
 titles_user = {}
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
-hasRecommendedMovie = False
+has_recommended_movie = False
 
 
 import pprint
@@ -43,7 +43,7 @@ pp = pprint.PrettyPrinter(depth=6)
 # dialogueCtrl() controls dialogue flow with socket
 def dialogueCtrl(input_json):
     """
-    dialogueCtrl takes in data (User input), sends to dailogue logic, gets response, and returns response back to socket
+    dialogueCtrl takes in data (User input), sends to dialogue logic, gets response, and returns response back to socket
     """
     scoreweights = np.array([.1, .1, .5, .2, .1])
 
@@ -51,7 +51,7 @@ def dialogueCtrl(input_json):
     if input_json is not "debug":
 
 
-        global state, history, textHistory, data, cache_results, curr_movie, hasRecommendedMovie
+        global state, history, textHistory, data, cache_results, curr_movie, has_recommended_movie
         js = json.loads(input_json)
         userid = js['id']
         text = js['text']
@@ -85,11 +85,10 @@ def dialogueCtrl(input_json):
             state[userid].append(newState)
             if newState is "tell":
                 # The sentence of the movie suggestion
-                # TODO: append to history (AND CHECK History tuple)
                 output, qtup, state[userid] = tellCtrl.ctrl(intent, state[userid], cache_results[userid], titles_user[userid], scoreweights, history[userid], qLib)
                 print "dialogueCtrl qtup @ line 90: {}".format(qtup)
-                hasRecommendedMovie = True
-                print "boolFlag @ 92: {}".format(hasRecommendedMovie)
+                has_recommended_movie = True
+                print "boolFlag @ 92: {}".format(has_recommended_movie)
                 if state[userid][-1] == "genre":
                     titles_user[userid] = titles
             else:
@@ -152,15 +151,10 @@ def dialogueIdle(userid):
     titles_user[userid] = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])
 
     print "titles_user count: {}".format(len(titles_user[userid]))
-    print "HasRecommendedMovie: {}".format(hasRecommendedMovie)
+    print "has_recommended_movie: {}".format(has_recommended_movie)
 
-    #print "HEREHEREHERE"
-    #print "State: {} \nCache: {} \nTitles: {}".format(state[userid][-2], cache_results[userid], titles_user[userid])
-
-    if hasRecommendedMovie:
+    if has_recommended_movie:
         ChatLogger.logToFile(textHistory[userid], userid)
-    #print "HEREHEREHEREMMMMMMMMM"
-    #print "State: {} \nCache: {} \nTitles: {}".format(state[userid][-2], cache_results[userid], titles_user[userid])
 
 def dialogueTest():
     print '[OK] Start dialogue test'

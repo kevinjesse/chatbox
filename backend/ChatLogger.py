@@ -14,15 +14,18 @@ def logToFile(history, userid):
 
 def __appendToLogFile(history, userid):
     with threadLock:
-        inputString = "\n".join("{}: {}".format(str(speaker), str(text)) for (speaker, text) in history)
+        input_string = "\n".join("{}: {}".format(str(speaker), str(text)) for (speaker, text) in history)
         log_directory = "logs"
         try:
             os.mkdir(log_directory)
         except Exception:
             pass
 
-        with open(os.path.join(log_directory, "output.txt"), "a+") as log_file:
+        # Add time to file_name so that new log will be created each hour
+        file_name = "output {}.log.txt".format(datetime.now().strftime("D=%Y-%m-%d H=%H"))
+
+        with open(os.path.join(log_directory, file_name), "a+") as log_file:
             output = "User:\t{};\t\tTimestamp:\t{}".format(userid, datetime.now()) + "\n"
-            output += inputString + "\n"
+            output += input_string + "\n"
             log_file.write(output)
             log_file.close()

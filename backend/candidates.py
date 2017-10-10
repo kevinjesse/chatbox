@@ -3,6 +3,11 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Candidates creates the scoring metrics and evaluates each features. This means normalizing and providing a correct score
+for each row (movie)
+"""
+
 import database_connect
 cur = database_connect.db_connect()
 

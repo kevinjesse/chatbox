@@ -16,6 +16,14 @@ cur = database_connect.db_connect()
 # This api_key will be moved to a database after initial build
 api_key = '166c772e6b94241f893e94b22f874c02'
 
+#initialize smaller name list for memory constraint
+names = {}
+cur.execute("SET statement_timeout = '10s'")
+sqlstring = """SELECT nconst, primaryname FROM name LIMIT 800000"""
+cur.execute(sqlstring)
+rows = cur.fetchall()
+for name in rows:
+    names[name[0]] = name[1]
 
 def moviebyID(movieID):
     """
@@ -55,23 +63,33 @@ def moviebyID(movieID):
     return rows[0]
 
 
-def actorsbyID(alist):
+# def actorsbyID(alist):
+#     actornamelist = []
+#     for actor in alist:
+#         sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + actor + """' LIMIT 1"""
+#         cur.execute(sqlstring)
+#         rows = cur.fetchall()
+#         actornamelist.append(rows[0][0])
+#     return actornamelist
+
+def peoplebyID(alist):
+    global names
     actornamelist = []
     for actor in alist:
-        sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + actor + """' LIMIT 1"""
-        cur.execute(sqlstring)
-        rows = cur.fetchall()
-        actornamelist.append(rows[0][0])
+        try:
+            actornamelist.append(names[actor])
+        except Exception as e:
+            actornamelist.append("")
     return actornamelist
 
-def directorsbyID(dlist):
-    directornamelist = []
-    for director in dlist:
-        sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + director + """' LIMIT 1"""
-        cur.execute(sqlstring)
-        rows = cur.fetchall()
-        directornamelist.append(rows[0][0])
-    return directornamelist
+# def directorsbyID(dlist):
+#     directornamelist = []
+#     for director in dlist:
+#         sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + director + """' LIMIT 1"""
+#         cur.execute(sqlstring)
+#         rows = cur.fetchall()
+#         directornamelist.append(rows[0][0])
+#     return directornamelist
 
 def upcomingMovies():
     """

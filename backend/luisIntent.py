@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Luis intent assigns the entities to the user cache and processes the intents
+"""
+
 #
 # def genre(intent,entities, userCache):
 #     if intent['intent'] == "goodGenre":
@@ -15,14 +19,14 @@
 #     return userCache
 
 import re
-import database_connect
 
 def ctrl(state, intent, entities, userCache):
     from pprint import pprint
+    print
     pprint(intent)
+    print
     pprint(entities)
-    #print
-    #print
+    print
     answered = False
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
@@ -38,8 +42,6 @@ def ctrl(state, intent, entities, userCache):
         return userCache, answered
     
     for ent in entities:
-        print "ENTITY NEXT "
-        print ent['entity']
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
         if dataType == 'year' or dataType == 'duration':
@@ -51,12 +53,7 @@ def ctrl(state, intent, entities, userCache):
             if pg13: ent['entity']='PG-13'
             elif nc17: ent['entity']='NC-17'
         elif dataType =='person':
-            # TODO: see if spell checking here is reasonable
-            title = ent['entity'].title()
-            title_id = __checkName(title)
-            print("title_id: {}".format(title_id))
-            if title_id != None:
-                ent['entity'] = title
+            ent['entity'] = ent['entity'].title()
 
         if userCache[dataType]:
             if ent['entity'] not in userCache[entity_map[ent['type']]]:
@@ -73,10 +70,3 @@ def ctrl(state, intent, entities, userCache):
 #Implement scoring and this can be a follow up function that could be a series of binary questions.
 def year(entity):
     return '2017'
-
-def __checkName(name_string):
-    cur = database_connect.db_connect()
-    sqlstring = """SELECT nconst FROM name WHERE primaryName = '""" + name_string + """'"""
-    cur.execute(sqlstring)
-    n_const = cur.fetchall()
-    print n_const

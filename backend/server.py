@@ -6,6 +6,10 @@
 import socket
 import threading
 from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle
+import json
+import sys
+
+debug = False
 
 class ThreadingServer(object):
     """
@@ -34,29 +38,42 @@ class ThreadingServer(object):
                 data = client.recv(size)
                 #print(data)
                 if data:
+                    # print data
                     try:
-                    # Set the response to echo back the recieved data
-                        response, userid = dialogueCtrl(data)
-                    except Exception as e:
-                        print e
-                        import traceback
-                        traceback.print_exc()
-                    print response
-                    client.send(response)
-                    try:
-                        dialogueIdle(userid)
+                        # if data == "passive" and getActive():
+                        #     response = getResponse()
+                        #     client.send(response)
+                        # elif data == "passive":
+                        #     client.send('')
+                        # else:
+                        print data
+                        # if data == "log":
+                        #     pass
+
+                        response, userid, passiveLen = dialogueCtrl(data)
+
+                        #change to JSON
+                        responseJson = json.dumps({'response':response, 'userid': userid, 'passiveLen': passiveLen})
+                        client.send(responseJson)
+                        dialogueIdle(userid, debug)
                     except Exception as e:
                         print e
                         import traceback
                         traceback.print_exc()
                 else:
                     raise error('Client disconnected')
-
             except:
                 client.close()
                 return False
 
+
+
+
 if __name__ == "__main__":
     initResources()
+    if 'debug' in sys.argv: debug = True
     while True:
         ThreadingServer('localhost',13113).listen()
+        # dpret, active = dialoguePassive()
+
+

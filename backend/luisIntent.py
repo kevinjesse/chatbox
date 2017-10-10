@@ -22,9 +22,10 @@ import re
 
 def ctrl(state, intent, entities, userCache):
     from pprint import pprint
-    pprint(intent)
-    pprint(entities)
     print
+    pprint(intent)
+    print
+    pprint(entities)
     print
     answered = False
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
@@ -41,8 +42,6 @@ def ctrl(state, intent, entities, userCache):
         return userCache, answered
     
     for ent in entities:
-        print "ENTITY NEXT "
-        print ent['entity']
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
         if dataType == 'year' or dataType == 'duration':

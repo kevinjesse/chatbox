@@ -126,8 +126,8 @@ def find (tconst, user_pref):
     mscores = ratingsscore(mscores, mmap)
     mscores = actorscore(mscores, mmap, user_pref['person'])
     mscores = directorscore(mscores, mmap, user_pref['person'])
-    print mmap
-    print mscores
+    print "candidates::mmap count: {}".format(len(mmap))
+    print "candidates::mscores count: {}".format(len(mscores))
 
     return mscores, mmap
 

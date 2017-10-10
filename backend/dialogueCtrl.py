@@ -61,7 +61,7 @@ def dialogueCtrl(input_json):
 
         output = ''
         qtup = None
-        if userid not in state:
+        if userid not in state or text == '':
             state[userid] = ["genre", ]
             qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []

@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Luis intent assigns the entities to the user cache and processes the intents
+"""
+
 #
 # def genre(intent,entities, userCache):
 #     if intent['intent'] == "goodGenre":
@@ -19,10 +23,17 @@ import database_connect
 
 def ctrl(state, intent, entities, userCache):
     from pprint import pprint
+    print
     pprint(intent)
+<<<<<<< HEAD
     pprint(entities)
     #print
     #print
+=======
+    print
+    pprint(entities)
+    print
+>>>>>>> master
     answered = False
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
@@ -38,8 +49,6 @@ def ctrl(state, intent, entities, userCache):
         return userCache, answered
     
     for ent in entities:
-        print "ENTITY NEXT "
-        print ent['entity']
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True
         if dataType == 'year' or dataType == 'duration':

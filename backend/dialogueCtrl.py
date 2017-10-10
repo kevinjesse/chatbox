@@ -4,7 +4,9 @@
 # import logging
 # import sys
 
-
+"""
+Controls the dialogue chatbox. Dialogue control is called from server.py
+"""
 
 # Imports
 import loader
@@ -16,12 +18,16 @@ import movieCtrl
 import luisQuery
 import luisIntent
 import candidates
-import entityDetect
 import filterMovies
 import tellCtrl
+<<<<<<< HEAD
 import ChatLogger
+=======
+import chatlogger
+>>>>>>> master
 
 import database_connect
+
 cur = database_connect.db_connect()
 
 
@@ -33,18 +39,27 @@ recommend = {}
 cache_results = {}
 curr_movie = {}
 titles_user = {}
+active = False
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
+<<<<<<< HEAD
 
+=======
+passiveResp = []
+scoreweights = np.array([.1, .1, .5, .2, .1])
+>>>>>>> master
 
 import pprint
+
 pp = pprint.PrettyPrinter(depth=6)
+
 
 # dialogueCtrl() controls dialogue flow with socket
 def dialogueCtrl(input_json):
     """
     dialogueCtrl takes in data (User input), sends to dialogue logic, gets response, and returns response back to socket
     """
+<<<<<<< HEAD
     scoreweights = np.array([.1, .1, .5, .2, .1])
 
     # Dont worry input_json can never be set to "debug" unless done in code...
@@ -52,9 +67,18 @@ def dialogueCtrl(input_json):
 
 
         global state, history, textHistory, data, cache_results, curr_movie, has_recommended_movie
+=======
+    try:
+        global state, history, textHistory, data, cache_results, curr_movie, scoreweights, passiveResp
+>>>>>>> master
         js = json.loads(input_json)
         userid = js['id']
         text = js['text']
+        mode = js['mode'] == "true"
+
+        if mode:
+            return listen(userid)
+
         output = ''
         qtup = None
         if userid not in state:
@@ -63,26 +87,35 @@ def dialogueCtrl(input_json):
             qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []
             textHistory[userid] = []
+<<<<<<< HEAD
             #data[userid] = []
             cache_results[userid] = {'genre': None, 'person':None, 'mpaa': None, 'rating': None, 'year': None, 'duration': None}
             curr_movie[userid] = None
+=======
+            # data[userid] = []
+            cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
+                                     'duration': None}
+            curr_movie[userid] = None
+
+>>>>>>> master
             textHistory[userid].append(("C", qtup[0]))
             history[userid].append(qtup)
-            return qtup[0],userid
+            return qtup[0], userid, 0
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
         if not answered:
-            #if do not understand utterance because intent is incorrect, try to find with entities
-            output = "I do not understand your answer. "
+            # if do not understand utterance because intent is incorrect, try to find with entities
+            passiveResp.append("I do not understand your answer. ")
             qtup = history[userid][-1]
         else:
-            #will change state machine to class object
+            # will change state machine to class object
             if not q_order.index(state[userid][-1]) == len(q_order) - 1:
-                newState = q_order[q_order.index(state[userid][-1])+1]
+                newState = q_order[q_order.index(state[userid][-1]) + 1]
             else:
                 newState = state[userid][-1]
             state[userid].append(newState)
+<<<<<<< HEAD
             if newState is "tell":
                 # The sentence of the movie suggestion
                 output, qtup, state[userid] = tellCtrl.ctrl(intent, state[userid], cache_results[userid], titles_user[userid], scoreweights, history[userid], qLib)
@@ -93,10 +126,14 @@ def dialogueCtrl(input_json):
                     titles_user[userid] = titles
             else:
                 qtup = random.choice(filter(lambda x: x[1] == str(newState), qLib[newState]))
+=======
+            qtup = random.choice(filter(lambda x: x[1] == str(newState), qLib[newState]))
+>>>>>>> master
 
         # Append history
         history[userid].append((text, state[userid][-1]))
         history[userid].append(qtup)
+<<<<<<< HEAD
         output += qtup[0]
 
         # Append to text file
@@ -115,13 +152,26 @@ def dialogueCtrl(input_json):
                   data[4].replace(' ', ', ') + " film. Produced by " + data[7] + ", this film's rating is " + data[
                       6] + ". "
         print output
+=======
+        passiveResp.append(qtup[0])
+        resp = passiveResp.pop(0)
+
+        textHistory[userid].append(("U", text))
+        textHistory[userid].append(("C", resp))
+
+        return resp, userid, len(passiveResp)
+
+    except ValueError as e:
+        return
+
+>>>>>>> master
 
 def initResources():
     global qLib, titles
     qLib = {}
     titles = []
 
-    #Load question library
+    # Load question library
     resource_root = 'resource'
     qLib['genre'] = loader.LoadQuestions(resource_root + '/template/template_genre.txt')
     qLib['actor'] = loader.LoadQuestions(resource_root + '/template/template_actor.txt')
@@ -137,14 +187,22 @@ def initResources():
         titles.append(mov[0])
 
     print "[OK] Initialization of resources."
-
     return
 
-def dialogueIdle(userid):
 
+def listen(userid):
+    while (not len(passiveResp)): continue
+    resp = passiveResp.pop(0)
+    textHistory[userid].append(("C", resp))
+    return resp, userid, len(passiveResp)
+
+
+def dialogueIdle(userid, debug=False):
+    global active, passiveResp, has_recommended_movie
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
+<<<<<<< HEAD
         print "state[userid]: {}".format(state[userid])
         titles_user[userid] = titles
         return
@@ -155,6 +213,33 @@ def dialogueIdle(userid):
 
     if has_recommended_movie:
         ChatLogger.logToFile(textHistory[userid], userid)
+=======
+        titles_user[userid] = titles
+        return
+
+    # Logic
+    if state[userid][-2] == "bye":
+        return
+    elif state[userid][-2] == "mpaa":
+        # output = "I like this movie because it has this"
+        try:
+            outputlist, qtup = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
+                                             scoreweights, history[userid], qLib)
+
+            passiveResp.extend(outputlist)
+            has_recommended_movie = True
+        except Exception as e:
+            print e
+        state[userid].append("bye")
+        passiveResp.append("I'm told to stop talking to you.")
+    else:
+        titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
+
+    if has_recommended_movie and debug and not passiveResp:
+        chatlogger.logToFile(textHistory[userid], userid)
+        has_recommended_movie = False
+
+>>>>>>> master
 
 def dialogueTest():
     print '[OK] Start dialogue test'
@@ -169,4 +254,4 @@ def dialogueTest():
     return
 
 
-#dialogueTest()
+    # dialogueTest()

@@ -3,6 +3,10 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+"""
+Entity detect fetches the data of the entity described based on what the table and column. Not being used 9-29-17
+"""
+
 import database_connect
 cur = database_connect.db_connect()
 

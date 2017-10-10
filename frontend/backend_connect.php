@@ -7,5 +7,4 @@ else {
     if ($result === false)
         echo "socket_connect() failed.\nReason: ($result) " . socket_strerror(socket_last_error($s)) . "\n";
 }
-
 ?>

@@ -1,0 +1,11 @@
+User:	59d46ccf2294d;		Timestamp:	2017-10-04 05:09:43.142028
+C: What types of movies, or genres, do you like?
+U: action
+C: What is your favorite actor or actress?
+U: Keanu Reeves 
+C: What is your favorite director?
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: How about The Matrix (1999)? The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenbergand is directed by Lilly Wachowski. This film is 136 minutes is a action, sci-fi and rated R film.
+Are you happy with this selection?

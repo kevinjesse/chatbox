@@ -24,9 +24,15 @@ def ctrl(state, intent, entities, userCache):
     from pprint import pprint
     print
     pprint(intent)
+<<<<<<< HEAD
+    pprint(entities)
+    #print
+    #print
+=======
     print
     pprint(entities)
     print
+>>>>>>> master
     answered = False
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',

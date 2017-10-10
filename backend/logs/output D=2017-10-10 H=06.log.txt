@@ -103,3 +103,16 @@ C: The Dark Knight stars Charles Roven, Heath Ledger, Jonathan Nolan and is dire
 C: This film is 152 minutes is a action, crime, drama and rated PG-13 film.
 C: I'm told to stop talking to you.
 
+User:	59dc6fb374ab2;		Timestamp:	2017-10-10 06:59:19.806490
+C: Can you tell me some genres?
+U: i like comedy
+C: Can you tell me some actors or actresses you like?
+U: I like brad pitt
+C: Tell me a director you prefer.
+U: i dont know
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg13
+C: I'm thinking about what you might like.
+C: Forrest Gump stars Wendy Finerman, Winston Groom,  and is directed by .
+C: I'm told to stop talking to you.
+

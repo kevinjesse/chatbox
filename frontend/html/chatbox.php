@@ -38,19 +38,30 @@ $UUID = uniqid();
 </html>
 
 <script type="text/javascript">
-    var d, m;
-
-    $(window).onload = sendChatText("");
-
+    var d, m, s;
+    var id = <?php echo json_encode($UUID);?>;
+    var listen = false;
+    $(window).onload = sendChatText("", false);
+    //$(window).onunload = sendKill();
     $(document).ready(function () {
         $('#btnSend').click(function () {
             var chatInput = $('#chatInput').val();
             if (chatInput != "") {
                 insertMessage(chatInput);
-                sendChatText(chatInput);
+                sendChatText(chatInput, false);
             }
         });
     });
+
+    function sendKill() {
+        var request;
+        request = $.ajax({
+            type: "GET",
+            url: "/submit.php?action=kill&UUID="+ encodeURIComponent(id)
+        });
+        request.done(function (response) {
+        });
+    }
 
     function enterPress(e) {
         if (e.keyCode === 13) {
@@ -58,7 +69,7 @@ $UUID = uniqid();
             var chatInput = $('#chatInput').val();
             if (chatInput != "") {
                 insertMessage(chatInput);
-                sendChatText(chatInput);
+                sendChatText(chatInput, false);
             }
         }
     }
@@ -95,17 +106,23 @@ $UUID = uniqid();
         }
     }
 
-    function sendChatText(chatText) {
+    function sendChatText(chatText, mode) {
         var request;
-        var id = <?php echo json_encode($UUID);?>;
         var chatInput = chatText;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput)
+            url: "/submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
         });
         request.done(function (response) {
-            insertAI(response)
+            respJSON = JSON.parse(response);
+            insertAI(respJSON['response']);
+            if (listen === false) {
+                listen = true;
+                sendChatText('', true);
+                listen = false;
+            }
         });
         $('#chatInput').val(null);
     }
+
 </script>

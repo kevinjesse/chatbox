@@ -74,21 +74,6 @@ def ctrl(state, userCache, user_tconst):
             user_tconst = list(set(user_tconst).union(tconst_list))
             return user_tconst
 
-<<<<<<< HEAD
-        cur.execute(sqlstringm)
-        rows = cur.fetchall()
-        tconst_list = [tconst[0] for tconst in rows]
-        print '##########'
-        print "Tconst_list count: {}".format(len(tconst_list))
-        print '##########'
-        print "user_tconst count: {}".format(len(user_tconst))
-        print '##########'
-        user_tconst = list(set(user_tconst).union(tconst_list))
-        return user_tconst
-=======
->>>>>>> master
-
-
         else:
             # IF STATE IS NOT IMPLEMENTED JUST RETURN what we started with
             # for now just return user_tconst

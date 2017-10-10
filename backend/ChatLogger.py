@@ -3,7 +3,7 @@ from datetime import datetime
 import threading
 import time
 
-# ChatLogger
+# chatLogger
 
 threadLock = threading.Lock()
 

@@ -24,15 +24,9 @@ def ctrl(state, intent, entities, userCache):
     from pprint import pprint
     print
     pprint(intent)
-<<<<<<< HEAD
-    pprint(entities)
-    #print
-    #print
-=======
     print
     pprint(entities)
     print
->>>>>>> master
     answered = False
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
@@ -46,7 +40,7 @@ def ctrl(state, intent, entities, userCache):
     if intent['intent'] == 'NoPreference' or intent['intent'] == 'Yes' or intent['intent'] == 'No':
         answered = True
         return userCache, answered
-    
+
     for ent in entities:
         dataType = entity_map[ent['type']]
         if dataType == state2entity_map[state]: answered = True

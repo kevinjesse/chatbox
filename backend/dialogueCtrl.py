@@ -81,12 +81,8 @@ def dialogueCtrl(input_json):
 
         output = ''
         qtup = None
-<<<<<<< HEAD
         if userid not in state:
             # First time the user visits the page
-=======
-        if userid not in state or text == '':
->>>>>>> master
             state[userid] = ["genre", ]
             qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []

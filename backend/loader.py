@@ -123,13 +123,22 @@ def LoadTopic(topicfile):
     return [line.strip() for line in open(topicfile)]
 
 
-def LoadQuestions(question_file):
+def LoadQuestions(question_file, is_choice_file=False):
     qLib = []
+    if is_choice_file:
+        for line in open(question_file):
+            state_type, argc, question = line.split(';')
+            state_type = state_type.strip()
+            argc = argc.strip()
+            question = question.strip()
+            qLib.append(tuple((question, state_type, argc)))
+        return qLib
+
     for line in open(question_file):
         a, q = line.split(';')
         a = a.strip()
         q = q.strip()
-        qLib.append(tuple((q, a)))
+        qLib.append(tuple((q, a, 0)))
         # try:
         #     qLib.append(tuple((q, a)))
         # except KeyError:

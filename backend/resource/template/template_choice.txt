@@ -1,0 +1,3 @@
+choice ; -1 ; Do you prefer $(choice...), or $(choice)?
+choice ; -1 ; Which of the following genre would you prefer: $(choice...), or genre?
+choice ; 2 ; Do you prefer $(choice) or $(choice)?

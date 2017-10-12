@@ -21,6 +21,7 @@ import candidates
 import filterMovies
 import tellCtrl
 import chatlogger
+import qManager
 
 import database_connect
 
@@ -63,7 +64,10 @@ def dialogueCtrl(input_json):
         qtup = None
         if userid not in state or text == '':
             state[userid] = ["genre", ]
-            qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
+            # TODO: Substitute temp replacement with actual recommendations
+            replacement_genre = ["Action", "Comedy", "Sci-fi"]
+            qtup = qManager.output_sentence(using_choice=True, replacement=replacement_genre, q_lib=qLib)
+            #qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
             history[userid] = []
             textHistory[userid] = []
             # data[userid] = []
@@ -88,7 +92,8 @@ def dialogueCtrl(input_json):
             else:
                 newState = state[userid][-1]
             state[userid].append(newState)
-            qtup = random.choice(filter(lambda x: x[1] == str(newState), qLib[newState]))
+            print "[DEBUG] cache_results: {}".format(curr_movie[userid])
+            qtup = qManager.output_sentence(using_choice=True, replacement=curr_movie[userid], q_lib=qLib)
 
         # Append history
         history[userid].append((text, state[userid][-1]))
@@ -117,6 +122,10 @@ def initResources():
     qLib['director'] = loader.LoadQuestions(resource_root + '/template/template_director.txt')
     qLib['mpaa'] = loader.LoadQuestions(resource_root + '/template/template_mpaa.txt')
     qLib['tell'] = loader.LoadQuestions(resource_root + '/template/template_tell.txt')
+
+    # Load more questions, this time for choices
+    #qLib['genre_choice'] = loader.LoadQuestions(resource_root + '/template/template_genre_choice.txt', is_choice_file=True)
+    qLib['choice'] = loader.LoadQuestions(resource_root + '/template/template_choice.txt', is_choice_file=True)
 
     # Init list of candidate movies - (relatively new 9-20-17)
     sqlstring = """SELECT tconst FROM title"""

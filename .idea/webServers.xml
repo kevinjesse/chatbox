@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d51a95c0-a892-49ba-a81c-82298ee07a1e" name="chatbox-aws" url="http://ec2-52-34-27-236.us-west-2.compute.amazonaws.com">
+        <fileTransfer host="ec2-52-34-27-236.us-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/.ssh/amchau.pem" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

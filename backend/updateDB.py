@@ -14,7 +14,11 @@ def fetch():
     :return:
     """
     import operator
-    api_key = '166c772e6b94241f893e94b22f874c02'
+    sqlstring = """SELECT api_key FROM api WHERE api_type='tmd'"""
+    cur.execute(sqlstring)
+    rows = cur.fetchall()
+    # This api_key will be moved to a database after initial build
+    api_key = rows[0][0]
 
     #Get movies in database
     sqlstring = """SELECT tconst FROM title WHERE mpaa IS NULL OR plot IS NULL OR prodco IS NULL"""

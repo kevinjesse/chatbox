@@ -38,13 +38,3 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-.idea/chatbox.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/*
-.idea/webServers.xml
-.idea/deployment.xml
-.idea
-

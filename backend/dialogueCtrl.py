@@ -9,21 +9,17 @@ Controls the dialogue chatbox. Dialogue control is called from server.py
 """
 
 # Imports
-import loader
 import json
 
-import random
 import numpy as np
-import movieCtrl
-import luisQuery
-import luisIntent
-import candidates
-import filterMovies
-import tellCtrl
-import chatlogger
-import qManager
 
+import chatlogger
 import database_connect
+import filterMovies
+import luisIntent
+import luisQuery
+import tellCtrl
+import templateCtrl
 
 cur = database_connect.db_connect()
 
@@ -61,30 +57,29 @@ def dialogueCtrl(input_json):
             return listen(userid)
 
         output = ''
-        qtup = None
+        question = None
         if userid not in state or text == '':
             state[userid] = ["genre", ]
             # TODO: Substitute temp replacement with actual recommendations
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
-            qtup = qManager.output_sentence(using_choice=True, replacement=replacement_genre, q_lib=qLib)
-            #qtup = random.choice(filter(lambda x: x[1] == 'genre', qLib[state[userid][-1]]))
+            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+
             history[userid] = []
             textHistory[userid] = []
-            # data[userid] = []
             cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
                                      'duration': None}
             curr_movie[userid] = None
 
-            textHistory[userid].append(("C", qtup[0]))
-            history[userid].append(qtup)
-            return qtup[0], userid, 0
+            textHistory[userid].append(("C", question))
+            history[userid].append((question, state[userid][-1]))
+            return question, userid, 0
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
             passiveResp.append("I do not understand your answer. ")
-            qtup = history[userid][-1]
+            question = history[userid][-1][0]
         else:
             # will change state machine to class object
             if not q_order.index(state[userid][-1]) == len(q_order) - 1:
@@ -93,12 +88,12 @@ def dialogueCtrl(input_json):
                 newState = state[userid][-1]
             state[userid].append(newState)
             print "[DEBUG] cache_results: {}".format(curr_movie[userid])
-            qtup = qManager.output_sentence(using_choice=True, replacement=curr_movie[userid], q_lib=qLib)
+            question = templateCtrl.get_sentence(state=newState, is_dynamic=False)
 
         # Append history
         history[userid].append((text, state[userid][-1]))
-        history[userid].append(qtup)
-        passiveResp.append(qtup[0])
+        history[userid].append((question, state[userid][-1]))
+        passiveResp.append(question)
         resp = passiveResp.pop(0)
 
         textHistory[userid].append(("U", text))
@@ -111,21 +106,11 @@ def dialogueCtrl(input_json):
 
 
 def initResources():
-    global qLib, titles
-    qLib = {}
+    global titles
     titles = []
 
     # Load question library
-    resource_root = 'resource'
-    qLib['genre'] = loader.LoadQuestions(resource_root + '/template/template_genre.txt')
-    qLib['actor'] = loader.LoadQuestions(resource_root + '/template/template_actor.txt')
-    qLib['director'] = loader.LoadQuestions(resource_root + '/template/template_director.txt')
-    qLib['mpaa'] = loader.LoadQuestions(resource_root + '/template/template_mpaa.txt')
-    qLib['tell'] = loader.LoadQuestions(resource_root + '/template/template_tell.txt')
-
-    # Load more questions, this time for choices
-    #qLib['genre_choice'] = loader.LoadQuestions(resource_root + '/template/template_genre_choice.txt', is_choice_file=True)
-    qLib['choice'] = loader.LoadQuestions(resource_root + '/template/template_choice.txt', is_choice_file=True)
+    templateCtrl.init_resources()
 
     # Init list of candidate movies - (relatively new 9-20-17)
     sqlstring = """SELECT tconst FROM title"""
@@ -139,7 +124,8 @@ def initResources():
 
 
 def listen(userid):
-    while (not len(passiveResp)): continue
+    while not len(passiveResp):
+        continue
     resp = passiveResp.pop(0)
     textHistory[userid].append(("C", resp))
     return resp, userid, len(passiveResp)
@@ -160,7 +146,7 @@ def dialogueIdle(userid, debug=False):
         # output = "I like this movie because it has this"
         try:
             outputlist, qtup = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
-                                             scoreweights, history[userid], qLib)
+                                             scoreweights, history[userid])
 
             passiveResp.extend(outputlist)
             has_recommended_movie = True

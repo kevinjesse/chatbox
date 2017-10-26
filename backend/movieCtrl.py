@@ -77,22 +77,21 @@ def moviebyID(movieID):
 #     return actornamelist
 
 def actorsbyID(alist):
+    alistord = """'""" + """','""".join(alist) + """'"""
+    alistval = ["('"+str(alist[i])+"' ," + str(i+1) + ")" for i in range(0, len(alist))]
+    aliststr = """, """.join(alistval)
     actornamelist = []
-    sqlstring = """SELECT primaryname FROM name WHERE nconst='"""
-    for actor in alist[1:]:
-        sqlstring += actor + """' OR nconst='"""
-        # print sqlstring
-        # cur.execute(sqlstring)
-        # rows = cur.fetchall()
-        # actornamelist.append(rows[0][0])
-    sqlstring += alist[0] + """'"""
-    #print sqlstring
+    #sqlstring = """SELECT primaryname FROM name WHERE nconst IN(""" + aliststr + """) ORDER BY (nconst,""" + aliststr +""")"""
+    #sqlstring = """SELECT primaryname FROM name WHERE nconst = ANY (VALUES """ + aliststr + """) ORDER BY (nconst,""" + alistord + """)"""
+    #SELECT name.primaryname FROM name join ( VALUES 88340',9),('nm0000620',10)) as x (nconst, ordering) on name.nconst = x.nconst order by x.ordering
+    sqlstring = """SELECT primaryname FROM name join (VALUES """ + aliststr + """) AS X (nconst, ordering) ON name.nconst = X.nconst ORDER BY X.ordering """
+    print
+    print sqlstring
+    print
     cur.execute(sqlstring)
     rows = cur.fetchall()
-    actornamelist.append(rows[-1][0])
-    for person in rows[:-1]:
+    for person in rows:
         actornamelist.append(person[0])
-
     return actornamelist
 
 

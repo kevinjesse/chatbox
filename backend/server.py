@@ -8,7 +8,8 @@ import threading
 from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle
 import json
 import sys
-
+import os
+import traceback
 debug = False
 
 class ThreadingServer(object):
@@ -57,8 +58,8 @@ class ThreadingServer(object):
                         client.send(responseJson)
                         dialogueIdle(userid, debug)
                     except Exception as e:
-                        print e
-                        import traceback
+                        exc_type, exc_value, exc_traceback = sys.exc_info()
+                        traceback.print_tb(exc_traceback, limit=1,)
                         traceback.print_exc()
                 else:
                     raise error('Client disconnected')

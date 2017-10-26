@@ -147,18 +147,6 @@ Austin Chau
   <state type='tell'>
     <static>
       <question id='1' tag='t0'>
-        <string>Are you happy with this selection?</string>
-      </question>
-      <question id='2' tag='t0'>
-        <string>Did I do ok with the selection?</string>
-      </question>
-      <question id='3' tag='t0'>
-        <string>Is the selection satisfactory?</string>
-      </question>
-      <question id='4' tag='t0'>
-        <string>Please tell me if this recommendation is good.</string>
-      </question>
-      <question id='5' tag='tell'>
         <string>I'm thinking about what you might like.</string>
       </question>
     </static>

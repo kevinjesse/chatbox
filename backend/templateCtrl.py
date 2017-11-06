@@ -42,18 +42,44 @@ def get_sentence(state, is_dynamic, replacement=None):
     # TODO: gracefully decline request for dynamic sentences when there is none in template.
     is_dynamic_string = "dynamic" if is_dynamic else "static"
 
-    elem_questions = list(xml.iterfind("state[@type='{}']/{}/".format(state, is_dynamic_string)))
+    elem_questions = list(xml.iterfind(
+        "state[@type='{}']/{}/question_group[@type='root']/".format(
+            state, is_dynamic_string
+        )))
 
-    if len(elem_questions) != 0:  # in case xml return None
+    return __get_question_string(elem_questions, is_dynamic, replacement)
+
+
+def get_followup(question_tag, state, is_dynamic, replacement=None):
+    is_dynamic_string = "dynamic" if is_dynamic else "static"
+
+    elem_questions = list(xml.iterfind(
+        "state[@type='{}']/{}/question_group[@type='follow_up']/*[@tag='{}']".format(
+            state, is_dynamic_string, question_tag
+        )))
+
+    return __get_question_string(elem_questions, is_dynamic, replacement)
+
+
+def __get_question_string(xml_element, is_dynamic, replacement):
+    """
+    The internal method that takes in a question_group element,
+    choose a question in random and return a formatted string.
+    :param xml_element: the xml element corresponding to the selected question_group.
+    :param is_dynamic: whether to use strings that have replaceable placeholders.
+    :param replacement: list of items to be used for replacement.
+    :return: a formatted string ready for output
+    """
+    if len(xml_element) != 0:  # in case xml return None
         if is_dynamic and replacement is not None:
             elem_question = random.choice(filter(
                 lambda x:
                 int(x.find('choice_count').text) == -1 or int(x.find('choice_count').text) == len(
                     replacement),
-                elem_questions))
+                xml_element))
             return __format_dynamic_template(elem_question, replacement)
         else:
-            elem_question = random.choice(elem_questions)
+            elem_question = random.choice(xml_element)
             return elem_question.find('string').text
     else:
         print("elem_questions has 0 length")

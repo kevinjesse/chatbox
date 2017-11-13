@@ -85,9 +85,9 @@ def actorsbyID(alist):
     #sqlstring = """SELECT primaryname FROM name WHERE nconst = ANY (VALUES """ + aliststr + """) ORDER BY (nconst,""" + alistord + """)"""
     #SELECT name.primaryname FROM name join ( VALUES 88340',9),('nm0000620',10)) as x (nconst, ordering) on name.nconst = x.nconst order by x.ordering
     sqlstring = """SELECT primaryname FROM name join (VALUES """ + aliststr + """) AS X (nconst, ordering) ON name.nconst = X.nconst ORDER BY X.ordering """
-    print
-    print sqlstring
-    print
+    # print
+    # print sqlstring
+    # print
     cur.execute(sqlstring)
     rows = cur.fetchall()
     for person in rows:

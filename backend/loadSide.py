@@ -28,9 +28,9 @@ userSideTop5 = loadSide()
 
 try:
     import json
-    with open("userSideTop5.json", 'wb') as f:
-        #pickle.dump(userSideTop5, f)
-        json.dump(userSideTop5, f)
+    with open("userSideTop5.txt", 'wb') as f:
+        pickle.dump(userSideTop5, f)
+        #json.dump(userSideTop5, f)
 
 except IOError as e:
     print ("Cannot write files")

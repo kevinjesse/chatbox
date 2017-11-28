@@ -20,13 +20,13 @@ rows = cur.fetchall()
 api_key = rows[0][0]
 
 #initialize smaller name list for memory constraint
-names = {}
-cur.execute("SET statement_timeout = '10s'")
-sqlstring = """SELECT nconst, primaryname FROM name LIMIT 800000"""
-cur.execute(sqlstring)
-rows = cur.fetchall()
-for name in rows:
-    names[name[0]] = name[1]
+# names = {}
+# cur.execute("SET statement_timeout = '10s'")
+# sqlstring = """SELECT nconst, primaryname FROM name LIMIT 800000"""
+# cur.execute(sqlstring)
+# rows = cur.fetchall()
+# for name in rows:
+#     names[name[0]] = name[1]
 
 def moviebyID(movieID):
     """
@@ -70,10 +70,30 @@ def moviebyID(movieID):
 #     actornamelist = []
 #     for actor in alist:
 #         sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + actor + """' LIMIT 1"""
+#         print sqlstring
 #         cur.execute(sqlstring)
 #         rows = cur.fetchall()
 #         actornamelist.append(rows[0][0])
 #     return actornamelist
+
+def actorsbyID(alist):
+    alistord = """'""" + """','""".join(alist) + """'"""
+    alistval = ["('"+str(alist[i])+"' ," + str(i+1) + ")" for i in range(0, len(alist))]
+    aliststr = """, """.join(alistval)
+    actornamelist = []
+    #sqlstring = """SELECT primaryname FROM name WHERE nconst IN(""" + aliststr + """) ORDER BY (nconst,""" + aliststr +""")"""
+    #sqlstring = """SELECT primaryname FROM name WHERE nconst = ANY (VALUES """ + aliststr + """) ORDER BY (nconst,""" + alistord + """)"""
+    #SELECT name.primaryname FROM name join ( VALUES 88340',9),('nm0000620',10)) as x (nconst, ordering) on name.nconst = x.nconst order by x.ordering
+    sqlstring = """SELECT primaryname FROM name join (VALUES """ + aliststr + """) AS X (nconst, ordering) ON name.nconst = X.nconst ORDER BY X.ordering """
+    print
+    print sqlstring
+    print
+    cur.execute(sqlstring)
+    rows = cur.fetchall()
+    for person in rows:
+        actornamelist.append(person[0])
+    return actornamelist
+
 
 def peoplebyID(alist):
     global names
@@ -85,14 +105,14 @@ def peoplebyID(alist):
             actornamelist.append("")
     return actornamelist
 
-# def directorsbyID(dlist):
-#     directornamelist = []
-#     for director in dlist:
-#         sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + director + """' LIMIT 1"""
-#         cur.execute(sqlstring)
-#         rows = cur.fetchall()
-#         directornamelist.append(rows[0][0])
-#     return directornamelist
+def directorsbyID(dlist):
+    directornamelist = []
+    for director in dlist:
+        sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + director + """' LIMIT 1"""
+        cur.execute(sqlstring)
+        rows = cur.fetchall()
+        directornamelist.append(rows[0][0])
+    return directornamelist
 
 def upcomingMovies():
     """

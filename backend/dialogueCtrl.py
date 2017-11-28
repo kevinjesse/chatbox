@@ -145,15 +145,16 @@ def dialogueIdle(userid, debug=False):
     elif state[userid][-2] == "mpaa":
         # output = "I like this movie because it has this"
         try:
-            outputlist, qtup = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
+            outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
                                              scoreweights, history[userid])
-
-            passiveResp.extend(outputlist)
+            for each in outputlist:
+                passiveResp.append(each) #see if slower puts results in order pulls from listeners
+            #passiveResp.extend(outputlist)
             has_recommended_movie = True
         except Exception as e:
             print e
         state[userid].append("bye")
-        passiveResp.append("I'm told to stop talking to you.")
+        passiveResp.append("Bye!")
     else:
         titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
 

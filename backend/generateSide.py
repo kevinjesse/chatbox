@@ -4,6 +4,7 @@ import database_connect
 from movieCtrl import actorsbyID, directorsbyID
 from scipy.sparse import coo_matrix
 from scipy.io import mmwrite, mmread
+import json
 
 cur = database_connect.db_connect()
 
@@ -95,6 +96,42 @@ def fillSideDict(sparse, sideDict):
 
     return sideDict, movieSideDict
 
+
+def fillFullSideMovieDict():
+    movieSideDict = {}
+    lastmov= None
+    for i in range(0,len(movies)):
+        #if i == 1: break
+        #look up about movie
+        #Only do if we havent seen this movie
+
+        if i != lastmov:
+            print (str(i) + ":" + str(movies[i]))
+            netflixid = movies[i]
+
+            #init 5 fields
+            tempdict = dict()
+            for field in sidefields:
+                tempdict[field] = []
+            movieSideDict[i] = tempdict
+
+            #Get and place movie side information
+            sqlstring = """SELECT * FROM title INNER JOIN STARS ON title.tconst = stars.tconst INNER JOIN crew ON title.tconst = crew.tconst WHERE netflixid='""" + netflixid +"""'"""
+            cur.execute(sqlstring)
+            row = cur.fetchone()
+            movieSideDict[i]['genre'] = row[4].split(" ")
+            movieSideDict[i]['actor'] = actorsbyID(row[11].split(" "))
+            movieSideDict[i]['director'] = actorsbyID(row[13].split(" "))
+            movieSideDict[i]['mpaa'] = [row[6]]
+            #print movieSideDict[i]
+
+            # print genres
+            # print actors
+            # print directors
+            #insert row values into appropriate spots
+        lastmov = i
+    return movieSideDict
+
 def howManyReviewsInSparse(sparse_fav):
     count = {}
     for i, j, v in zip(sparse_fav.row, sparse_fav.col, sparse_fav.data):
@@ -111,12 +148,29 @@ def howManyReviewsInSparse(sparse_fav):
 
 sparse_fav = sparse_favorite()
 sideDict = initSideDict()
-userSideDict, movieSideDict = fillSideDict(sparse_fav, sideDict)
+#userSideDict, movieSideDict = fillSideDict(sparse_fav, sideDict)
+# with open("userSideDict.txt", 'wb') as f:
+#     pickle.dump(userSideDict, f)
 
-#print userSideDict
-with open("userSideDict.txt", 'wb') as f:
-    pickle.dump(userSideDict, f)
 
-with open("movieSideDict.txt", 'wb') as f:
-    pickle.dump(movieSideDict, f)
 
+#############
+# with open("movieSideDict.txt", 'wb') as f:
+#     pickle.dump(movieSideDict, f)
+
+
+
+
+# userSideDict = {}
+# with open("userSideDict.txt", 'r') as f:
+#     userSideDict = pickle.load(f)
+#
+# with open("userSideDict.json", 'w') as outfile:
+#     json.dump(userSideDict, outfile)
+##################
+
+
+#For full dictionary
+movieSideDict = fillFullSideMovieDict()
+with open("movieSideDict.json", 'wb') as f:
+    json.dump(movieSideDict, f)

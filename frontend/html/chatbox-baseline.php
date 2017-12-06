@@ -100,7 +100,7 @@ $UUID = uniqid();
         var chatInput = chatText;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput)
+            url: "/submit-baseline.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput)
         });
         request.done(function (response) {
             insertAI(response)

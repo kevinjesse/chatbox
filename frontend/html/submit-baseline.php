@@ -2,7 +2,7 @@
 /**
  * @author kevin.r.jesse@gmail.com
  */
-require_once("/home/ubuntu/chatbox/frontend/backend_connect.php");
+require_once("/home/krjesse/chatbox-baseline/frontend/backend_connect.php");
 
 if(function_exists($_GET['action'])) {
      echo $_GET['action']($s);

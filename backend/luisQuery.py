@@ -4,9 +4,19 @@
 #
 
 import requests
+import database_connect
+cur = database_connect.db_connect()
 
-app_id = 'a40a20d8-b506-4df2-83a7-981fb73ac684'
-sub_key= '8e429f4906f646fba1bdb54ed0baaf3a'
+sqlstring = """SELECT api_key FROM api WHERE api_type='luisid'"""
+cur.execute(sqlstring)
+rows = cur.fetchall()
+# This api_key will be moved to a database after initial build
+app_id = rows[0][0]
+
+sqlstring = """SELECT api_key FROM api WHERE api_type='luis'"""
+cur.execute(sqlstring)
+rows = cur.fetchall()
+sub_key= rows[0][0]
 base_url = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/'
 
 

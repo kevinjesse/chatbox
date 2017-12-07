@@ -1,4 +1,1 @@
-t0 ; Are you happy with this selection?
-t0 ; Did I do ok with the selection?
-t0 ; Is the selection satisfactory?
-t0 ; Please tell me if this recommendation is good.
+t0 ; Please fill out the survey and tell me how I did!

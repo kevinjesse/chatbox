@@ -31,23 +31,35 @@ def ctrl(intent, state, cache_results, titles_user, scoreweights, history, qLib)
                                 reverse=True)
 
         #not sure why this occasionally excepts keyerror from movieWith Score
-        try:
-            data = movieCtrl.moviebyID(movieWithScore[0][0])
 
-            #process directors and actors into readable for output
-            dlist = data[10].split(' ')
-            alist = data[13].split(' ')
-            actorNameList = movieCtrl.actorsbyID(alist)
-            directorNameList = movieCtrl.directorsbyID(dlist)
+        data = movieCtrl.moviebyID(movieWithScore[0][0])
 
-            output += "How about " + data[1] + " (" + data[
-                3] + ")? " + data[1] + " stars " + ", ".join(actorNameList[:3]) + "and is directed by " + \
-                      directorNameList[0] + ". This film is " + data[8] + " minutes is a " + \
-                      data[4].replace(' ', ', ') + " and rated " + data[
-                          6] + " film."
 
-        except Exception as e:
-            print e
+        #process directors and actors into readable for output
+        dlist = data[11].split(' ')
+        alist = data[14].split(' ')
+        actorNameList = movieCtrl.actorsbyID(alist)
+        directorNameList = movieCtrl.actorsbyID(dlist)
+        actorstring = ""
+        directorstring = ""
+        count = 0
+        for each in actorNameList:
+            if count > 2 : break;
+            else: count+=1;
+            try:
+                actorstring += each
+                if count < 2: actorstring+=", "
+            except IndexError:
+                break
+        if len(directorNameList) > 0:
+            directorstring = directorNameList[0]
+
+        output += "How about " + data[1] + " (" + data[
+            3] + ")? " + data[1] + " stars " + actorstring + " and is directed by " + \
+                  directorstring + ". This film is " + data[8] + " minutes is a " + \
+                  data[4].replace(' ', ', ') + " and rated " + data[
+                      6] + " film. "
+
 
         # output += "How about " + data[1] + " (" + data[
         #     3] + ")? " + data[1] + " stars " + ", ".join(actorNameList[:3]) + "and is directed by " + \

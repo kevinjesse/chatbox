@@ -18,9 +18,6 @@ state2entity_map ={'genre': 'genre', 'role': 'role', 'mpaa':'mpaa', 'title': 'ti
 def ctrl(state, userCache, user_tconst):
     tconst_list = []
 
-    print "VALUE IS"
-    print userCache[state2entity_map[state]]
-
     if userCache[state2entity_map[state]] is None:
         print "return high"
         return user_tconst
@@ -69,11 +66,11 @@ def ctrl(state, userCache, user_tconst):
         cur.execute(sqlstringm)
         rows = cur.fetchall()
         tconst_list = [tconst[0] for tconst in rows]
-        print '##########'
-        print tconst_list
-        print '##########'
-        print user_tconst
-        print '##########'
+        # print '##########'
+        # print tconst_list
+        # print '##########'
+        # print user_tconst
+        # print '##########'
         user_tconst = list(set(user_tconst).union(tconst_list))
         return user_tconst
 

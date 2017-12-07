@@ -3,7 +3,6 @@
 # @email kevin.r.jesse@gmail.com
 #
 
-import nltk
 from collections import defaultdict
 import json
 import os.path as path

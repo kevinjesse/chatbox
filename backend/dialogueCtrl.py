@@ -20,6 +20,7 @@ import luisIntent
 import luisQuery
 import tellCtrl
 import templateCtrl
+import matrixFact #matix factorization and matrix tell
 
 cur = database_connect.db_connect()
 
@@ -145,8 +146,10 @@ def dialogueIdle(userid, debug=False):
     elif state[userid][-2] == "mpaa":
         # output = "I like this movie because it has this"
         try:
-            outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
-                                             scoreweights, history[userid])
+            # outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
+            #                                  scoreweights, history[userid])
+            movielist, outputlist = matrixFact.recommend(cache_results[userid])
+            print outputlist
             for each in outputlist:
                 passiveResp.append(each) #see if slower puts results in order pulls from listeners
             #passiveResp.extend(outputlist)
@@ -154,7 +157,7 @@ def dialogueIdle(userid, debug=False):
         except Exception as e:
             print e
         state[userid].append("bye")
-        passiveResp.append("Bye!")
+        passiveResp.append("Please click on next and take the short survey.")
     else:
         titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
 

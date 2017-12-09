@@ -16,6 +16,7 @@ class State:
     MPAA = 'mpaa'
     RATING = 'rating'
     TELL = 'tell'
+    BYE = 'bye'
 
 
 def init_resources():

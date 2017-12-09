@@ -38,6 +38,18 @@ body {
 }
 
 /*--------------------
+Next Button
+--------------------*/
+.buttonCtrl {
+
+}
+
+#buttonCtrlForm {
+    display: none;
+}
+
+
+/*--------------------
 Chat
 --------------------*/
 .chat {

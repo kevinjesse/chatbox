@@ -38,6 +38,11 @@ $UUID = session_id();
         <input type="button" class="message-submit" id="btnSend" value="Send"/>
     </div>
 </div>
+<div class="buttonCtrl" id="buttonCtrlForm">
+    <form id="showSurveyForm" action="">
+        <input type="button" class="next" id="btnShowSurvey" value="Next" />
+    </form>
+</div>
 </body>
 </html>
 
@@ -55,6 +60,13 @@ $UUID = session_id();
                 sendChatText(chatInput, false);
             }
         });
+        document.getElementById("btnShowSurvey").onclick = function () {
+            /*request = $.ajax({
+                type: "GET",
+                url: "/submit.php?action=getJson&UUID="+ encodeURIComponent(id)
+            });*/
+            location.href = "/survey.php?id="+ encodeURIComponent(id);
+        }
     });
 
     function sendKill() {
@@ -119,6 +131,13 @@ $UUID = session_id();
         });
         request.done(function (response) {
             respJSON = JSON.parse(response);
+
+            console.log(response);
+
+            if (respJSON['signal'] == "end") {
+                document.getElementById('buttonCtrlForm').style.display = "block"
+            }
+
             insertAI(respJSON['response']);
             if (listen === false) {
                 listen = true;
@@ -128,5 +147,6 @@ $UUID = session_id();
         });
         $('#chatInput').val(null);
     }
+
 
 </script>

@@ -18,8 +18,8 @@ $UUID = session_id();
 <head>
     <title>Chatbox</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/chat.css">
-    <script src="/css/jquery.js"></script>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="css/jquery.js"></script>
 </head>
 <body>
 <div class="chat">
@@ -27,7 +27,7 @@ $UUID = session_id();
         <h1>Cortana</h1>
         <h2>Chatbox</h2>
         <figure class="avatar">
-            <img src="/lib/cortana.png"/></figure>
+            <img src="lib/cortana.png"/></figure>
     </div>
     <div id="messages" class="messages">
         <div id="messages-content" class="messages-content"></div>
@@ -65,7 +65,7 @@ $UUID = session_id();
                 type: "GET",
                 url: "/submit.php?action=getJson&UUID="+ encodeURIComponent(id)
             });*/
-            location.href = "/survey.php?id="+ encodeURIComponent(id);
+            location.href = "survey.php?id="+ encodeURIComponent(id);
         }
 
         var position = $('.chat').offset();
@@ -79,7 +79,7 @@ $UUID = session_id();
         var request;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=kill&UUID="+ encodeURIComponent(id)
+            url: "submit.php?action=kill&UUID="+ encodeURIComponent(id)
         });
         request.done(function (response) {
         });
@@ -133,7 +133,7 @@ $UUID = session_id();
         var chatInput = chatText;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
+            url: "submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
         });
         request.done(function (response) {
             respJSON = JSON.parse(response);

@@ -67,6 +67,12 @@ $UUID = session_id();
             });*/
             location.href = "/survey.php?id="+ encodeURIComponent(id);
         }
+
+        var position = $('.chat').offset();
+        $('.buttonCtrl').offset({
+            top: position.top + $('.chat').outerHeight(true),
+            left: position.left
+        })
     });
 
     function sendKill() {

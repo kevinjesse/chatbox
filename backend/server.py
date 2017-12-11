@@ -84,7 +84,7 @@ if __name__ == "__main__":
     initResources()
     if 'debug' in sys.argv: debug = True
     while True:
-        ThreadingServer('localhost',13113).listen()
+        ThreadingServer('localhost/chatbox-base',13113).listen()
         # dpret, active = dialoguePassive()
 
 

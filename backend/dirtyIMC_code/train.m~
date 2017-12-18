@@ -6,6 +6,11 @@ if (strcmp(feature, "genre"))
      X = mmread("sparseXgenre.mm.mtx");
      Y = mmread("sparseYgenre.mm.mtx");
 end
+
+if (strcmp(feature, "mpaa"))
+     X = mmread("sparseXgenre.mm.mtx");
+     Y = mmread("sparseYgenre.mm.mtx");
+end
 % 
 Obs = mmread("sparseN.mm.mtx");
 %Make full
@@ -15,14 +20,15 @@ Y = full(Y);
 [m,n] = size(Obs);
 [j,k] = size(X);
 %PCA on x matrix to rank 12
-approxXrank12 = pcasolver(X, 12, j);
-
+if (strcmp(feature, "genre"))
+     X = pcasolver(X, 12, j);
+end
 
 
 obsf = Obs';
 perm = randperm(n);
 ObsShuf = obsf(perm,:);
-XShuf = approxXrank12(perm,:);
+XShuf = X(perm,:);
 
 start = 1;
 folds=10;

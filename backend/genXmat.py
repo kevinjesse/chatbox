@@ -5,8 +5,7 @@ from scipy.sparse import coo_matrix
 from scipy.io import mmwrite, mmread
 import database_connect
 import sys
-import psutil
-import gc
+
 
 userSideTop5 = {}
 
@@ -14,6 +13,10 @@ try:
     with open("userSideTop5.json", 'rb') as outfile:
         #userSideTop5 = pickle.load(outfile)
         userSideTop5 = json.load(outfile)
+
+    with open("userSideDict.txt", 'rb') as outfile:
+        userSideDict = pickle.load(outfile)
+        # userSideTop5 = json.load(outfile)
     with open("movieSideDict.json", 'rb') as outfile:
         movieSide = json.load(outfile)
         #movieSide = pickle.load(outfile)
@@ -74,23 +77,43 @@ for mode in mymode:
     modelist = [row[0] for row in rows]
     npgen = np.zeros((len(userlist), len(modelist)))
 
+
+# X Matrice
+
     for user in userlist:
-        userinfo = userSideTop5[user][mode]
-        for item in userinfo:
-            npgen[userlist.index(user)][modelist.index(item)] = 1
-        print user
+        if user == '1557557': continue
+        totalfreq = 0
+        userinfo = userSideDict[user][mode]
+        for item,freq in userinfo.iteritems():
+            npgen[userlist.index(user)][modelist.index(item)] = freq
+            totalfreq+=freq
+
+        npgen[userlist.index(user)] /= totalfreq
+        print str(user) + ", total freq: " +str(totalfreq)
+    #     #print psutil.virtual_memory()
+
+    # for user in userlist:
+    #     userinfo = userSideTop5[user][mode]
+    #     for item in userinfo:
+    #         npgen[userlist.index(user)][modelist.index(item)] = 1
+    #     print user
         #print psutil.virtual_memory()
 
     sparse = coo_matrix(npgen)
     mmwrite("sparseX"+mode+".mm", sparse)
 
+###
+
     npgen = np.zeros((len(movielist), len(modelist)))
 
     for movieid in range(0,len(movielist)):
         movieinfo = movieSide[str(movieid)][mode]
+        freq = 0
         for item in movieinfo:
             print item
             npgen[movieid][modelist.index(item)] = 1
+            freq +=1
         print movieid
+        npgen[movieid] /= freq
     sparse = coo_matrix(npgen)
     mmwrite("sparseY" + mode + ".mm", sparse)

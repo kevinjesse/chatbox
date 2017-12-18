@@ -1,13 +1,18 @@
-function [M, min_lambda] = train(mode)
+function [M, min_lambda] = train(feature)
 %TRAIN Summary of this function goes here
 %   Detailed explanation goes here
 
-% if (strcmp(feature, "genre"))
+if (strcmp(feature, "genre"))
      X = mmread("sparseXgenre.mm.mtx");
      Y = mmread("sparseYgenre.mm.mtx");
-% end
+end
+
+if (strcmp(feature, "mpaa"))
+     X = mmread("sparseXgenre.mm.mtx");
+     Y = mmread("sparseYgenre.mm.mtx");
+end
 % 
- Obs = mmread("sparseN.mm.mtx");
+Obs = mmread("sparseN.mm.mtx");
 %Make full
 X = full(X);
 Y = full(Y);
@@ -15,14 +20,15 @@ Y = full(Y);
 [m,n] = size(Obs);
 [j,k] = size(X);
 %PCA on x matrix to rank 12
-approxXrank12 = pcasolver(X, 12, j);
-
+if (strcmp(feature, "genre"))
+     X = pcasolver(X, 12, j);
+end
 
 
 obsf = Obs';
 perm = randperm(n);
 ObsShuf = obsf(perm,:);
-XShuf = approxXrank12(perm,:);
+XShuf = X(perm,:);
 
 start = 1;
 folds=10;
@@ -33,7 +39,7 @@ partsize = n/folds;
 
 %lambda = logspace(-5,5,100);
 lambda = [10^-3 10^-2 10^-1 1 10 100];
-lambda = [10^-3 10^-1 10 100];
+%lambda = [10^-3 10^-1 10 100];
 lambda1 = [100000000];
 lambda_loss = zeros(folds,length(lambda));
 lambda_ratio = zeros(folds,length(lambda));
@@ -90,7 +96,7 @@ end
 [UU SS VV U S V] = dirtyIMC(Obs', X, Y, min_lambda, lambda1);
 M = UU*SS*VV';
 
-% filename = strcat(strcat("M",feature),".mm.mtx"); 
-% mmwrite(filename,M);
+filename = strcat(strcat("M",feature),".mm.mtx"); 
+mmwrite(filename,M);
 end
 

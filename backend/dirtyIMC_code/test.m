@@ -1,7 +1,7 @@
 
 feature = "genre";
-X = mmread("sparseXgenre.mm.mtx");
-Y = mmread("sparseYgenre.mm.mtx");
+X = mmread("sparseXactor.mm.mtx");
+Y = mmread("sparseYactor.mm.mtx");
 Obs = mmread("sparseN.mm.mtx");
 
 %Make full

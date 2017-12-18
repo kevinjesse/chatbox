@@ -79,6 +79,7 @@ def train():
 
 def computeRow(userCache):
     X = translateDialogue("genre", userCache)
+    print X
     Z = np.matmul(X, np.matmul(M, Y.T))
     return Z
 
@@ -86,14 +87,14 @@ def recommend(userCache):
     Z = computeRow(userCache)
     Z = Z.tolist()
     bestScore = max(Z[0])
+    print bestScore
     RecList = [movielist[i] for i,j in enumerate(Z[0]) if j == bestScore] #netflix ids of recommendations
+    print RecList
     if len(RecList) > 1: return RecList, recommendationText(pickTie(RecList))
-    return RecList, recommendationText(RecList[1])
+    return RecList, recommendationText(RecList[0])
 # Convert to names
 
 def pickTie(RecList):
-    reclistval = ["('"+str(RecList[i])+"' ," + str(i+1) + ")" for i in range(0, len(RecList))]
-    idstring = """, """.join(reclistval)
     sqlstring = """SELECT title.netflixid FROM title join ratings ON title.tconst = ratings.tconst WHERE netflixid ='""" +str(RecList[0]) + """'"""
     for id in RecList[1:]:
         sqlstring += """OR netflixid='""" + str(id) + """' """
@@ -112,22 +113,44 @@ def recommendationText(id):
     rows = cur.fetchone()
     tconst = rows[0]
     data = movieCtrl.moviebyID(tconst)
-    print data
     # process directors and actors into readable for output
     output = []
-    output.append("How about " + data[1] + " (" + data[3] + ")? ")
-    if len(data) > 10:
-        dlist = data[11].split(' ')
-        alist = data[14].split(' ')
-        actorNameList = movieCtrl.actorsbyID(alist)
-        directorNameList = movieCtrl.actorsbyID(dlist)
-        output.append(data[1] + " stars " + ", ".join(actorNameList[:3]) + " and is directed by " + \
-                      directorNameList[0] + ".")
+
+    # process directors and actors into readable for output
+    dlist = data[11].split(' ')
+    alist = data[14].split(' ')
+
+    actorNameList = movieCtrl.actorsbyID(alist)
+    directorNameList = movieCtrl.actorsbyID(dlist)
+
+    actorstring = ""
+    directorstring = ""
+    count = 0
+    for each in actorNameList:
+        if count > 2:
+            break
+        else:
+            count += 1
+        try:
+            actorstring += each
+            if count < 2: actorstring += ", "
+        except IndexError:
+            break
+    if len(directorNameList) > 0:
+        directorstring = directorNameList[0]
+
+
+
+    output.append("How about " + data[1] + " (" + data[
+        3] + ")? ")
+    output.append(data[1] + " stars " + actorstring + " and is directed by " + \
+              directorstring + ".")
     output.append("This film is " + data[8] + " minutes is a " + \
-                  data[4].replace(' ', ', ') + " and is rated " + data[
-                      6] +".")
+              data[4].replace(' ', ', ') + " and is rated " + data[
+                  6])
 
     print output
     return output
 # userCache = {'rating': None, 'mpaa': None, 'duration': None, 'person': None, 'year': None, 'genre': [u'comedy']}
 # recommend(userCache)
+#print movielist[20]

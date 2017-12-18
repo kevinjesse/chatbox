@@ -148,6 +148,7 @@ def dialogueIdle(userid, debug=False):
         try:
             # outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
             #                                  scoreweights, history[userid])
+            print "happens after this"
             movielist, outputlist = matrixFact.recommend(cache_results[userid])
             print outputlist
             for each in outputlist:
@@ -155,11 +156,11 @@ def dialogueIdle(userid, debug=False):
             #passiveResp.extend(outputlist)
             has_recommended_movie = True
         except Exception as e:
-            print e
+            passiveResp.append("I messed up a calculation. I cannot give a recommendation at this time.")
         state[userid].append("bye")
         passiveResp.append("Please click on next and take the short survey.")
-    else:
-        titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
+    #else:
+        #titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
 
     if has_recommended_movie and debug and not passiveResp:
         chatlogger.logToFile(textHistory[userid], userid)

@@ -51,6 +51,10 @@ fieldset[name="turkID"].section input[type="text"] {
 	border-color: darkgray;
 }
 
+fieldset.question h1 {
+	margin-top: 1em;
+}
+
 /* ——————————————————————————————————————————————————
 	MARK: - For each question
  —————————————————————————————————————————————————— */
@@ -72,10 +76,6 @@ fieldset.question h1 {
 
 fieldset.question h2 {
 	font-size: 1em;
-}
-
-fieldset.question p {
-	line-height: 0.5em;
 }
 
 fieldset.question p.did-not-respond {

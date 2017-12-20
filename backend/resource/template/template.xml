@@ -106,7 +106,7 @@ Austin Chau
     <static>
       <question_group type='root'>
         <question id='1'>
-          <string>What is your favorite actor or actress?</string>
+          <string>Who is your favorite actor or actress?</string>
         </question>
         <question id='2'>
           <string>Can you tell me some actors or actresses you prefer to watch?</string>
@@ -130,7 +130,7 @@ Austin Chau
     <static>
       <question_group type='root'>
         <question id='1'>
-          <string>What is your favorite director?</string>
+          <string>who is your favorite director?</string>
         </question>
         <question id='2'>
           <string>Tell me a director you prefer.</string>

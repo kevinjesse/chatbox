@@ -44,7 +44,7 @@ def ctrl(cache_results, titles_user, scoreweights, history):
             directorNameList = movieCtrl.actorsbyID(dlist)
             output.append(data[1] + " stars " + ", ".join(actorNameList[:3]) + " and is directed by " + \
                           directorNameList[0] + ".")
-        output.append("This film is " + data[8] + " minutes is a " + \
-                      data[4].replace(' ', ', ') + " and rated " + data[
-                          6])
+        output.append("This film is " + data[8] + " minutes long. It is a " + \
+                      data[4].replace(' ', ', ') + ". It is rated " + data[
+                          6] + ".")
     return output

@@ -9,15 +9,23 @@ import dialogueCtrl as dCtrl
 from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle
 import json
 import sys
-import os
+import time
 import traceback
 debug = False
+
+def chatbox_socket():
+    if debug:
+        return 13120;
+    else:
+        return 13113;
 
 class ThreadingServer(object):
     """
     Threading server for every interaction with backend. Creates thread on each message to allow for multiple
     messages sent before response.
     """
+
+    push_queue = []
 
     def __init__(self, host, port):
         self.host = host
@@ -67,6 +75,8 @@ class ThreadingServer(object):
 
                         #change to JSON
                         responseJson = json.dumps({'response': response, 'userid': userid, 'signal': signal, 'passiveLen': passiveLen})
+                        time.sleep(0.75)
+                        print "I'm pushing! \n{}".format(responseJson)
                         client.send(responseJson)
                         dialogueIdle(userid, debug)
 
@@ -80,11 +90,18 @@ class ThreadingServer(object):
                 client.close()
                 return False
 
+
+    def push_to_client(self, client, response):
+        while not self.len(self.push_queue):
+            client.send(response)
+
 if __name__ == "__main__":
     initResources()
-    if 'debug' in sys.argv: debug = True
+    if 'debug' in sys.argv:
+        debug = True
+        print "Running in debug mode. (socket: {})".format(chatbox_socket())
     while True:
-        ThreadingServer('localhost',13113).listen()
+        ThreadingServer('localhost',chatbox_socket()).listen()
         # dpret, active = dialoguePassive()
 
 

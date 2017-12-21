@@ -10,6 +10,7 @@ Controls the dialogue chatbox. Dialogue control is called from server.py
 
 # Imports
 import json
+import Queue
 
 import numpy as np
 
@@ -34,7 +35,7 @@ titles_user = {}
 active = False
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
-passiveResp = []
+passiveResp = Queue.Queue()
 scoreweights = np.array([.1, .1, .5, .2, .1])
 
 end_dialogue = "Bye! Please click the next button to proceed."
@@ -84,7 +85,7 @@ def dialogueCtrl(input_json):
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
-            passiveResp.append("I do not understand your answer. ")
+            passiveResp.put("I do not understand your answer. ")
             question = history[userid][-1][0]
         else:
             # will change state machine to class object
@@ -99,8 +100,8 @@ def dialogueCtrl(input_json):
         # Append history
         history[userid].append((text, state[userid][-1]))
         history[userid].append((question, state[userid][-1]))
-        passiveResp.append(question)
-        resp = passiveResp.pop(0)
+        passiveResp.put(question)
+        resp = passiveResp.get()
 
         textHistory[userid].append(("U", text))
         textHistory[userid].append(("C", resp))
@@ -116,7 +117,7 @@ def dialogueCtrl(input_json):
         #     print "state is bye"
         #     signal = 'end'
 
-        return resp, userid, len(passiveResp), signal
+        return resp, userid, passiveResp.qsize(), signal
 
     except ValueError as e:
         print "dialogueCtrl: {}".format(e)
@@ -142,11 +143,11 @@ def initResources():
 
 
 def listen(userid):
-    while not len(passiveResp):
+    while not passiveResp.qsize():
         continue
-    resp = passiveResp.pop(0)
+    resp = passiveResp.get()
     textHistory[userid].append(("C", resp))
-    return resp, userid, len(passiveResp)
+    return resp, userid, passiveResp.qsize()
 
 
 def dialogueIdle(userid, debug=False):
@@ -170,19 +171,23 @@ def dialogueIdle(userid, debug=False):
         try:
             outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
             for each in outputlist:
-                print "Each: {}".format(each)
-                passiveResp.append(each)  # see if slower puts results in order pulls from listeners
+                print "Each: \n{}".format(each)
+                passiveResp.put(each)  # see if slower puts results in order pulls from listeners
+            print "outputlist: \n{}".format(outputlist)
             # passiveResp.extend(outputlist)
+
+            state[userid].append(State.BYE)
+            passiveResp.put(end_dialogue)
+
             has_recommended_movie = True
         except Exception as e:
             print "Error at dialogueCtrl::164: {}".format(e)
-        state[userid].append(State.BYE)
-        passiveResp.append(end_dialogue)
+
     else:
         titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
 
     if has_recommended_movie and debug and not passiveResp:
-        print "textHistory: {}".format(textHistory[userid])
+        # print "textHistory: {}".format(textHistory[userid])
         has_recommended_movie = False
 
     return

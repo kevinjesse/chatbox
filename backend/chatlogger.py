@@ -17,7 +17,7 @@ def logToFile(history, userid):
 
 def __appendToLogFile(history, userid):
     with threadLock:
-        print "history log: {}".format(history);
+        # print "history log: {}".format(history);
         input_string = "\n".join("{}: {}".format(str(speaker), str(text)) for (speaker, text) in history)
         log_directory = "../logs/text_logs"
         try:

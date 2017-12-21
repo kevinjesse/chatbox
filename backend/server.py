@@ -68,15 +68,15 @@ class ThreadingServer(object):
 
                         #signal = None
                         response, userid, passiveLen, signal = dialogueCtrl(data)
-                        print response, userid, passiveLen, signal
+                        # print response, userid, passiveLen, signal
                         # TODO: This is a bad idea but it works
                         if response == dCtrl.end_dialogue:
                             signal = 'end'
 
                         #change to JSON
                         responseJson = json.dumps({'response': response, 'userid': userid, 'signal': signal, 'passiveLen': passiveLen})
-                        time.sleep(0.75)
-                        print "I'm pushing! \n{}".format(responseJson)
+                        #time.sleep(1)
+                        print "I'm pushing! \n{}\n".format(responseJson)
                         client.send(responseJson)
                         dialogueIdle(userid, debug)
 

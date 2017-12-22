@@ -171,17 +171,17 @@ def dialogueIdle(userid, debug=False):
         try:
             outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
             # TODO: Workaround for the out of order bug, by making it a single json response
-            outputString = "<br><br>".join(outputlist)
-            #for each in outputlist:
+            #outputString = "<br><br>".join(outputlist)
+            for each in outputlist:
                 # print "Each: \n{}".format(each)
-                #passiveResp.put(each)  # see if slower puts results in order pulls from listeners
+                passiveResp.put(each)  # see if slower puts results in order pulls from listeners
 
 
 
             # print "outputlist: \n{}".format(outputlist)
             # passiveResp.extend(outputlist)
 
-            passiveResp.put(outputString)
+            #passiveResp.put(outputString)
 
             passiveResp.put(end_dialogue)
             state[userid].append(State.BYE)

@@ -35,7 +35,7 @@ titles_user = {}
 active = False
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
-passiveResp = Queue.Queue()
+passiveResp = {}
 scoreweights = np.array([.1, .1, .5, .2, .1])
 
 end_dialogue = "Bye! Please click the next button to proceed."
@@ -70,7 +70,7 @@ def dialogueCtrl(input_json):
             # TODO: Substitute temp replacement with actual recommendations
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
             question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
-
+            passiveResp[userid] = Queue.Queue()
             history[userid] = []
             textHistory[userid] = []
             cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
@@ -85,7 +85,7 @@ def dialogueCtrl(input_json):
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
-            passiveResp.put("I do not understand your answer. ")
+            passiveResp[userid].put("I do not understand your answer. ")
             question = history[userid][-1][0]
         else:
             # will change state machine to class object
@@ -100,8 +100,8 @@ def dialogueCtrl(input_json):
         # Append history
         history[userid].append((text, state[userid][-1]))
         history[userid].append((question, state[userid][-1]))
-        passiveResp.put(question)
-        resp = passiveResp.get()
+        passiveResp[userid].put(question)
+        resp = passiveResp[userid].get()
 
         textHistory[userid].append(("U", text))
         textHistory[userid].append(("C", resp))
@@ -117,7 +117,7 @@ def dialogueCtrl(input_json):
         #     print "state is bye"
         #     signal = 'end'
 
-        return resp, userid, passiveResp.qsize(), signal
+        return resp, userid, passiveResp[userid].qsize(), signal
 
     except ValueError as e:
         print "dialogueCtrl: {}".format(e)
@@ -143,11 +143,12 @@ def initResources():
 
 
 def listen(userid):
-    while not passiveResp.qsize():
+    while not passiveResp[userid].qsize():
         continue
-    resp = passiveResp.get()
+    resp = passiveResp[userid].get()
+    print resp
     textHistory[userid].append(("C", resp))
-    return resp, userid, passiveResp.qsize()
+    return resp, userid, passiveResp[userid].qsize()
 
 
 def dialogueIdle(userid, debug=False):
@@ -174,7 +175,7 @@ def dialogueIdle(userid, debug=False):
             #outputString = "<br><br>".join(outputlist)
             for each in outputlist:
                 # print "Each: \n{}".format(each)
-                passiveResp.put(each)  # see if slower puts results in order pulls from listeners
+                passiveResp[userid].put(each)  # see if slower puts results in order pulls from listeners
 
 
 
@@ -183,7 +184,7 @@ def dialogueIdle(userid, debug=False):
 
             #passiveResp.put(outputString)
 
-            passiveResp.put(end_dialogue)
+            passiveResp[userid].put(end_dialogue)
             state[userid].append(State.BYE)
 
             has_recommended_movie = True
@@ -193,7 +194,7 @@ def dialogueIdle(userid, debug=False):
     else:
         titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
 
-    if has_recommended_movie and debug and not passiveResp:
+    if has_recommended_movie and debug and not passiveResp[userid]:
         # print "textHistory: {}".format(textHistory[userid])
         has_recommended_movie = False
 

@@ -7,11 +7,11 @@ session_start();
 #ini_set('display_errors', 1);
 #ini_set('display_startup_errors', 1);
 #error_reporting(E_ALL);
-if (!session_id()) {
-    session_id(uniqid());
-}
+//if (!session_id()) {
+//    session_id(uniqid());
+//}
 
-$UUID = session_id();
+$UUID = uniqid();
 ?>
 
 <html>
@@ -144,13 +144,15 @@ $UUID = session_id();
                 document.getElementById('buttonCtrlForm').style.display = "block"
             }
 
-            insertAI(respJSON['response']);
+
             if (listen === false) {
+                insertAI(respJSON['response']);
                 listen = true;
                 sendChatText('', true);
                 listen = false;
             }
         });
+
         $('#chatInput').val(null);
     }
 

@@ -13,7 +13,7 @@ import psycopg2
 def db_connect():
     cur = None
     try:
-        conn = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='postgres'", connect_timeout=30)
+        conn = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='2251'", connect_timeout=30)
         conn.autocommit = True #Auto commit must be on if you want changes to be immediate for insert/update
         cur = conn.cursor()
         cur.itersize = 10000

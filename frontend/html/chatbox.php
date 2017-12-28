@@ -24,10 +24,10 @@ $UUID = uniqid();
 <body>
 <div class="chat">
     <div class="chat-title">
-        <h1>Cortana</h1>
-        <h2>Chatbox</h2>
+        <h1>Chatbot</h1>
+        <h2>Interaction - Chatbox</h2>
         <figure class="avatar">
-            <img src="lib/cortana.png"/></figure>
+            <img src="lib/chatbox-small.png"/></figure>
     </div>
     <div id="messages" class="messages">
         <div id="messages-content" class="messages-content"></div>
@@ -118,10 +118,12 @@ $UUID = uniqid();
 
     function insertAI(resp) {
         if (resp != "") {
-            $('<div class="message loading new"><figure class="avatar"><img src="/lib/cortana.png" /></figure><span></span></div>').appendTo($('.messages-content'));
+            $('<div class="message loading new"><figure class="avatar"><img src="/lib/chatbox-small.png" ' +
+                '/></figure><span></span></div>').appendTo($('.messages-content'));
             setTimeout(function () {
                 $('.message.loading').remove();
-                $('<div class="message new"><figure class="avatar"><img src="/lib/cortana.png" /></figure>' + resp + '</div>').appendTo($('.messages-content')).addClass('new');
+                $('<div class="message new"><figure class="avatar"><img src="/lib/chatbox-small.png" /></figure>' +
+                    resp + '</div>').appendTo($('.messages-content')).addClass('new');
                 setDate();
                 scrollDown(1000)
             }, 1000);

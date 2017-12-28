@@ -38,12 +38,12 @@ def ctrl(cache_results, titles_user, scoreweights, history):
         output.append("How about " + data[1] + " (" + data[
             3] + ")? ")
         if len(data) > 10:
-            dlist = data[11].split(' ')
+            dlist = data[12].split(' ')
             alist = data[14].split(' ')
             actorNameList = movieCtrl.actorsbyID(alist)
             directorNameList = movieCtrl.actorsbyID(dlist)
-            output.append(data[1] + " stars " + ", ".join(actorNameList[:3]) + " and is directed by " + \
-                          directorNameList[0] + ".")
+            output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
+                          ", ".join(directorNameList) + ".")
         output.append("This film is {} minutes long. It is {} {} movie, and is rated {}.".format(
             data[8],
             "an" if any(v in data[4][:1].lower() for v in ['a','e','i','o','u']) else "a",

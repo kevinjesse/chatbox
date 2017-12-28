@@ -54,9 +54,11 @@ def ctrl(state, intent, entities, userCache):
             elif nc17: ent['entity']='NC-17'
         elif dataType =='person':
             ent['entity'] = ent['entity'].title()
+            # this is to create two categories one for actor and director instead of people
+            dataType = state
 
         if userCache[dataType]:
-            if ent['entity'] not in userCache[entity_map[ent['type']]]:
+            if ent['entity'] not in userCache[state]:
                 userCache[dataType].append(ent['entity'])
         else:
             userCache[dataType] = [ent['entity']]
@@ -64,7 +66,7 @@ def ctrl(state, intent, entities, userCache):
         # if intent['intent'] == 'None':
         #     return userCache, answered
 
-
+    print userCache
     return userCache, answered
 
 #Implement scoring and this can be a follow up function that could be a series of binary questions.

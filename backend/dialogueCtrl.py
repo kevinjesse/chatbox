@@ -33,12 +33,14 @@ cache_results = {}
 curr_movie = {}
 titles_user = {}
 active = False
+nomatch = {}
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
 passiveResp = {}
 scoreweights = np.array([.1, .1, .5, .2, .1])
 
 end_dialogue = "Bye! Please click the next button to proceed."
+notperfect_string = "There is no exact match for what was specified, so I will do my best!"
 
 import pprint
 
@@ -71,10 +73,11 @@ def dialogueCtrl(input_json):
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
             question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
             passiveResp[userid] = Queue.Queue()
+            nomatch[userid] = False
             history[userid] = []
             textHistory[userid] = []
             cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
-                                     'duration': None}
+                                     'duration': None, 'actor': None, 'director': None}
             curr_movie[userid] = None
 
             textHistory[userid].append(("C", question))
@@ -152,7 +155,7 @@ def listen(userid):
 
 
 def dialogueIdle(userid, debug=False):
-    global active, passiveResp, has_recommended_movie
+    global active, passiveResp, has_recommended_movie, nomatch
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
@@ -163,36 +166,33 @@ def dialogueIdle(userid, debug=False):
     # Logic
     if state[userid][-1] == State.BYE:
         chatlogger.logToFile(textHistory[userid], userid)
-
         return
+
     if state[userid][-2] == State.BYE:
         return
-    elif state[userid][-2] == State.MPAA:
-        # output = "I like this movie because it has this"
-        try:
-            outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
-            # TODO: Workaround for the out of order bug, by making it a single json response
-            #outputString = "<br><br>".join(outputlist)
-            for each in outputlist:
-                # print "Each: \n{}".format(each)
-                passiveResp[userid].put(each)  # see if slower puts results in order pulls from listeners
-
-
-
-            # print "outputlist: \n{}".format(outputlist)
-            # passiveResp.extend(outputlist)
-
-            #passiveResp.put(outputString)
-
-            passiveResp[userid].put(end_dialogue)
-            state[userid].append(State.BYE)
-
-            has_recommended_movie = True
-        except Exception as e:
-            print "Error at dialogueCtrl::164: {}".format(e)
-
     else:
-        titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
+        titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])
+        if not nomatch[userid] and not match:
+            nomatch[userid] = True
+            passiveResp[userid].put(notperfect_string)
+
+        if state[userid][-2] == State.MPAA:
+            try:
+                outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
+                # TODO: Workaround for the out of order bug, by making it a single json response
+                # outputString = "<br><br>".join(outputlist)
+                for each in outputlist:
+                    # print "Each: \n{}".format(each)
+                    passiveResp[userid].put(each)  # see if slower puts results in order pulls from listeners
+                passiveResp[userid].put(end_dialogue)
+                state[userid].append(State.BYE)
+
+                has_recommended_movie = True
+            except Exception as e:
+                print "Error at dialogueCtrl::164: {}".format(e)
+            chatlogger.logToFile(textHistory[userid], userid)
+            state[userid].append(State.BYE)
+            return
 
     if has_recommended_movie and debug and not passiveResp[userid]:
         # print "textHistory: {}".format(textHistory[userid])

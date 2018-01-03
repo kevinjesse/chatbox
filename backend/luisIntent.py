@@ -27,7 +27,7 @@ def ctrl(state, intent, entities, userCache):
     print
     pprint(entities)
     print
-    answered = False
+    answered = True
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
                   'builtin.datetimeV2.duration': 'duration', 'builtin.datetimeV2.daterange': 'year',
@@ -39,11 +39,15 @@ def ctrl(state, intent, entities, userCache):
     #     #default by setting year to
     if intent['intent'] == 'NoPreference' or intent['intent'] == 'Yes' or intent['intent'] == 'No':
         answered = True
+        userCache['satisfied'] = intent['intent']
         return userCache, answered
     
     for ent in entities:
         dataType = entity_map[ent['type']]
-        if dataType == state2entity_map[state]: answered = True
+        if dataType != state2entity_map[state]:
+            answered = False
+            continue
+
         if dataType == 'year' or dataType == 'duration':
             #for now we will do nothing with year and duration
             userCache[dataType] = year(ent)

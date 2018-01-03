@@ -177,4 +177,14 @@ Austin Chau
       </question_group>
     </static>
   </state>
+  <state type='tell2'>
+    <static>
+      <question_group type='root'>
+        <question id='1' tag='t0'>
+            <string>Is this recommendation satisfactory?</string>
+        </question>
+      </question_group>
+    </static>
+  </state>
+
 </root>

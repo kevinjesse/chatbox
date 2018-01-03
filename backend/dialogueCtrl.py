@@ -34,13 +34,15 @@ curr_movie = {}
 titles_user = {}
 active = False
 nomatch = {}
+movieWithRatings = {}
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
 passiveResp = {}
-scoreweights = np.array([.1, .1, .5, .2, .1])
+scoreweights = np.array([.2, .2, .2, .2, .2])
 
 end_dialogue = "Bye! Please click the next button to proceed."
 notperfect_string = "There is no exact match for what was specified, so I will do my best!"
+no_recommendation = "I'm sorry but there is no recommendation that can be made with your criteria."
 
 import pprint
 
@@ -60,12 +62,12 @@ def dialogueCtrl(input_json):
         mode = js['mode'] == "true"
 
         if mode:
-            signal = None
+            signal = "listen"
             a, b, c = listen(userid)
             return a, b, c, signal
 
         output = ''
-        question = None
+        question = ''
         if userid not in state or text == '':
             # If this is a new user
             state[userid] = ["genre", ]
@@ -76,8 +78,9 @@ def dialogueCtrl(input_json):
             nomatch[userid] = False
             history[userid] = []
             textHistory[userid] = []
+            movieWithRatings[userid] = []
             cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
-                                     'duration': None, 'actor': None, 'director': None}
+                                     'duration': None, 'actor': None, 'director': None, 'satisfied': None}
             curr_movie[userid] = None
 
             textHistory[userid].append(("C", question))
@@ -92,13 +95,17 @@ def dialogueCtrl(input_json):
             question = history[userid][-1][0]
         else:
             # will change state machine to class object
-            if not q_order.index(state[userid][-1]) == len(q_order) - 1:
-                newState = q_order[q_order.index(state[userid][-1]) + 1]
-            else:
-                newState = state[userid][-1]
-            state[userid].append(newState)
-            print "[DEBUG] cache_results: {}".format(curr_movie[userid])
-            question = templateCtrl.get_sentence(state=newState, is_dynamic=False)
+            if state[userid][-1] in q_order:
+                if not q_order.index(state[userid][-1]) == len(q_order) - 1:
+                    newState = q_order[q_order.index(state[userid][-1]) + 1]
+                else:
+                    newState = state[userid][-1]
+                state[userid].append(newState)
+                print "[DEBUG] cache_results: {}".format(curr_movie[userid])
+                question = templateCtrl.get_sentence(state=newState, is_dynamic=False)
+                print question
+                print newState
+
 
         # Append history
         history[userid].append((text, state[userid][-1]))
@@ -124,7 +131,7 @@ def dialogueCtrl(input_json):
 
     except ValueError as e:
         print "dialogueCtrl: {}".format(e)
-        return None, None, None, None
+        return '', userid, passiveResp[userid].qsize(), None
 
 
 def initResources():
@@ -146,16 +153,16 @@ def initResources():
 
 
 def listen(userid):
-    while not passiveResp[userid].qsize():
-        continue
-    resp = passiveResp[userid].get()
+    # while not passiveResp[userid].qsize():
+    #     continue
+    resp = passiveResp[userid].get(True)
     print resp
     textHistory[userid].append(("C", resp))
     return resp, userid, passiveResp[userid].qsize()
 
 
 def dialogueIdle(userid, debug=False):
-    global active, passiveResp, has_recommended_movie, nomatch
+    global active, passiveResp, has_recommended_movie, nomatch, movieWithRatings
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
@@ -170,29 +177,55 @@ def dialogueIdle(userid, debug=False):
 
     if state[userid][-2] == State.BYE:
         return
-    else:
-        titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])
+
+    if state[userid][-1] != State.TELL2:
+        titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
+                                                   titles_user[userid])
         if not nomatch[userid] and not match:
             nomatch[userid] = True
-            passiveResp[userid].put(notperfect_string)
+            passiveResp[userid].put(notperfect_string, False)
 
-        if state[userid][-2] == State.MPAA:
-            try:
-                outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
-                # TODO: Workaround for the out of order bug, by making it a single json response
-                # outputString = "<br><br>".join(outputlist)
-                for each in outputlist:
-                    # print "Each: \n{}".format(each)
-                    passiveResp[userid].put(each)  # see if slower puts results in order pulls from listeners
+    if state[userid][-1] == State.TELL:
+        try:
+            #movieWithRatings[userid] = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
+            print titles_user[userid]
+            movieWithRatings[userid] = tellCtrl.sortByRating(titles_user[userid])
+            movieWithRatings[userid]
+            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            # TODO: Workaround for the out of order bug, by making it a single json response
+            # outputString = "<br><br>".join(outputlist)
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+
+        except Exception as e:
+            print "Error at dialogueCtrl::164: {}".format(e)
+        #chatlogger.logToFile(textHistory[userid], userid)
+        state[userid].append(State.TELL2)
+        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+        passiveResp[userid].put(question, False)
+        #cache_results[userid]['satisfied'][-1] = None
+
+
+    elif state[userid][-1] == State.TELL2:
+        if cache_results[userid]['satisfied'] == 'Yes':
+            passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.BYE)
+        else:
+            movieWithRatings[userid].pop(0)
+            if not movieWithRatings[userid]:
+                passiveResp[userid].put(no_recommendation)
                 passiveResp[userid].put(end_dialogue)
                 state[userid].append(State.BYE)
-
-                has_recommended_movie = True
-            except Exception as e:
-                print "Error at dialogueCtrl::164: {}".format(e)
-            chatlogger.logToFile(textHistory[userid], userid)
-            state[userid].append(State.BYE)
-            return
+                return
+            print movieWithRatings[userid]
+            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+            # passiveResp[userid].put(end_dialogue)
+            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+            passiveResp[userid].put(question)
 
     if has_recommended_movie and debug and not passiveResp[userid]:
         # print "textHistory: {}".format(textHistory[userid])

@@ -76,9 +76,10 @@ class ThreadingServer(object):
                         #change to JSON
                         responseJson = json.dumps({'response': response, 'userid': userid, 'signal': signal, 'passiveLen': passiveLen})
                         #time.sleep(1)
-                        print "I'm pushing! \n{}\n".format(responseJson)
+                        #print "I'm pushing! \n{}\n".format(responseJson)
                         client.send(responseJson)
-                        dialogueIdle(userid, debug)
+                        if signal != "listen":
+                            dialogueIdle(userid, debug)
 
                     except Exception as e:
                         exc_type, exc_value, exc_traceback = sys.exc_info()

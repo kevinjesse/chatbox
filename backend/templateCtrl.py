@@ -16,6 +16,7 @@ class State:
     MPAA = 'mpaa'
     RATING = 'rating'
     TELL = 'tell'
+    TELL2 = 'tell2'
     BYE = 'bye'
 
 

@@ -25,7 +25,6 @@
     $survey_q1 = filter_input(INPUT_POST, "survey-q1");
     $survey_q2 = filter_input(INPUT_POST, "survey-q2");
     $survey_q3 = filter_input(INPUT_POST, "survey-q3");
-    $survey_q4 = filter_input(INPUT_POST, "survey-q4");
 
     // Save to file
     $timestamp = date("Y-m-d-H-i-s", time());
@@ -40,14 +39,14 @@
         'survey' => [
             'q1' => $survey_q1,
             'q2' => $survey_q2,
-            'q3' => $survey_q3,
-	    'q4' => $survey_q4
+            'q3' => $survey_q3
         ],
         'rating' => $ratings
     ];
 
-    $fn = dirname( __FILE__, 3). "/logs/survey_logs/user-" . $userID . ".txt";
-    $file = fopen($fn, "a+") or die("Could not open survey_log file. Please report this to HIT administrator.");
+    $fn = $_SERVER['DOCUMENT_ROOT']
+    echo $fn;
+    $file = fopen($fn, "a+") or die("Could not open survey_log file.");
     $json = json_encode($json_array);
     fwrite($file, $json);
     fwrite($file, "\n");

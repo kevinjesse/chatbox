@@ -1,0 +1,24 @@
+User:	5a4cd5059788a;		Timestamp:	2018-01-03 05:05:51.650337
+C: What types of films do you like to see?
+U: action
+C: I'd like to get to know what your actor preferences are.
+U: johnny depp
+C: Tell me a director you prefer.
+U: stephen spillberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Pirates of the Caribbean: The Curse of the Black Pearl (2003)? 
+C: Pirates of the Caribbean: The Curse of the Black Pearl stars Ted Elliott, Jay Wolpert, Gore Verbinski, Orlando Bloom, Keira Knightley, Jerry Bruckheimer, Terry Rossio, Stuart Beattie, Johnny Depp, Geoffrey Rush and is directed by Ted Elliott, Terry Rossio, Stuart Beattie, Jay Wolpert.
+C: This film is 143 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Pirates of the Caribbean: Dead Man's Chest (2006)? 
+C: Pirates of the Caribbean: Dead Man's Chest stars Terry Rossio, Orlando Bloom, Jay Wolpert, Stuart Beattie, Keira Knightley, Ted Elliott, Johnny Depp, Gore Verbinski, Jack Davenport, Jerry Bruckheimer and is directed by Ted Elliott, Terry Rossio, Stuart Beattie, Jay Wolpert.
+C: This film is 151 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -35,44 +35,69 @@ def ctrl(state, userCache, user_tconst):
             sqlstring += """SELECT tconst FROM title WHERE genres LIKE '%""" + userCache['genre'][0] + """%'"""
             if len(userCache['genre']) > 1:
                 for gen in userCache['genre'][1:]:
-                    """ AND genres LIKE '%""" + gen + """%'"""
+                    sqlstring+= """ AND genres LIKE '%""" + gen + """%'"""
+            print sqlstring
             cur.execute(sqlstring)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
 
 
         elif state == 'actor':
-            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """' ORDER BY nconst ASC LIMIT 1"""
+            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """'"""
+            if len(userCache[state]) > 1:
+                for more in userCache[state][1:]:
+                    sqlstring+=""" OR primaryname = '""" + more + """' """
             print sqlstring
+            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(userCache[state]))
             cur.execute(sqlstring)
             rows = cur.fetchall()
-            nm = rows[0][0]
-            sqlstringm = """SELECT tconst FROM stars WHERE principalcast LIKE '%""" + nm + """%' """
-            for act in userCache[state][1:]:
-                sqlstring = """SELECT nconst FROM name WHERE primaryname LIKE '%""" + act + """%' ORDER BY nconst ASC LIMIT 1"""
-                cur.execute(sqlstring)
-                rows = cur.fetchall()
-                nm = rows[0][0]
-                sqlstringm += """AND principalcast LIKE '%""" + nm + """%' """
 
+            if not rows:
+                return user_tconst, False
+            names=[r[0] for r in rows]
+
+            sqlstringm = """SELECT tconst FROM stars WHERE principalcast LIKE '%""" + names[0] + """%' """
+            print names
+            for each in names:
+                sqlstringm += """ AND principalcast LIKE '%""" + each + """%'"""
+            # sqlstringm += """AND principalcast LIKE '%""" + nm + """%' """
+
+            print sqlstringm
             cur.execute(sqlstringm)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
 
         #print sqlstring
         elif state == 'director':
-            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """' ORDER BY nconst ASC LIMIT 1"""
+            # sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """' ORDER BY nconst ASC LIMIT 1"""
+            # cur.execute(sqlstring)
+            # rows = cur.fetchall()
+            # nm = rows[0][0]
+            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """'"""
+            if len(userCache[state]) > 1:
+                for more in userCache[state][1:]:
+                    sqlstring+=""" OR primaryname = '""" + more + """' """
+            print sqlstring
+            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(userCache[state]))
             cur.execute(sqlstring)
             rows = cur.fetchall()
-            nm = rows[0][0]
-            sqlstringm = """SELECT tconst FROM crew WHERE directors LIKE '%""" + nm + """%' """
-            for act in userCache[state][1:]:
-                sqlstring = """SELECT nconst FROM name WHERE primaryname LIKE '%""" + act + """%' ORDER BY nconst ASC LIMIT 1"""
-                cur.execute(sqlstring)
-                rows = cur.fetchall()
-                nm = rows[0][0]
-                sqlstringm += """AND directors LIKE '%""" + nm + """%' """
+            if not rows:
+                return user_tconst, False
+            names=[r[0] for r in rows]
 
+            sqlstringm = """SELECT tconst FROM crew WHERE directors LIKE '%""" + names[0] + """%' """
+            # for act in userCache[state][1:]:
+            #     sqlstring = """SELECT nconst FROM name WHERE primaryname LIKE '%""" + act + """%' ORDER BY nconst ASC LIMIT 1"""
+            #     cur.execute(sqlstring)
+            #     rows = cur.fetchall()
+            #     nm = rows[0][0]
+            #     sqlstringm += """AND directors LIKE '%""" + nm + """%' """
+
+            print names
+            for each in names:
+                sqlstringm += """ AND directors LIKE '%""" + each + """%'"""
+
+            print sqlstringm
             cur.execute(sqlstringm)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
@@ -97,7 +122,7 @@ def ctrl(state, userCache, user_tconst):
             # IF STATE IS NOT IMPLEMENTED JUST RETURN what we started with
             # for now just return user_tconst
             return user_tconst ,match
-    except KeyError as e:
+    except KeyError, IndexError:
         # Error with states while developing, ignore this filter round
         tconst_list = backup_tconst
         match = False

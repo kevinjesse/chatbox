@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-06-23-56-23"},"cryptID":"$1$r9wWp84H$y2oUecCPM2MmPMHGQYKdS0","userID":"5a51d124ccbcf","turkID":"A5V3ZMQI0PU3F","survey":{"q1":"1","q2":"3","q3":"It was a bit slow.","q4":"5"},"rating":["3","3","3","3","3","3","3"]}

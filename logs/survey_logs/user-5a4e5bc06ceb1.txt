@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-04-08-55-15"},"cryptID":"$1$Ua2eqJcp$xFT3AAmlAQonzWAlyjxG31","userID":"5a4e5bc06ceb1","turkID":"A1U0GNE5ELW5V7","survey":{"q1":"0","q2":"5","q3":"It was like talking to a real person.","q4":"5"},"rating":["3","3","3","3","3","3"]}

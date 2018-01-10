@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-08-10-52-11"},"cryptID":"$1$nc\/loOp6$TRD\/Go39eg8.R\/Q1ydHpR\/","userID":"5a53bd08773a0","turkID":"A2XM6C78S9L8UG","survey":{"q1":"1","q2":"4","q3":"simple and clear","q4":"5"},"rating":["3","3","3","3","3","2"]}

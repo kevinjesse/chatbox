@@ -19,6 +19,7 @@ import database_connect
 import filterMovies
 import luisIntent
 import luisQuery
+import luisVerify
 import tellCtrl
 import templateCtrl
 from templateCtrl import State
@@ -79,8 +80,7 @@ def dialogueCtrl(input_json):
             history[userid] = []
             textHistory[userid] = []
             movieWithRatings[userid] = []
-            cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
-                                     'duration': None, 'actor': None, 'director': None, 'satisfied': None}
+            cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None,'actor': None, 'director': None}
             curr_movie[userid] = None
 
             textHistory[userid].append(("C", question))
@@ -89,6 +89,7 @@ def dialogueCtrl(input_json):
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
+        cache_results[userid] = luisVerify.ctrl(cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
             passiveResp[userid].put("I do not understand your answer. ")

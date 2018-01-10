@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-03-09-50-44"},"cryptID":null,"userID":null,"turkID":null,"survey":{"q1":null,"q2":null,"q3":null},"rating":[]}

@@ -1,0 +1,25 @@
+User:	5a51d124ccbcf;		Timestamp:	2018-01-06 23:53:04.735600
+C: What are your movie interests?
+U: horror 
+C: Tell me some actors you like.
+U: denzel washington
+C: who is your favorite director?
+C: There is no exact match for what was specified, so I will do my best!
+U: spike lee
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: great
+C: 
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

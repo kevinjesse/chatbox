@@ -1,0 +1,181 @@
+User:	5a4cfe14576cf;		Timestamp:	2018-01-03 08:00:38.758932
+C: I am trying to understand your genre preferences.
+U: action
+C: Can you tell me some actors or actresses you like?
+U: keanu reeves
+C: who is your favorite director?
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cfe5fea728;		Timestamp:	2018-01-03 08:02:02.932108
+C: What is your favorite genre?
+U: action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: comedy
+C: I do not understand your answer. 
+C: Can you tell me some actors or actresses you prefer to watch?
+U: keanu reeves
+C: who is your favorite director?
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cfec24ec25;		Timestamp:	2018-01-03 08:03:41.870306
+C: What types of movies, or genres, do you like?
+U: comedy
+C: I'd like to get to know what your actor preferences are.
+U: brad pitt
+C: who is your favorite director?
+U: jj abrams
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Snatch (2000)? 
+C: Snatch stars Matthew Vaughn, Dennis Farina, Jon Harris, Jason Statham, John Murphy, Brad Pitt, Benicio Del Toro, Guy Ritchie, Hugo Luczyc-Wyhowski, Tim Maurice-Jones and is directed by Guy Ritchie.
+C: This film is 104 minutes long. It is a comedy and crime movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4d059334983;		Timestamp:	2018-01-03 08:33:28.809692
+C: I am trying to understand your genre preferences.
+U: i like adventure and comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: brad pitt is good
+C: who is your favorite director?
+U: i don't have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: Inglourious Basterds stars Mélanie Laurent, Quentin Tarantino, David Wasco, Sally Menke, Robert Richardson, Brad Pitt, Diane Kruger, Eli Roth, Lawrence Bender and is directed by Quentin Tarantino.
+C: Is this recommendation satisfactory?
+C: This film is 153 minutes long. It is an adventure, drama and war movie, and is rated R.
+C: How about Inglourious Basterds (2009)? 
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4d06cb0c1df;		Timestamp:	2018-01-03 08:38:40.206460
+C: Tell me a genre you prefer?
+U: i like action movies
+C: Who is your favorite actor or actress?
+U: brad pitt
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg-13
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Fury (2014)? 
+C: Fury stars Bill Block, John Lesher, David Ayer, Steven Price, Logan Lerman, Michael Peña, Brad Pitt, Ethan Smith, Roman Vasyanov, Shia LaBeouf and is directed by David Ayer.
+C: This film is 134 minutes long. It is an action, drama and war movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Megamind (2010)? 
+C: Megamind stars Tina Fey, Lara Breay, Denise Nolan Cascino, Lorne Balfe, Brent Simons, Alan Schoolcraft, Tom McGrath, Brad Pitt, Will Ferrell, Jonah Hill and is directed by Alan Schoolcraft, Brent Simons.
+C: This film is 95 minutes long. It is an action, animation and comedy movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Spy Game (2001)? 
+C: Spy Game stars Harry Gregson-Williams, Robert Redford, Michael Frost Beckner, Brad Pitt, David Arata, Marc Abraham, Tony Scott, Catherine McCormack, Douglas Wick, Stephen Dillane and is directed by Michael Frost Beckner, David Arata.
+C: This film is 126 minutes long. It is an action, crime and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Allied (2016)? 
+C: Allied stars Alan Silvestri, Brad Pitt, Jared Harris, Graham King, Don Burgess, Vincent Ebrahim, Steven Knight, Marion Cotillard, Steve Starkey, Robert Zemeckis and is directed by Steven Knight.
+C: This film is 124 minutes long. It is an action, drama and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4d0962b9443;		Timestamp:	2018-01-03 08:49:14.016087
+C: What are your movie interests?
+U: action 
+C: I'd like to get to know what your actor preferences are.
+U: tom cruise
+C: who is your favorite director?
+U: spielberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Edge of Tomorrow (2014)? 
+C: Edge of Tomorrow stars Bill Paxton, John-Henry Butterworth, Brendan Gleeson, Christopher McQuarrie, Jez Butterworth, Hiroshi Sakurazaka, Emily Blunt, Tom Cruise, Doug Liman, Jason Hoffs and is directed by Christopher McQuarrie, Jez Butterworth, John-Henry Butterworth, Hiroshi Sakurazaka.
+C: This film is 113 minutes long. It is an action, adventure and sci-fi movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4d09850538a;		Timestamp:	2018-01-03 08:50:11.086734
+C: What types of movies, or genres, do you like?
+U: Drama or sci-fi
+C: Please tell me the people you like to see in a movie.
+U: anyone
+C: Tell me a director you prefer.
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R or PG-13
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about The Mountain II (2016)? 
+C: The Mountain II stars Mehmet Basbaran, Doruk Acar, Murat Arkin, Ozan Agaç, Bedii Akin, Eylül Arular, Alper Caglar and is directed by Alper Caglar.
+C: This film is 135 minutes long. It is a drama, history and war movie, and is rated .
+C: Is this recommendation satisfactory?
+U: Yes, this sounds good
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4d09c72d0b8;		Timestamp:	2018-01-03 08:51:16.479388
+C: Can you tell me some genres?
+U: horror, comedy, sci fi
+C: I'd like to get to know what your actor preferences are.
+U: buschemi
+C: Tell me a director you prefer.
+U: tarantino
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: sure
+C: 
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

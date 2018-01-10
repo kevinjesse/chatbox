@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-03-08-02-24"},"cryptID":"$1$MYDymoqS$.l8acacOvS8JC93L6qWBt.","userID":"5a4cfe5fea728","turkID":"testTurkIDAustin","survey":{"q1":"1","q2":"1","q3":"tet"},"rating":["1","1","1","1","1","1","1"]}

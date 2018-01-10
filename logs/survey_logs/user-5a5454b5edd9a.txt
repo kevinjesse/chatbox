@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-08-21-40-18"},"cryptID":"$1$d.1MiEFG$uZ1cDdkf.\/U\/FZBILH4Fh\/","userID":"5a5454b5edd9a","turkID":"ABM77ZQWCHPNX","survey":{"q1":"0","q2":"4","q3":"I liked that it was quick. It could have asked me if I had anymore questions before the chatbox said bye.","q4":"4"},"rating":["3","3","3","2","3","3"]}

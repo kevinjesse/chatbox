@@ -1,0 +1,19 @@
+User:	5a53bd08773a0;		Timestamp:	2018-01-08 10:51:27.713798
+C: What are your movie interests?
+U: comedy and horror
+C: Who is your favorite actor or actress?
+U: steve buschemi
+C: Tell me a director you prefer.
+U: tarantino
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Forrest Gump (1994)? 
+C: Forrest Gump stars Wendy Finerman, Winston Groom, Robert Zemeckis, Gary Sinise, Eric Roth, Steve Starkey, Sally Field, Steve Tisch, Robin Wright, Tom Hanks and is directed by Winston Groom, Eric Roth.
+C: This film is 142 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

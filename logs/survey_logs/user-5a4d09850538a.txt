@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-03-08-51-21"},"cryptID":"$1$NdFo5jCi$Y7SVer6RH5SCqyryxth3y\/","userID":"5a4d09850538a","turkID":"A3K43RI91Y567E","survey":{"q1":"1","q2":"3","q3":"Very quick and to the point. No mistakes or adding in small talk."},"rating":["2","2","2","2","3","3"]}

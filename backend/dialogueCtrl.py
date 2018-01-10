@@ -89,7 +89,7 @@ def dialogueCtrl(input_json):
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
-        cache_results[userid] = luisVerify.ctrl(cache_results[userid])
+        # cache_results[userid] = luisVerify.ctrl(cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
             passiveResp[userid].put("I do not understand your answer. ")

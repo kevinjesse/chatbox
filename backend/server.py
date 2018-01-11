@@ -74,7 +74,7 @@ if __name__ == "__main__":
     initResources()
     if 'debug' in sys.argv: debug = True
     while True:
-        ThreadingServer('localhost',13113).listen()
+        ThreadingServer('localhost',13114).listen()
         # dpret, active = dialoguePassive()
 
 

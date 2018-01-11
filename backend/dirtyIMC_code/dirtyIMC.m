@@ -11,10 +11,6 @@ function [UU SS VV U S V] = dirtyIMC(A, X, Y, lambda, lambda1, maxit, showopt)
 	[ii jj vv] = find(A);
 	[n1, d1] = size(X);
 	[n2, d2] = size(Y);
-    disp(size(A, 1))
-    disp(n1)
-    disp(size(A, 2))
-    disp(n2)
 	if(size(A, 1) ~= n1 || size(A, 2) ~= n2)
 		error('Dimensionality between observations and features does not match\n');
 	end
@@ -39,7 +35,7 @@ function [UU SS VV U S V] = dirtyIMC(A, X, Y, lambda, lambda1, maxit, showopt)
 		entries = vv - dotp(U*S, V, ii, jj);
 		A = sparse(ii, jj, entries, n1, n2);
 		[UU SS VV] = mysolver_IMC(A, X, Y, lambda, 5, UU, SS, VV, 0);
-        
+
 		obj = sum((vv-dotp(U*S, V, ii, jj)+dotp(X*UU*SS*VV', Y, ii, jj)).^2)/2 + lambda*sum(diag(SS))+lambda1*sum(diag(S));
 		if(showopt ~= 0)
 			fprintf('Objective = %e\n', obj);
@@ -52,7 +48,7 @@ function [UU SS VV U S V] = dirtyIMC(A, X, Y, lambda, lambda1, maxit, showopt)
 		entries = vv - dotp(X*UU*SS*VV', Y, ii, jj);
 		B = sparse(ii, jj, entries, n1, n2);
 		[U S V] = mysolver_alt(B, lambda1, [], min(d1, d2), 5, U, S, V, 0);
-        
+
 		obj = sum((vv-dotp(U*S, V, ii, jj)+dotp(X*UU*SS*VV', Y, ii, jj)).^2)/2 + lambda*sum(diag(SS))+lambda1*sum(diag(S));
 		if(showopt ~= 0)
 			fprintf('Objective = %e\n', obj);

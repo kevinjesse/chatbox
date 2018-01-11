@@ -1,7 +1,7 @@
-function [M, min_lambda] = train(feature)
+%function [M, min_lambda] = train(feature)
 %TRAIN Summary of this function goes here
 %   Detailed explanation goes here
-
+feature = "genre"
 if (strcmp(feature, "genre"))
      X = mmread("sparseXgenre.mm.mtx");
      Y = mmread("sparseYgenre.mm.mtx");
@@ -13,19 +13,36 @@ if (strcmp(feature, "mpaa"))
 end
 % 
 Obs = mmread("sparseN.mm.mtx");
+
+
+%%%TEST%%%%
+Obs = Obs(1:200, 1:200);
+X = X(1:200, :);
+Y = Y(1:200, :);
+
+
 %Make full
 X = full(X);
 Y = full(Y);
 
+
 [m,n] = size(Obs);
 [j,k] = size(X);
 %PCA on x matrix to rank 12
-if (strcmp(feature, "genre"))
-     X = pcasolver(X, 12, j);
-end
+% if (strcmp(feature, "genre"))
+%      X = pcasolver(X, 12, j);
+% end
+
 
 
 obsf = Obs';
+
+%User normalization on Netflix True ratings
+%sum along the columns (users) and divide by number of users (340)
+%obsf = obsf./sum(obsf, 2); %m is movies, %n is users
+% obsf = obsf - sum(obsf, 2)/n;
+% obsf = obsf - mean(obsf(:));
+
 perm = randperm(n);
 ObsShuf = obsf(perm,:);
 XShuf = X(perm,:);
@@ -40,11 +57,11 @@ partsize = n/folds;
 %lambda = logspace(-5,5,100);
 lambda = [10^-3 10^-2 10^-1 1 10 100];
 %lambda = [10^-3 10^-1 10 100];
+%lambda = [.9030];
+
 lambda1 = [100000000];
 lambda_loss = zeros(folds,length(lambda));
 lambda_ratio = zeros(folds,length(lambda));
-
-%Completed = zeros(34,1188);
 
 for part = start:folds
     if part == start
@@ -73,7 +90,10 @@ for part = start:folds
        disp(part);
        disp(lambda(a));
         for b = 1:length(lambda1)
+           %disp(lambda1(b));
            [UU SS VV U S V] = dirtyIMC(ObsFold, XFold, Y, lambda(a), lambda1(b));
+           
+           CompletedTraining = XFold*UU*SS*VV'*Y';
            Completed =  XFoldTest*UU*SS*VV'*Y';
             
            [~,com_i] = sort(Completed, 2, 'descend');
@@ -98,5 +118,5 @@ M = UU*SS*VV';
 
 filename = strcat(strcat("M",feature),".mm.mtx"); 
 mmwrite(filename,M);
-end
+%end
 

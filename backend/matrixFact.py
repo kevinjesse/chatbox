@@ -10,10 +10,14 @@ import array as arr
 import pickle
 import matlab.engine
 import movieCtrl
+import matlab
 eng = matlab.engine.start_matlab()
 eng.cd(r'dirtyIMC_code')
-M = np.array(mmread("./dirtyIMC_code/Mgenre.mm.mtx"))
-Y = mmread("./dirtyIMC_code/sparseYgenre.mm.mtx").todense()
+# M = np.array(mmread("./dirtyIMC_code/Mgenre.mm.mtx"))
+# Y = mmread("./dirtyIMC_code/sparseYgenre.mm.mtx").todense()
+# M = mmread("./dirtyIMC_code/M.mm.mtx").todense()
+# X = mmread("./dirtyIMC_code/XR.mm.mtx").todense()
+
 try:
     with open("netflix/movielist.txt", "rb") as fp:  # Unpickling
         movielist = pickle.load(fp)
@@ -58,14 +62,16 @@ def translateDialogue(mode,userCache):
     cur.execute(sqlstring)
     rows = cur.fetchall()
     modelist = [row[0] for row in rows]
-    npgen = np.zeros(len(modelist))
+    #npgen = np.zeros(len(modelist))
+    npgen = [0]*len(modelist)
     for item in userCache[mode] :
         npgen[modelist.index(item)] = 1
-    return npgen.T
+    #return npgen.T
+    return npgen
 
     #npgen = np.zeros((len(userlist), len(modelist)))
 
-import matlab
+
 
 
 
@@ -74,41 +80,51 @@ import matlab
 # matlabdata = matlab.double(X)
 
 def train():
-    M, t = eng.train(nargout=2)
-    return M
+    M, XR, YR = eng.train2(nargout=3)
+    return M, XR, YR
+
+def test(X):
+    SN = eng.test2(matlab.double(X),nargout=1)
+    return SN
 
 def computeRow(userCache):
     X = translateDialogue("genre", userCache)
-    print X
-    Z = np.matmul(X, np.matmul(M, Y.T))
-    return Z
+    return test(X)[0]
 
 def recommend(userCache):
-    Z = computeRow(userCache)
-    Z = Z.tolist()
-    bestScore = max(Z[0])
-    print bestScore
-    RecList = [movielist[i] for i,j in enumerate(Z[0]) if j == bestScore] #netflix ids of recommendations
-    print RecList
-    if len(RecList) > 1: return RecList, recommendationText(pickTie(RecList))
-    return RecList, recommendationText(RecList[0])
+    Z = map(int, computeRow(userCache))
+    Z[:] = [x - 1 for x in Z] #make 0 indexed
+
+    # Z = Z.tolist()
+    # bestScore = max(Z[0])
+    # print bestScore
+    # RecList = [movielist[i] for i,j in enumerate(Z[0]) if j == bestScore] #netflix ids of recommendations
+    # print RecList
+    # print userCache
+    # print Z
+    # if len(RecList) > 1: return RecList, recommendationText(pickTie(RecList))
+    # return RecList, recommendationText(RecList[0])
+    print movielist
+    print Z[0]
+    print recommendationText(movielist[Z[0]])
+    return Z, recommendationText(movielist[Z[0]])
 # Convert to names
 
-def pickTie(RecList):
-    sqlstring = """SELECT title.netflixid FROM title join ratings ON title.tconst = ratings.tconst WHERE netflixid ='""" +str(RecList[0]) + """'"""
-    for id in RecList[1:]:
-        sqlstring += """OR netflixid='""" + str(id) + """' """
-    sqlstring += """ORDER BY numvotes DESC"""
-    cur.execute(sqlstring)
-    rows = cur.fetchall()
-    return rows[0][0]
+# def pickTie(RecList):
+#     sqlstring = """SELECT title.netflixid FROM title join ratings ON title.tconst = ratings.tconst WHERE netflixid ='""" +str(RecList[0]) + """'"""
+#     for id in RecList[1:]:
+#         sqlstring += """OR netflixid='""" + str(id) + """' """
+#     sqlstring += """ORDER BY numvotes DESC"""
+#     cur.execute(sqlstring)
+#     rows = cur.fetchall()
+#     return rows[0][0]
 
    # # sqlstring = """SELECT tconst FROM title INNER JOIN ratings ON title.tconst=ratings.tconst WHERE """
    #  for id in RecList:
    #      sqlstring += """netflixid ='""" + str(id) + """' OR"""
 
 def recommendationText(id):
-    sqlstring = """SELECT tconst FROM title WHERE netflixid ='"""+str(id)+"""'"""
+    sqlstring = """SELECT tconst FROM title WHERE netflixid ='"""+str(id)+"""' ORDER BY tconst DESC LIMIT 1"""
     cur.execute(sqlstring)
     rows = cur.fetchone()
     tconst = rows[0]
@@ -149,8 +165,10 @@ def recommendationText(id):
               data[4].replace(' ', ', ') + " and is rated " + data[
                   6])
 
-    print output
-    return output
-# userCache = {'rating': None, 'mpaa': None, 'duration': None, 'person': None, 'year': None, 'genre': [u'comedy']}
+userCache = {'rating': None, 'mpaa': None, 'duration': None, 'person': None, 'year': None, 'genre': [u'comedy', u'animation']}
 # recommend(userCache)
 #print movielist[20]
+
+# II = [ 0.0,   0.0,   0.0,   0.0,   1.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,  0.0,   0.0,   0.0,   0.0, ]
+# print test(II)
+#recommend(userCache)

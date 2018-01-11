@@ -23,6 +23,7 @@ import luisVerify
 import tellCtrl
 import templateCtrl
 from templateCtrl import State
+import matrixFact
 
 cur = database_connect.db_connect()
 
@@ -179,20 +180,22 @@ def dialogueIdle(userid, debug=False):
     if state[userid][-2] == State.BYE:
         return
 
-    if state[userid][-1] != State.TELL2:
-        titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
-                                                   titles_user[userid])
-        if not nomatch[userid] and not match:
-            nomatch[userid] = True
-            passiveResp[userid].put(notperfect_string, False)
+    # if state[userid][-1] != State.TELL2:
+    #     titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
+    #                                                titles_user[userid])
+    #     if not nomatch[userid] and not match:
+    #         nomatch[userid] = True
+    #         passiveResp[userid].put(notperfect_string, False)
 
     if state[userid][-1] == State.TELL:
         try:
             #movieWithRatings[userid] = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
-            print titles_user[userid]
-            movieWithRatings[userid] = tellCtrl.sortByRating(titles_user[userid])
-            movieWithRatings[userid]
-            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            #movieWithRatings[userid] = tellCtrl.sortByRating(titles_user[userid])
+            #outputlist = tellCtrl.toText(movieWithRatings[userid])
+            movieWithRatings[userid] = matrixFact.recommend(cache_results[userid])
+            print movieWithRatings[userid]
+            outputlist = matrixFact.recommendationText(movieWithRatings[userid][0])
+
             # TODO: Workaround for the out of order bug, by making it a single json response
             # outputString = "<br><br>".join(outputlist)
             for each in outputlist:
@@ -205,6 +208,7 @@ def dialogueIdle(userid, debug=False):
         state[userid].append(State.TELL2)
         question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
         passiveResp[userid].put(question, False)
+
         #cache_results[userid]['satisfied'][-1] = None
 
 
@@ -220,7 +224,8 @@ def dialogueIdle(userid, debug=False):
                 state[userid].append(State.BYE)
                 return
             print movieWithRatings[userid]
-            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            #outputlist = tellCtrl.toText(movieWithRatings[userid])
+            outputlist = matrixFact.recommendationText(movieWithRatings[userid][0])
             for each in outputlist:
                 # print "Each: \n{}".format(each)
                 passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners

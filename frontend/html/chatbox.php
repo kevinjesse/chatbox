@@ -58,6 +58,7 @@ $UUID = uniqid();
             if (chatInput != "") {
                 insertMessage(chatInput);
                 sendChatText(chatInput, false);
+                $('#chatInput').val(null);
             }
         });
         document.getElementById("btnShowSurvey").onclick = function () {
@@ -66,7 +67,7 @@ $UUID = uniqid();
                 url: "/submit.php?action=getJson&UUID="+ encodeURIComponent(id)
             });*/
             location.href = "survey.php?id="+ encodeURIComponent(id);
-        }
+        };
 
         var position = $('.chat').offset();
         $('.buttonCtrl').offset({
@@ -92,6 +93,7 @@ $UUID = uniqid();
             if (chatInput != "") {
                 insertMessage(chatInput);
                 sendChatText(chatInput, false);
+                $('#chatInput').val(null);
             }
         }
     }
@@ -127,6 +129,7 @@ $UUID = uniqid();
                 setDate();
                 scrollDown(1000)
             }, 1000);
+            $('#chatInput').val(null);
         }
     }
 
@@ -142,21 +145,52 @@ $UUID = uniqid();
 
             console.log(response);
 
-            if (respJSON['signal'] == "end") {
-                document.getElementById('buttonCtrlForm').style.display = "block"
-            }
 
+            insertAI(respJSON['response']);
 
-            if (listen === false) {
-                insertAI(respJSON['response']);
-                listen = true;
-                sendChatText('', true);
-                listen = false;
-            }
+            //if (listen === false) {
+            ////////   listen = true;
+
+            //sendChatText('', listen);
+
+            //}
         });
+        //listen = false;
 
-        $('#chatInput').val(null);
     }
+
+    function listener() {
+        var request;
+        if (listen === false) {
+            listen = true;
+            request = $.ajax({
+                type: "GET",
+                url: "submit.php?action=submit&UUID=" + encodeURIComponent(id) + "&chattext=" + encodeURIComponent('') + "&mode=" + true
+            });
+            request.done(function (response) {
+                respJSON = JSON.parse(response);
+
+                console.log(response);
+
+                insertAI(respJSON['response']);
+                //if (listen === false) {
+                ////////   listen = true;
+
+                //sendChatText('', listen);
+
+                //}
+                listen = false;
+                if (respJSON['signal'] === "end") {
+                    document.getElementById('buttonCtrlForm').style.display = "block"
+                }
+            });
+
+        }
+        //listen = false;
+
+    }
+    //
+    setInterval(function() {listener();}, 2000);
 
 
 </script>

@@ -1,8 +1,8 @@
 
 function [M, XR, YR] = train2()
  
-TmpX = full(mmread("sparseXgenre.mm.mtx"));
-TmpY = full(mmread("sparseYgenre.mm.mtx"));
+TmpX = full(mmread("sparseXactor.mm.mtx"));
+TmpY = full(mmread("sparseYactor.mm.mtx"));
 
 [j,k] = size(TmpX);
 [s,t] = size(TmpY);

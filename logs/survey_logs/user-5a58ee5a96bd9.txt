@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-12-09-23-56"},"cryptID":"$1$o.LdJTpH$DnUippqur3mfo\/baz7u3K\/","userID":"5a58ee5a96bd9","turkID":"A2A52EATFDQJ1P","survey":{"q1":"0","q2":"5","q3":"I think it was fun. I would definitely use it again. ","q4":"5"},"rating":["3","3","3","3","3","3"]}

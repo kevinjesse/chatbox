@@ -1,0 +1,54 @@
+User:	5a60af9c62ed6;		Timestamp:	2018-01-18 06:32:09.028230
+C: Please tell me some genres you like.
+U: any
+C: I'd like to get to know what your actor preferences are.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: anhy
+C: I'm thinking about what you might like.
+C: How about The Godfather (1972)? 
+U: k
+C: The Godfather stars Marlon Brando, William Reynolds, Gordon Willis, Nino Rota, Albert S. Ruddy, Mario Puzo, Francis Ford Coppola, Diane Keaton, James Caan, Al Pacino and is directed by Mario Puzo, Francis Ford Coppola.
+U: ok
+C: This film is 175 minutes long. It is a crime and drama movie, and is rated R.
+
+User:	5a60af9c62ed6;		Timestamp:	2018-01-18 06:32:12.122199
+C: Please tell me some genres you like.
+U: any
+C: I'd like to get to know what your actor preferences are.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: anhy
+C: I'm thinking about what you might like.
+C: How about The Godfather (1972)? 
+U: k
+C: The Godfather stars Marlon Brando, William Reynolds, Gordon Willis, Nino Rota, Albert S. Ruddy, Mario Puzo, Francis Ford Coppola, Diane Keaton, James Caan, Al Pacino and is directed by Mario Puzo, Francis Ford Coppola.
+U: ok
+C: This film is 175 minutes long. It is a crime and drama movie, and is rated R.
+U: ok
+C: Is this recommendation satisfactory?
+
+User:	5a60af9c62ed6;		Timestamp:	2018-01-18 06:32:17.556905
+C: Please tell me some genres you like.
+U: any
+C: I'd like to get to know what your actor preferences are.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: anhy
+C: I'm thinking about what you might like.
+C: How about The Godfather (1972)? 
+U: k
+C: The Godfather stars Marlon Brando, William Reynolds, Gordon Willis, Nino Rota, Albert S. Ruddy, Mario Puzo, Francis Ford Coppola, Diane Keaton, James Caan, Al Pacino and is directed by Mario Puzo, Francis Ford Coppola.
+U: ok
+C: This film is 175 minutes long. It is a crime and drama movie, and is rated R.
+U: ok
+C: Is this recommendation satisfactory?
+U: no
+C: 
+

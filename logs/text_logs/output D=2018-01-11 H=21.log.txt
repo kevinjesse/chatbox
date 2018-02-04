@@ -1,0 +1,19 @@
+User:	5a5849ea106ac;		Timestamp:	2018-01-11 21:41:16.262264
+C: What types of films do you like to see?
+U: Horror and science fiction.
+C: Please tell me the people you like to see in a movie.
+C: There is no exact match for what was specified, so I will do my best!
+U: I like to see Clint Eastwood and Robert DeNiro.
+C: Tell me a director you prefer.
+U: Martin Scorcese.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about The Good  the Bad and the Ugly (1966)? 
+C: The Good  the Bad and the Ugly stars Agenore Incrocci, Luciano Vincenzoni, Eli Wallach, Lee Van Cleef, Sergio Leone, Clint Eastwood, Aldo Giuffrè, Alberto Grimaldi, Mickey Knox, Furio Scarpelli and is directed by Luciano Vincenzoni, Sergio Leone, Agenore Incrocci, Furio Scarpelli, Mickey Knox.
+C: This film is 161 minutes long. It is a western movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes.
+C: 
+C: Bye! Please click the next button to proceed.
+

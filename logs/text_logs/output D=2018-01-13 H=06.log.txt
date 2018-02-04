@@ -1,0 +1,19 @@
+User:	5a5a14b4c4a79;		Timestamp:	2018-01-13 06:19:10.323410
+C: What is your favorite genre?
+U: Drama
+C: Please tell me the people you like to see in a movie.
+U: Sally Field or Matt Damon
+C: who is your favorite director?
+C: There is no exact match for what was specified, so I will do my best!
+U: Steven Spielberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Schindler's List (1993)? 
+C: This film is 195 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Schindler's List stars Branko Lustig, Steven Zaillian, John Williams, Ralph Fiennes, Steven Spielberg, Liam Neeson, Thomas Keneally, Caroline Goodall, Gerald R. Molen, Ben Kingsley and is directed by Thomas Keneally, Steven Zaillian.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

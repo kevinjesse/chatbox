@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-22-13-37-02"},"cryptID":"$1$JY6MZXhX$BoLmAvdOSBtrFhRrbXADT1","userID":"5a6658d24dfe9","turkID":"A2GR3333S2F53G","survey":{"q1":"1","q2":"2","q3":"The chatbot did not seem flexible to no preference answers, very little flexibility toward general answers.","q4":"4"},"rating":[]}

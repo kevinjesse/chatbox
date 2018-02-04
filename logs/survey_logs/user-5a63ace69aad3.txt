@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-20-13-01-49"},"cryptID":"$1$naSJZ5Zo$q.oAXMgPTxNC2rHvp93lL.","userID":"5a63ace69aad3","turkID":"A2WNW8A4MOR7T7","survey":{"q1":"0","q2":"4","q3":"LIKES IT COULD RECCOMEND MOVIES based on my input. Disliked the typing would rather speak","q4":"5"},"rating":["2","3","3","3","3","3"]}

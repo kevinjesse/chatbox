@@ -1,0 +1,38 @@
+User:	5a58c3faac1a2;		Timestamp:	2018-01-12 06:20:53.941057
+C: Please tell me some genres you like.
+U: documentaries, sci-fi, drama
+C: Can you tell me some actors or actresses you prefer to watch?
+C: There is no exact match for what was specified, so I will do my best!
+U: juliette lewis, aubrey plaza
+C: Tell me a director you prefer.
+U: werner herzog
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: doesn't matter
+C: I'm thinking about what you might like.
+C: How about Rescue Dawn (2006)? 
+C: Rescue Dawn stars Werner Herzog, Zach Grenier, Klaus Badelt, Steve Marlton, Harry Knapp, Steve Zahn, Jeremy Davies, Peter Zeitlinger, Elton Brand, Christian Bale and is directed by Werner Herzog.
+C: This film is 120 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a58c7a3a203c;		Timestamp:	2018-01-12 06:36:31.740619
+C: What types of movies, or genres, do you like?
+U: comedy, action, drama
+C: Tell me some actors you like.
+U: Tom Hanks, Jennifer Lawrence
+C: Tell me a director you prefer.
+C: There is no exact match for what was specified, so I will do my best!
+U: Ron Howard
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about The Pacifier (2005)? 
+C: Is this recommendation satisfactory?
+C: The Pacifier stars Robert Ben Garant, Jonathan Glickman, Max Thieriot, Brad Garrett, Brittany Snow, Roger Birnbaum, Adam Shankman, Gary Barber, Thomas Lennon, Vin Diesel and is directed by Thomas Lennon, Robert Ben Garant.
+C: This film is 95 minutes long. It is an action, comedy and drama movie, and is rated PG.
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

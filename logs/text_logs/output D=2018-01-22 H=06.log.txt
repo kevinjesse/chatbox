@@ -1,0 +1,46 @@
+User:	5a65f0aed65ec;		Timestamp:	2018-01-22 06:12:09.384512
+C: What is your favorite genre?
+U: comedies
+C: Can you tell me some actors or actresses you like?
+C: There is no exact match for what was specified, so I will do my best!
+U: Chris Pratt
+C: who is your favorite director?
+U: Steven Spielberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Schindler's List (1993)? 
+C: Schindler's List stars Branko Lustig, Steven Zaillian, John Williams, Ralph Fiennes, Steven Spielberg, Liam Neeson, Thomas Keneally, Caroline Goodall, Gerald R. Molen, Ben Kingsley and is directed by Thomas Keneally, Steven Zaillian.
+C: This film is 195 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Not what I requested, but I do like that movie.
+C: 
+U: No
+C: 
+C: How about Saving Private Ryan (1998)? 
+C: Saving Private Ryan stars Tom Sizemore, Tom Hanks, Gary Levinsohn, Mark Gordon, Ian Bryce, John Williams, Robert Rodat, Matt Damon, Steven Spielberg, Edward Burns and is directed by Robert Rodat.
+C: This film is 169 minutes long. It is a drama and war movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a65f2139c6d7;		Timestamp:	2018-01-22 06:16:54.607269
+C: What types of films do you like to see?
+U: Horror films
+C: Tell me some actors you like.
+U: Idris Elba, Michael B. Jordan
+C: Tell me a director you prefer.
+C: There is no exact match for what was specified, so I will do my best!
+U: James Cameron
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: It doesn't matter
+C: I'm thinking about what you might like.
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U:  yes it is
+C: 
+C: Bye! Please click the next button to proceed.
+

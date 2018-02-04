@@ -1,0 +1,20 @@
+User:	5a66909bf2166;		Timestamp:	2018-01-22 17:35:06.734649
+C: What are your movie interests?
+U: I like costume dramas
+C: I'd like to get to know what your actor preferences are.
+C: There is no exact match for what was specified, so I will do my best!
+U: I like Tom Hardy
+C: Tell me a director you prefer.
+U: David Lynch
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: It doesn't matter
+C: I'm thinking about what you might like.
+C: How about Layer Cake (2004)? 
+C: Layer Cake stars David Reid, Tom Hardy, Michael Gambon, Daniel Craig, Matthew Vaughn, Adam Bohling, Sienna Miller, J.J. Connolly, Lisa Gerrard, Ilan Eshkeri and is directed by J.J. Connolly.
+C: This film is 105 minutes long. It is a crime, drama and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, I will check it out
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+

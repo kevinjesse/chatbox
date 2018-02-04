@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-23-06-50-39"},"cryptID":"$1$zW8KWhuO$spd367iFwy\/\/dzIfFBHFq0","userID":"5a674b12bd7dc","turkID":"A3HNEYFOIJWPH1","survey":{"q1":"1","q2":"4","q3":"Responded too fast. Seemed unnatural.","q4":"4"},"rating":["3","3","3","3","3","3","3"]}

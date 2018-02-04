@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-18-13-11-07"},"cryptID":"$1$iYasvBIX$y.eS3o43PqjiLs0jZm5j81","userID":"5a610cfe37d66","turkID":"ANPCXN619ACW9","survey":{"q1":"0","q2":"5","q3":"I like how quick it was to respond","q4":"5"},"rating":["3","3","2","3","3","3"]}

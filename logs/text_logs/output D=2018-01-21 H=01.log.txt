@@ -1,0 +1,19 @@
+User:	5a645e905c2b1;		Timestamp:	2018-01-21 01:35:14.081461
+C: I am trying to understand your genre preferences.
+U: action
+C: Tell me some actors you like.
+U: will smith
+C: who is your favorite director?
+U: stephen speilberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+C: There is no exact match for what was specified, so I will do my best!
+U: r
+C: I'm thinking about what you might like.
+C: How about Enemy of the State (1998)? 
+C: Enemy of the State stars Tony Scott, Harry Gregson-Williams, Dan Mindel, Trevor Rabin, Will Smith, Gene Hackman, Jon Voight, Lisa Bonet, David Marconi, Jerry Bruckheimer and is directed by David Marconi.
+C: This film is 132 minutes long. It is an action, crime and mystery movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

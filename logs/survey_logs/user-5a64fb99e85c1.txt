@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-21-12-47-46"},"cryptID":"$1$mLS.4ZyI$GvOn6cTSiRx70c6xHGDYL0","userID":"5a64fb99e85c1","turkID":"A35HV0HVOYKET5","survey":{"q1":"1","q2":"4","q3":"I thought the chatbot did exactly what it was asked to do.","q4":"4"},"rating":["2","3","3","3","3","3"]}

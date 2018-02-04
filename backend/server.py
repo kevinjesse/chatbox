@@ -12,20 +12,19 @@ import sys
 import time
 import traceback
 debug = False
+passive = {}
 
 def chatbox_socket():
     if debug:
-        return 13120;
+        return 13120
     else:
-        return 13113;
+        return 13113
 
 class ThreadingServer(object):
     """
     Threading server for every interaction with backend. Creates thread on each message to allow for multiple
     messages sent before response.
     """
-
-    push_queue = []
 
     def __init__(self, host, port):
         self.host = host
@@ -43,7 +42,7 @@ class ThreadingServer(object):
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
 
     def listenToClient(self, client, address):
-        size = 1024
+        size = 2048
         while True:
             try:
                 data = client.recv(size)
@@ -67,6 +66,7 @@ class ThreadingServer(object):
                         #     pass
 
                         #signal = None
+
                         response, userid, passiveLen, signal = dialogueCtrl(data)
                         # print response, userid, passiveLen, signal
                         # TODO: This is a bad idea but it works
@@ -75,6 +75,7 @@ class ThreadingServer(object):
 
                         #change to JSON
                         responseJson = json.dumps({'response': response, 'userid': userid, 'signal': signal, 'passiveLen': passiveLen})
+                        print responseJson
                         #time.sleep(1)
                         #print "I'm pushing! \n{}\n".format(responseJson)
                         client.send(responseJson)
@@ -90,11 +91,8 @@ class ThreadingServer(object):
             except:
                 client.close()
                 return False
+            client.close()
 
-
-    def push_to_client(self, client, response):
-        while not self.len(self.push_queue):
-            client.send(response)
 
 if __name__ == "__main__":
     initResources()

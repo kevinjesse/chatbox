@@ -1,0 +1,50 @@
+User:	5a628e3a36fc5;		Timestamp:	2018-01-19 16:37:09.312381
+C: What types of films do you like to see?
+U: I like action movies
+C: I'd like to get to know what your actor preferences are.
+U: I like Tom Cruise
+C: Tell me a director you prefer.
+U: I am not specific about directors
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: It can be PG-13 or R rated.
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Minority Report (2002)? 
+C: Minority Report stars Scott Frank, Philip K. Dick, Jon Cohen, Bonnie Curtis, Steven Spielberg, Jan de Bont, Max von Sydow, Samantha Morton, Colin Farrell, Tom Cruise and is directed by Philip K. Dick, Scott Frank, Jon Cohen.
+C: This film is 145 minutes long. It is an action, adventure and crime movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Is there anything that is newer that you can recommend?
+C: 
+C: How about Minority Report (2002)? 
+C: Minority Report stars Scott Frank, Philip K. Dick, Jon Cohen, Bonnie Curtis, Steven Spielberg, Jan de Bont, Max von Sydow, Samantha Morton, Colin Farrell, Tom Cruise and is directed by Philip K. Dick, Scott Frank, Jon Cohen.
+C: This film is 145 minutes long. It is an action, adventure and crime movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes, that will be fine.
+C: 
+C: How about Mission: Impossible (1996)? 
+C: Mission: Impossible stars Emmanuelle Béart, Henry Czerny, Tom Cruise, Jon Voight, Paula Wagner, Steven Zaillian, David Koepp, Brian De Palma, Robert Towne, Bruce Geller and is directed by Bruce Geller, David Koepp, Steven Zaillian, Robert Towne.
+C: This film is 110 minutes long. It is an action, adventure and thriller movie, and is rated .
+C: Is this recommendation satisfactory?
+U: Yes, that is a good choice also.
+C: 
+C: How about Top Gun (1986)? 
+C: Top Gun stars Kelly McGillis, Jerry Bruckheimer, Val Kilmer, Tom Cruise, Tony Scott, Jim Cash, Jack Epps Jr., Tim Robbins, Ehud Yonay, Warren Skaaren and is directed by Jim Cash, Jack Epps Jr., Ehud Yonay, Warren Skaaren.
+C: This film is 110 minutes long. It is an action, drama and romance movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Are there any other movies you can recommend?
+C: 
+C: How about Mission: Impossible II (2000)? 
+C: Mission: Impossible II stars Robert Towne, Paula Wagner, Ronald D. Moore, Tom Cruise, Ving Rhames, John Woo, Thandie Newton, Brannon Braga, Bruce Geller, Dougray Scott and is directed by Bruce Geller, Ronald D. Moore, Brannon Braga, Robert Towne.
+C: This film is 123 minutes long. It is an action, adventure and thriller movie, and is rated .
+C: Is this recommendation satisfactory?
+U: That is a good recommendation.
+C: 
+C: How about Days of Thunder (1990)? 
+C: Days of Thunder stars Ward Russell, Nicole Kidman, Robert Duvall, Tom Cruise, Randy Quaid, Don Simpson, Robert Towne, Hans Zimmer, Jerry Bruckheimer, Tony Scott and is directed by Robert Towne, Tom Cruise.
+C: This film is 107 minutes long. It is an action, drama and sport movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: That is a little old for me, but it might work.
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+

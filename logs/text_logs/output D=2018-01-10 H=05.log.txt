@@ -1,0 +1,19 @@
+User:	5a5610a025ac4;		Timestamp:	2018-01-10 05:10:26.464833
+C: What is your favorite genre?
+U: i like comedy
+C: I'd like to get to know what your actor preferences are.
+U: i like denzel washington
+C: who is your favorite director?
+U: i dont care
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about 2 Guns (2013)? 
+C: 2 Guns stars Mark Wahlberg, George Furla, Baltasar Kormákur, Blake Masters, Andrew Cosby, Bill Paxton, Steven Grant, Paula Patton, Denzel Washington, Randall Emmett and is directed by Blake Masters, Steven Grant.
+C: This film is 109 minutes long. It is an action, comedy and crime movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

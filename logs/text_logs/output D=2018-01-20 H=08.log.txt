@@ -1,0 +1,23 @@
+User:	5a6369b2de306;		Timestamp:	2018-01-20 08:11:25.444349
+C: Can you tell me some genres?
+U: Action and Drama
+C: Who is your favorite actor or actress?
+U: stalon
+C: who is your favorite director?
+U: Spielberg 
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Gladiator (2000)? 
+C: Gladiator stars William Nicholson, Ridley Scott, Joaquin Phoenix, Branko Lustig, Oliver Reed, Douglas Wick, John Logan, Russell Crowe, David Franzoni, Connie Nielsen and is directed by David Franzoni, John Logan, William Nicholson.
+C: This film is 155 minutes long. It is an action, adventure and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U:  like that movie
+C: 
+U: I like that movie yes
+C: 
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

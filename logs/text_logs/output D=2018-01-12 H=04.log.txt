@@ -1,0 +1,63 @@
+User:	5a58aced16003;		Timestamp:	2018-01-12 04:42:07.099801
+C: Can you tell me some genres?
+U: comedy, thriller, chick flick
+C: I'd like to get to know what your actor preferences are.
+C: There is no exact match for what was specified, so I will do my best!
+U: Will Smith
+C: who is your favorite director?
+U: I don't have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: definitely PG-13
+C: I'm thinking about what you might like.
+C: How about The Pursuit of Happyness (2006)? 
+C: The Pursuit of Happyness stars Will Smith, Thandie Newton, Steve Conrad, Gabriele Muccino, Jason Blumenthal, James Lassiter, Brian Howe, Todd Black, Steve Tisch, Jaden Smith and is directed by Steve Conrad.
+C: This film is 117 minutes long. It is a biography and drama movie, and is rated PG-13.
+U: l
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a58aced16003;		Timestamp:	2018-01-12 04:42:12.900671
+C: Can you tell me some genres?
+U: comedy, thriller, chick flick
+C: I'd like to get to know what your actor preferences are.
+C: There is no exact match for what was specified, so I will do my best!
+U: Will Smith
+C: who is your favorite director?
+U: I don't have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: definitely PG-13
+C: I'm thinking about what you might like.
+C: How about The Pursuit of Happyness (2006)? 
+C: The Pursuit of Happyness stars Will Smith, Thandie Newton, Steve Conrad, Gabriele Muccino, Jason Blumenthal, James Lassiter, Brian Howe, Todd Black, Steve Tisch, Jaden Smith and is directed by Steve Conrad.
+C: This film is 117 minutes long. It is a biography and drama movie, and is rated PG-13.
+U: l
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+U: I've watched it before
+C: 
+
+User:	5a58aced16003;		Timestamp:	2018-01-12 04:42:20.211397
+C: Can you tell me some genres?
+U: comedy, thriller, chick flick
+C: I'd like to get to know what your actor preferences are.
+C: There is no exact match for what was specified, so I will do my best!
+U: Will Smith
+C: who is your favorite director?
+U: I don't have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: definitely PG-13
+C: I'm thinking about what you might like.
+C: How about The Pursuit of Happyness (2006)? 
+C: The Pursuit of Happyness stars Will Smith, Thandie Newton, Steve Conrad, Gabriele Muccino, Jason Blumenthal, James Lassiter, Brian Howe, Todd Black, Steve Tisch, Jaden Smith and is directed by Steve Conrad.
+C: This film is 117 minutes long. It is a biography and drama movie, and is rated PG-13.
+U: l
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+U: I've watched it before
+C: 
+U: I'd rather watch a new movie
+C: 
+

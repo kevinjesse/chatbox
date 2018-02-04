@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-12-08-51-50"},"cryptID":"$1$NBbX7MBg$I6KOFAur8NXwMHA1QxGlV0","userID":"5a58e7392ef03","turkID":"A171S8E9IFSHH2","survey":{"q1":"1","q2":"3","q3":"The bot gave me a movie that is rated R when I asked for pg13","q4":"4"},"rating":["2","3","3","3","2","3"]}

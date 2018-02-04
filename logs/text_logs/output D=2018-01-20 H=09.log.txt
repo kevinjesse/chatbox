@@ -1,0 +1,19 @@
+User:	5a6379ac3452e;		Timestamp:	2018-01-20 09:20:08.031195
+C: What is your favorite genre?
+U: science fiction
+C: Can you tell me some actors or actresses you prefer to watch?
+C: There is no exact match for what was specified, so I will do my best!
+U: mark hamill
+C: Tell me a director you prefer.
+U: george lucas
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg-13
+C: I'm thinking about what you might like.
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

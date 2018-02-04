@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-11-20-21-14"},"cryptID":"$1$cSfmtGy7$26N5PASOUZBgr894x1.EK0","userID":"5a58374055e89","turkID":"A171S8E9IFSHH2","survey":{"q1":"1","q2":"2","q3":"He didn't seem to understand my answers very well but was fsst","q4":"3"},"rating":["2","1","2","3","3","3"]}

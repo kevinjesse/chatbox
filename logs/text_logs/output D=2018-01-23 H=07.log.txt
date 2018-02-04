@@ -1,0 +1,25 @@
+User:	5a675506254c7;		Timestamp:	2018-01-23 07:32:41.384042
+C: What are your movie interests?
+U: Dramas, documentaries, comedies
+C: Who is your favorite actor or actress?
+C: There is no exact match for what was specified, so I will do my best!
+U: Laura Dern
+C: who is your favorite director?
+U: Ron Howard
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: Don't know the movie
+C: I'm thinking about what you might like.
+C: How about Jurassic Park (1993)? 
+C: Jurassic Park stars Sam Neill, Laura Dern, John Williams, Gerald R. Molen, Jeff Goldblum, Kathleen Kennedy, David Koepp, Michael Crichton, Steven Spielberg, Richard Attenborough and is directed by Michael Crichton, David Koepp.
+C: This film is 127 minutes long. It is an adventure, sci-fi and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes, because of Dern.
+C: 
+C: How about October Sky (1999)? 
+C: October Sky stars Jake Gyllenhaal, Chris Cooper, Mark Isham, Charles Gordon, Larry J. Franco, Lewis Colick, Homer H. Hickam Jr., Joe Johnston, Chris Owen, Laura Dern and is directed by Homer H. Hickam Jr., Lewis Colick.
+C: This film is 108 minutes long. It is a biography, drama and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

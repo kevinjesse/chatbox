@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-18-09-42-10"},"cryptID":"$1$PyJm777B$EHcdNWeKNPAmKlRR3OVbM.","userID":"5a60db5fdfaca","turkID":"A1IZ4NX41GKU4X","survey":{"q1":"1","q2":"5","q3":"I liked it very much and wouldn't change much at all. It worked for me. Maybe updated movie list. ","q4":"5"},"rating":["3","2","3","3","3","3","3","3","3","3"]}

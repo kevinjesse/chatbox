@@ -1,0 +1,19 @@
+User:	5a64fb99e85c1;		Timestamp:	2018-01-21 12:45:32.184629
+C: Can you tell me some genres?
+U: Drama
+C: Who is your favorite actor or actress?
+U: Morgan Freeman
+C: who is your favorite director?
+U: Steven Spielberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Amistad (1997)? 
+C: Amistad stars Matthew McConaughey, Debbie Allen, John Williams, Janusz Kaminski, Steven Spielberg, David Franzoni, Colin Wilson, Morgan Freeman, Djimon Hounsou, Anthony Hopkins and is directed by David Franzoni.
+C: This film is 155 minutes long. It is a drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

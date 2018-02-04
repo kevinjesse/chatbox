@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-20-00-26-09"},"cryptID":"$1$wQTaN4Ek$JBWukE9tX2yyBXY4ulbN0.","userID":"5a62fca48401f","turkID":"A1GXPNXDLMT0QB","survey":{"q1":"0","q2":"3","q3":"The questions seem a little wide open. I think there should be more specific questions, maybe about specific movies the user likes.","q4":"4"},"rating":["3","3","3","3","3","3"]}

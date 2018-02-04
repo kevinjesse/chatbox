@@ -1,0 +1,19 @@
+User:	5a62cc38ea116;		Timestamp:	2018-01-19 21:01:02.858498
+C: Can you tell me some genres?
+U: drama, comedy, action, suspense, thriller
+C: Can you tell me some actors or actresses you like?
+C: There is no exact match for what was specified, so I will do my best!
+U: Danny Devito
+C: who is your favorite director?
+U: Ron Howard
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about A Beautiful Mind (2001)? 
+C: A Beautiful Mind stars Ron Howard, James Horner, Brian Grazer, Ed Harris, Sylvia Nasar, Roger Deakins, Christopher Plummer, Jennifer Connelly, Akiva Goldsman, Russell Crowe and is directed by Akiva Goldsman, Sylvia Nasar.
+C: This film is 135 minutes long. It is a biography and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

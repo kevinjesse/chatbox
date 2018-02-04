@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-23-07-36-02"},"cryptID":"$1$TqI3EK.q$H\/DyOMp6X49Ls8afuRxUx0","userID":"5a675506254c7","turkID":"A3FYSDFRZF4T8","survey":{"q1":"0","q2":"4","q3":"I actually have never used a chatbot before but it was kinda fun.  No need for small talk, just straight to the point.  Nothing I didn't like.","q4":"4"},"rating":["3","3","3","3","3","3","3"]}

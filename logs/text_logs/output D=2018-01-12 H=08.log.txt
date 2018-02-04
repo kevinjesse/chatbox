@@ -1,0 +1,59 @@
+User:	5a58e6e750439;		Timestamp:	2018-01-12 08:49:23.091638
+C: Tell me a genre you prefer?
+U: Drama
+C: Who is your favorite actor or actress?
+U: Johnny depp
+C: Tell me a director you prefer.
+U: Clint Eastwood
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+C: There is no exact match for what was specified, so I will do my best!
+U: R
+C: I'm thinking about what you might like.
+C: How about Ed Wood (1994)? 
+C: Ed Wood stars Scott Alexander, Johnny Depp, Rudolph Grey, Sarah Jessica Parker, Tim Burton, Patricia Arquette, Denise Di Novi, Larry Karaszewski, Martin Landau, Howard Shore and is directed by Rudolph Grey, Scott Alexander, Larry Karaszewski.
+C: This film is 127 minutes long. It is a biography, comedy and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a58e6e750439;		Timestamp:	2018-01-12 08:49:37.426460
+C: Tell me a genre you prefer?
+U: Drama
+C: Who is your favorite actor or actress?
+U: Johnny depp
+C: Tell me a director you prefer.
+U: Clint Eastwood
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+C: There is no exact match for what was specified, so I will do my best!
+U: R
+C: I'm thinking about what you might like.
+C: How about Ed Wood (1994)? 
+C: Ed Wood stars Scott Alexander, Johnny Depp, Rudolph Grey, Sarah Jessica Parker, Tim Burton, Patricia Arquette, Denise Di Novi, Larry Karaszewski, Martin Landau, Howard Shore and is directed by Rudolph Grey, Scott Alexander, Larry Karaszewski.
+C: This film is 127 minutes long. It is a biography, comedy and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+U: Ok
+C: 
+
+User:	5a58e7392ef03;		Timestamp:	2018-01-12 08:50:42.165945
+C: Please tell me some genres you like.
+U: Drama
+C: I'd like to get to know what your actor preferences are.
+U: Johnny depp
+C: Tell me a director you prefer.
+U: Clint Eastwood
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+C: There is no exact match for what was specified, so I will do my best!
+U: Pg-13
+C: I'm thinking about what you might like.
+C: How about Ed Wood (1994)? 
+C: Ed Wood stars Scott Alexander, Johnny Depp, Rudolph Grey, Sarah Jessica Parker, Tim Burton, Patricia Arquette, Denise Di Novi, Larry Karaszewski, Martin Landau, Howard Shore and is directed by Rudolph Grey, Scott Alexander, Larry Karaszewski.
+C: This film is 127 minutes long. It is a biography, comedy and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

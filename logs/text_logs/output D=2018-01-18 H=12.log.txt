@@ -1,0 +1,97 @@
+User:	5a60fe770152b;		Timestamp:	2018-01-18 12:08:25.496144
+C: Please tell me some genres you like.
+U: Comedy, action and romance
+C: Tell me some actors you like.
+C: There is no exact match for what was specified, so I will do my best!
+U: ryan gosling
+C: Tell me a director you prefer.
+U: dont have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: NC17
+C: I'm thinking about what you might like.
+C: How about The Notebook (2004)? 
+C: The Notebook stars Rachel McAdams, Nick Cassavetes, Ryan Gosling, Jan Sardi, Mark Johnson, James Garner, Jeremy Leven, Gena Rowlands, Nicholas Sparks, Lynn Harris and is directed by Jeremy Leven, Jan Sardi, Nicholas Sparks.
+C: This film is 123 minutes long. It is a drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Drive (2011)? 
+C: Drive stars James Sallis, Bryan Cranston, Ryan Gosling, Carey Mulligan, Nicolas Winding Refn, Marc Platt, Albert Brooks, Michel Litvak, Hossein Amini, John Palermo and is directed by Hossein Amini, James Sallis.
+C: This film is 100 minutes long. It is a crime and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U:  that
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a60fe770152b;		Timestamp:	2018-01-18 12:08:33.781312
+C: Please tell me some genres you like.
+U: Comedy, action and romance
+C: Tell me some actors you like.
+C: There is no exact match for what was specified, so I will do my best!
+U: ryan gosling
+C: Tell me a director you prefer.
+U: dont have one
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: NC17
+C: I'm thinking about what you might like.
+C: How about The Notebook (2004)? 
+C: The Notebook stars Rachel McAdams, Nick Cassavetes, Ryan Gosling, Jan Sardi, Mark Johnson, James Garner, Jeremy Leven, Gena Rowlands, Nicholas Sparks, Lynn Harris and is directed by Jeremy Leven, Jan Sardi, Nicholas Sparks.
+C: This film is 123 minutes long. It is a drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Drive (2011)? 
+C: Drive stars James Sallis, Bryan Cranston, Ryan Gosling, Carey Mulligan, Nicolas Winding Refn, Marc Platt, Albert Brooks, Michel Litvak, Hossein Amini, John Palermo and is directed by Hossein Amini, James Sallis.
+C: This film is 100 minutes long. It is a crime and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U:  that
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+U: yes I like drive
+C: 
+
+User:	5a60ff089262d;		Timestamp:	2018-01-18 12:10:40.383815
+C: What are your movie interests?
+U: Historical
+C: I'd like to get to know what your actor preferences are.
+U: I like Daniel Day Lewis.
+C: Tell me a director you prefer.
+C: There is no exact match for what was specified, so I will do my best!
+U: I like Peter Jackson.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Dead Alive (1992)? 
+C: Dead Alive stars Murray Milne, Ian Watkin, Diana Peñalver, Stephen Sinclair, Fran Walsh, Peter Jackson, Elizabeth Moody, Timothy Balme, Jim Booth, Peter Dasent and is directed by Stephen Sinclair, Fran Walsh, Peter Jackson.
+C: This film is 104 minutes long. It is a comedy and horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, I like that.
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a6107471a7e0;		Timestamp:	2018-01-18 12:46:00.507148
+C: What is your favorite genre?
+U: Comedy 
+C: Who is your favorite actor or actress?
+U: Tom Hanks
+C: Tell me a director you prefer.
+U: whatever
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: don't care
+C: I'm thinking about what you might like.
+C: How about Forrest Gump (1994)? 
+C: Forrest Gump stars Wendy Finerman, Winston Groom, Robert Zemeckis, Gary Sinise, Eric Roth, Steve Starkey, Sally Field, Steve Tisch, Robin Wright, Tom Hanks and is directed by Winston Groom, Eric Roth.
+C: This film is 142 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: nope
+C: 
+C: How about Toy Story (1995)? 
+C: Toy Story stars John Lasseter, Don Rickles, Joe Ranft, Joss Whedon, Pete Docter, Tom Hanks, Andrew Stanton, Jim Varney, Joel Cohen, Tim Allen and is directed by John Lasseter, Pete Docter, Andrew Stanton, Joe Ranft, Joss Whedon, Joel Cohen, Alec Sokolow.
+C: This film is 81 minutes long. It is an adventure, animation and comedy movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: maybe
+C: 
+C: Bye! Please click the next button to proceed.
+

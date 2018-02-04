@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-12-05-48-58"},"cryptID":"$1$OhIIF7Yw$yC7Se6mRrrp.LCo7ipjo.\/","userID":"5a58b9e43b6e4","turkID":"A10DDXKFJGT66R","survey":{"q1":"0","q2":"1","q3":"Make things optional, I couldn't think of directors off the top of my head.","q4":"5"},"rating":["3","3","2","2","3","3","3"]}

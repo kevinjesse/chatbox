@@ -143,7 +143,7 @@ def initResources():
     templateCtrl.init_resources()
 
     # Init list of candidate movies - (relatively new 9-20-17)
-    sqlstring = """SELECT tconst FROM title"""
+    sqlstring = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
     cur.execute(sqlstring)
     rows = cur.fetchall()
     for mov in rows:
@@ -154,10 +154,19 @@ def initResources():
 
 
 def listen(userid):
+    # while
+    #     print "in loop"
+    #     continue
+    # while passiveResp[userid].empty():
+    #     continue
+    resp = ""
+    # resp = passiveResp[userid].get(True)
+    # print "here"
+    # passiveResp[userid].task_done()
+
     # while not passiveResp[userid].qsize():
     #     continue
-    resp = passiveResp[userid].get(True)
-    print resp
+    resp = passiveResp[userid].get()
     textHistory[userid].append(("C", resp))
     return resp, userid, passiveResp[userid].qsize()
 

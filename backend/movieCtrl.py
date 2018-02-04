@@ -90,8 +90,9 @@ def actorsbyID(alist):
     # print
     cur.execute(sqlstring)
     rows = cur.fetchall()
-    for person in rows:
-        actornamelist.append(person[0])
+    if rows:
+        for person in rows:
+            actornamelist.append(person[0])
     return actornamelist
 
 

@@ -1,0 +1,98 @@
+User:	5a661c36b2311;		Timestamp:	2018-01-22 09:17:21.935735
+C: I am trying to understand your genre preferences.
+U: Ok
+C: Please tell me the people you like to see in a movie.
+U: The Rock, Leonardo DiCaprio, Matt damon, Samuel L Jackson
+C: Tell me a director you prefer.
+C: There is no exact match for what was specified, so I will do my best!
+U: quentin tarantino
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Pulp Fiction (1994)? 
+C: Pulp Fiction stars Lawrence Bender, Uma Thurman, Roger Avary, Sally Menke, David Wasco, Samuel L. Jackson, Quentin Tarantino, Bruce Willis, John Travolta, Andrzej Sekula and is directed by Quentin Tarantino, Roger Avary.
+C: This film is 154 minutes long. It is a crime and drama movie, and is rated .
+C: Is this recommendation satisfactory?
+U: YES
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a6624aa6ebef;		Timestamp:	2018-01-22 09:52:49.514417
+C: What are your movie interests?
+U: sci fi
+C: I'd like to get to know what your actor preferences are.
+U: ok
+C: Tell me a director you prefer.
+U: coppola
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+U: no
+C: Is this recommendation satisfactory?
+C: 
+U: no
+C: 
+C: How about Back to the Future (1985)? 
+C: Back to the Future stars Neil Canton, Harry Keramidas, Bob Gale, Robert Zemeckis, Crispin Glover, Lea Thompson, Christopher Lloyd, Michael J. Fox, Alan Silvestri, Dean Cundey and is directed by Robert Zemeckis, Bob Gale.
+C: This film is 116 minutes long. It is an adventure, comedy and sci-fi movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: How about Metropolis (1927)? 
+U: no
+C: Metropolis stars Giorgio Moroder, Abel Korzeniowski, Gottfried Huppertz, Erich Pommer, Gustav Fröhlich, Thea von Harbou, Brigitte Helm, Fritz Lang, Alfred Abel, Rudolf Klein-Rogge and is directed by Thea von Harbou, Fritz Lang.
+C: This film is 153 minutes long. It is a drama and sci-fi movie, and is rated NR.
+C: Is this recommendation satisfactory?
+C: 
+U: yes
+C: How about 2001: A Space Odyssey (1968)? 
+C: 2001: A Space Odyssey stars Gary Lockwood, Ernest Archer, Keir Dullea, Stanley Kubrick, Harry Lange, William Sylvester, Geoffrey Unsworth, Ray Lovejoy, Arthur C. Clarke, Daniel Richter and is directed by Stanley Kubrick, Arthur C. Clarke.
+C: This film is 149 minutes long. It is an adventure and sci-fi movie, and is rated G.
+C: Is this recommendation satisfactory?
+C: 
+U: yes
+C: Bye! Please click the next button to proceed.
+
+User:	5a6624aa6ebef;		Timestamp:	2018-01-22 09:53:09.989728
+C: What are your movie interests?
+U: sci fi
+C: I'd like to get to know what your actor preferences are.
+U: ok
+C: Tell me a director you prefer.
+U: coppola
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+U: no
+C: Is this recommendation satisfactory?
+C: 
+U: no
+C: 
+C: How about Back to the Future (1985)? 
+C: Back to the Future stars Neil Canton, Harry Keramidas, Bob Gale, Robert Zemeckis, Crispin Glover, Lea Thompson, Christopher Lloyd, Michael J. Fox, Alan Silvestri, Dean Cundey and is directed by Robert Zemeckis, Bob Gale.
+C: This film is 116 minutes long. It is an adventure, comedy and sci-fi movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: How about Metropolis (1927)? 
+U: no
+C: Metropolis stars Giorgio Moroder, Abel Korzeniowski, Gottfried Huppertz, Erich Pommer, Gustav Fröhlich, Thea von Harbou, Brigitte Helm, Fritz Lang, Alfred Abel, Rudolf Klein-Rogge and is directed by Thea von Harbou, Fritz Lang.
+C: This film is 153 minutes long. It is a drama and sci-fi movie, and is rated NR.
+C: Is this recommendation satisfactory?
+C: 
+U: yes
+C: How about 2001: A Space Odyssey (1968)? 
+C: 2001: A Space Odyssey stars Gary Lockwood, Ernest Archer, Keir Dullea, Stanley Kubrick, Harry Lange, William Sylvester, Geoffrey Unsworth, Ray Lovejoy, Arthur C. Clarke, Daniel Richter and is directed by Stanley Kubrick, Arthur C. Clarke.
+C: This film is 149 minutes long. It is an adventure and sci-fi movie, and is rated G.
+C: Is this recommendation satisfactory?
+C: 
+U: yes
+C: Bye! Please click the next button to proceed.
+C: 
+U: ok
+C: 
+

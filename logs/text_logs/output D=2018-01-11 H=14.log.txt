@@ -1,0 +1,19 @@
+User:	5a57e346b67f6;		Timestamp:	2018-01-11 14:22:08.596738
+C: What is your favorite genre?
+U: Documentary
+C: Who is your favorite actor or actress?
+U: Johnny Depp
+C: who is your favorite director?
+C: There is no exact match for what was specified, so I will do my best!
+U: werner herzog
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: Any
+C: I'm thinking about what you might like.
+C: How about Inside Job (2010)? 
+C: Is this recommendation satisfactory?
+C: Inside Job stars Andri Snær Magnason, Matt Damon, Sigridur Benediktsdottir, Adam Bolt, Chad Beck, Svetlana Cvetko, Gylfi Zoega, Charles Ferguson, Alex Heffes, Audrey Marrs and is directed by Charles Ferguson, Chad Beck, Adam Bolt.
+C: This film is 105 minutes long. It is a crime and documentary movie, and is rated PG-13.
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

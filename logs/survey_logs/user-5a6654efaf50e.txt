@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-22-13-19-47"},"cryptID":"$1$BTNm9fud$2b01xMtPG70EJ6o9KFI0N1","userID":"5a6654efaf50e","turkID":"AEWGY34WUIA32","survey":{"q1":"1","q2":"4","q3":"I liked it, I have a new movie to watch tonight ","q4":"5"},"rating":["3","3","3","3","3","3"]}

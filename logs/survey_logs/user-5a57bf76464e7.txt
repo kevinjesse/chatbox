@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-11-11-49-56"},"cryptID":"$1$Kw4FFXKG$QEzY6QQh\/9bSxaKLIfvKs0","userID":"5a57bf76464e7","turkID":"A1ZBP0B1FAZAH1","survey":{"q1":"0","q2":"4","q3":"It was great. This was exactly the movie I wanted to see. ","q4":"5"},"rating":["3","3","3","3","3","3"]}

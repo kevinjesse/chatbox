@@ -7,7 +7,8 @@ require("/home/ubuntu/chatbox/frontend/backend_connect.php");
 if(function_exists($_GET['action'])) {
     echo $_GET['action']($s);
 }
-die();
+socket_close($s);
+//die();
 
 function submit($s) {
     $chattext = strip_tags( $_GET['chattext'] );

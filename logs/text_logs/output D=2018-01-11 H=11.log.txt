@@ -1,0 +1,62 @@
+User:	5a57bf47b61d1;		Timestamp:	2018-01-11 11:48:41.154096
+C: What types of movies, or genres, do you like?
+U: comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Travolta
+C: Tell me a director you prefer.
+U: Tarantino
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Forrest Gump (1994)? 
+C: Forrest Gump stars Wendy Finerman, Winston Groom, Robert Zemeckis, Gary Sinise, Eric Roth, Steve Starkey, Sally Field, Steve Tisch, Robin Wright, Tom Hanks and is directed by Winston Groom, Eric Roth.
+C: This film is 142 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Life Is Beautiful (1997)? 
+C: Life Is Beautiful stars Gianluigi Braschi, Roberto Benigni, Giorgio Cantarini, Vincenzo Cerami, Tonino Delli Colli, Nicola Piovani, Elda Ferri, Nicoletta Braschi, John M. Davis, Giustino Durano and is directed by Vincenzo Cerami, Roberto Benigni.
+C: This film is 116 minutes long. It is a comedy, drama and war movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about City Lights (1931)? 
+C: City Lights stars Roland Totheroh, Gordon Pollock, Harry Clive, Harry Myers, Virginia Cherrill, Harry Crocker, Charles Chaplin, Florence Lee and is directed by Charles Chaplin, Harry Carr, Harry Crocker.
+C: This film is 87 minutes long. It is a comedy, drama and romance movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about City Lights (1931)? 
+C: City Lights stars Roland Totheroh, Gordon Pollock, Harry Clive, Harry Myers, Virginia Cherrill, Harry Crocker, Charles Chaplin, Florence Lee and is directed by Charles Chaplin, Harry Carr, Harry Crocker.
+C: This film is 87 minutes long. It is a comedy, drama and romance movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)? 
+C: Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb stars Sterling Hayden, Stanley Kubrick, Anthony Harvey, Peter George, George C. Scott, Gilbert Taylor, Keenan Wynn, Laurie Johnson, Terry Southern, Peter Sellers and is directed by Stanley Kubrick, Terry Southern, Peter George.
+C: This film is 95 minutes long. It is a comedy movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a57bf76464e7;		Timestamp:	2018-01-11 11:49:05.797082
+C: I am trying to understand your genre preferences.
+U: k
+C: Please tell me the people you like to see in a movie.
+U: Michael Jordan
+C: Tell me a director you prefer.
+U: James Cameron
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+C: There is no exact match for what was specified, so I will do my best!
+U: R
+C: I'm thinking about what you might like.
+C: How about Space Jam (1996)? 
+C: Space Jam stars Wayne Knight, Manner Washington, Joe Pytka, Daniel Goldberg, Steve Rudnick, Michael Jordan, Theresa Randle, Timothy Harris, Herschel Weingrod, Leo Benvenuti and is directed by Leo Benvenuti, Steve Rudnick, Timothy Harris, Herschel Weingrod.
+C: This film is 88 minutes long. It is an adventure, animation and comedy movie, and is rated .
+C: Is this recommendation satisfactory?
+U: Yes that is my favorite movie of all time
+C: 
+C: Bye! Please click the next button to proceed.
+

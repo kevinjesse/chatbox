@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-11-10-47-28"},"cryptID":"$1$f8EqUwM.$fhbyYwH\/1XJjU1P1cGTJ4\/","userID":"5a57b02f0adff","turkID":"A2UVEVCYVC553J","survey":{"q1":"0","q2":"5","q3":"I liked all of it.  It asked good questions and gave good answers.","q4":"5"},"rating":["2","3","3","3","3","3","3"]}

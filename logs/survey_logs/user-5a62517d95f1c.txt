@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-19-12-16-34"},"cryptID":"$1$QiC\/h\/Fg$2tTRbWcoaCriYMmcfOP171","userID":"5a62517d95f1c","turkID":"A27MJOV91GA8R3","survey":{"q1":"1","q2":"5","q3":"I felt that it didn't really know what the word \"documentary\" meant.  I was really hoping to get recommendations for a documentary.","q4":"3"},"rating":["3","3","3","3","3","3","3","3"]}

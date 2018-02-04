@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-01-22-13-39-37"},"cryptID":"$1$Mj\/pX3Wt$2Je7dNCN.o.h8yKktvaJW\/","userID":"5a66599debe6f","turkID":"A1AZAC9CPBEP6K","survey":{"q1":"0","q2":"4","q3":"I like how the questions are simple and easy to follow. I think when the Chatbot gives an answer it should link to a picture of the film it's recommending as well as info links.","q4":"4"},"rating":[]}

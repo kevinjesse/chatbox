@@ -1,0 +1,25 @@
+User:	5a65ccc372c49;		Timestamp:	2018-01-22 03:37:43.808106
+C: Can you tell me some genres?
+U: horror
+C: Can you tell me some actors or actresses you like?
+U: Ryan gosling, mads mikkelson
+C: Tell me a director you prefer.
+C: There is no exact match for what was specified, so I will do my best!
+U: David fincher
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Psycho (1960)? 
+C: Psycho stars Vera Miles, George Tomasini, John Gavin, Anthony Perkins, Robert Bloch, Bernard Herrmann, Janet Leigh, Joseph Stefano, John L. Russell, Alfred Hitchcock and is directed by Joseph Stefano, Robert Bloch.
+C: This film is 109 minutes long. It is a horror, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Shining (1980)? 
+C: The Shining stars John Alcott, Wendy Carlos, Stephen King, Rachel Elkind, Diane Johnson, Jack Nicholson, Shelley Duvall, Danny Lloyd, Stanley Kubrick, Scatman Crothers and is directed by Stephen King, Stanley Kubrick, Diane Johnson.
+C: This film is 146 minutes long. It is a drama and horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

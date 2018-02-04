@@ -1,0 +1,43 @@
+User:	5a62a3688bba8;		Timestamp:	2018-01-19 18:06:18.572986
+C: Tell me a genre you prefer?
+U: comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: brian cranston
+C: who is your favorite director?
+C: There is no exact match for what was specified, so I will do my best!
+U: i dont know
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Forrest Gump (1994)? 
+C: Forrest Gump stars Wendy Finerman, Winston Groom, Robert Zemeckis, Gary Sinise, Eric Roth, Steve Starkey, Sally Field, Steve Tisch, Robin Wright, Tom Hanks and is directed by Winston Groom, Eric Roth.
+C: This film is 142 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: i  have seen it
+C: 
+C: How about City Lights (1931)? 
+C: City Lights stars Roland Totheroh, Gordon Pollock, Harry Clive, Harry Myers, Virginia Cherrill, Harry Crocker, Charles Chaplin, Florence Lee and is directed by Charles Chaplin, Harry Carr, Harry Crocker.
+C: This film is 87 minutes long. It is a comedy, drama and romance movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about City Lights (1931)? 
+C: City Lights stars Roland Totheroh, Gordon Pollock, Harry Clive, Harry Myers, Virginia Cherrill, Harry Crocker, Charles Chaplin, Florence Lee and is directed by Charles Chaplin, Harry Carr, Harry Crocker.
+C: This film is 87 minutes long. It is a comedy, drama and romance movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: you already said that
+C: 
+C: How about Modern Times (1936)? 
+C: Modern Times stars Ira H. Morgan, Stanley Blystone, Hank Mann, Paulette Goddard, Tiny Sandford, Henry Bergman, Chester Conklin, Charles Chaplin, Al Ernest Garcia, Roland Totheroh and is directed by Charles Chaplin.
+C: This film is 87 minutes long. It is a comedy, drama and family movie, and is rated NR.
+C: Is this recommendation satisfactory?
+U: Yes I will watch that
+C: 
+C: How about Modern Times (1936)? 
+C: Modern Times stars Ira H. Morgan, Stanley Blystone, Hank Mann, Paulette Goddard, Tiny Sandford, Henry Bergman, Chester Conklin, Charles Chaplin, Al Ernest Garcia, Roland Totheroh and is directed by Charles Chaplin.
+C: This film is 87 minutes long. It is a comedy, drama and family movie, and is rated NR.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

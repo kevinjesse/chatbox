@@ -21,7 +21,7 @@ base_url = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/'
 
 
 def ctrl(text):
-    url = base_url + app_id + '?subscription-key=' + sub_key + '&verbose=true&timezoneOffset=0&q=' + text
+    url = base_url + app_id + '?subscription-key=' + sub_key + '&verbose=true&timezoneOffset=0&q=' + text.strip()
     print url
     r = requests.get(url)
     if r.status_code != 200:

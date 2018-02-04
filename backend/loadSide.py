@@ -19,9 +19,8 @@ def loadSide():
         count += 1
         print count
         for sideType, freqDict in user_val.iteritems():
-            #top5 = sorted(freqDict, key=freqDict.get, reverse=True)[:5]
-            top = sorted(freqDict, key=freqDict.get, reverse=True)
-            full_user[user][sideType] = top
+            top5 = sorted(freqDict, key=freqDict.get, reverse=True)[:5]
+            full_user[user][sideType] = top5
 
     return full_user
 
@@ -31,9 +30,7 @@ try:
     import json
     with open("userSideTop5.txt", 'wb') as f:
         pickle.dump(userSideTop5, f)
-
-    with open("userSideTop5.json", 'wb') as f:
-        json.dump(userSideTop5, f)
+        #json.dump(userSideTop5, f)
 
 except IOError as e:
     print ("Cannot write files")

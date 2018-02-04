@@ -10,6 +10,7 @@ Controls the dialogue chatbox. Dialogue control is called from server.py
 
 # Imports
 import json
+import Queue
 
 import numpy as np
 
@@ -18,9 +19,11 @@ import database_connect
 import filterMovies
 import luisIntent
 import luisQuery
+import luisVerify
 import tellCtrl
 import templateCtrl
-import matrixFact #matix factorization and matrix tell
+from templateCtrl import State
+import matrixFact
 
 cur = database_connect.db_connect()
 
@@ -32,11 +35,17 @@ cache_results = {}
 curr_movie = {}
 titles_user = {}
 active = False
+nomatch = {}
+movieWithRatings = {}
 q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
 has_recommended_movie = False
-passiveResp = []
-scoreweights = np.array([.1, .1, .5, .2, .1])
+passiveResp = {}
+scoreweights = np.array([.2, .2, .2, .2, .2])
 
+end_dialogue = "Bye! Please click the next button to proceed."
+notperfect_string = "There is no exact match for what was specified, so I will do my best!"
+no_recommendation = "I'm sorry but there is no recommendation that can be made with your criteria."
+recIND = 0
 import pprint
 
 pp = pprint.PrettyPrinter(depth=6)
@@ -45,7 +54,7 @@ pp = pprint.PrettyPrinter(depth=6)
 # dialogueCtrl() controls dialogue flow with socket
 def dialogueCtrl(input_json):
     """
-    dialogueCtrl takes in data (User input), sends to dailogue logic, gets response, and returns response back to socket
+    dialogueCtrl takes in data (User input), sends to dialogue logic, gets response, and returns response back to socket
     """
     try:
         global state, history, textHistory, data, cache_results, curr_movie, scoreweights, passiveResp
@@ -55,55 +64,76 @@ def dialogueCtrl(input_json):
         mode = js['mode'] == "true"
 
         if mode:
-            return listen(userid)
+            signal = "listen"
+            a, b, c = listen(userid)
+            return a, b, c, signal
 
         output = ''
-        question = None
+        question = ''
         if userid not in state or text == '':
+            # If this is a new user
             state[userid] = ["genre", ]
             # TODO: Substitute temp replacement with actual recommendations
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
             question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
-
+            passiveResp[userid] = Queue.Queue()
+            nomatch[userid] = False
             history[userid] = []
             textHistory[userid] = []
-            cache_results[userid] = {'genre': None, 'person': None, 'mpaa': None, 'rating': None, 'year': None,
-                                     'duration': None}
+            movieWithRatings[userid] = []
+            cache_results[userid] = {'genre': [], 'person': [], 'mpaa': [],'actor': [], 'director': []}
             curr_movie[userid] = None
 
             textHistory[userid].append(("C", question))
             history[userid].append((question, state[userid][-1]))
-            return question, userid, 0
+            return question, userid, 0, None
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
+        # cache_results[userid] = luisVerify.ctrl(cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
-            passiveResp.append("I do not understand your answer. ")
+            passiveResp[userid].put("I do not understand your answer. ")
             question = history[userid][-1][0]
         else:
             # will change state machine to class object
-            if not q_order.index(state[userid][-1]) == len(q_order) - 1:
-                newState = q_order[q_order.index(state[userid][-1]) + 1]
-            else:
-                newState = state[userid][-1]
-            state[userid].append(newState)
-            print "[DEBUG] cache_results: {}".format(curr_movie[userid])
-            question = templateCtrl.get_sentence(state=newState, is_dynamic=False)
+            if state[userid][-1] in q_order:
+                if not q_order.index(state[userid][-1]) == len(q_order) - 1:
+                    newState = q_order[q_order.index(state[userid][-1]) + 1]
+                else:
+                    newState = state[userid][-1]
+                state[userid].append(newState)
+                print "[DEBUG] cache_results: {}".format(curr_movie[userid])
+                question = templateCtrl.get_sentence(state=newState, is_dynamic=False)
+                print question
+                print newState
+
 
         # Append history
         history[userid].append((text, state[userid][-1]))
         history[userid].append((question, state[userid][-1]))
-        passiveResp.append(question)
-        resp = passiveResp.pop(0)
+        passiveResp[userid].put(question)
+        resp = passiveResp[userid].get()
 
         textHistory[userid].append(("U", text))
         textHistory[userid].append(("C", resp))
 
-        return resp, userid, len(passiveResp)
+        # check for end state of bye, if so, send an end signal
+        print "dialogueCtrl::state: {}".format(state[userid][-1])
+        signal = None
+        # if state[userid][-1] == State.TELL:
+        #     print "state is tell"
+        #     signal = 'end'
+
+        # if state[userid][-1] == State.BYE:
+        #     print "state is bye"
+        #     signal = 'end'
+
+        return resp, userid, passiveResp[userid].qsize(), signal
 
     except ValueError as e:
-        return
+        print "dialogueCtrl: {}".format(e)
+        return '', userid, passiveResp[userid].qsize(), None
 
 
 def initResources():
@@ -125,46 +155,90 @@ def initResources():
 
 
 def listen(userid):
-    while not len(passiveResp):
-        continue
-    resp = passiveResp.pop(0)
+    # while not passiveResp[userid].qsize():
+    #     continue
+    resp = passiveResp[userid].get(True)
+    print resp
     textHistory[userid].append(("C", resp))
-    return resp, userid, len(passiveResp)
+    return resp, userid, passiveResp[userid].qsize()
 
 
 def dialogueIdle(userid, debug=False):
-    global active, passiveResp, has_recommended_movie
+    global active, passiveResp, has_recommended_movie, nomatch, movieWithRatings, recIND
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
         titles_user[userid] = titles
         return
 
+    print "dialogueIdle::state: {}".format(state[userid])
     # Logic
-    if state[userid][-2] == "bye":
-        return
-    elif state[userid][-2] == "mpaa":
-        # output = "I like this movie because it has this"
-        try:
-            # outputlist = tellCtrl.ctrl(cache_results[userid], titles_user[userid],
-            #                                  scoreweights, history[userid])
-            print "happens after this"
-            movielist, outputlist = matrixFact.recommend(cache_results[userid])
-            print outputlist
-            for each in outputlist:
-                passiveResp.append(each) #see if slower puts results in order pulls from listeners
-            #passiveResp.extend(outputlist)
-            has_recommended_movie = True
-        except Exception as e:
-            passiveResp.append("I messed up a calculation. I cannot give a recommendation at this time.")
-        state[userid].append("bye")
-        passiveResp.append("Please click on next and take the short survey.")
-    #else:
-        #titles_user[userid] = filterMovies.ctrl(state[userid][-1], cache_results[userid], titles_user[userid])
-
-    if has_recommended_movie and debug and not passiveResp:
+    if state[userid][-1] == State.BYE:
         chatlogger.logToFile(textHistory[userid], userid)
+        return
+
+    if state[userid][-2] == State.BYE:
+        return
+
+    # if state[userid][-1] != State.TELL2:
+    #     titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
+    #                                                titles_user[userid])
+    #     if not nomatch[userid] and not match:
+    #         nomatch[userid] = True
+    #         passiveResp[userid].put(notperfect_string, False)
+
+    if state[userid][-1] == State.TELL:
+        try:
+            #movieWithRatings[userid] = tellCtrl.ctrl(cache_results[userid], titles_user[userid], scoreweights, history[userid])
+            #movieWithRatings[userid] = tellCtrl.sortByRating(titles_user[userid])
+            #outputlist = tellCtrl.toText(movieWithRatings[userid])
+            movieWithRatings[userid] = matrixFact.recommend(cache_results[userid])
+            print movieWithRatings[userid]
+            outputlist, recIND = matrixFact.recommendationText(0)
+            # print recIND
+            # TODO: Workaround for the out of order bug, by making it a single json response
+            # outputString = "<br><br>".join(outputlist)
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+
+        except Exception as e:
+            print "Error at dialogueCtrl::164: {}".format(e)
+        #chatlogger.logToFile(textHistory[userid], userid)
+        state[userid].append(State.TELL2)
+        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+        passiveResp[userid].put(question, False)
+
+        #cache_results[userid]['satisfied'][-1] = None
+
+
+    elif state[userid][-1] == State.TELL2:
+        if cache_results[userid]['satisfied'] == 'Yes':
+            passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.BYE)
+        else:
+            movieWithRatings[userid].pop(0)
+            if not movieWithRatings[userid]:
+                passiveResp[userid].put(no_recommendation)
+                passiveResp[userid].put(end_dialogue)
+                state[userid].append(State.BYE)
+                return
+            print movieWithRatings[userid]
+            #outputlist = tellCtrl.toText(movieWithRatings[userid])
+            outputlist, recIND = matrixFact.recommendationText(recIND)
+            # print recIND
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+            # passiveResp[userid].put(end_dialogue)
+            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+            passiveResp[userid].put(question)
+
+    if has_recommended_movie and debug and not passiveResp[userid]:
+        # print "textHistory: {}".format(textHistory[userid])
         has_recommended_movie = False
+
+    return
 
 
 def dialogueTest():

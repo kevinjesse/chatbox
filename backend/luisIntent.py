@@ -27,7 +27,7 @@ def ctrl(state, intent, entities, userCache):
     print
     pprint(entities)
     print
-    answered = False
+    answered = True
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
                   'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
                   'builtin.datetimeV2.duration': 'duration', 'builtin.datetimeV2.daterange': 'year',
@@ -39,32 +39,39 @@ def ctrl(state, intent, entities, userCache):
     #     #default by setting year to
     if intent['intent'] == 'NoPreference' or intent['intent'] == 'Yes' or intent['intent'] == 'No':
         answered = True
+        userCache['satisfied'] = intent['intent']
         return userCache, answered
     
     for ent in entities:
         dataType = entity_map[ent['type']]
-        if dataType == state2entity_map[state]: answered = True
+        if dataType != state2entity_map[state]:
+            answered = False
+            continue
+
         if dataType == 'year' or dataType == 'duration':
             #for now we will do nothing with year and duration
             userCache[dataType] = year(ent)
         elif dataType == 'mpaa':
-            pg13 = re.match('pg(-|\s?)13', ent['entity'].lower())
-            nc17 = re.match('nc(-|\s?)17', ent['entity'].lower())
+            pg13 = re.match('[Pp][Gg]\s*[-]?\s*13', ent['entity'].lower())
+            nc17 = re.match('[Nn][Cc]\s*[-]?\s*17', ent['entity'].lower())
             if pg13: ent['entity']='PG-13'
             elif nc17: ent['entity']='NC-17'
+            ent['entity'] = ent['entity'].upper()
         elif dataType =='person':
             ent['entity'] = ent['entity'].title()
+            # this is to create two categories one for actor and director instead of people
+            dataType = state
 
         if userCache[dataType]:
-            if ent['entity'] not in userCache[entity_map[ent['type']]]:
-                userCache[dataType].append(ent['entity'])
+            if ent['entity'] not in userCache[state]:
+                userCache[dataType].append(str(ent['entity']))
         else:
-            userCache[dataType] = [ent['entity']]
+            userCache[dataType] = [str(ent['entity'])]
 
         # if intent['intent'] == 'None':
         #     return userCache, answered
 
-
+    print userCache
     return userCache, answered
 
 #Implement scoring and this can be a follow up function that could be a series of binary questions.

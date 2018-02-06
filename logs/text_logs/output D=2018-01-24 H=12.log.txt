@@ -1,0 +1,48 @@
+User:	5a68eb5ec2cd0;		Timestamp:	2018-01-24 12:24:57.621280
+C: I am trying to understand your genre preferences.
+U: comedy
+C: Please tell me the people you like to see in a movie.
+U: any
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Addams Family Values (1993)? 
+C: Addams Family Values stars Scott Rudin, Raul Julia, Charles Addams, Joan Cusack, Paul Rudnick, Marc Shaiman, Donald Peterman, Anjelica Huston, Christopher Lloyd, Barry Sonnenfeld and is directed by Charles Addams, Paul Rudnick.
+C: This film is 94 minutes long. It is a comedy and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Gremlins (1984)? 
+C: Gremlins stars Michael Finnell, John Louie, John Hora, Chris Columbus, Joe Dante, Jerry Goldsmith, Hoyt Axton, Phoebe Cates, Tina Hirsch, Zach Galligan and is directed by Chris Columbus.
+C: This film is 106 minutes long. It is a comedy, fantasy and horror movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The City of Lost Children (1995)? 
+C: The City of Lost Children stars Marc Caro, Gilles Adrien, Félicie Dutertre, Dominique Pinon, Guillaume Laurant, María Victoria Hebrero, Judith Vittet, Jean-Pierre Jeunet, Daniel Emilfork, Ron Perlman and is directed by Gilles Adrien, Jean-Pierre Jeunet, Marc Caro, Guillaume Laurant.
+C: This film is 112 minutes long. It is a fantasy and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a68ecda4298a;		Timestamp:	2018-01-24 12:31:10.986122
+C: Tell me a genre you prefer?
+U: fantasy
+C: Tell me some actors you like.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Addams Family Values (1993)? 
+C: Addams Family Values stars Scott Rudin, Raul Julia, Charles Addams, Joan Cusack, Paul Rudnick, Marc Shaiman, Donald Peterman, Anjelica Huston, Christopher Lloyd, Barry Sonnenfeld and is directed by Charles Addams, Paul Rudnick.
+C: This film is 94 minutes long. It is a comedy and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

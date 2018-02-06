@@ -1,0 +1,371 @@
+User:	5a7589b05e148;		Timestamp:	2018-02-03 02:07:20.613766
+C: Tell me a genre you prefer?
+U: scifi
+C: Can you tell me some actors or actresses you prefer to watch?
+U: matt damon
+C: who is your favorite director?
+U: miyazaki
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13 or R
+C: I'm thinking about what you might like.
+C: How about Fahrenheit 9/11 (2004)? 
+C: Fahrenheit 9/11 stars Stevie Wonder, Jim Czarnecki, George W. Bush, Michael Moore, Kurt Engfehr, Woody Richman, Jeff Gibbs, Ben Affleck, Kathleen Glynn, Chris Seward and is directed by Michael Moore.
+U: thanks
+C: This film is 122 minutes long. It is a documentary, drama and war movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7589b05e148;		Timestamp:	2018-02-03 02:07:54.134392
+C: Tell me a genre you prefer?
+U: scifi
+C: Can you tell me some actors or actresses you prefer to watch?
+U: matt damon
+C: who is your favorite director?
+U: miyazaki
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13 or R
+C: I'm thinking about what you might like.
+C: How about Fahrenheit 9/11 (2004)? 
+C: Fahrenheit 9/11 stars Stevie Wonder, Jim Czarnecki, George W. Bush, Michael Moore, Kurt Engfehr, Woody Richman, Jeff Gibbs, Ben Affleck, Kathleen Glynn, Chris Seward and is directed by Michael Moore.
+U: thanks
+C: This film is 122 minutes long. It is a documentary, drama and war movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+U: I guess so, though a bit far from what I imagined
+C: 
+
+User:	5a758b8660d21;		Timestamp:	2018-02-03 02:15:40.101455
+C: Please tell me some genres you like.
+U: Animated and family
+C: Can you tell me some actors or actresses you like?
+U: Julie Andrews, Angela Lansbury
+C: who is your favorite director?
+U: none
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG
+C: I'm thinking about what you might like.
+C: How about 2 Fast 2 Furious (2003)? 
+C: 2 Fast 2 Furious stars Derek Haas, Cole Hauser, Neal H. Moritz, John Singleton, David Arnold, Tyrese Gibson, Michael Brandt, Paul Walker, Eva Mendes, Gary Scott Thompson and is directed by Gary Scott Thompson, Michael Brandt, Derek Haas.
+C: This film is 107 minutes long. It is an action, crime and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Dark Water (2005)? 
+C: Dark Water stars Takashige Ichise, Ariel Gade, John C. Reilly, Walter Salles, Jennifer Connelly, Rafael Yglesias, Tim Roth, Hideo Nakata, Doug Davison, Kôji Suzuki and is directed by Kôji Suzuki, Hideo Nakata, Takashige Ichise, Rafael Yglesias.
+C: This film is 105 minutes long. It is a drama, horror and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Street Fighter (1994)? 
+C: Street Fighter stars Edward M. Abroms, Jean-Claude Van Damme, Raul Julia, Ming-Na Wen, Damian Chapa, Steven E. de Souza, Edward R. Pressman, Kenzo Tsujimoto, Graeme Revell, William A. Fraker and is directed by Steven E. de Souza.
+C: This film is 102 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Maybe
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a758c46aa791;		Timestamp:	2018-02-03 02:22:15.494247
+C: What types of films do you like to see?
+U: all of em, but scifi the most
+C: Can you tell me some actors or actresses you like?
+U: oscar isaac has been quite good lately
+C: Tell me a director you prefer.
+U: kubrick is the best of course
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: what movie?
+C: I'm thinking about what you might like.
+C: How about 2 Fast 2 Furious (2003)? 
+C: 2 Fast 2 Furious stars Derek Haas, Cole Hauser, Neal H. Moritz, John Singleton, David Arnold, Tyrese Gibson, Michael Brandt, Paul Walker, Eva Mendes, Gary Scott Thompson and is directed by Gary Scott Thompson, Michael Brandt, Derek Haas.
+C: This film is 107 minutes long. It is an action, crime and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: ucks
+C: 
+U: no
+C: 
+C: How about Street Fighter (1994)? 
+U: that movie is terrible :(
+C: Street Fighter stars Edward M. Abroms, Jean-Claude Van Damme, Raul Julia, Ming-Na Wen, Damian Chapa, Steven E. de Souza, Edward R. Pressman, Kenzo Tsujimoto, Graeme Revell, William A. Fraker and is directed by Steven E. de Souza.
+C: This film is 102 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+C: 
+C: How about Hackers (1995)? 
+C: Hackers stars Ralph Winter, Matthew Lillard, Simon Boswell, Iain Softley, Michael Peyser, Jesse Bradford, Guy Pratt, Rafael Moreu, Angelina Jolie, Jonny Lee Miller and is directed by Rafael Moreu.
+C: This film is 107 minutes long. It is a comedy, crime and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: those are also terrible, but in a good way
+C: 
+C: How about The Station Agent (2003)? 
+C: The Station Agent stars Oliver Bokelberg, Paul Benjamin, Peter Dinklage, Robert May, Tom McCarthy, Mary Jane Skalski, Bobby Cannavale, Stephen Trask, Kathryn Tucker, Patricia Clarkson and is directed by Tom McCarthy.
+C: This film is 89 minutes long. It is a comedy and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: that might be good
+C: 
+C: How about The Beach (2000)? 
+C: The Beach stars Danny Boyle, Andrew Macdonald, Leonardo DiCaprio, John Hodge, Patcharawan Patarakijjanon, Virginie Ledoyen, Angelo Badalamenti, Daniel York, Darius Khondji, Alex Garland and is directed by John Hodge, Alex Garland.
+C: This film is 119 minutes long. It is an adventure, drama and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: I liked that one
+C: 
+C: How about Home Alone (1990)? 
+C: Home Alone stars Julio Macat, Raja Gosnell, John Williams, John Hughes, John Muto, Chris Columbus, John Heard, Daniel Stern, Joe Pesci, Macaulay Culkin and is directed by John Hughes.
+C: This film is 103 minutes long. It is a comedy and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no thanks
+C: 
+C: How about True Grit (2010)? 
+C: True Grit stars Carter Burwell, Josh Brolin, Matt Damon, Joel Coen, Scott Rudin, Roger Deakins, Ethan Coen, Hailee Steinfeld, Charles Portis, Jeff Bridges and is directed by Joel Coen, Ethan Coen, Charles Portis.
+C: This film is 110 minutes long. It is an adventure, drama and western movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes, but I've seen it
+C: 
+C: How about Babe (1995)? 
+C: Babe stars Dick King-Smith, Doug Mitchell, Magda Szubanski, Bill Miller, Miriam Margolyes, Christine Cavanaugh, George Miller, Chris Noonan, James Cromwell, Nigel Westlake and is directed by Dick King-Smith, George Miller, Chris Noonan.
+C: This film is 91 minutes long. It is a comedy, drama and family movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no, eww
+C: 
+C: How about Uncle Buck (1989)? 
+C: Uncle Buck stars Ira Newborn, John Candy, Gaby Hoffmann, John Hughes, Ralf D. Bode, Tom Jacobson, Tony Lombardo, Lou Lombardo, Jean Louisa Kelly, Macaulay Culkin and is directed by John Hughes.
+C: This film is 100 minutes long. It is a comedy movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: the thing with your recommendations is I've seen them all
+C: 
+C: How about Annie Hall (1977)? 
+C: Annie Hall stars Marshall Brickman, Wendy Greene Bricmont, Diane Keaton, Carol Kane, Tony Roberts, Woody Allen, Ralph Rosenblum, Charles H. Joffe, Gordon Willis and is directed by Woody Allen, Marshall Brickman.
+C: This film is 93 minutes long. It is a comedy and romance movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: t
+C: 
+C: How about The Spy Who Loved Me (1977)? 
+U: also great but seen it
+C: The Spy Who Loved Me stars Lewis Gilbert, Christopher Wood, Barbara Bach, Albert R. Broccoli, Roger Moore, Marvin Hamlisch, Ian Fleming, Richard Maibaum, Richard Kiel, Curd Jürgens and is directed by Christopher Wood, Richard Maibaum, Ian Fleming.
+C: This film is 125 minutes long. It is an action, adventure and thriller movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: 
+C: How about Sabotage (2014)? 
+U: seen all the Bonds
+C: Sabotage stars Ethan Smith, Skip Woods, Terrence Howard, Palak Patel, Arnold Schwarzenegger, Paul Hanson, Olivia Williams, Bill Block, David Ayer, Sam Worthington and is directed by Skip Woods, David Ayer.
+C: This film is 109 minutes long. It is an action, crime and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: How about Red Dawn (2012)? 
+C: Red Dawn stars Kevin Reynolds, Dan Bradley, Chris Hemsworth, Isabel Lucas, Josh Peck, Josh Hutcherson, Beau Flynn, Carl Ellsworth, Jeremy Passmore, John Milius and is directed by Carl Ellsworth, Jeremy Passmore, Kevin Reynolds, John Milius.
+C: This film is 93 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: haven't seen that
+C: 
+C: How about Sisters (2015)? 
+C: Sisters stars Jason Moore, Paula Pell, Maya Rudolph, Christophe Beck, John S. Lyons, Amy Poehler, Jay Roach, Barry Peterson, Tina Fey, Ike Barinholtz and is directed by Paula Pell.
+C: This film is 118 minutes long. It is a comedy movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: looks not good
+C: 
+C: How about Mystery Men (1999)? 
+C: Mystery Men stars Kinka Usher, Neil Cuthbert, Mike Richardson, Lloyd Levin, Hank Azaria, William H. Macy, Lawrence Gordon, Janeane Garofalo, Bob Burden, Ben Stiller and is directed by Neil Cuthbert, Bob Burden.
+C: This film is 121 minutes long. It is an action, comedy and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a758d5aee4b9;		Timestamp:	2018-02-03 02:33:15.060751
+C: What are your movie interests?
+U: Comedy and drama.
+C: Tell me some actors you like.
+U: Reese Witherspoon and Kevin Bacon.
+C: who is your favorite director?
+U: Ridley Scott.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about The Straight Story (1999)? 
+U: ay.
+C: The Straight Story stars Neal Edelstein, Jane Galloway Heitz, Joseph A. Carpenter, Freddie Francis, Angelo Badalamenti, John Roach, Sissy Spacek, David Lynch, Mary Sweeney, Richard Farnsworth and is directed by John Roach, Mary Sweeney.
+C: This film is 112 minutes long. It is a biography and drama movie, and is rated G.
+C: Is this recommendation satisfactory?
+C: 
+U: Yes, I've never seen that and it sounds good.
+C: 
+U: How would I watch it?
+C: 
+C: How about Fried Green Tomatoes (1991)? 
+C: Fried Green Tomatoes stars Jordan Kerner, Thomas Newman, Carol Sobieski, Jon Avnet, Kathy Bates, Mary Stuart Masterson, Mary-Louise Parker, Geoffrey Simpson, Fannie Flagg, Jessica Tandy and is directed by Fannie Flagg, Carol Sobieski.
+C: This film is 130 minutes long. It is a drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: No, I've already seen that.
+C: 
+C: How about Election (1999)? 
+C: Election stars David Gale, Reese Witherspoon, Keith Samples, Jessica Campbell, Alexander Payne, Jim Taylor, Tom Perrotta, Matthew Broderick, Albert Berger, Chris Klein and is directed by Tom Perrotta, Alexander Payne, Jim Taylor.
+C: This film is 103 minutes long. It is a comedy, drama and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, I love that one.
+C: 
+C: How about Dancer in the Dark (2000)? 
+C: Dancer in the Dark stars David Morse, Robby Müller, Vibeke Windeløv, Karl Júlíusson, François Gédigier, Peter Stormare, Björk, Molly Marlene Stensgaard, Lars von Trier, Catherine Deneuve and is directed by Lars von Trier.
+C: This film is 140 minutes long. It is a crime, drama and musical movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Sure, I'd like to try that.
+C: 
+C: How about The Experiment (2001)? 
+C: The Experiment stars Christian Berkel, Mario Giordano, Wotan Wilke Möhring, Christoph Darnstädt, Oliver Hirschbiegel, Oliver Stokowski, Moritz Bleibtreu, Norbert Preuss, Marc Conrad, Don Bohlinger and is directed by Mario Giordano, Christoph Darnstädt, Don Bohlinger.
+C: This film is 120 minutes long. It is a drama and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: What is the plot like?
+C: 
+C: How about Eraserhead (1977)? 
+C: Eraserhead stars Herbert Cardwell, Frederick Elmes, Allen Joseph, David Lynch, Charlotte Stewart, Jeanne Bates, Jack Nance and is directed by David Lynch.
+C: This film is 89 minutes long. It is a fantasy and horror movie, and is rated NR.
+C: Is this recommendation satisfactory?
+U: Yeah, I have been meaning to see that.
+C: 
+C: How about Holes (2003)? 
+C: Holes stars Mike Medavoy, Shia LaBeouf, Andrew Davis, Teresa Tucker-Davies, Jon Voight, Tim Blake Nelson, Louis Sachar, Sigourney Weaver, Lowell D. Blank, Joel McNeely and is directed by Louis Sachar.
+C: This film is 117 minutes long. It is an adventure, comedy and drama movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Yes, that sound good.
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: That one is okay, I don't know if I would want to listen again.
+C: 
+C: How about Sister Act (1992)? 
+C: Sister Act stars Adam Greenberg, Kathy Najimy, Maggie Smith, Marc Shaiman, Wendy Makkena, Emile Ardolino, Colleen Halsey, Teri Schwartz, Paul Rudnick, Whoopi Goldberg and is directed by Paul Rudnick.
+C: This film is 100 minutes long. It is a comedy, crime and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Eh, that's kind of a one-time watch.
+C: 
+C: How about My Sister's Keeper (2009)? 
+C: My Sister's Keeper stars Cameron Diaz, Jeremy Leven, Chuck Pacheco, Abigail Breslin, Mark Johnson, Jodi Picoult, Alec Baldwin, Scott Goldman, Nick Cassavetes, Walter Raney and is directed by Jeremy Leven, Nick Cassavetes, Jodi Picoult.
+C: This film is 109 minutes long. It is a drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yeah, I'd like to see that.
+C: 
+C: How about Four Weddings and a Funeral (1994)? 
+C: Four Weddings and a Funeral stars Mike Newell, Hugh Grant, Jon Gregory, Michael Coulter, James Fleet, Simon Callow, Richard Curtis, Duncan Kenworthy, Andie MacDowell, Richard Rodney Bennett and is directed by Richard Curtis.
+C: This film is 117 minutes long. It is a comedy, drama and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, that one sounds good.
+C: 
+C: How about Empire of the Sun (1987)? 
+C: Empire of the Sun stars J.G. Ballard, Tom Stoppard, Frank Marshall, Kathleen Kennedy, Miranda Richardson, John Malkovich, Menno Meyjes, Christian Bale, Nigel Havers, Steven Spielberg and is directed by Tom Stoppard, J.G. Ballard, Menno Meyjes.
+C: This film is 153 minutes long. It is a drama, history and war movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Yes.
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7590bf042bb;		Timestamp:	2018-02-03 02:38:29.059730
+C: Tell me a genre you prefer?
+U: Horror, stuff like Rob Zombie
+C: I do not understand your answer. 
+C: Tell me a genre you prefer?
+U: Horror
+C: I'd like to get to know what your actor preferences are.
+U: Sheri Moon Zombie
+C: Tell me a director you prefer.
+U: Rob Zombie
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Fright Night (2011)? 
+C: Fright Night stars Tom Holland, David Tennant, Toni Collette, Alison R. Rosenzweig, Anton Yelchin, Ramin Djawadi, Michael De Luca, Marti Noxon, Colin Farrell, Craig Gillespie and is directed by Marti Noxon, Tom Holland.
+C: This film is 106 minutes long. It is a comedy and horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about The Texas Chainsaw Massacre (2003)? 
+C: The Texas Chainsaw Massacre stars Mike Fleiss, Jonathan Tucker, Andrew Bryniarski, Michael Bay, Scott Kosar, Erica Leerhsen, Kim Henkel, Marcus Nispel, Tobe Hooper, Jessica Biel and is directed by Kim Henkel, Tobe Hooper, Scott Kosar.
+C: This film is 98 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Good one!
+C: 
+C: How about Dancer in the Dark (2000)? 
+C: Dancer in the Dark stars David Morse, Robby Müller, Vibeke Windeløv, Karl Júlíusson, François Gédigier, Peter Stormare, Björk, Molly Marlene Stensgaard, Lars von Trier, Catherine Deneuve and is directed by Lars von Trier.
+C: This film is 140 minutes long. It is a crime, drama and musical movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a75904f9c5f2;		Timestamp:	2018-02-03 02:42:38.732914
+C: What types of films do you like to see?
+U: I like classic movies.
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Willam Holden, Montgomery Clift
+C: Tell me a director you prefer.
+U: Alfred Hitchcock
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13 is okay
+C: I'm thinking about what you might like.
+C: How about 2 Fast 2 Furious (2003)? 
+C: 2 Fast 2 Furious stars Derek Haas, Cole Hauser, Neal H. Moritz, John Singleton, David Arnold, Tyrese Gibson, Michael Brandt, Paul Walker, Eva Mendes, Gary Scott Thompson and is directed by Gary Scott Thompson, Michael Brandt, Derek Haas.
+C: This film is 107 minutes long. It is an action, crime and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: I might try it, but it doesn't sound like my style.
+C: 
+C: How about Dark Water (2005)? 
+C: Dark Water stars Takashige Ichise, Ariel Gade, John C. Reilly, Walter Salles, Jennifer Connelly, Rafael Yglesias, Tim Roth, Hideo Nakata, Doug Davison, Kôji Suzuki and is directed by Kôji Suzuki, Hideo Nakata, Takashige Ichise, Rafael Yglesias.
+C: This film is 105 minutes long. It is a drama, horror and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: okay, I would take a look.
+C: 
+C: How about The Texas Chainsaw Massacre (2003)? 
+C: The Texas Chainsaw Massacre stars Mike Fleiss, Jonathan Tucker, Andrew Bryniarski, Michael Bay, Scott Kosar, Erica Leerhsen, Kim Henkel, Marcus Nispel, Tobe Hooper, Jessica Biel and is directed by Kim Henkel, Tobe Hooper, Scott Kosar.
+C: This film is 98 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes, that's fine.
+C: 
+C: How about Dancer in the Dark (2000)? 
+C: Dancer in the Dark stars David Morse, Robby Müller, Vibeke Windeløv, Karl Júlíusson, François Gédigier, Peter Stormare, Björk, Molly Marlene Stensgaard, Lars von Trier, Catherine Deneuve and is directed by Lars von Trier.
+C: This film is 140 minutes long. It is a crime, drama and musical movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no. try something else please.
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes, it's okay
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No. Do you have a drama?
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Can you help me?
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, it's fine.
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: YES!!!
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

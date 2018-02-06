@@ -1,0 +1,107 @@
+User:	5a7227e1a61d2;		Timestamp:	2018-01-31 12:33:14.403337
+C: Please tell me some genres you like.
+U: keanu reeves
+C: I do not understand your answer. 
+C: Please tell me some genres you like.
+U: action
+C: Tell me some actors you like.
+U: keanu reeves
+C: who is your favorite director?
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7228efbf8d7;		Timestamp:	2018-01-31 12:39:05.626236
+C: What types of films do you like to see?
+U: Comedy Drama and Crime 
+C: I'd like to get to know what your actor preferences are.
+U: Wesley Snipes, Eddie Murphy, Tom Cruise and Nick Nolte
+C: Tell me a director you prefer.
+U: Stephen Speilberg 
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes 
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7228f7da5ee;		Timestamp:	2018-01-31 12:39:19.794046
+C: Can you tell me some genres?
+U: comedy
+C: I'd like to get to know what your actor preferences are.
+U: oka
+C: who is your favorite director?
+U: I don't know directors
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Braveheart (1995)? 
+C: Braveheart stars Bruce Davey, Mel Gibson, Randall Wallace, Alan Ladd Jr., John Toll, Angus Macfadyen, Sophie Marceau, Steven Rosenblum, James Horner, Patrick McGoohan and is directed by Randall Wallace.
+C: This film is 178 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about The Usual Suspects (1995)? 
+C: The Usual Suspects stars Michael McDonnell, Gabriel Byrne, Chazz Palminteri, Stephen Baldwin, Bryan Singer, Christopher McQuarrie, John Ottman, Newton Thomas Sigel, Howard Cummings, Kevin Spacey and is directed by Christopher McQuarrie.
+C: This film is 106 minutes long. It is a crime, drama and mystery movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Saving Private Ryan (1998)? 
+C: Saving Private Ryan stars Tom Sizemore, Tom Hanks, Gary Levinsohn, Mark Gordon, Ian Bryce, John Williams, Robert Rodat, Matt Damon, Steven Spielberg, Edward Burns and is directed by Robert Rodat.
+C: This film is 169 minutes long. It is a drama and war movie, and is rated R.
+U: No
+C: Is this recommendation satisfactory?
+C: 
+U: No
+C: 
+C: How about Die Hard (1988)? 
+C: Die Hard stars Jeb Stuart, Roderick Thorp, Alan Rickman, John McTiernan, Bonnie Bedelia, Lawrence Gordon, Joel Silver, Steven E. de Souza, Reginald VelJohnson, Bruce Willis and is directed by Roderick Thorp, Jeb Stuart, Steven E. de Souza.
+C: This film is 131 minutes long. It is an action and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

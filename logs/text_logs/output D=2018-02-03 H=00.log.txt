@@ -1,0 +1,114 @@
+User:	5a75736000598;		Timestamp:	2018-02-03 00:33:18.124434
+C: What types of movies, or genres, do you like?
+U: horror movies, comedy, action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: chris pine, chris hemsworth, robert englund
+C: Tell me a director you prefer.
+U: Guillermo del Toro
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Red Dawn (2012)? 
+C: Red Dawn stars Kevin Reynolds, Dan Bradley, Chris Hemsworth, Isabel Lucas, Josh Peck, Josh Hutcherson, Beau Flynn, Carl Ellsworth, Jeremy Passmore, John Milius and is directed by Carl Ellsworth, Jeremy Passmore, Kevin Reynolds, John Milius.
+C: This film is 93 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Warriors (1979)? 
+C: The Warriors stars Lawrence Gordon, Sol Yurick, Walter Hill, Freeman A. Davies, David Shaber, Brian Tyler, Laurent Bouzereau, Dorsey Wright, James Remar, Michael Beck and is directed by Sol Yurick, David Shaber, Walter Hill.
+C: This film is 92 minutes long. It is an action and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Living Daylights (1987)? 
+C: The Living Daylights stars John Glen, Richard Maibaum, Michael G. Wilson, Ian Fleming, John Barry, Albert R. Broccoli, Maryam d'Abo, Jeroen Krabbé, Joe Don Baker, Timothy Dalton and is directed by Richard Maibaum, Michael G. Wilson, Ian Fleming.
+C: This film is 130 minutes long. It is an action, adventure and thriller movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: o
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a75748f21383;		Timestamp:	2018-02-03 00:38:11.958474
+C: Please tell me some genres you like.
+U: action
+C: Can you tell me some actors or actresses you like?
+U: keanu reeves
+C: who is your favorite director?
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Friday Night Lights (2004)? 
+C: Friday Night Lights stars Jay Hernandez, Brian Reitzell, Explosions in the Sky, Brian Grazer, David Aaron Cohen, Buzz Bissinger, Peter Berg, Lucas Black, Derek Luke, Billy Bob Thornton and is directed by Buzz Bissinger, David Aaron Cohen, Peter Berg.
+C: This film is 118 minutes long. It is an action, drama and sport movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Jacket (2005)? 
+C: The Jacket stars Kris Kristofferson, George Clooney, Peter Guber, Daniel Craig, Keira Knightley, Adrien Brody, John Maybury, Marc Rocco, Massy Tadjedin, Tom Bleecker and is directed by Tom Bleecker, Marc Rocco, Massy Tadjedin.
+C: This film is 103 minutes long. It is a drama, mystery and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Santa Clause (1994)? 
+C: The Santa Clause stars Jeffrey Silver, Steve Rudnick, Robert F. Newmyer, Tim Allen, Brian Reilly, Wendy Crewson, Eric Lloyd, Leo Benvenuti, Judge Reinhold, John Pasquin and is directed by Leo Benvenuti, Steve Rudnick.
+C: This film is 97 minutes long. It is a comedy, drama and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Following (1998)? 
+C: Following stars Lucy Russell, Emma Thomas, Jeremy Theobald, David Julyan, John Nolan, Gareth Heal, Alex Haw, Christopher Nolan and is directed by Christopher Nolan.
+C: This film is 69 minutes long. It is a crime, mystery and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Sunshine (2007)? 
+C: Sunshine stars Rose Byrne, Alwin H. Küchler, Cillian Murphy, Michelle Yeoh, John Murphy, Chris Evans, Chris Gill, Alex Garland, Andrew Macdonald, Danny Boyle and is directed by Alex Garland.
+C: This film is 107 minutes long. It is an adventure, sci-fi and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Candyman (1992)? 
+C: Candyman stars Sigurjon Sighvatsson, Tony Todd, Kasi Lemmons, Philip Glass, Bernard Rose, Virginia Madsen, Clive Barker, Alan Poul, Xander Berkeley, Steve Golin and is directed by Clive Barker, Bernard Rose.
+C: This film is 99 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7575744077c;		Timestamp:	2018-02-03 00:42:47.268049
+C: What is your favorite genre?
+U: drama
+C: Please tell me the people you like to see in a movie.
+U: Tom Cruise 
+C: Tell me a director you prefer.
+U: martin scorsese
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: How about Citizen Kane (1941)? 
+C: Citizen Kane stars Orson Welles, Bernard Herrmann, Agnes Moorehead, Herman J. Mankiewicz, Mollie Kent, Joseph Cotten, John Houseman, Gregg Toland, Roger Q. Denny, Dorothy Comingore and is directed by Herman J. Mankiewicz, Orson Welles, John Houseman, Roger Q. Denny, Mollie Kent.
+C: This film is 119 minutes long. It is a drama and mystery movie, and is rated NR.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7576755ffa9;		Timestamp:	2018-02-03 00:51:41.967847
+C: Please tell me some genres you like.
+U: RAP
+C: Please tell me the people you like to see in a movie.
+U: HALLIE
+C: Tell me a director you prefer.
+U: MARK
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG
+C: I'm thinking about what you might like.
+C: How about The Nightmare Before Christmas (1993)? 
+C: The Nightmare Before Christmas stars Caroline Thompson, Catherine O'Hara, Chris Sarandon, Henry Selick, Michael McDowell, Danny Elfman, Don Hahn, Tim Burton, William Hickey, Denise Di Novi and is directed by Tim Burton, Michael McDowell, Caroline Thompson.
+C: This film is 76 minutes long. It is an animation, family and fantasy movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: YEA
+C: 
+C: Bye! Please click the next button to proceed.
+

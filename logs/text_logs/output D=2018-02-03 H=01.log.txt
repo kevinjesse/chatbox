@@ -1,0 +1,138 @@
+User:	5a757b9038c84;		Timestamp:	2018-02-03 01:09:07.971784
+C: What is your favorite genre?
+U: Science fiction
+C: I'd like to get to know what your actor preferences are.
+U: I like a strong rugged actor or actress.
+C: Tell me a director you prefer.
+U: George Lucas
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about 2 Fast 2 Furious (2003)? 
+C: 2 Fast 2 Furious stars Derek Haas, Cole Hauser, Neal H. Moritz, John Singleton, David Arnold, Tyrese Gibson, Michael Brandt, Paul Walker, Eva Mendes, Gary Scott Thompson and is directed by Gary Scott Thompson, Michael Brandt, Derek Haas.
+C: This film is 107 minutes long. It is an action, crime and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yeah, it sounds great!
+C: 
+C: How about Dark Water (2005)? 
+C: Dark Water stars Takashige Ichise, Ariel Gade, John C. Reilly, Walter Salles, Jennifer Connelly, Rafael Yglesias, Tim Roth, Hideo Nakata, Doug Davison, Kôji Suzuki and is directed by Kôji Suzuki, Hideo Nakata, Takashige Ichise, Rafael Yglesias.
+C: This film is 105 minutes long. It is a drama, horror and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Does it have subtitles?
+C: 
+C: How about Street Fighter (1994)? 
+C: Street Fighter stars Edward M. Abroms, Jean-Claude Van Damme, Raul Julia, Ming-Na Wen, Damian Chapa, Steven E. de Souza, Edward R. Pressman, Kenzo Tsujimoto, Graeme Revell, William A. Fraker and is directed by Steven E. de Souza.
+C: This film is 102 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes, it will do.
+C: 
+C: How about Hackers (1995)? 
+C: Hackers stars Ralph Winter, Matthew Lillard, Simon Boswell, Iain Softley, Michael Peyser, Jesse Bradford, Guy Pratt, Rafael Moreu, Angelina Jolie, Jonny Lee Miller and is directed by Rafael Moreu.
+C: This film is 107 minutes long. It is a comedy, crime and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes, it sounds great!
+C: 
+C: How about The Station Agent (2003)? 
+C: The Station Agent stars Oliver Bokelberg, Paul Benjamin, Peter Dinklage, Robert May, Tom McCarthy, Mary Jane Skalski, Bobby Cannavale, Stephen Trask, Kathryn Tucker, Patricia Clarkson and is directed by Tom McCarthy.
+C: This film is 89 minutes long. It is a comedy and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: I would check it out.
+C: 
+C: How about The Beach (2000)? 
+C: The Beach stars Danny Boyle, Andrew Macdonald, Leonardo DiCaprio, John Hodge, Patcharawan Patarakijjanon, Virginie Ledoyen, Angelo Badalamenti, Daniel York, Darius Khondji, Alex Garland and is directed by John Hodge, Alex Garland.
+C: This film is 119 minutes long. It is an adventure, drama and romance movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes it is.
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a758270d0f30;		Timestamp:	2018-02-03 01:38:20.686267
+C: Can you tell me some genres?
+U: Horror and classics
+C: I'd like to get to know what your actor preferences are.
+U: Jennifer Connelly, Emma Roberts, Jessica Harper
+C: Tell me a director you prefer.
+U: Dario Argento
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Fright Night (2011)? 
+C: Fright Night stars Tom Holland, David Tennant, Toni Collette, Alison R. Rosenzweig, Anton Yelchin, Ramin Djawadi, Michael De Luca, Marti Noxon, Colin Farrell, Craig Gillespie and is directed by Marti Noxon, Tom Holland.
+C: This film is 106 minutes long. It is a comedy and horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Saw it and I didn't like it.
+C: 
+C: How about The Texas Chainsaw Massacre (2003)? 
+C: The Texas Chainsaw Massacre stars Mike Fleiss, Jonathan Tucker, Andrew Bryniarski, Michael Bay, Scott Kosar, Erica Leerhsen, Kim Henkel, Marcus Nispel, Tobe Hooper, Jessica Biel and is directed by Kim Henkel, Tobe Hooper, Scott Kosar.
+C: This film is 98 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: I didn't like that one either.
+C: 
+C: How about Dancer in the Dark (2000)? 
+C: Dancer in the Dark stars David Morse, Robby Müller, Vibeke Windeløv, Karl Júlíusson, François Gédigier, Peter Stormare, Björk, Molly Marlene Stensgaard, Lars von Trier, Catherine Deneuve and is directed by Lars von Trier.
+C: This film is 140 minutes long. It is a crime, drama and musical movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes, I'll try that one.
+C: 
+C: How about Wrong Turn (2003)? 
+C: Wrong Turn stars Eliza Dushku, Rob Schmidt, Jeremy Sisto, Robert Kulzer, Erik Feig, Emmanuelle Chriqui, Brian J. Gilbert, Stan Winston, Desmond Harrington, Alan B. McElroy and is directed by Alan B. McElroy.
+C: This film is 84 minutes long. It is a horror movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes.
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7585ab79e16;		Timestamp:	2018-02-03 01:51:41.726950
+C: What are your movie interests?
+U: I like action movies.
+C: Can you tell me some actors or actresses you like?
+U: Tom Cruise is pretty good.
+C: Tell me a director you prefer.
+U: Quentin Tarantino
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a75866b2ae52;		Timestamp:	2018-02-03 01:58:37.295215
+C: Please tell me some genres you like.
+U: I like country music.
+C: Can you tell me some actors or actresses you like?
+U: I like Abigail Spencer.
+C: who is your favorite director?
+U: I do not really have a favorite director.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: What movie?
+C: I'm thinking about what you might like.
+C: How about 2 Fast 2 Furious (2003)? 
+C: 2 Fast 2 Furious stars Derek Haas, Cole Hauser, Neal H. Moritz, John Singleton, David Arnold, Tyrese Gibson, Michael Brandt, Paul Walker, Eva Mendes, Gary Scott Thompson and is directed by Gary Scott Thompson, Michael Brandt, Derek Haas.
+C: This film is 107 minutes long. It is an action, crime and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: That is a good movie!
+C: 
+C: How about Dark Water (2005)? 
+C: Dark Water stars Takashige Ichise, Ariel Gade, John C. Reilly, Walter Salles, Jennifer Connelly, Rafael Yglesias, Tim Roth, Hideo Nakata, Doug Davison, Kôji Suzuki and is directed by Kôji Suzuki, Hideo Nakata, Takashige Ichise, Rafael Yglesias.
+C: This film is 105 minutes long. It is a drama, horror and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: I do not think I would like that movie.
+C: 
+C: How about Street Fighter (1994)? 
+C: Street Fighter stars Edward M. Abroms, Jean-Claude Van Damme, Raul Julia, Ming-Na Wen, Damian Chapa, Steven E. de Souza, Edward R. Pressman, Kenzo Tsujimoto, Graeme Revell, William A. Fraker and is directed by Steven E. de Souza.
+C: This film is 102 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Are we done?
+C: 
+C: How about Hackers (1995)? 
+C: Hackers stars Ralph Winter, Matthew Lillard, Simon Boswell, Iain Softley, Michael Peyser, Jesse Bradford, Guy Pratt, Rafael Moreu, Angelina Jolie, Jonny Lee Miller and is directed by Rafael Moreu.
+C: This film is 107 minutes long. It is a comedy, crime and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes.
+C: 
+C: Bye! Please click the next button to proceed.
+

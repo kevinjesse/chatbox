@@ -1,0 +1,24 @@
+User:	5a724180ab253;		Timestamp:	2018-01-31 14:23:38.225217
+C: What is your favorite genre?
+U: Action
+C: Can you tell me some actors or actresses you like?
+U: The Rock, Mark Wahlberg, Jason Stathom
+C: Tell me a director you prefer.
+U: John Woo
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: YES
+C: 
+C: Bye! Please click the next button to proceed.
+

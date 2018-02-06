@@ -94,7 +94,11 @@ for mode in mymode:
         npgen = np.zeros((len(movielist), len(modelist)))
 
         for movieid in range(0, len(movielist)):
-            movieinfo = movieSide[str(movieid)][mode]
+            try:
+                movieinfo = movieSide[str(movieid)][mode]
+            except KeyError:
+                continue
+            #movieinfo = movieSide[str(movieid)][mode]
             freq = 0
             for item in movieinfo:
                 try:
@@ -150,7 +154,12 @@ for mode in mymode:
         npgen = np.zeros((len(movielist), len(modelist)))
 
         for movieid in range(0, len(movielist)):
-            movieinfo = movieSide[str(movieid)][mode]
+            try:
+                movieinfo = movieSide[str(movieid)][mode]
+            except KeyError:
+                continue
+
+            #movieinfo = movieSide[str(movieid)][mode]
             freq = 0
             for item in movieinfo:
                 try:
@@ -211,14 +220,14 @@ for mode in mymode:
                 continue
 
             freq = 0
-            for item in movieinfo:
-                try:
-                    print item
+            #for item in movieinfo:
+            try:
+                print item
 
-                    npgen[movieid][modelist.index(item)] = 1
-                    freq += 1
-                except ValueError:
-                    continue
+                npgen[movieid][modelist.index(item)] = 1
+                freq += 1
+            except ValueError:
+                continue
             # print movieid
             # print freq
             if freq != 0:

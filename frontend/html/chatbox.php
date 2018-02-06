@@ -7,27 +7,27 @@ session_start();
 #ini_set('display_errors', 1);
 #ini_set('display_startup_errors', 1);
 #error_reporting(E_ALL);
-if (!session_id()) {
-    session_id(uniqid());
-}
+//if (!session_id()) {
+//    session_id(uniqid());
+//}
 
-$UUID = session_id();
+$UUID = uniqid();
 ?>
 
 <html>
 <head>
     <title>Chatbox</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/chat.css">
-    <script src="/css/jquery.js"></script>
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="css/jquery.js"></script>
 </head>
 <body>
 <div class="chat">
     <div class="chat-title">
-        <h1>Cortana</h1>
-        <h2>Chatbox</h2>
+        <h1>Chatbot</h1>
+        <h2>Interaction - Chatbox</h2>
         <figure class="avatar">
-            <img src="/lib/cortana.png"/></figure>
+            <img src="lib/chatbox-small.png"/></figure>
     </div>
     <div id="messages" class="messages">
         <div id="messages-content" class="messages-content"></div>
@@ -37,6 +37,11 @@ $UUID = session_id();
                id="chatInput" onkeypress="enterPress(event)"/>
         <input type="button" class="message-submit" id="btnSend" value="Send"/>
     </div>
+</div>
+<div class="buttonCtrl" id="buttonCtrlForm">
+    <form id="showSurveyForm" action="">
+        <input type="button" class="next" id="btnShowSurvey" value="Next" />
+    </form>
 </div>
 </body>
 </html>
@@ -53,15 +58,29 @@ $UUID = session_id();
             if (chatInput != "") {
                 insertMessage(chatInput);
                 sendChatText(chatInput, false);
+                $('#chatInput').val(null);
             }
         });
+        document.getElementById("btnShowSurvey").onclick = function () {
+            /*request = $.ajax({
+                type: "GET",
+                url: "/submit.php?action=getJson&UUID="+ encodeURIComponent(id)
+            });*/
+            location.href = "survey.php?id="+ encodeURIComponent(id);
+        };
+
+        var position = $('.chat').offset();
+        $('.buttonCtrl').offset({
+            top: position.top + $('.chat').outerHeight(true),
+            left: position.left
+        })
     });
 
     function sendKill() {
         var request;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=kill&UUID="+ encodeURIComponent(id)
+            url: "submit.php?action=kill&UUID="+ encodeURIComponent(id)
         });
         request.done(function (response) {
         });
@@ -74,6 +93,7 @@ $UUID = session_id();
             if (chatInput != "") {
                 insertMessage(chatInput);
                 sendChatText(chatInput, false);
+                $('#chatInput').val(null);
             }
         }
     }
@@ -100,13 +120,16 @@ $UUID = session_id();
 
     function insertAI(resp) {
         if (resp != "") {
-            $('<div class="message loading new"><figure class="avatar"><img src="/lib/cortana.png" /></figure><span></span></div>').appendTo($('.messages-content'));
+            $('<div class="message loading new"><figure class="avatar"><img src="/lib/chatbox-small.png" ' +
+                '/></figure><span></span></div>').appendTo($('.messages-content'));
             setTimeout(function () {
                 $('.message.loading').remove();
-                $('<div class="message new"><figure class="avatar"><img src="/lib/cortana.png" /></figure>' + resp + '</div>').appendTo($('.messages-content')).addClass('new');
+                $('<div class="message new"><figure class="avatar"><img src="/lib/chatbox-small.png" /></figure>' +
+                    resp + '</div>').appendTo($('.messages-content')).addClass('new');
                 setDate();
                 scrollDown(1000)
             }, 1000);
+            $('#chatInput').val(null);
         }
     }
 
@@ -115,18 +138,59 @@ $UUID = session_id();
         var chatInput = chatText;
         request = $.ajax({
             type: "GET",
-            url: "/submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
+            url: "submit.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
         });
         request.done(function (response) {
             respJSON = JSON.parse(response);
+
+            console.log(response);
+
+
             insertAI(respJSON['response']);
-            if (listen === false) {
-                listen = true;
-                sendChatText('', true);
-                listen = false;
-            }
+
+            //if (listen === false) {
+            ////////   listen = true;
+
+            //sendChatText('', listen);
+
+            //}
         });
-        $('#chatInput').val(null);
+        //listen = false;
+
     }
+
+    function listener() {
+        var request;
+        if (listen === false) {
+            listen = true;
+            request = $.ajax({
+                type: "GET",
+                url: "submit.php?action=submit&UUID=" + encodeURIComponent(id) + "&chattext=" + encodeURIComponent('') + "&mode=" + true
+            });
+            request.done(function (response) {
+                respJSON = JSON.parse(response);
+
+                console.log(response);
+
+                insertAI(respJSON['response']);
+                //if (listen === false) {
+                ////////   listen = true;
+
+                //sendChatText('', listen);
+
+                //}
+                listen = false;
+                if (respJSON['signal'] === "end") {
+                    document.getElementById('buttonCtrlForm').style.display = "block"
+                }
+            });
+
+        }
+        //listen = false;
+
+    }
+    //
+    setInterval(function() {listener();}, 2000);
+
 
 </script>

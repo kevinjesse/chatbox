@@ -1,11 +1,11 @@
 import pickle
-import matplotlib
+#import matplotlib
 import copy
 import numpy as np
 from scipy.sparse import coo_matrix
 from scipy.io import mmwrite, mmread
-matplotlib.use('Agg')
-from matplotlib import pyplot as plt
+#matplotlib.use('Agg')
+#from matplotlib import pyplot as plt
 import database_connect
 
 cur = database_connect.db_connect()
@@ -175,11 +175,12 @@ for movie_name in both:
 
 #both = list(set(movie_names).intersection(set(names)))
 #userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:341]
-userlist = sorted(user_set, key=user_set.get, reverse=True)[0:340]
+userlist = sorted(user_set, key=user_set.get, reverse=True) #477396 users
+
 movielist = sorted(bothdic.itervalues(), key=bothdic.get)
 net_table = np.zeros((len(movielist),len(userlist)))
 
-
+print "PROCESSING"
 for mov in movielist:
     row = movielist.index(mov)
     text_file = "mv_" + mov.zfill(7) + ".txt"
@@ -193,7 +194,7 @@ for mov in movielist:
             try:
                 col = userlist.index(user_id)
                 user_rate = userrow[1].strip()
-                print "adding "+ user_rate +" at row " +str(row) + ", col " + str(col)
+                #print "adding "+ user_rate +" at row " +str(row) + ", col " + str(col)
                 net_table[row][col] = user_rate
             except ValueError as e:
                 continue

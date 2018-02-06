@@ -1,0 +1,24 @@
+User:	5a7216fc0b6ee;		Timestamp:	2018-01-31 11:23:01.034053
+C: Please tell me some genres you like.
+U: action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: keanu reeves
+C: Tell me a director you prefer.
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Amadeus (1984)? 
+C: Amadeus stars T.M. Christopher, Elizabeth Berridge, Michael Chandler, Saul Zaentz, Miroslav Ondrícek, Peter Shaffer, Milos Forman, F. Murray Abraham, Roy Dotrice, Tom Hulce and is directed by Peter Shaffer.
+C: This film is 160 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Kiss of the Dragon (2001)? 
+C: Kiss of the Dragon stars Tchéky Karyo, Steven Chasman, Max Ryan, Happy Walters, Robert Mark Kamen, Jet Li, Bridget Fonda, Chris Nahon, Luc Besson, Craig Armstrong and is directed by Jet Li, Luc Besson, Robert Mark Kamen.
+C: This film is 98 minutes long. It is an action, crime and drama movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

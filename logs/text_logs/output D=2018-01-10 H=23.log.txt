@@ -1,0 +1,18 @@
+User:	ibv1d78e9l6sc468nnqfoosp25;		Timestamp:	2018-01-10 23:33:43.738944
+C: What types of movies, or genres, do you like?
+U: animation and romance
+C: Can you tell me some actors or actresses you like?
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Beauty and the Beast (2017)? 
+C: Beauty and the Beast stars Gabrielle-Suzanne Barbot de Villeneuve, Emma Watson, Luke Evans, Jeanne-Marie Leprince de Beaumont, Dan Stevens, Bill Condon, Linda Woolverton, Evan Spiliotopoulos, Stephen Chbosky, Josh Gad and is directed by Stephen Chbosky, Evan Spiliotopoulos, Linda Woolverton, Gabrielle-Suzanne Barbot de Villeneuve, Jeanne-Marie Leprince de Beaumont.
+C: This film is 129 minutes long. It is a family, fantasy and musical movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

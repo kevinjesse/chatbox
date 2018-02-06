@@ -1,0 +1,24 @@
+User:	5a6f7e50cde84;		Timestamp:	2018-01-29 12:06:02.076692
+C: What types of movies, or genres, do you like?
+U: scifi, adventure
+C: I'd like to get to know what your actor preferences are.
+U: johnny depp
+C: who is your favorite director?
+U: stephen spillberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Addams Family Values (1993)? 
+C: Addams Family Values stars Scott Rudin, Raul Julia, Charles Addams, Joan Cusack, Paul Rudnick, Marc Shaiman, Donald Peterman, Anjelica Huston, Christopher Lloyd, Barry Sonnenfeld and is directed by Charles Addams, Paul Rudnick.
+C: This film is 94 minutes long. It is a comedy and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Starship Troopers (1997)? 
+C: Starship Troopers stars Jon Davison, Basil Poledouris, Paul Verhoeven, Robert A. Heinlein, Dina Meyer, Casper Van Dien, Edward Neumeier, Alan Marshall, Jake Busey, Denise Richards and is directed by Edward Neumeier, Robert A. Heinlein.
+C: This film is 129 minutes long. It is an action, adventure and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

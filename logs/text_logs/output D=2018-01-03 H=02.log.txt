@@ -1,0 +1,249 @@
+User:	5a4ca9e1e1d45;		Timestamp:	2018-01-03 02:01:23.808035
+C: What are your movie interests?
+U: sci-fi
+C: Can you tell me some actors or actresses you prefer to watch?
+U: chris pine
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by Adam Cozad, David Koepp, Tom Clancy.
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4caaa644109;		Timestamp:	2018-01-03 02:04:42.494933
+C: Tell me a genre you prefer?
+U: sci-fi
+C: Can you tell me some actors or actresses you like?
+U: chris pine
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by Adam Cozad, David Koepp, Tom Clancy.
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: None
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4caadc1d9a4;		Timestamp:	2018-01-03 02:05:36.425890
+C: What are your movie interests?
+U: sci-fi
+C: Tell me some actors you like.
+U: chris pine
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by Adam Cozad, David Koepp, Tom Clancy.
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cab827b766;		Timestamp:	2018-01-03 02:08:31.039418
+C: Can you tell me some genres?
+U: sci-fi
+C: Can you tell me some actors or actresses you like?
+U: chris pine
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+U: no
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by .
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+C: How about Hell or High Water (2016)? 
+C: Hell or High Water stars Peter Berg, David Mackenzie, Jeff Bridges, Gil Birmingham, Ben Foster, Carla Hacken, Chris Pine, Sidney Kimmel, Julie Yorn, Taylor Sheridan and is directed by Taylor Sheridan.
+C: This film is 102 minutes long. It is a crime, drama and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4caba944082;		Timestamp:	2018-01-03 02:09:23.366962
+C: What types of movies, or genres, do you like?
+U: comedy
+C: Please tell me the people you like to see in a movie.
+U: chris pine
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg-13
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about This Means War (2012)? 
+C: This Means War stars Tom Hardy, Marcus Gautesen, Til Schweiger, Reese Witherspoon, McG, Timothy Dowling, Chris Pine, Robert Simonds, Simon Kinberg, James Lassiter and is directed by Timothy Dowling, Simon Kinberg, Marcus Gautesen.
+C: This film is 103 minutes long. It is an action, comedy and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cabd736d70;		Timestamp:	2018-01-03 02:10:00.255928
+C: What types of films do you like to see?
+U: comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Watch (2012)? 
+C: The Watch stars Seth Rogen, Jared Stern, Jonah Hill, Vince Vaughn, Akiva Schaffer, Christophe Beck, Ben Stiller, Evan Goldberg, Shawn Levy, Billy Crudup and is directed by Jared Stern, Seth Rogen, Evan Goldberg.
+C: This film is 102 minutes long. It is an action, comedy and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cac8cdbdf3;		Timestamp:	2018-01-03 02:12:59.713544
+C: What is your favorite genre?
+U: sci-fi
+C: Can you tell me some actors or actresses you like?
+U: chris pine
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg-13
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by Adam Cozad, David Koepp, Tom Clancy.
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cada762381;		Timestamp:	2018-01-03 02:20:20.437970
+C: What types of movies, or genres, do you like?
+U: sci-fi
+C: I'd like to get to know what your actor preferences are.
+U: chris pine
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Star Trek (2009)? 
+C: Star Trek stars Zachary Quinto, Chris Pine, Alex Kurtzman, Damon Lindelof, Michael Giacchino, Gene Roddenberry, Roberto Orci, J.J. Abrams, Leonard Nimoy, Simon Pegg and is directed by Roberto Orci, Alex Kurtzman, Gene Roddenberry.
+C: This film is 127 minutes long. It is an action, adventure and sci-fi movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Wonder Woman (2017)? 
+C: Wonder Woman stars Jason Fuchs, Charles Roven, William Moulton Marston, Gal Gadot, Chris Pine, Robin Wright, Lucy Davis, Patty Jenkins, Allan Heinberg, Zack Snyder and is directed by Allan Heinberg, Zack Snyder, Jason Fuchs, William Moulton Marston.
+C: This film is 141 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Star Trek Into Darkness (2013)? 
+C: Star Trek Into Darkness stars Bryan Burk, Chris Pine, Gene Roddenberry, Zoe Saldana, Roberto Orci, Benedict Cumberbatch, Damon Lindelof, Zachary Quinto, Alex Kurtzman, J.J. Abrams and is directed by Roberto Orci, Alex Kurtzman, Damon Lindelof, Gene Roddenberry.
+C: This film is 132 minutes long. It is an action, adventure and sci-fi movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Hell or High Water (2016)? 
+C: Hell or High Water stars Peter Berg, David Mackenzie, Jeff Bridges, Gil Birmingham, Ben Foster, Carla Hacken, Chris Pine, Sidney Kimmel, Julie Yorn, Taylor Sheridan and is directed by Taylor Sheridan.
+C: This film is 102 minutes long. It is a crime, drama and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Rise of the Guardians (2012)? 
+C: Rise of the Guardians stars Isla Fisher, Chris Pine, David Lindsay-Abaire, William Joyce, Christina Steinberg, Nancy Bernstein, Alexandre Desplat, Peter Ramsey, Hugh Jackman, Alec Baldwin and is directed by David Lindsay-Abaire, William Joyce.
+C: This film is 97 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Star Trek Beyond (2016)? 
+C: Star Trek Beyond stars Karl Urban, Patrick McKay, Justin Lin, Gene Roddenberry, Simon Pegg, Zachary Quinto, Chris Pine, Doug Jung, Zoe Saldana, Roberto Orci and is directed by Simon Pegg, Doug Jung, Gene Roddenberry, Roberto Orci, Patrick McKay, John D. Payne.
+C: This film is 122 minutes long. It is an action, adventure and sci-fi movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Unstoppable (2010)? 
+C: Unstoppable stars Mimi Rogers, Denzel Washington, Alex Young, Julie Yorn, Rosario Dawson, Chris Pine, Ethan Suplee, Tony Scott, Mark Bomback, Eric McLeod and is directed by Mark Bomback.
+C: This film is 98 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about This Means War (2012)? 
+C: This Means War stars Tom Hardy, Marcus Gautesen, Til Schweiger, Reese Witherspoon, McG, Timothy Dowling, Chris Pine, Robert Simonds, Simon Kinberg, James Lassiter and is directed by Timothy Dowling, Simon Kinberg, Marcus Gautesen.
+C: This film is 103 minutes long. It is an action, comedy and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Jack Ryan: Shadow Recruit (2014)? 
+C: Jack Ryan: Shadow Recruit stars Adam Cozad, Kenneth Branagh, David Koepp, Chris Pine, Tom Clancy, Kevin Costner, Lorenzo di Bonaventura, Keira Knightley, David Barron, Mace Neufeld and is directed by Adam Cozad, David Koepp, Tom Clancy.
+C: This film is 105 minutes long. It is an action, drama and thriller movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Into the Woods (2014)? 
+C: Into the Woods stars Stephen Sondheim, Anna Kendrick, Meryl Streep, Chris Pine, Emily Blunt, Rob Marshall, Marc Platt, James Lapine, Callum McDougall, John DeLuca and is directed by James Lapine, Stephen Sondheim.
+C: This film is 125 minutes long. It is an adventure, fantasy and musical movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: I'm sorry but there is no recommendation that can be made with your criteria.
+C: Bye! Please click the next button to proceed.
+
+User:	5a4cae938af7d;		Timestamp:	2018-01-03 02:22:04.596045
+C: What are your movie interests?
+U: action
+C: Can you tell me some actors or actresses you like?
+U: keanu reeves
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about John Wick: Chapter 2 (2017)? 
+C: John Wick: Chapter 2 stars Chad Stahelski, Keanu Reeves, Riccardo Scamarcio, Erica Lee, Joel J. Richard, Tyler Bates, Derek Kolstad, Ruby Rose, Basil Iwanyk, Ian McShane and is directed by Derek Kolstad.
+C: This film is 122 minutes long. It is an action, crime and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about John Wick (2014)? 
+C: John Wick stars Willem Dafoe, Derek Kolstad, David Leitch, Chad Stahelski, Keanu Reeves, Alfie Allen, Mike Witherill, Basil Iwanyk, Michael Nyqvist, Eva Longoria and is directed by Derek Kolstad.
+C: This film is 101 minutes long. It is an action, crime and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Speed (1994)? 
+C: Speed stars Mark Gordon, Dennis Hopper, Keanu Reeves, Andrzej Bartkowiak, Sandra Bullock, Graham Yost, Joe Morton, John Wright, Jan de Bont, Mark Mancina and is directed by Graham Yost.
+C: This film is 116 minutes long. It is an action, adventure and crime movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

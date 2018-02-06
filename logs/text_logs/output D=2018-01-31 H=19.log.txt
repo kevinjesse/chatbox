@@ -1,0 +1,80 @@
+User:	5a728ecf737d6;		Timestamp:	2018-01-31 19:54:50.573269
+C: I am trying to understand your genre preferences.
+U: ok. what do you want to know?
+C: Tell me some actors you like.
+U: Jensen Ackles
+C: who is your favorite director?
+U: I don't have one.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: Any rating
+C: I'm thinking about what you might like.
+C: How about Addams Family Values (1993)? 
+C: Addams Family Values stars Scott Rudin, Raul Julia, Charles Addams, Joan Cusack, Paul Rudnick, Marc Shaiman, Donald Peterman, Anjelica Huston, Christopher Lloyd, Barry Sonnenfeld and is directed by Charles Addams, Paul Rudnick.
+C: This film is 94 minutes long. It is a comedy and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: hello?
+C: 
+C: How about Starship Troopers (1997)? 
+C: Starship Troopers stars Jon Davison, Basil Poledouris, Paul Verhoeven, Robert A. Heinlein, Dina Meyer, Casper Van Dien, Edward Neumeier, Alan Marshall, Jake Busey, Denise Richards and is directed by Edward Neumeier, Robert A. Heinlein.
+C: This film is 129 minutes long. It is an action, adventure and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a728f5827a9f;		Timestamp:	2018-01-31 19:54:58.181409
+C: Tell me a genre you prefer?
+U: rock
+C: Can you tell me some actors or actresses you prefer to watch?
+U: edward norton, cate blanchett
+C: who is your favorite director?
+U: ridley scott
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a728ff19c695;		Timestamp:	2018-01-31 19:57:33.844338
+C: What are your movie interests?
+U: I love mystery and thrillers
+C: I'd like to get to know what your actor preferences are.
+U: Jake Gyllenhaal and Brad Pitt 
+C: who is your favorite director?
+U: Christopher Nolan
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+U: Cool
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a728fef7876d;		Timestamp:	2018-01-31 19:58:53.892659
+C: What types of movies, or genres, do you like?
+U: I like dramas and adventure movies
+C: Tell me some actors you like.
+U: Liam Neeson, Robin Williams, Simon Pegg
+C: who is your favorite director?
+U: Scorcese
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Not familiar with it, but I'd watch it.
+C: 
+U: Maybe
+C: 
+C: Bye! Please click the next button to proceed.
+

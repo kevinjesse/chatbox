@@ -1,0 +1,37 @@
+User:	5a4e546d6f00f;		Timestamp:	2018-01-04 08:21:23.475267
+C: What are your movie interests?
+U: action
+C: Tell me some actors you like.
+U: keanu reeves
+C: Tell me a director you prefer.
+U: anyone
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a4e5bc06ceb1;		Timestamp:	2018-01-04 08:53:54.396323
+C: Tell me a genre you prefer?
+U: Action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Danzel Washington
+C: who is your favorite director?
+U: Steven Spilburg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: There is no exact match for what was specified, so I will do my best!
+C: How about The Dark Knight (2008)? 
+C: The Dark Knight stars Charles Roven, Heath Ledger, Jonathan Nolan, Christian Bale, David S. Goyer, Lorne Orleans, Aaron Eckhart, Bob Kane, Michael Caine, Christopher Nolan and is directed by Jonathan Nolan, Christopher Nolan, David S. Goyer, Bob Kane.
+C: This film is 152 minutes long. It is an action, crime and drama movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

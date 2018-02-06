@@ -21,6 +21,10 @@ function submit($s) {
     return $content;
 }
 
+function getJson($s) {
+    $json = json_encode(array('getJson' => true));
+}
+
 function kill($s) {
     socket_write($s, "log", strlen("log"));
     $content = socket_read($s, 2048);

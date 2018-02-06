@@ -1,0 +1,304 @@
+User:	5a72590d87369;		Timestamp:	2018-01-31 16:06:54.446803
+C: What are your movie interests?
+U: Horror and thrillers mostly, some dramas and documentaries
+C: Can you tell me some actors or actresses you like?
+U: Tom Hardy, Julianne Moore, Toni Colette, Jake Gyllenhaal, Ian McKellan
+C: who is your favorite director?
+U: darren aronofsky
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: r
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: Absolutely
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a725b02b0a3e;		Timestamp:	2018-01-31 16:11:55.235674
+C: What are your movie interests?
+U: I like all kinds of movies. Lately I've really enjoyed romance and horror! Sci-fi is nice sometimes too.
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Umm... brad pit!
+C: Tell me a director you prefer.
+U: No preferences
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: idk?
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+U: ok
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a725b02b0a3e;		Timestamp:	2018-01-31 16:11:55.974887
+C: What are your movie interests?
+U: I like all kinds of movies. Lately I've really enjoyed romance and horror! Sci-fi is nice sometimes too.
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Umm... brad pit!
+C: Tell me a director you prefer.
+U: No preferences
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: idk?
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+U: ok
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+U: es
+C: 
+
+User:	5a725d4ff24d2;		Timestamp:	2018-01-31 16:21:47.008845
+C: What types of films do you like to see?
+U: horror
+C: Tell me some actors you like.
+U: tom cruise
+C: Tell me a director you prefer.
+U: Steven Spielberg
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: ok
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a725d533d973;		Timestamp:	2018-01-31 16:23:05.895230
+C: Can you tell me some genres?
+U: I like horror and fantasy.
+C: Please tell me the people you like to see in a movie.
+U: I love The Rock, Emma Stone and Rose McGowan
+C: I do not understand your answer. 
+C: Please tell me the people you like to see in a movie.
+U: Rose McGowan
+C: Tell me a director you prefer.
+U: Guillermo Del Toro
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: 
+U: :(
+C: 
+U: No
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: How about The Matrix (1999)? 
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: The Matrix is great
+C: 
+C: How about Braveheart (1995)? 
+C: Braveheart stars Bruce Davey, Mel Gibson, Randall Wallace, Alan Ladd Jr., John Toll, Angus Macfadyen, Sophie Marceau, Steven Rosenblum, James Horner, Patrick McGoohan and is directed by Randall Wallace.
+U:  mark
+C: This film is 178 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a725d533d973;		Timestamp:	2018-01-31 16:23:08.421282
+C: Can you tell me some genres?
+U: I like horror and fantasy.
+C: Please tell me the people you like to see in a movie.
+U: I love The Rock, Emma Stone and Rose McGowan
+C: I do not understand your answer. 
+C: Please tell me the people you like to see in a movie.
+U: Rose McGowan
+C: Tell me a director you prefer.
+U: Guillermo Del Toro
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+C: 
+U: :(
+C: 
+U: No
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: How about The Matrix (1999)? 
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: The Matrix is great
+C: 
+C: How about Braveheart (1995)? 
+C: Braveheart stars Bruce Davey, Mel Gibson, Randall Wallace, Alan Ladd Jr., John Toll, Angus Macfadyen, Sophie Marceau, Steven Rosenblum, James Horner, Patrick McGoohan and is directed by Randall Wallace.
+U:  mark
+C: This film is 178 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+C: 
+C: Bye! Please click the next button to proceed.
+U: Ok yes
+C: 
+
+User:	5a725d8213ba2;		Timestamp:	2018-01-31 16:23:49.457581
+C: Tell me a genre you prefer?
+U: science fiction
+C: I'd like to get to know what your actor preferences are.
+U: keanu reeves
+C: who is your favorite director?
+U: christopher nolan
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: pg-13
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Transcendence (2014)? 
+C: Transcendence stars Annie Marter, Morgan Freeman, Wally Pfister, Johnny Depp, Cillian Murphy, Rebecca Hall, Broderick Johnson, Kate Cohen, Andrew A. Kosove, Jack Paglen and is directed by Jack Paglen.
+C: This film is 119 minutes long. It is a drama, mystery and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Underworld (2003)? 
+C: Underworld stars Tom Rosenberg, Gary Lucchesi, Kate Beckinsale, Shane Brolly, Danny McBride, Scott Speedman, Richard S. Wright, Kevin Grevioux, Len Wiseman, Michael Sheen and is directed by Kevin Grevioux, Len Wiseman, Danny McBride.
+C: This film is 121 minutes long. It is an action, fantasy and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7260d2bfb81;		Timestamp:	2018-01-31 16:39:24.206945
+C: What types of films do you like to see?
+U: I like comedys
+C: Can you tell me some actors or actresses you like?
+U: burt renylds 
+C: Tell me a director you prefer.
+U: I dont have any prefrenc
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: at least r rated
+C: I'm thinking about what you might like.
+C: How about Dead Silence (2007)? 
+C: Dead Silence stars Michael Fairman, Charlie Clouser, Amber Valletta, James Wan, Oren Koules, Mark Burg, Ryan Kwanten, Donnie Wahlberg, Gregg Hoffman, Leigh Whannell and is directed by Leigh Whannell, James Wan.
+C: This film is 89 minutes long. It is a horror and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: wait for your answer
+C: 
+C: How about Transcendence (2014)? 
+C: Transcendence stars Annie Marter, Morgan Freeman, Wally Pfister, Johnny Depp, Cillian Murphy, Rebecca Hall, Broderick Johnson, Kate Cohen, Andrew A. Kosove, Jack Paglen and is directed by Jack Paglen.
+C: This film is 119 minutes long. It is a drama, mystery and romance movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no its not
+C: 
+C: How about Underworld (2003)? 
+C: Underworld stars Tom Rosenberg, Gary Lucchesi, Kate Beckinsale, Shane Brolly, Danny McBride, Scott Speedman, Richard S. Wright, Kevin Grevioux, Len Wiseman, Michael Sheen and is directed by Kevin Grevioux, Len Wiseman, Danny McBride.
+C: This film is 121 minutes long. It is an action, fantasy and thriller movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: sure
+C: 
+C: How about Sherlock Holmes (2009)? 
+C: Sherlock Holmes stars Jude Law, Simon Kinberg, Michael Robert Johnson, Lionel Wigram, Robert Downey Jr., Mark Strong, Rachel McAdams, Arthur Conan Doyle, Anthony Peckham, Guy Ritchie and is directed by Michael Robert Johnson, Anthony Peckham, Simon Kinberg, Lionel Wigram, Arthur Conan Doyle.
+C: This film is 128 minutes long. It is an action, adventure and crime movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: nope
+C: 
+C: How about Red Riding Hood (2011)? 
+C: Red Riding Hood stars David Leslie Johnson, Leonardo DiCaprio, Catherine Hardwicke, Billy Burke, Amanda Seyfried, Alex Heffes, Julie Yorn, Gary Oldman, Lukas Haas, Jennifer Davisson and is directed by David Leslie Johnson.
+C: This film is 100 minutes long. It is a fantasy, horror and mystery movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: ok thats a good one
+C: 
+C: How about Season of the Witch (2011)? 
+C: Season of the Witch stars Charles Roven, Nicolas Cage, Claire Foy, Dominic Sena, Stephen Campbell Moore, Bragi F. Schut, Alex Gartner, Amir Mokri, Atli Örvarsson, Ron Perlman and is directed by Bragi F. Schut.
+C: This film is 95 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a7263e0a3274;		Timestamp:	2018-01-31 16:50:30.638196
+C: Tell me a genre you prefer?
+U: Action
+C: Please tell me the people you like to see in a movie.
+U: Bruce Willis
+C: Tell me a director you prefer.
+U: Kevin Smith
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: R
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a72653de1074;		Timestamp:	2018-01-31 16:56:44.388139
+C: Please tell me some genres you like.
+U: I like adventure movies
+C: Can you tell me some actors or actresses you like?
+U: I don't really have any favorites.
+C: Tell me a director you prefer.
+U: I don't have any preferences. I usually don't even know who is directing the movie.
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Raiders of the Lost Ark (1981)? 
+C: Raiders of the Lost Ark stars Philip Kaufman, Lawrence Kasdan, Steven Spielberg, John Williams, John Rhys-Davies, George Lucas, Frank Marshall, Paul Freeman, Harrison Ford, Karen Allen and is directed by Lawrence Kasdan, George Lucas, Philip Kaufman.
+C: This film is 115 minutes long. It is an action and adventure movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: Yes, it is.
+C: 
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: NO
+C: 
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: No
+C: 
+C: How about Braveheart (1995)? 
+C: Braveheart stars Bruce Davey, Mel Gibson, Randall Wallace, Alan Ladd Jr., John Toll, Angus Macfadyen, Sophie Marceau, Steven Rosenblum, James Horner, Patrick McGoohan and is directed by Randall Wallace.
+C: This film is 178 minutes long. It is a biography, drama and history movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Usual Suspects (1995)? 
+C: The Usual Suspects stars Michael McDonnell, Gabriel Byrne, Chazz Palminteri, Stephen Baldwin, Bryan Singer, Christopher McQuarrie, John Ottman, Newton Thomas Sigel, Howard Cummings, Kevin Spacey and is directed by Christopher McQuarrie.
+C: This film is 106 minutes long. It is a crime, drama and mystery movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Saving Private Ryan (1998)? 
+C: Saving Private Ryan stars Tom Sizemore, Tom Hanks, Gary Levinsohn, Mark Gordon, Ian Bryce, John Williams, Robert Rodat, Matt Damon, Steven Spielberg, Edward Burns and is directed by Robert Rodat.
+C: This film is 169 minutes long. It is a drama and war movie, and is rated R.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Abyss (1989)? 
+C: The Abyss stars Leo Burmester, Mary Elizabeth Mastrantonio, Ed Harris, Conrad Buff IV, Mikael Salomon, Alan Silvestri, Van Ling, Gale Anne Hurd, James Cameron, Michael Biehn and is directed by James Cameron.
+C: This film is 145 minutes long. It is an adventure, drama and sci-fi movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

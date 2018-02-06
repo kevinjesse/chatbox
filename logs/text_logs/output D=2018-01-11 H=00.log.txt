@@ -1,0 +1,102 @@
+User:	5a571a1e4a03c;		Timestamp:	2018-01-11 00:03:39.951207
+C: Tell me a genre you prefer?
+U: drama and family and animation
+C: Please tell me the people you like to see in a movie.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Dumbo (1941)? 
+C: Dumbo stars Norman Ferguson, Ben Sharpsteen, Herman Bing, James Baskett, Samuel Armstrong, Jack Kinney, Sterling Holloway, Bill Roberts, Wilfred Jackson, Edward Brophy and is directed by Joe Grant, Dick Huemer, Otto Englander, Bill Peet, Aurelius Battaglia, Joe Rinaldi, Vernon Stallings, Webb Smith, Helen Aberson, Harold Pearl.
+C: This film is 64 minutes long. It is an animation, drama and family movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about A Christmas Carol (2009)? 
+C: A Christmas Carol stars Jim Carrey, Gary Oldman, Robert Presley, Colin Firth, Steve Valentine, Robert Zemeckis, Charles Dickens, Alan Silvestri, Jack Rapke, Steve Starkey and is directed by Robert Zemeckis, Charles Dickens.
+C: This film is 96 minutes long. It is an animation, drama and family movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a571a5f3386f;		Timestamp:	2018-01-11 00:09:29.240627
+C: Tell me a genre you prefer?
+U: family and animation
+C: Please tell me the people you like to see in a movie.
+U: any
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: Mulan stars Philip LaZebnik, Ming-Na Wen, Eddie Murphy, Rita Hsiao, Robert D. San Souci, BD Wong, Tony Bancroft, Chris Sanders, Miguel Ferrer, Barry Cook and is directed by Robert D. San Souci, Rita Hsiao, Chris Sanders, Philip LaZebnik, Raymond Singer, Eugenia Bostwick-Singer, Dean DeBlois, John Sanford, Chris Williams, Tim Hodge, Julius Aguimatang, Burny Mattinson, Lorna Cook, Barry Johnson, Thom Enriquez, Ed Gombert, Joe Grant, Floyd Norman, Linda Woolverton, Jodi Ann Johnson, Alan Ormsby, David Reynolds, Don Dougherty, Jorgen Klubien, Denis Rich, Joe Ekers, Theodore Newton, Larry Scholl, Daan Jippes, Frank Nissen, Jeff Snow, Anonymous.
+C: How about Mulan (1998)? 
+C: This film is 88 minutes long. It is an adventure, animation and family movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Alice in Wonderland (2010)? 
+C: This film is 108 minutes long. It is an adventure, family and fantasy movie, and is rated PG.
+C: Alice in Wonderland stars Johnny Depp, Lewis Carroll, Helena Bonham Carter, Anne Hathaway, Tim Burton, Jennifer Todd, Linda Woolverton, Mia Wasikowska, Suzanne Todd, Joe Roth and is directed by Linda Woolverton, Lewis Carroll.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Spirited Away (2001)? 
+C: Spirited Away stars Donald W. Ernst, Suzanne Pleshette, Atsushi Okui, John Lasseter, Rumi Hiiragi, Miyu Irino, Daveigh Chase, Joe Hisaishi, Toshio Suzuki, Hayao Miyazaki and is directed by Hayao Miyazaki.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated .
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Jungle Book (2016)? 
+C: This film is 106 minutes long. It is an adventure, drama and family movie, and is rated PG.
+C: The Jungle Book stars Jon Favreau, John Debney, Idris Elba, Bill Pope, Neel Sethi, Justin Marks, Bill Murray, Rudyard Kipling, Brigham Taylor, Ben Kingsley and is directed by Justin Marks, Rudyard Kipling.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a571dbf0cf4f;		Timestamp:	2018-01-11 00:19:10.038323
+C: Can you tell me some genres?
+U: family and romance
+C: Please tell me the people you like to see in a movie.
+U: any
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about The Karate Kid Part II (1986)? 
+C: The Karate Kid Part II stars Robert Mark Kamen, James Crabe, David Garfield, Pat Morita, Bill Conti, Bruce Malmuth, John G. Avildsen, Eddie Smith, Jerry Weintraub, Ralph Macchio and is directed by Robert Mark Kamen.
+C: This film is 113 minutes long. It is an action, family and romance movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about A Cinderella Story (2004)? 
+C: A Cinderella Story stars Dan Byrd, Ilyssa Goodman, Hilary Duff, Dylan Sellers, Hunt Lowry, Mark Rosman, Clifford Werber, Leigh Dunlap, Chad Michael Murray, Jennifer Coolidge and is directed by Leigh Dunlap.
+C: This film is 95 minutes long. It is a comedy, family and romance movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about The Princess Diaries 2: Royal Engagement (2004)? 
+C: The Princess Diaries 2: Royal Engagement stars Anne Hathaway, Meg Cabot, Whitney Houston, Julie Andrews, Garry Marshall, Hector Elizondo, Callum Blue, Debra Martin Chase, Gina Wendkos, Shonda Rhimes and is directed by Meg Cabot, Gina Wendkos, Shonda Rhimes.
+C: This film is 113 minutes long. It is a comedy, family and romance movie, and is rated G.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Father of the Bride (1991)? 
+C: Father of the Bride stars Martin Short, Diane Keaton, Albert Hackett, Nancy Meyers, Frances Goodrich, Steve Martin, Kimberly Williams-Paisley, Carol Baum, Howard Rosenman, Charles Shyer and is directed by Frances Goodrich, Albert Hackett, Nancy Meyers, Charles Shyer.
+C: This film is 105 minutes long. It is a comedy, family and romance movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Jingle All the Way (1996)? 
+C: This film is 89 minutes long. It is a comedy and family movie, and is rated PG.
+C: Jingle All the Way stars Michael Barnathan, Phil Hartman, Arnold Schwarzenegger, Chris Columbus, Rita Wilson, Brian Levant, David Newman, Sinbad, Randy Kornfield, Mark Radcliffe and is directed by Randy Kornfield.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

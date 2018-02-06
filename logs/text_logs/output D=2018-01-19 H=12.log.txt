@@ -1,0 +1,24 @@
+User:	5a6252246eb15;		Timestamp:	2018-01-19 12:17:17.674541
+C: What types of films do you like to see?
+U: comedy 
+C: Can you tell me some actors or actresses you like?
+U: any
+C: who is your favorite director?
+U: any
+C: What MPAA rating should this movie be (eg. PG-13, pg, G)?
+U: any
+C: I'm thinking about what you might like.
+C: How about Kindergarten Cop (1990)? 
+C: Kindergarten Cop stars Timothy Harris, Herschel Weingrod, Arnold Schwarzenegger, Penelope Ann Miller, Pamela Reed, Linda Hunt, Ivan Reitman, Murray Salem, Randy Edelman, Brian Grazer and is directed by Murray Salem, Herschel Weingrod, Timothy Harris.
+C: This film is 111 minutes long. It is a comedy movie, and is rated PG-13.
+C: Is this recommendation satisfactory?
+U: no
+C: 
+C: How about Uncle Buck (1989)? 
+C: Uncle Buck stars Ira Newborn, John Candy, Gaby Hoffmann, John Hughes, Ralf D. Bode, Tom Jacobson, Tony Lombardo, Lou Lombardo, Jean Louisa Kelly, Macaulay Culkin and is directed by John Hughes.
+C: This film is 100 minutes long. It is a comedy movie, and is rated PG.
+C: Is this recommendation satisfactory?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

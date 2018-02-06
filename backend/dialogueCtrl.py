@@ -75,8 +75,15 @@ def dialogueCtrl(input_json):
             state[userid] = ["genre", ]
             # TODO: Substitute temp replacement with actual recommendations
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
-            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
             passiveResp[userid] = Queue.Queue()
+            question = templateCtrl.get_sentence(state='intro', is_dynamic=False)
+            question2 = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+            print question
+            passiveResp[userid].put(question)
+            passiveResp[userid].put(question2)
+
+
+
             nomatch[userid] = False
             history[userid] = []
             textHistory[userid] = []
@@ -86,7 +93,7 @@ def dialogueCtrl(input_json):
 
             textHistory[userid].append(("C", question))
             history[userid].append((question, state[userid][-1]))
-            return question, userid, 0, None
+            return '', userid, 0, None
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])

@@ -19,9 +19,11 @@ TmpX = [TmpX TmpXa TmpXb]./3;
 TmpYa = full(mmread("sparseYmpaa.mm.mtx"));
 TmpY = [TmpY TmpYa TmpYb]./3;
 
-TmpX = vertcat(TmpX, TmpX);
+%TmpX = vertcat(TmpX, TmpX);
 %TmpY = vertcat(TmpY, TmpY, TmpY, TmpY);
 
+TmpX(isnan(TmpX))=0; TmpX(isinf(TmpX))=0;
+TmpY(isnan(TmpY))=0; TmpY(isinf(TmpY))=0;
 
 [j,k] = size(TmpX);
 [s,t] = size(TmpY);
@@ -46,9 +48,9 @@ Y = optY;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Obs = mmread("sparseN.mm.mtx");
-Obs = [Obs Obs];
+%Obs = [Obs Obs];
 [m,n] = size(Obs);
-
+%pause
 % X = TmpX;
 % Y = TmpY;
 % [j,k] = size(X);

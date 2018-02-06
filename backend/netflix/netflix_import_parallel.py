@@ -178,8 +178,8 @@ for movie_name in both:
     except KeyError:
         continue
 
-userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:5000]
-#userlist1 = sorted(user_set.items(), key=user_set.get, reverse=True) [0:341]#477396 users
+#userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:5000]
+userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:50000]
 
 movielist = sorted(bothdic.itervalues(), key=bothdic.get)
 net_table = np.zeros((len(movielist),len(userlist)))

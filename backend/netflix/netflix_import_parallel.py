@@ -63,7 +63,7 @@ def ratings(mov, userlist, movielist):
                 rows.append(row)
                 cols.append(col)
                 data.append(user_rate)
-                print user_rate
+                #print user_rate
                 # net_table[row][col] = user_rate
             except ValueError as e:
                 #print "value error"
@@ -178,8 +178,8 @@ for movie_name in both:
     except KeyError:
         continue
 
-#userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:5000]
-userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:50000]
+userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:5000]
+#userlist = sorted(user_set.items(), key=lambda (k, v): v, reverse=True)[0:200000]
 
 movielist = sorted(bothdic.itervalues(), key=bothdic.get)
 net_table = np.zeros((len(movielist),len(userlist)))

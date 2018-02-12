@@ -211,11 +211,15 @@ def dialogueIdle(userid, debug=False):
         except Exception as e:
             print "Error at dialogueCtrl::164: {}".format(e)
         #chatlogger.logToFile(textHistory[userid], userid)
-        state[userid].append(State.TELL2)
-        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+        state[userid].append(State.TELL1)
+        question = templateCtrl.get_sentence(state=State.TELL1, is_dynamic=False)
         passiveResp[userid].put(question, False)
         #cache_results[userid]['satisfied'][-1] = None
 
+    elif state[userid][-1] == State.TELL1:
+        state[userid].append(State.TELL2)
+        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+        passiveResp[userid].put(question, False)
 
     elif state[userid][-1] == State.TELL2:
         if cache_results[userid]['satisfied'] == 'Yes':
@@ -234,7 +238,8 @@ def dialogueIdle(userid, debug=False):
                 # print "Each: \n{}".format(each)
                 passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
             # passiveResp[userid].put(end_dialogue)
-            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+            state[userid].append(State.TELL1)
+            question = templateCtrl.get_sentence(state=State.TELL1, is_dynamic=False)
             passiveResp[userid].put(question)
 
     if has_recommended_movie and debug and not passiveResp[userid]:

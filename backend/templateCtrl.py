@@ -17,6 +17,7 @@ class State:
     RATING = 'rating'
     TELL = 'tell'
     TELL1 = 'tell1'
+    TELL1_5 = 'tell1_5'
     TELL2 = 'tell2'
     BYE = 'bye'
 

@@ -219,9 +219,35 @@ def dialogueIdle(userid, debug=False):
         #cache_results[userid]['satisfied'][-1] = None
 
     elif state[userid][-1] == State.TELL1:
-        state[userid].append(State.TELL2)
-        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
-        passiveResp[userid].put(question, False)
+        if cache_results[userid]['satisfied'] == 'Yes':  # if watched recommendation before
+            state[userid].append(State.TELL1_5)
+            question = templateCtrl.get_sentence(state=State.TELL1_5, is_dynamic=False)
+            passiveResp[userid].put(question, False)
+        else:
+            state[userid].append(State.TELL2)
+            question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+            passiveResp[userid].put(question, False)
+
+    elif state[userid][-1] == State.TELL1_5:
+        if cache_results[userid]['satisfied'] == 'Yes':  # want new recommendations
+            movieWithRatings[userid].pop(0)
+            if not movieWithRatings[userid]:
+                passiveResp[userid].put(no_recommendation)
+                passiveResp[userid].put(end_dialogue)
+                state[userid].append(State.BYE)
+                return
+            print movieWithRatings[userid]
+            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+            # passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.TELL1)
+            question = templateCtrl.get_sentence(state=State.TELL1, is_dynamic=False)
+            passiveResp[userid].put(question)
+        else:
+            passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.BYE)
 
 
     elif state[userid][-1] == State.TELL2:

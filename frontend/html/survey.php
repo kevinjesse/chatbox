@@ -99,33 +99,40 @@
             </fieldset>
 
             <fieldset class="question survey" name="survey-q2">
-                <h2><label>How engaged you feel during the conversation?</label></h2>
+                <h2><label>Do you like the recommended movie?</label></h2>
                 <input type="radio" name="survey-q2" id="survey-q2-input-1" value="1" required><label
-                        for="survey-q2-input-1">1 (None)</label>
-                <input type="radio" name="survey-q2" id="survey-q2-input-2" value="2"><label for="survey-q2-input-2">2</label>
-                <input type="radio" name="survey-q2" id="survey-q2-input-3" value="3"><label for="survey-q2-input-3">3</label>
-                <input type="radio" name="survey-q2" id="survey-q2-input-4" value="4"><label for="survey-q2-input-4">4</label>
-                <input type="radio" name="survey-q2" id="survey-q2-input-5" value="5"><label for="survey-q2-input-5">5 (Very)</label>
+                        for="survey-q2-input-1">1 (No)</label>
+                <input type="radio" name="survey-q2" id="survey-q2-input-2" value="2"><label
+                        for="survey-q2-input-2">2</label>
+                <input type="radio" name="survey-q2" id="survey-q2-input-3" value="3"><label
+                        for="survey-q2-input-3">3</label>
+                <input type="radio" name="survey-q2" id="survey-q2-input-4" value="4"><label
+                        for="survey-q2-input-4">4</label>
+                <input type="radio" name="survey-q2" id="survey-q2-input-5" value="5"><label
+                        for="survey-q2-input-5">5 (Very)</label>
             </fieldset>
 
             <fieldset class="question survey" name="survey-q3">
-                <h2><label for="survey-q3-input-1">What do you like and not like about the chatbot, and any questions and suggestions?</label></h2>
-                <textarea name="survey-q3" id="survey-q3-input-1" required></textarea>
+                <h2><label>How engaged you feel during the conversation?</label></h2>
+                <input type="radio" name="survey-q3" id="survey-q3-input-1" value="1" required><label
+                        for="survey-q3-input-1">1 (None)</label>
+                <input type="radio" name="survey-q3" id="survey-q3-input-2" value="2"><label
+                        for="survey-q3-input-2">2</label>
+                <input type="radio" name="survey-q3" id="survey-q3-input-3" value="3"><label
+                        for="survey-q3-input-3">3</label>
+                <input type="radio" name="survey-q3" id="survey-q3-input-4" value="4"><label
+                        for="survey-q3-input-4">4</label>
+                <input type="radio" name="survey-q3" id="survey-q3-input-5" value="5"><label
+                        for="survey-q3-input-5">5 (Very)</label>
             </fieldset>
 
             <fieldset class="question survey" name="survey-q4">
-                <h2><label>Do you like the recommended movie?</label></h2>
-                <input type="radio" name="survey-q4" id="survey-q4-input-1" value="1" required><label
-                        for="survey-q2-input-1">1 (No)</label>
-                <input type="radio" name="survey-q4" id="survey-q4-input-2" value="2"><label
-                        for="survey-q2-input-2">2</label>
-                <input type="radio" name="survey-q4" id="survey-q4-input-3" value="3"><label
-                        for="survey-q2-input-3">3</label>
-                <input type="radio" name="survey-q4" id="survey-q4-input-4" value="4"><label
-                        for="survey-q2-input-4">4</label>
-                <input type="radio" name="survey-q4" id="survey-q4-input-5" value="5"><label
-                        for="survey-q2-input-5">5 (Very)</label>
+                <h2><label for="survey-q4-input-1">What do you like and not like about the chatbot, and any questions
+                        and suggestions?</label></h2>
+                <textarea name="survey-q4" id="survey-q4-input-1" required></textarea>
             </fieldset>
+
+
 
             <input type="submit" name="submit-survey" value="Submit">
     </form>

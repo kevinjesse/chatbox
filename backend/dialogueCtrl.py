@@ -237,7 +237,7 @@ def dialogueIdle(userid, debug=False):
                 state[userid].append(State.BYE)
                 return
             print movieWithRatings[userid]
-            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            outputlist, recIND = matrixFact.recommendationText(recIND)
             for each in outputlist:
                 # print "Each: \n{}".format(each)
                 passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners

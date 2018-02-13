@@ -183,5 +183,14 @@ Austin Chau
             </question_group>
         </static>
     </state>
+    <state type='intro'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
 
 </root>

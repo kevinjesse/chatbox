@@ -19,9 +19,15 @@ rows = cur.fetchall()
 sub_key= rows[0][0]
 base_url = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/'
 
+sqlstring = """SELECT api_key FROM api WHERE api_type='bing1'"""
+cur.execute(sqlstring)
+rows = cur.fetchall()
+bing_key= rows[0][0]
+
 
 def ctrl(text):
-    url = base_url + app_id + '?subscription-key=' + sub_key + '&verbose=true&timezoneOffset=0&q=' + text.strip()
+    url = base_url + app_id + '?subscription-key=' + sub_key + '&spellCheck=true&bing-spell-check-subscription-key=' \
+          + bing_key +'&verbose=true&timezoneOffset=0&q=' + text.strip()
     print url
     r = requests.get(url)
     if r.status_code != 200:

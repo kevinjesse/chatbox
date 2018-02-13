@@ -74,8 +74,13 @@ def dialogueCtrl(input_json):
             state[userid] = ["genre", ]
             # TODO: Substitute temp replacement with actual recommendations
             replacement_genre = ["Action", "Comedy", "Sci-fi"]
-            question = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
             passiveResp[userid] = Queue.Queue()
+            question = templateCtrl.get_sentence(state='intro', is_dynamic=False)
+            question2 = templateCtrl.get_sentence(state=state[userid][-1], is_dynamic=False)
+            print question
+            passiveResp[userid].put(question)
+            passiveResp[userid].put(question2)
+
             nomatch[userid] = False
             history[userid] = []
             textHistory[userid] = []
@@ -85,7 +90,7 @@ def dialogueCtrl(input_json):
 
             textHistory[userid].append(("C", question))
             history[userid].append((question, state[userid][-1]))
-            return question, userid, 0, None
+            return '', userid, 0, None
 
         query, intent, entity = luisQuery.ctrl(text)
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
@@ -166,7 +171,7 @@ def listen(userid):
 
     # while not passiveResp[userid].qsize():
     #     continue
-    resp = passiveResp[userid].get()
+    resp = passiveResp[userid].get(True)
     textHistory[userid].append(("C", resp))
     return resp, userid, passiveResp[userid].qsize()
 
@@ -217,9 +222,36 @@ def dialogueIdle(userid, debug=False):
         #cache_results[userid]['satisfied'][-1] = None
 
     elif state[userid][-1] == State.TELL1:
-        state[userid].append(State.TELL2)
-        question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
-        passiveResp[userid].put(question, False)
+        if cache_results[userid]['satisfied'] == 'Yes':  # if watched recommendation before
+            state[userid].append(State.TELL1_5)
+            question = templateCtrl.get_sentence(state=State.TELL1_5, is_dynamic=False)
+            passiveResp[userid].put(question, False)
+        else:
+            state[userid].append(State.TELL2)
+            question = templateCtrl.get_sentence(state=State.TELL2, is_dynamic=False)
+            passiveResp[userid].put(question, False)
+
+    elif state[userid][-1] == State.TELL1_5:
+        if cache_results[userid]['satisfied'] == 'Yes':  # want new recommendations
+            movieWithRatings[userid].pop(0)
+            if not movieWithRatings[userid]:
+                passiveResp[userid].put(no_recommendation)
+                passiveResp[userid].put(end_dialogue)
+                state[userid].append(State.BYE)
+                return
+            print movieWithRatings[userid]
+            outputlist = tellCtrl.toText(movieWithRatings[userid])
+            for each in outputlist:
+                # print "Each: \n{}".format(each)
+                passiveResp[userid].put(each, False)  # see if slower puts results in order pulls from listeners
+            # passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.TELL1)
+            question = templateCtrl.get_sentence(state=State.TELL1, is_dynamic=False)
+            passiveResp[userid].put(question)
+        else:
+            passiveResp[userid].put(end_dialogue)
+            state[userid].append(State.BYE)
+
 
     elif state[userid][-1] == State.TELL2:
         if cache_results[userid]['satisfied'] == 'Yes':

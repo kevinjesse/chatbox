@@ -5,186 +5,201 @@ Austin Chau
 -->
 
 <root>
-  <state type='movies'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>Tell me a movie that you like?</string>
-        </question>
-      </question_group>
-    </static>
-    <dynamic>
-      <question_group type='root'>
-        <question id='1' dtype='choice'>
-          <string>Do you prefer $(movies...), or $(movies)?</string>
-          <choice_count>-1</choice_count>
-          <replacements>
-            <string>movies</string>
-          </replacements>
-        </question>
-        <question id='2' dtype='choice'>
-          <string>Which of the following movies would you prefer: $(movies...), or $(movies)?</string>
-          <choice_count>-1</choice_count>
-          <replacements>
-            <string>movies</string>
-          </replacements>
-        </question>
-        <question id='3' dtype='choice'>
-          <string>Do you prefer $(movies) or $(movies)?</string>
-          <choice_count>2</choice_count>
-          <replacements>
-            <string>movies</string>
-          </replacements>
-        </question>
-      </question_group>
-    </dynamic>
-  </state>
-  <state type='genre'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>Tell me a genre you prefer?</string>
-        </question>
-        <question id='2'>
-          <string>What are your movie interests?</string>
-        </question>
-        <question id='3'>
-          <string>What is your favorite genre?</string>
-        </question>
-        <question id='4'>
-          <string>What types of films do you like to see?</string>
-        </question>
-        <question id='5'>
-          <string>I am trying to understand your genre preferences.</string>
-        </question>
-        <question id='6'>
-          <string>Can you tell me some genres?</string>
-        </question>
-        <question id='7'>
-          <string>Please tell me some genres you like.</string>
-        </question>
-        <question id='8'>
-          <string>What types of movies, or genres, do you like?</string>
-        </question>
-      </question_group>
-      <question_group type='follow_up'>
-        <question id='1' tag='subgenre'>
-          <string>Could you clarify with a subgenre?</string>
-        </question>
-        <question id='2' tag='subgenre'>
-          <string>Is there any subgenres of that which you like?</string>
-        </question>
-      </question_group>
-    </static>
-    <dynamic>
-      <question_group type='root'>
-        <question id='1' dtype='choice'>
-          <string>Do you prefer $(genre...), or $(genre)?</string>
-          <choice_count>-1</choice_count>
-          <replacements>
-            <string>genre</string>
-          </replacements>
-        </question>
-        <question id='2' dtype='choice'>
-          <string>Which of the following genre would you prefer: $(genre...), or $(genre)?</string>
-          <choice_count>-1</choice_count>
-          <replacements>
-            <string>genre</string>
-          </replacements>
-        </question>
-        <question id='3' dtype='choice'>
-          <string>Do you prefer $(genre) or $(genre)?</string>
-          <choice_count>2</choice_count>
-          <replacements>
-            <string>genre</string>
-          </replacements>
-        </question>
-      </question_group>
-    </dynamic>
-  </state>
-  <state type='actor'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>Who is your favorite actor or actress?</string>
-        </question>
-        <question id='2'>
-          <string>Can you tell me some actors or actresses you prefer to watch?</string>
-        </question>
-        <question id='3'>
-          <string>Can you tell me some actors or actresses you like?</string>
-        </question>
-        <question id='4'>
-          <string>Tell me some actors you like.</string>
-        </question>
-        <question id='5'>
-          <string>I'd like to get to know what your actor preferences are.</string>
-        </question>
-        <question id='6'>
-          <string>Please tell me the people you like to see in a movie.</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
-  <state type='director'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>who is your favorite director?</string>
-        </question>
-        <question id='2'>
-          <string>Tell me a director you prefer.</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
-  <state type='mpaa'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>What MPAA rating should this movie be (eg. PG-13, pg, G)?</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
-  <state type='rating'>
-    <static>
-      <question_group type='root'>
-        <question id='1'>
-          <string>How highly rated should the movie be?</string>
-        </question>
-        <question id='2'>
-          <string>Let me know if the movie should be PG13, R, G, etc.</string>
-        </question>
-        <question id='3'>
-          <string>If you are watching this movie with kids, I recommend entering a MPAA rating.</string>
-        </question>
-        <question id='4'>
-          <string>Tell me what rating is appropriate for this movie selection.</string>
-        </question>
-        <question id='5'>
-          <string>If you want a particularly rated movie you need to tell me what you preferences are. (R, PG13, PG, etc.)</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
-  <state type='tell'>
-    <static>
-      <question_group type='root'>
-        <question id='1' tag='t0'>
-            <string>I'm thinking about what you might like.</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
-  <state type='tell2'>
-    <static>
-      <question_group type='root'>
-        <question id='1' tag='t0'>
-            <string>Is this recommendation satisfactory?</string>
-        </question>
-      </question_group>
-    </static>
-  </state>
+    <state type='movies'>
+        <static>
+            <question_group type='root'>
+                <question id='1'>
+                    <string>Tell me a movie that you like?</string>
+                </question>
+            </question_group>
+        </static>
+        <dynamic>
+            <question_group type='root'>
+                <question id='1' dtype='choice'>
+                    <string>Do you prefer $(movies...), or $(movies)?</string>
+                    <choice_count>-1</choice_count>
+                    <replacements>
+                        <string>movies</string>
+                    </replacements>
+                </question>
+                <question id='2' dtype='choice'>
+                    <string>Which of the following movies would you prefer: $(movies...), or $(movies)?</string>
+                    <choice_count>-1</choice_count>
+                    <replacements>
+                        <string>movies</string>
+                    </replacements>
+                </question>
+                <question id='3' dtype='choice'>
+                    <string>Do you prefer $(movies) or $(movies)?</string>
+                    <choice_count>2</choice_count>
+                    <replacements>
+                        <string>movies</string>
+                    </replacements>
+                </question>
+            </question_group>
+        </dynamic>
+    </state>
+    <state type='genre'>
+        <static>
+            <question_group type='root'>
+                <question id='1'>
+                    <string>What genres of movies do you like?</string>
+                </question>
+                <question id='2'>
+                    <string>Tell me a movie genre you prefer?</string>
+                </question>
+                <question id='3'>
+                    <string>What's your favorite movie genre?</string>
+                </question>
+                <question id='4'>
+                    <string>What genre of films do you like to see?</string>
+                </question>
+                <question id='5'>
+                    <string>Can you tell me what movie genres you like?</string>
+                </question>
+                <question id='6'>
+                    <string>What genre of movies do you want?</string>
+                </question>
+                <question id='7'>
+                    <string>Please tell me your movie genre preferences.</string>
+                </question>
+            </question_group>
+            <question_group type='follow_up'>
+                <question id='1' tag='subgenre'>
+                    <string>Could you clarify with a subgenre?</string>
+                </question>
+                <question id='2' tag='subgenre'>
+                    <string>Is there any subgenres of that which you like?</string>
+                </question>
+            </question_group>
+        </static>
+        <dynamic>
+            <question_group type='root'>
+                <question id='1' dtype='choice'>
+                    <string>Do you prefer $(genre...), or $(genre)?</string>
+                    <choice_count>-1</choice_count>
+                    <replacements>
+                        <string>genre</string>
+                    </replacements>
+                </question>
+                <question id='2' dtype='choice'>
+                    <string>Which of the following genre would you prefer: $(genre...), or $(genre)?</string>
+                    <choice_count>-1</choice_count>
+                    <replacements>
+                        <string>genre</string>
+                    </replacements>
+                </question>
+                <question id='3' dtype='choice'>
+                    <string>Do you prefer $(genre) or $(genre)?</string>
+                    <choice_count>2</choice_count>
+                    <replacements>
+                        <string>genre</string>
+                    </replacements>
+                </question>
+            </question_group>
+        </dynamic>
+    </state>
+    <state type='actor'>
+        <static>
+            <question_group type='root'>
+                <question id='1'>
+                    <string>Who are your favorite actors or actresses?</string>
+                </question>
+                <question id='2'>
+                    <string>Can you tell me some actors or actresses you like?</string>
+                </question>
+                <question id='3'>
+                    <string>Can you tell me some actors or actresses you prefer to watch?</string>
+                </question>
+                <question id='4'>
+                    <string>Tell me some actors or actresses you like.</string>
+                </question>
+                <question id='5'>
+                    <string>Tell me your actor/actress preferences.</string>
+                </question>
+                <question id='6'>
+                    <string>Who would you like to see starring in a movie?</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='director'>
+        <static>
+            <question_group type='root'>
+                <question id='1'>
+                    <string>Who is your favorite director?</string>
+                </question>
+                <question id='2'>
+                    <string>Tell me a director you prefer.</string>
+                </question>
+                <question id='3'>
+                    <string>Can you tell me which director you like?</string>
+                </question>
+                <question id='4'>
+                    <string>Tell me some directors that you like.</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='mpaa'>
+        <static>
+            <question_group type='root'>
+                <question id='1'>
+                    <string>What MPAA rating should this movie be?</string>
+                </question>
+                <question id='2'>
+                    <string>What should the MPAA rating for this movie be?</string>
+                </question>
+                <question id='3'>
+                    <string>Tell me what MPAA rating should this movie have.</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='tell'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>I'm thinking about what you might like.</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='tell1'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>Have you watched this movie before?</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='tell1_5'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>Would you want another recommendation then?</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='tell2'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>Do you like this recommendation?</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
+    <state type='intro'>
+        <static>
+            <question_group type='root'>
+                <question id='1' tag='t0'>
+                    <string>Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!</string>
+                </question>
+            </question_group>
+        </static>
+    </state>
 
 </root>

@@ -158,20 +158,17 @@ def initResources():
     return
 
 
-def listen(userid):
-    # while
-    #     print "in loop"
-    #     continue
-    # while passiveResp[userid].empty():
-    #     continue
-    resp = ""
-    # resp = passiveResp[userid].get(True)
-    # print "here"
-    # passiveResp[userid].task_done()
+# def listen(userid):
 
+    # resp = passiveResp[userid].get()
+    # textHistory[userid].append(("C", resp))
+    # return resp, userid, passiveResp[userid].qsize()
+
+def listen(userid):
     # while not passiveResp[userid].qsize():
     #     continue
     resp = passiveResp[userid].get(True)
+    print resp
     textHistory[userid].append(("C", resp))
     return resp, userid, passiveResp[userid].qsize()
 

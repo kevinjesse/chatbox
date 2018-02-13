@@ -190,12 +190,12 @@ def dialogueIdle(userid, debug=False):
     if state[userid][-2] == State.BYE:
         return
 
-    if state[userid][-1] != State.TELL2:
-        titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
-                                                   titles_user[userid])
-        if not nomatch[userid] and not match:
-            nomatch[userid] = True
-            passiveResp[userid].put(notperfect_string, False)
+    # if state[userid][-1] != State.TELL2:
+    #     titles_user[userid], match = filterMovies.ctrl(state[userid][-2], cache_results[userid],
+    #                                                titles_user[userid])
+    #     if not nomatch[userid] and not match:
+    #         nomatch[userid] = True
+    #         passiveResp[userid].put(notperfect_string, False)
 
     if state[userid][-1] == State.TELL:
         try:

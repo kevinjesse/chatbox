@@ -62,6 +62,7 @@ def sortByRating(movielist):
     alistval = ["('"+str(movielist[i])+"' ," + str(i+1) + ")" for i in range(0, len(movielist))]
     aliststr = """, """.join(alistval)
     sqlstring = """SELECT averagerating FROM ratings join (VALUES """ + aliststr + """) AS X (tconst, ordering) ON ratings.tconst = X.tconst ORDER BY X.ordering """
+    #print "SQLString:", sqlstring
     cur.execute(sqlstring)
     rows = cur.fetchall()
     movieWithRating = sorted(zip(movielist, rows), key=lambda tup: tup[1],

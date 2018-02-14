@@ -93,7 +93,9 @@ def dialogueCtrl(input_json):
             return '', userid, 0, None
 
         query, intent, entity = luisQuery.ctrl(text)
+        #print "cache_results[userid] before luis", cache_results[userid]
         cache_results[userid], answered = luisIntent.ctrl(state[userid][-1], intent, entity, cache_results[userid])
+        #print "after", cache_results[userid]
         # cache_results[userid] = luisVerify.ctrl(cache_results[userid])
         if not answered:
             # if do not understand utterance because intent is incorrect, try to find with entities
@@ -178,6 +180,7 @@ def dialogueIdle(userid, debug=False):
     if not state[userid]:
         return
     elif len(state[userid]) < 2:
+        #print "len(state[userid]) < 2"
         titles_user[userid] = titles
         return
 
@@ -270,6 +273,11 @@ def dialogueIdle(userid, debug=False):
             state[userid].append(State.TELL1)
             question = templateCtrl.get_sentence(state=State.TELL1, is_dynamic=False)
             passiveResp[userid].put(question)
+
+    else:
+        #print "title_user before\n", len(titles_user[userid])
+        titles_user[userid] = filterMovies.ctrl(state[userid][-2], cache_results[userid], titles_user[userid])[0]
+        #print "title_user after\n", len(titles_user[userid])
 
     if has_recommended_movie and debug and not passiveResp[userid]:
         # print "textHistory: {}".format(textHistory[userid])

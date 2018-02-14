@@ -22,12 +22,14 @@ state2entity_map ={'genre': 'genre', 'role': 'role', 'mpaa':'mpaa', 'title': 'ti
 def ctrl(state, userCache, user_tconst):
     backup_tconst = user_tconst
     match = True
+    #print "Filter movie ctrl"
     try:
 
         # if userCache[state2entity_map[state]] is None:
         #     return user_tconst
 
         if userCache[state] is None:
+            #print "userCache state is None"
             return user_tconst, match
         # Write query -  would like to do this in generic form but each query has specific joins and rows.
         sqlstring = ''
@@ -40,6 +42,7 @@ def ctrl(state, userCache, user_tconst):
             cur.execute(sqlstring)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
+            #print tconst_list
 
 
         elif state == 'actor':
@@ -124,14 +127,17 @@ def ctrl(state, userCache, user_tconst):
             return user_tconst ,match
     except KeyError, IndexError:
         # Error with states while developing, ignore this filter round
+        print "Error filter movies; {}".format(KeyError)
         tconst_list = backup_tconst
         match = False
 
 
     candidatelist = list(set(user_tconst).intersection(tconst_list))
     if len(candidatelist) != 0: #the new list has nothing
+        #print "len(candidatelist) != 0"
         user_tconst = candidatelist
     else:
+        #print "len(candidatelist) == 0 using backup"
         user_tconst = backup_tconst
         match = False
     return user_tconst ,match

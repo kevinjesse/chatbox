@@ -17,7 +17,7 @@ def chatbox_socket():
     if debug:
         return 13120
     else:
-        return 13137
+        return 13135
 
 class ThreadingServer(object):
     """

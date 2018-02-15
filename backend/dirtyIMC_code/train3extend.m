@@ -6,18 +6,18 @@ tic;
 TmpX = full(mmread("sparseXgenre.mm.mtx"));
 TmpY = full(mmread("sparseYgenre.mm.mtx"));
 % 
-TmpXb = full(mmread("sparseXactor.mm.mtx"));
-TmpYb = full(mmread("sparseYactor.mm.mtx"));
+% TmpXb = full(mmread("sparseXactor.mm.mtx"));
+% TmpYb = full(mmread("sparseYactor.mm.mtx"));
 %TmpX = [TmpX./3 TmpXa./3];
 % TmpX = TmpX(:,1:200);
 
 % TmpY = TmpY(:,1:200);
 %TmpY = [TmpY./3 TmpYa./3];
 % % 
-TmpXa = full(mmread("sparseXmpaa.mm.mtx"));
-TmpX = [TmpX TmpXa TmpXb]./3;
-TmpYa = full(mmread("sparseYmpaa.mm.mtx"));
-TmpY = [TmpY TmpYa TmpYb]./3;
+% TmpXa = full(mmread("sparseXmpaa.mm.mtx"));
+% TmpX = [TmpX TmpXa TmpXb]./3;
+% TmpYa = full(mmread("sparseYmpaa.mm.mtx"));
+% TmpY = [TmpY TmpYa TmpYb]./3;
 
 %TmpX = vertcat(TmpX, TmpX);
 %TmpY = vertcat(TmpY, TmpY, TmpY, TmpY);

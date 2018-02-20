@@ -145,16 +145,16 @@ Austin Chau
         <static>
             <question_group type='root'>
                 <question id='1'>
-                    <string>What MPAA rating should this movie be?</string>
+                    <string>What MPAA rating should this movie be? (eg. PG-13, R, G)</string>
                 </question>
                 <question id='2'>
-                    <string>What should the MPAA rating for this movie be?</string>
+                    <string>What should the MPAA rating for this movie be? (eg. PG-13, R, G)</string>
                 </question>
                 <question id='3'>
-                    <string>Tell me what MPAA rating should this movie have.</string>
+                    <string>Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)</string>
                 </question>
             </question_group>
-        </static>
+        </static>s
     </state>
     <state type='tell'>
         <static>

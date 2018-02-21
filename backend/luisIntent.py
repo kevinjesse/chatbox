@@ -19,6 +19,29 @@ Luis intent assigns the entities to the user cache and processes the intents
 #     return userCache
 
 import re
+from nltk.stem.snowball import SnowballStemmer
+
+def genre_spellcheck(userinput):
+    stemmer = SnowballStemmer('english')
+
+    genre_core = ['action', 'adventure', 'animation', 'biography', 'comedy', 'crime', 'documentary', 'drama',
+                  'family', 'fantasy', 'film-noir', 'history', 'horror', 'music', 'musical', 'mystery',
+                  'romance', 'sci-fi', 'sport', 'thriller', 'war', 'western']
+    genre_stem = dict(zip([stemmer.stem(item)[:5] for item in genre_core], genre_core))
+    genre_stem['romantic'] = 'romance'
+    genre_stem['sci fi'] = 'sci-fi'
+    genre_stem['science fiction'] = 'sci-fi'
+    genre_stem['funny'] = 'comedy'
+    genre_stem['love'] = 'romance'
+
+    userinput = userinput.lower()
+    if userinput in genre_stem:
+        return genre_stem[userinput]
+    else:
+        parsedinput = stemmer.stem(userinput)[:5]
+        output = genre_stem[parsedinput] if parsedinput in genre_stem else userinput
+        return output
+
 
 def ctrl(state, intent, entities, userCache):
     from pprint import pprint
@@ -61,6 +84,11 @@ def ctrl(state, intent, entities, userCache):
             ent['entity'] = ent['entity'].title()
             # this is to create two categories one for actor and director instead of people
             dataType = state
+        elif dataType == 'genre':
+            print 'genre_input: ' + ent['entity']
+            input_genre = genre_spellcheck(ent['entity'])
+            print 'genre_output: ' + input_genre
+            ent['entity'] = input_genre
 
         if userCache[dataType]:
             if ent['entity'] not in userCache[state]:

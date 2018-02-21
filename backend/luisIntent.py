@@ -75,10 +75,11 @@ def ctrl(state, intent, entities, userCache):
             #for now we will do nothing with year and duration
             userCache[dataType] = year(ent)
         elif dataType == 'mpaa':
-            pg13 = re.match('pg(-|\s?)13', ent['entity'].lower())
-            nc17 = re.match('nc(-|\s?)17', ent['entity'].lower())
+            pg13 = re.match('[Pp][Gg]\s*[-]?\s*13', ent['entity'].lower())
+            nc17 = re.match('[Nn][Cc]\s*[-]?\s*17', ent['entity'].lower())
             if pg13: ent['entity']='PG-13'
             elif nc17: ent['entity']='NC-17'
+            ent['entity'] = ent['entity'].upper()
         elif dataType =='person':
             ent['entity'] = ent['entity'].title()
             # this is to create two categories one for actor and director instead of people
@@ -91,9 +92,9 @@ def ctrl(state, intent, entities, userCache):
 
         if userCache[dataType]:
             if ent['entity'] not in userCache[state]:
-                userCache[dataType].append(ent['entity'])
+                userCache[dataType].append(str(ent['entity']))
         else:
-            userCache[dataType] = [ent['entity']]
+            userCache[dataType] = [str(ent['entity'])]
 
         # if intent['intent'] == 'None':
         #     return userCache, answered

@@ -154,7 +154,7 @@ Austin Chau
                     <string>Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)</string>
                 </question>
             </question_group>
-        </static>s
+        </static>
     </state>
     <state type='tell'>
         <static>

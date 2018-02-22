@@ -1,0 +1,155 @@
+User:	5a8587c2efa74;		Timestamp:	2018-02-15 05:16:00.620299
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: musicals
+C: Who are your favorite actors or actresses?
+U: emma stone
+C: Tell me a director you prefer.
+U: baz luhrman
+C: What MPAA rating should this movie be?
+U: pg 13
+C: I'm thinking about what you might like.
+C: How about Spider-Man 2 (2004)? 
+C: Spider-Man 2 stars Miles Millar, Alfred Gough, Steve Ditko, Stan Lee, Sam Raimi, Michael Chabon, James Franco, Alfred Molina, Kirsten Dunst, Tobey Maguire and is directed by Stan Lee, Steve Ditko, Alfred Gough, Miles Millar, Michael Chabon, Alvin Sargent.
+C: This film is 127 minutes long. It is an action and adventure movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes please
+C: 
+C: How about The Mummy Returns (2001)? 
+C: The Mummy Returns stars Stephen Sommers, Sean Daniel, Brendan Fraser, Arnold Vosloo, Bob Ducsay, James Jacks, Adrian Biddle, John Hannah, Alan Silvestri, Rachel Weisz and is directed by Stephen Sommers.
+C: This film is 130 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a858965142fd;		Timestamp:	2018-02-15 05:23:17.763590
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: I like drama and mysterys
+C: Who are your favorite actors or actresses?
+U: Jennifer Love Hewitt and Tom Hanks
+C: Tell me some directors that you like.
+U: Clint Eastwood
+C: What MPAA rating should this movie be?
+U: PG
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I haven't, and it sounds perfect
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8589a66b546;		Timestamp:	2018-02-15 05:25:52.628581
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Science Fiction and Fantasy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Harrison Ford, Arnold Schwartnegger
+C: Who is your favorite director?
+U: Steven Speilberg
+C: Tell me what MPAA rating should this movie have.
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a858e4807365;		Timestamp:	2018-02-15 05:46:20.362940
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: romantic comedy
+C: Who would you like to see starring in a movie?
+U: Kristen Chenowith
+C: Tell me some directors that you like.
+U: Rob Reiner is the only one I can remember.  John Hughes too
+C: What MPAA rating should this movie be?
+U: pg-13 or below
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I don't think I have
+C: 
+C: Do you like this recommendation?
+U: Do  you have another recommendation?
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Spanglish (2004)? 
+C: Spanglish stars Richard Marks, Richard Sakai, Hans Zimmer, Adam Sandler, Julie Ansell, Paz Vega, James L. Brooks, Cloris Leachman, John Seale, Téa Leoni and is directed by James L. Brooks.
+C: This film is 131 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Dazed and Confused (1993)? 
+C: Dazed and Confused stars Lee Daniel, Wiley Wiggins, Sean Daniel, Sandra Adair, John Frick, Matthew McConaughey, Jason London, James Jacks, Rory Cochrane, Richard Linklater and is directed by Richard Linklater.
+C: This film is 102 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-19-11-49-39"},"cryptID":"$1$oZNA9Cvb$0IK9YiCRlfs8ipkGv0X8Z0","userID":"5a8b299ae0d37","turkID":"A2S96ZZ70YFPSK","survey":{"q1":"1","q2":"4","q3":"4","q4":"didn't recommend any movies with requested actress"},"rating":["3","3","3","3","3","3","3","3","3","3","3","3","3"]}

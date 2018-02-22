@@ -1,0 +1,46 @@
+User:	5a8553ce34b87;		Timestamp:	2018-02-15 01:34:07.246780
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: funny
+C: Tell me some actors or actresses you like.
+U: john
+C: Can you tell me which director you like?
+U: steven
+C: Tell me what MPAA rating should this movie have.
+U: r
+C: I'm thinking about what you might like.
+C: How about Ghost in the Shell (1995)? 
+C: Ghost in the Shell stars Akio Ôtsuka, Iemasa Kayumi, Ken Matsumoto, Kazunori Itô, Mitsuhisa Ishikawa, Shirow Masamune, Kôichi Yamadera, Mamoru Oshii, Atsuko Tanaka, Ken Iyadomi and is directed by Shirow Masamune, Kazunori Itô.
+C: This film is 83 minutes long. It is an action, animation and crime movie, and is rated NR.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a85589cccf7a;		Timestamp:	2018-02-15 01:55:00.061777
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: horror
+C: Tell me some actors or actresses you like.
+U: johnny depp
+C: Can you tell me which director you like?
+U: it doesnt matter to me
+C: What should the MPAA rating for this movie be?
+U: anything
+C: I'm thinking about what you might like.
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no this one is fine
+C: 
+C: Bye! Please click the next button to proceed.
+

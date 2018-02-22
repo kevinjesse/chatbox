@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-00-30-04"},"cryptID":"$1$31hmIU7u$jy0y0yy6hgoBgk4Tm3uFH1","userID":"5a8938de09134","turkID":"A37DFWV5W6PXMS","survey":{"q1":"1","q2":"4","q3":"2","q4":"The chatbot isn't very interactive, it presents pretty simple questions and suggestions."},"rating":["3","2","2","3","2","3","3","3","2"]}

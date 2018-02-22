@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-09-43-42"},"cryptID":"$1$TtaJl1Tj$PDcgrznjc9JHYtZ0B.FsK0","userID":"5a8c5d8709a4c","turkID":"A1Q4PWSHDWPH1Q","survey":{"q1":"1","q2":"4","q3":"5","q4":"I liked it because it was quick and intelligent."},"rating":["3","3","3","1","2","3","2","3","2","3","3"]}

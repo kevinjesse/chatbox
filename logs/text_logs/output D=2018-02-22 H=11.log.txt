@@ -1,0 +1,23 @@
+User:	5a8f2034068d5;		Timestamp:	2018-02-22 11:57:09.791020
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: Romance and  comedy
+C: Who would you like to see starring in a movie?
+U: Does not matter
+C: Tell me a director you prefer.
+U: Steven Spielberg
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: r
+C: I'm thinking about what you might like.
+C: How about Breaking the Waves (1996)? 
+C: Breaking the Waves stars Peter Asmussen, Robby Müller, Vibeke Windeløv, Peter Aalbæk Jensen, David Pirie, Lars von Trier, Jean-Marc Barr, Katrin Cartlidge, Stellan Skarsgård, Emily Watson and is directed by Lars von Trier, Peter Asmussen, David Pirie.
+C: This film is 159 minutes long. It is a drama and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: seems ok
+C: 
+C: Bye! Please click the next button to proceed.
+

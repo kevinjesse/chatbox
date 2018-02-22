@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-09-01-06"},"cryptID":"$1$833r.KWk$G5EPE\/22J7YOuRa6G0v5K1","userID":"5a8c53fb9ade7","turkID":"A3QC57KUVJP5EW","survey":{"q1":"1","q2":"3","q3":"4","q4":"It was very precise. "},"rating":["3","3","3","3","3","3","3"]}

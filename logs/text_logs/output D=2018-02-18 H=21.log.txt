@@ -1,0 +1,32 @@
+User:	5a8a5a77ab86b;		Timestamp:	2018-02-18 21:05:02.892998
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: horror scifi
+C: Can you tell me some actors or actresses you prefer to watch?
+U: jeffrey combs
+C: Who is your favorite director?
+U: Brian Yuzna
+C: What MPAA rating should this movie be?
+U: r
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

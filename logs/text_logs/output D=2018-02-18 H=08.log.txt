@@ -1,0 +1,32 @@
+User:	5a89a681e03d0;		Timestamp:	2018-02-18 08:16:24.676828
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: reese whitherspoon
+C: Tell me some directors that you like.
+U: I'm not sure
+C: Tell me what MPAA rating should this movie have.
+U: how high does the scale go?
+C: I'm thinking about what you might like.
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I haven't
+C: 
+C: Do you like this recommendation?
+U: I'd be willing to try
+C: 
+C: How about Rushmore (1998)? 
+C: Rushmore stars Jason Schwartzman, Bill Murray, Owen Wilson, Paul Schiff, Robert D. Yeoman, Mark Mothersbaugh, Olivia Williams, Barry Mendel, Wes Anderson, Seymour Cassel and is directed by Wes Anderson, Owen Wilson.
+C: This film is 93 minutes long. It is a comedy and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

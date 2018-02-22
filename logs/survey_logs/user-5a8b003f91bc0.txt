@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-19-08-52-32"},"cryptID":"$1$joL61exR$9gcAczOsLXjPlhc.SZoDs1","userID":"5a8b003f91bc0","turkID":"A1UE6IH3L3XYN2","survey":{"q1":"1","q2":"4","q3":"4","q4":"It doesn't feel very personable. "},"rating":["3","3","3","2","3","2","3"]}

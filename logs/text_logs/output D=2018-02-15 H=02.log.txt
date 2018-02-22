@@ -1,0 +1,46 @@
+User:	5a855b526d123;		Timestamp:	2018-02-15 02:06:43.904813
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: comedy
+C: Can you tell me some actors or actresses you prefer to watch?
+U: jack black
+C: Can you tell me which director you like?
+U: woody allen
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about High Fidelity (2000)? 
+C: High Fidelity stars Scott Rosenberg, Iben Hjejle, Tim Bevan, Jack Black, Steve Pink, D.V. DeVincentis, Nick Hornby, John Cusack, Todd Louiso, Stephen Frears and is directed by Nick Hornby, D.V. DeVincentis, Steve Pink, John Cusack, Scott Rosenberg.
+C: This film is 113 minutes long. It is a comedy, drama and music movie, and is rated R.
+C: Have you watched this movie before?
+U: NO
+C: 
+C: Do you like this recommendation?
+U: YES
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a855c7f17369;		Timestamp:	2018-02-15 02:12:41.245365
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U:  I really enjoy comedy movies and horror!
+C: Tell me some actors or actresses you like.
+U: Hmm, Al Pacino, Woody Harrelson, Will Smith, Michael J. Fox, Johnny Depp 
+C: Can you tell me which director you like?
+U: Steven Spielberg
+C: Tell me what MPAA rating should this movie have.
+U: Pg-13 to R is fine
+C: I'm thinking about what you might like.
+C: How about Natural Born Killers (1994)? 
+C: Natural Born Killers stars Oliver Stone, Don Murphy, Quentin Tarantino, Rodney Dangerfield, Woody Harrelson, Richard Rutowski, Juliette Lewis, Jane Hamsher, David Veloz, Tom Sizemore and is directed by Quentin Tarantino, David Veloz, Richard Rutowski, Oliver Stone.
+C: This film is 118 minutes long. It is a crime and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: I haven't, but I'm familiar with it
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

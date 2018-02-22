@@ -1,0 +1,23 @@
+User:	5a82bd938e03f;		Timestamp:	2018-02-13 02:29:18.967613
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: action
+C: Can you tell me some actors or actresses you like?
+U: brad pitt
+C: Who is your favorite director?
+U: speilberg
+C: What should the MPAA rating for this movie be?
+U: doesnt matter
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: no i havent
+C: 
+C: Do you like this recommendation?
+U: yes i do
+C: 
+C: Bye! Please click the next button to proceed.
+

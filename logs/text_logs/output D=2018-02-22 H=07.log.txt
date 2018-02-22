@@ -1,0 +1,73 @@
+User:	5a8edbdd98ebf;		Timestamp:	2018-02-22 07:06:21.968164
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: I like romantic comedies, dramas, and thrillers.
+C: Who would you like to see starring in a movie?
+U: Bradley Cooper, Jennifer Lawrence, Natalie Portman
+C: Tell me a director you prefer.
+U: David Russell
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: Any rating
+C: I'm thinking about what you might like.
+C: How about Garden State (2004)? 
+C: Garden State stars Pamela Abdy, Chad Fischer, Natalie Portman, Dan Halsted, Peter Sarsgaard, Ian Holm, Zach Braff, Lawrence Sher, Richard Klubeck, Gary Gilbert and is directed by Zach Braff.
+C: This film is 102 minutes long. It is a comedy, drama and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Sure
+C: 
+C: How about The Sea Inside (2004)? 
+C: The Sea Inside stars Javier Bardem, Alejandro Amenábar, Lola Dueñas, Belén Rueda, Mabel Rivera, Mateo Gil, Javier Aguirresarobe, Fernando Bovaira, Benjamín Fernández and is directed by Alejandro Amenábar, Mateo Gil.
+C: This film is 125 minutes long. It is a biography, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Sure
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ee1d06550e;		Timestamp:	2018-02-22 07:31:40.868893
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Drama
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Brad Pitt, Will Smith, Reese Witherspoon
+C: Tell me some directors that you like.
+U: I don't really have any favorite directors
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: PG-13 or R
+C: I'm thinking about what you might like.
+C: How about Seven Years in Tibet (1997)? 
+C: Seven Years in Tibet stars John H. Williams, John Williams, Becky Johnston, Heinrich Harrer, Jean-Jacques Annaud, Mako, Iain Smith, BD Wong, David Thewlis, Brad Pitt and is directed by Heinrich Harrer, Becky Johnston.
+C: This film is 136 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I have not
+C: 
+C: Do you like this recommendation?
+U: Not really, anything more recent?
+C: 
+C: How about Legends of the Fall (1994)? 
+C: Legends of the Fall stars James Horner, Brad Pitt, Marshall Herskovitz, Julia Ormond, Aidan Quinn, Jim Harrison, William D. Wittliff, Susan Shilliday, Edward Zwick, Anthony Hopkins and is directed by Susan Shilliday, William D. Wittliff, Jim Harrison.
+C: This film is 133 minutes long. It is a drama, romance and war movie, and is rated R.
+C: Have you watched this movie before?
+U: I have seen that
+C: 
+C: Do you like this recommendation?
+U: No, it is even older than the first recomendation
+C: 
+C: How about Men in Black II (2002)? 
+C: Men in Black II stars Lara Flynn Boyle, Robert Gordon, Barry Sonnenfeld, Will Smith, Walter F. Parkes, Tommy Lee Jones, Rip Torn, Lowell Cunningham, Barry Fanaro, Laurie MacDonald and is directed by Lowell Cunningham, Robert Gordon, Barry Fanaro.
+C: This film is 88 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I have not
+C: 
+C: Do you like this recommendation?
+U: Yes!
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-03-48-47"},"cryptID":"$1$RAxVE.vL$X5kCZe68Ov.Ap997agx4R.","userID":"5a8ead36b98b3","turkID":"43604983","survey":{"q1":"1","q2":"3","q3":"4","q4":"I like everything about the chatbot!"},"rating":["3","3","3","3","3","3","3"]}

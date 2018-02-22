@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-22-14-29"},"cryptID":"$1$Jjh1jkOO$isDFR6H6bLWPUxKFbj8yV1","userID":"5a8a6ad84152c","turkID":"AMX5R6NLYNA2K","survey":{"q1":"1","q2":"5","q3":"5","q4":"It was very quick and did a good job of finding a movie that fit my parameters"},"rating":["3","3","3","3","3","2","3"]}

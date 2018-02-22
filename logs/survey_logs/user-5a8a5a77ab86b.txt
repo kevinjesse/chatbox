@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-21-06-44"},"cryptID":"$1$5y6tOZrM$\/jTnlvVIQ.0ClfobKmz9v\/","userID":"5a8a5a77ab86b","turkID":"A1NMKXK04PZ6KK","survey":{"q1":"0","q2":"1","q3":"4","q4":"the chatbot didn't give me a title near my interest even after collecting the information."},"rating":["3","3","3","3","3","3","3","3","3"]}

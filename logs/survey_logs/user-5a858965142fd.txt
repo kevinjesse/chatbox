@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-05-25-42"},"cryptID":"$1$QcC00Srp$EZGw8oQ7bzmkNB4iOogc6.","userID":"5a858965142fd","turkID":"A2PXJTMWGUE5DC","survey":{"q1":"1","q2":"3","q3":"5","q4":"The recommendation was a little odd, but I think I'd actually try it. The chatbox was friendly and easy to use. I didn't find anything I truly didn't like."},"rating":["3","3","3","3","2","3","3"]}

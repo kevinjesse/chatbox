@@ -1,0 +1,100 @@
+User:	5a85abc7966bd;		Timestamp:	2018-02-15 07:51:01.540024
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: I like dramas
+C: Who would you like to see starring in a movie?
+U: Casey Affleck
+C: Who is your favorite director?
+U: Michael Mann
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No, I haven't seen it yet.
+C: 
+C: Do you like this recommendation?
+U: Not really
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Spanglish (2004)? 
+C: Spanglish stars Richard Marks, Richard Sakai, Hans Zimmer, Adam Sandler, Julie Ansell, Paz Vega, James L. Brooks, Cloris Leachman, John Seale, Téa Leoni and is directed by James L. Brooks.
+C: This film is 131 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a85acc461c51;		Timestamp:	2018-02-15 07:56:02.150205
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: I like documentaries, dark dramas, independent films, etc.
+C: Can you tell me some actors or actresses you like?
+U: eh, I like Jeff Bridges, Nick Nolte, Paul Giamatti, 
+C: Tell me a director you prefer.
+U: Clint Eastwood
+C: What should the MPAA rating for this movie be?
+U: Doesn't matter, maybe not G though.
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Not really into it, no.
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Not really, no
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Spanglish (2004)? 
+C: Spanglish stars Richard Marks, Richard Sakai, Hans Zimmer, Adam Sandler, Julie Ansell, Paz Vega, James L. Brooks, Cloris Leachman, John Seale, Téa Leoni and is directed by James L. Brooks.
+C: This film is 131 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Maybe
+C: 
+C: Bye! Please click the next button to proceed.
+

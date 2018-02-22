@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-04-50-15"},"cryptID":"$1$VLDQRZbi$d2YF9dkyzjRozkfbB7zx2\/","userID":"5a8ebb97828bd","turkID":"Sergik Ivancov","survey":{"q1":"0","q2":"4","q3":"5","q4":"Like all"},"rating":["3","3","3","3","2","1","3","3","3"]}

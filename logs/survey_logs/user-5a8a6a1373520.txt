@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-22-12-11"},"cryptID":"$1$6Umjl4yj$JdR51BZ2vDqGaNOh4X3a8\/","userID":"5a8a6a1373520","turkID":"AMX5R6NLYNA2K","survey":{"q1":"0","q2":"5","q3":"5","q4":"It was very quick and did feel personalized. The algorithm definitely works"},"rating":["3","3","3","3","3","3","3","3","3"]}

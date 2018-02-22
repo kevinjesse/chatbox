@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-17-15-41-43"},"cryptID":"$1$1O0FXicI$n2W3sYU2X\/MSp2aOL.qdq0","userID":"5a88bcbf66f9a","turkID":"A175ZTL2OZO9YU","survey":{"q1":"0","q2":"3","q3":"5","q4":"I like that chatbot is more human-like to me to chat with. I like that it is fast, but not too fast."},"rating":["3","3","2","2","3","3","3","3","3"]}

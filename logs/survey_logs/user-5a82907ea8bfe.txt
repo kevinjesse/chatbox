@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-12-23-18-11"},"cryptID":"$1$uYsbKaR0$EswfclZH9AwMvZbN8BXq50","userID":"5a82907ea8bfe","turkID":"A35E65NESZS93W","survey":{"q1":"0","q2":"5","q3":"4","q4":"chat bot should list multiple movies at a time while showing only 1 or 2 actors to save text space"},"rating":["3","3","3","3","3","3","3","3","3"]}

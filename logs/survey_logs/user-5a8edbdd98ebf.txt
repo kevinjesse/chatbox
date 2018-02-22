@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-07-08-06"},"cryptID":"$1$jGVqcXMD$4ekKgxBOxqJWi86Q64\/760","userID":"5a8edbdd98ebf","turkID":"A1F991VPHVNIVC","survey":{"q1":"1","q2":"4","q3":"3","q4":"I thought the conversation was pretty natural. It's pretty hard to tell if the movie suggestion is a good one without seeing the movie."},"rating":["3","3","3","3","3","3","3","3","3"]}

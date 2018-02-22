@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-19-11-42-30"},"cryptID":"$1$4gxnBvX7$l0NtTcdeIF6i6TDoNUMsw1","userID":"5a8b275f694af","turkID":"A2S96ZZ70YFPSK","survey":{"q1":"1","q2":"2","q3":"3","q4":"the suggestions did not adhere to the genre I requested"},"rating":["3","3","3","3","2","3","2","3","2","3","2","3","2","3","3"]}

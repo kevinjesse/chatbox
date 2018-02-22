@@ -1,0 +1,552 @@
+User:	5a8ead36b98b3;		Timestamp:	2018-02-22 03:46:36.713394
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: terror
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Nicole Kidman 
+C: Can you tell me which director you like?
+U: Tarantino
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead3da73f7;		Timestamp:	2018-02-22 03:49:41.182893
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: terror
+C: Who would you like to see starring in a movie?
+U: patrick wilson
+C: Tell me a director you prefer.
+U: james wan
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: pg-13
+C: I'm thinking about what you might like.
+C: How about Spider-Man 2 (2004)? 
+C: Spider-Man 2 stars Miles Millar, Alfred Gough, Steve Ditko, Stan Lee, Sam Raimi, Michael Chabon, James Franco, Alfred Molina, Kirsten Dunst, Tobey Maguire and is directed by Stan Lee, Steve Ditko, Alfred Gough, Miles Millar, Michael Chabon, Alvin Sargent.
+C: This film is 127 minutes long. It is an action and adventure movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+U: yes
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead594fc86;		Timestamp:	2018-02-22 03:49:44.570665
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Titanic 
+C: Who are your favorite actors or actresses?
+U: Brad Pitt 
+C: Can you tell me which director you like?
+U: I don't know 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Thanks 
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead4e20fd4;		Timestamp:	2018-02-22 03:49:58.574846
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: Saw
+C: Tell me your actor/actress preferences.
+U:  Sylvester Stallone 
+C: Who is your favorite director?
+U: Adolf Hitler 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: 4 star
+C: I'm thinking about what you might like.
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead594fc86;		Timestamp:	2018-02-22 03:50:06.479729
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Titanic 
+C: Who are your favorite actors or actresses?
+U: Brad Pitt 
+C: Can you tell me which director you like?
+U: I don't know 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Thanks 
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+U: Thanks 
+C: 
+
+User:	5a8ead5e99a79;		Timestamp:	2018-02-22 03:50:37.721712
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: jason statham,chloe morezt,vin diesel
+C: Who is your favorite director?
+U: guillermo del toro
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: pg-14
+C: I'm thinking about what you might like.
+C: How about Priest (2011)? 
+C: Priest stars Michael De Luca, Maggie Q, Min-Woo Hyung, Cam Gigandet, Joshua Donen, Karl Urban, Mitchell Peck, Cory Goodman, Paul Bettany, Scott Stewart and is directed by Cory Goodman, Min-Woo Hyung.
+C: This film is 87 minutes long. It is an action, fantasy and horror movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no men
+C: 
+C: Do you like this recommendation?
+U: yes,I like it
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead594fc86;		Timestamp:	2018-02-22 03:50:39.691977
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Titanic 
+C: Who are your favorite actors or actresses?
+U: Brad Pitt 
+C: Can you tell me which director you like?
+U: I don't know 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Thanks 
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+U: Thanks 
+C: 
+U: Hi
+C: 
+
+User:	5a8ead594fc86;		Timestamp:	2018-02-22 03:51:07.588190
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Titanic 
+C: Who are your favorite actors or actresses?
+U: Brad Pitt 
+C: Can you tell me which director you like?
+U: I don't know 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Thanks 
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+U: Thanks 
+C: 
+U: Hi
+C: 
+U: Yes 
+C: 
+
+User:	5a8ead7d34a8d;		Timestamp:	2018-02-22 03:53:30.770473
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: Drama, mystery, thriller
+C: Tell me some actors or actresses you like.
+U: Tom Hardy, Cillian Murphy, Amy Adams
+C: Can you tell me which director you like?
+U: Hitchcock, Tarkovsky, Kieslowski, Kurosawa, 
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: G
+C: I'm thinking about what you might like.
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+C: 
+U: I didnt watch this movie
+C: 
+C: Do you like this recommendation?
+U: Sorry, but I dont like this recommendation
+C: 
+U: No
+C: My Neighbor Totoro stars Mark Henley, Toru Hara, Hitoshi Takagi, Noriko Hidaka, Joe Hisaishi, Shigesato Itoi, Hayao Miyazaki, Chika Sakamoto, Hisao Shirai, Ned Lott and is directed by Hayao Miyazaki.
+C: How about My Neighbor Totoro (1988)? 
+C: This film is 86 minutes long. It is an animation, family and fantasy movie, and is rated G.
+C: Have you watched this movie before?
+C: Do you like this recommendation?
+U: Yes, I watched this movie 
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eaf03addf8;		Timestamp:	2018-02-22 03:53:42.242101
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: accion
+C: Tell me your actor/actress preferences.
+U: jason statham
+C: Can you tell me which director you like?
+U: guillermo del toro
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: pg-4
+C: I'm thinking about what you might like.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ead43588e3;		Timestamp:	2018-02-22 03:54:22.688288
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: action
+C: Can you tell me some actors or actresses you like?
+U: arnold schwarzenegger
+C: Can you tell me which director you like?
+U: F. Gary Gray
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: i don't like
+C: 
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes I like
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eaecbf0f95;		Timestamp:	2018-02-22 03:56:15.486067
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Any thing 
+C: Tell me some actors or actresses you like.
+U: Brad Pitt and Angelina 
+C: Can you tell me which director you like?
+U: Mahmoud
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes 
+C: 
+C: How about Seven Years in Tibet (1997)? 
+C: Seven Years in Tibet stars John H. Williams, John Williams, Becky Johnston, Heinrich Harrer, Jean-Jacques Annaud, Mako, Iain Smith, BD Wong, David Thewlis, Brad Pitt and is directed by Heinrich Harrer, Becky Johnston.
+C: This film is 136 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes thanks 
+C: 
+U: What happened 
+C: 
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Titanic 
+C: 
+C: How about Ocean's Eleven (2001)? 
+C: This film is 116 minutes long. It is a crime and thriller movie, and is rated PG-13.
+C: Ocean's Eleven stars Jack Golden Russell, Steven Soderbergh, George Clayton Johnson, Brad Pitt, Julia Roberts, Matt Damon, Charles Lederer, George Clooney, Harry Brown, Ted Griffin and is directed by George Clayton Johnson, Jack Golden Russell, Harry Brown, Charles Lederer, Ted Griffin.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes 
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eaecbf0f95;		Timestamp:	2018-02-22 03:56:38.759605
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Any thing 
+C: Tell me some actors or actresses you like.
+U: Brad Pitt and Angelina 
+C: Can you tell me which director you like?
+U: Mahmoud
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes 
+C: 
+C: How about Seven Years in Tibet (1997)? 
+C: Seven Years in Tibet stars John H. Williams, John Williams, Becky Johnston, Heinrich Harrer, Jean-Jacques Annaud, Mako, Iain Smith, BD Wong, David Thewlis, Brad Pitt and is directed by Heinrich Harrer, Becky Johnston.
+C: This film is 136 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes thanks 
+C: 
+U: What happened 
+C: 
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Titanic 
+C: 
+C: How about Ocean's Eleven (2001)? 
+C: This film is 116 minutes long. It is a crime and thriller movie, and is rated PG-13.
+C: Ocean's Eleven stars Jack Golden Russell, Steven Soderbergh, George Clayton Johnson, Brad Pitt, Julia Roberts, Matt Damon, Charles Lederer, George Clooney, Harry Brown, Ted Griffin and is directed by George Clayton Johnson, Jack Golden Russell, Harry Brown, Charles Lederer, Ted Griffin.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes 
+C: 
+C: Bye! Please click the next button to proceed.
+U: No problem 
+C: 
+
+User:	5a8eaecbf0f95;		Timestamp:	2018-02-22 03:57:18.098828
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Any thing 
+C: Tell me some actors or actresses you like.
+U: Brad Pitt and Angelina 
+C: Can you tell me which director you like?
+U: Mahmoud
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: Eg
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes 
+C: 
+C: How about Seven Years in Tibet (1997)? 
+C: Seven Years in Tibet stars John H. Williams, John Williams, Becky Johnston, Heinrich Harrer, Jean-Jacques Annaud, Mako, Iain Smith, BD Wong, David Thewlis, Brad Pitt and is directed by Heinrich Harrer, Becky Johnston.
+C: This film is 136 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Yes thanks 
+C: 
+U: What happened 
+C: 
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: Have you watched this movie before?
+U: Yes 
+C: 
+C: Would you want another recommendation then?
+U: Titanic 
+C: 
+C: How about Ocean's Eleven (2001)? 
+C: This film is 116 minutes long. It is a crime and thriller movie, and is rated PG-13.
+C: Ocean's Eleven stars Jack Golden Russell, Steven Soderbergh, George Clayton Johnson, Brad Pitt, Julia Roberts, Matt Damon, Charles Lederer, George Clooney, Harry Brown, Ted Griffin and is directed by George Clayton Johnson, Jack Golden Russell, Harry Brown, Charles Lederer, Ted Griffin.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes 
+C: 
+C: Bye! Please click the next button to proceed.
+U: No problem 
+C: 
+U: Where is the code 
+C: 
+
+User:	5a8eafe194b7f;		Timestamp:	2018-02-22 03:58:33.837904
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Action
+C: Who would you like to see starring in a movie?
+U: arnold schwarzenegger
+C: Can you tell me which director you like?
+U: F. Gary Gray
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eafe194b7f;		Timestamp:	2018-02-22 03:59:07.272088
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Action
+C: Who would you like to see starring in a movie?
+U: arnold schwarzenegger
+C: Can you tell me which director you like?
+U: F. Gary Gray
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+U: The code
+C: 
+

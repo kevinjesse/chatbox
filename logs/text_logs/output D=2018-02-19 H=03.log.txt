@@ -1,0 +1,55 @@
+User:	5a8aaebb1b5b5;		Timestamp:	2018-02-19 03:03:25.852138
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: Action, Comedy
+C: Who are your favorite actors or actresses?
+U: Jake Gyllenhaal, Luke Evans, Tom Hardy
+C: Tell me some directors that you like.
+U: Ang Lee
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ab446f36a9;		Timestamp:	2018-02-19 03:29:11.306019
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: I enjoy drama and action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Tom Hanks Harrison Ford Daniel Day Lewis
+C: Tell me a director you prefer.
+U: Francis Ford Coppola Quenten Tarantinno
+C: What should the MPAA rating for this movie be?
+U: I dont have a preference
+C: I'm thinking about what you might like.
+C: How about Derailed (2005)? 
+C: Derailed stars Clive Owen, Vincent Cassel, James Siegel, Ed Shearmur, Peter Biziou, Stuart Beattie, Lorenzo di Bonaventura, Jennifer Aniston, Addison Timlin, Mikael Håfström and is directed by Stuart Beattie, James Siegel.
+C: This film is 108 minutes long. It is a crime, drama and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No I have not
+C: 
+C: Do you like this recommendation?
+U: I would like to give it a try
+C: 
+C: How about Happiness (1998)? 
+C: Happiness stars Philip Seymour Hoffman, Alan Oxman, Maryse Alberti, Jane Adams, Robbie Kondor, Christine Vachon, Ted Hope, Jon Lovitz, Todd Solondz, Dylan Baker and is directed by Todd Solondz.
+C: This film is 134 minutes long. It is a comedy and drama movie, and is rated NC-17.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

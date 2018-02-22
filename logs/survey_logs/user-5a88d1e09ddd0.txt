@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-17-17-11-18"},"cryptID":"$1$79ovuo8z$nw7CpCM8cGECBtu13nq\/R\/","userID":"5a88d1e09ddd0","turkID":"A1506T1PAYRT16","survey":{"q1":"0","q2":"4","q3":"5","q4":"He paused when I didn't exactly answer \"yes\" to his question, but overall it was good."},"rating":["3","3","3","3","3","3","3","3","3","3"]}

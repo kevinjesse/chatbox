@@ -1,0 +1,32 @@
+User:	5a85b2a272ce5;		Timestamp:	2018-02-15 08:19:28.507922
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Comedy
+C: Who would you like to see starring in a movie?
+U: Mike Epps
+C: Can you tell me which director you like?
+U: It doesn't matter
+C: Tell me what MPAA rating should this movie have.
+U: pg
+C: I'm thinking about what you might like.
+C: How about Caddyshack (1980)? 
+C: Caddyshack stars Chevy Chase, Ted Knight, Brian Doyle-Murray, Johnny Mandel, Harold Ramis, Douglas Kenney, William C. Carruth, Rodney Dangerfield, Bill Murray, Stevan Larner and is directed by Brian Doyle-Murray, Harold Ramis, Douglas Kenney.
+C: This film is 98 minutes long. It is a comedy and sport movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: not really
+C: 
+C: How about Coffee and Cigarettes (2003)? 
+C: Coffee and Cigarettes stars Jim Stark, Jason Kliot, Demetra J. MacBride, Rudd Simmons, Bill Murray, Roberto Benigni, Cassis Birgit Staudt, Jim Jarmusch, RZA, Tom Waits and is directed by Jim Jarmusch.
+C: This film is 95 minutes long. It is a comedy, drama and music movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: maybe
+C: 
+C: Bye! Please click the next button to proceed.
+

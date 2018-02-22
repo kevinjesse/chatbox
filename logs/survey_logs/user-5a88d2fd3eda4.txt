@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-17-17-16-45"},"cryptID":"$1$l42dm4mT$zZ4zd3RgQaNraqXKdGoOH.","userID":"5a88d2fd3eda4","turkID":"AJNQ2PBD07FKE","survey":{"q1":"1","q2":"4","q3":"5","q4":"Very responsive and fast. I thought it was very interactive. "},"rating":["3","3","3","3","3","3","3","3","3"]}

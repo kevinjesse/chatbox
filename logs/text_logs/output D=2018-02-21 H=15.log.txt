@@ -1,0 +1,21 @@
+User:	5a8dfd8347d39;		Timestamp:	2018-02-21 15:17:02.186600
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+C: Tell me your actor/actress preferences.
+U: animation
+C: Tell me a director you prefer.
+U: any
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: G
+C: I'm thinking about what you might like.
+U: tom hanks
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: How about Castle in the Sky (1986)? 
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

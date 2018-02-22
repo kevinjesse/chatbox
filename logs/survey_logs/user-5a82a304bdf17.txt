@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-13-00-36-06"},"cryptID":"$1$KQfNeaPU$CYjixU3LkGlB4DtI1UCL70","userID":"5a82a304bdf17","turkID":"AR5OPTTGMTI9S","survey":{"q1":"0","q2":"5","q3":"5","q4":"It was awesome! So fast, so life like. I really think it is perfect"},"rating":["3","3","3","3","3","3","3","3"]}

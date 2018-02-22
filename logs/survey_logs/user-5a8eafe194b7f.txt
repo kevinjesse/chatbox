@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-04-06-48"},"cryptID":"$1$axEe9pRB$UUl0.oTx9SUJiqrSRQI.j1","userID":"5a8eafe194b7f","turkID":"moonmarvel","survey":{"q1":"0","q2":"4","q3":"4","q4":"I don't when he take a longe time to reply."},"rating":["2","1","3","2","3","2","3","2"]}

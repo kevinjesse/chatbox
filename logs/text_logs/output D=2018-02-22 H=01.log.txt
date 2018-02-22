@@ -1,0 +1,23 @@
+User:	5a8e8afa5fa17;		Timestamp:	2018-02-22 01:20:10.063624
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Comedy
+C: Tell me your actor/actress preferences.
+U: Tom hanks
+C: Can you tell me which director you like?
+U: Stephen King
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Anchorman: The Legend of Ron Burgundy (2004)? 
+C: Anchorman: The Legend of Ron Burgundy stars Adam McKay, Steve Carell, Christina Applegate, Will Ferrell, Brent White, Thomas E. Ackerman, Alex Wurman, Clayton Hartley, Judd Apatow, Paul Rudd and is directed by Will Ferrell, Adam McKay.
+C: This film is 94 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-11-36-57"},"cryptID":"$1$5EDCsXsH$4p7n75OvSQpQezHT\/debn\/","userID":"5a8c78430cae6","turkID":"A35E65NESZS93W","survey":{"q1":"1","q2":"3","q3":"2","q4":"would like to list multiple movies at the same time"},"rating":["3","3","3","3","3","3","3","3","3","3","3"]}

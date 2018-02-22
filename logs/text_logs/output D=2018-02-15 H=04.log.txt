@@ -1,0 +1,55 @@
+User:	5a857cb8d51bd;		Timestamp:	2018-02-15 04:29:14.458613
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Action
+C: Who would you like to see starring in a movie?
+U: doesn't matter
+C: Who is your favorite director?
+U: John Woo
+C: What should the MPAA rating for this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Payback (1999)? 
+C: Payback stars Chris Boardman, Mel Gibson, David Paymer, Terry Hayes, Gregg Henry, Bruce Davey, Ericson Core, Donald E. Westlake, Brian Helgeland, Maria Bello and is directed by Donald E. Westlake, Brian Helgeland, Terry Hayes.
+C: This film is 100 minutes long. It is an action, crime and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Blade (1998)? 
+C: Blade stars Mark Isham, Stephen Norrington, Robert Engelman, David S. Goyer, Wesley Snipes, Stephen Dorff, N'Bushe Wright, Kris Kristofferson, Peter Frankfurt, Theo van de Sande and is directed by David S. Goyer.
+C: This film is 120 minutes long. It is an action and horror movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8582c6d50d2;		Timestamp:	2018-02-15 04:55:27.038989
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: Documentary
+C: Tell me your actor/actress preferences.
+U: I like Brad Pitt and I Scarlett Johannsen
+C: Tell me a director you prefer.
+U: Martin Scorcesse
+C: What should the MPAA rating for this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Fahrenheit 9/11 (2004)? 
+C: Fahrenheit 9/11 stars Stevie Wonder, Jim Czarnecki, George W. Bush, Michael Moore, Kurt Engfehr, Woody Richman, Jeff Gibbs, Ben Affleck, Kathleen Glynn, Chris Seward and is directed by Michael Moore.
+C: This film is 122 minutes long. It is a documentary, drama and war movie, and is rated R.
+C: Have you watched this movie before?
+U: No, I haven't 
+C: 
+C: Do you like this recommendation?
+U: Maybe
+C: 
+C: Bye! Please click the next button to proceed.
+

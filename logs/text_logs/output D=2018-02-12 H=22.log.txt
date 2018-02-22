@@ -1,0 +1,64 @@
+User:	5a82899bec683;		Timestamp:	2018-02-12 22:46:35.858780
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: comedy
+C: Can you tell me some actors or actresses you like?
+U: any
+C: Who is your favorite director?
+U: any
+C: Tell me what MPAA rating should this movie have.
+U: any
+C: I'm thinking about what you might like.
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a828aa3b67eb;		Timestamp:	2018-02-12 22:50:53.372931
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: action
+C: Who are your favorite actors or actresses?
+U: keanu reeves
+C: Tell me some directors that you like.
+U: anyone
+C: Tell me what MPAA rating should this movie have.
+U: any
+C: I'm thinking about what you might like.
+C: How about The Matrix (1999)? 
+C: The Matrix stars Lana Wachowski, Keanu Reeves, Zach Staenberg, Laurence Fishburne, Bill Pope, Don Davis, Carrie-Anne Moss, Joel Silver, Lilly Wachowski, Hugo Weaving and is directed by Lilly Wachowski, Lana Wachowski.
+C: This film is 136 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Blade (1998)? 
+C: Blade stars Mark Isham, Stephen Norrington, Robert Engelman, David S. Goyer, Wesley Snipes, Stephen Dorff, N'Bushe Wright, Kris Kristofferson, Peter Frankfurt, Theo van de Sande and is directed by David S. Goyer.
+C: This film is 120 minutes long. It is an action and horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

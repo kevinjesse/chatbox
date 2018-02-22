@@ -1,0 +1,41 @@
+User:	5a851550a87bc;		Timestamp:	2018-02-14 21:08:51.846410
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: I like romantic movies.
+C: Who would you like to see starring in a movie?
+U: Sandra Bullock is great, and so is Julia Roberts.
+C: Can you tell me which director you like?
+U: I don't really have a favorite.
+C: What should the MPAA rating for this movie be?
+U: PG-13 or R is fine.
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Do you have a different suggestion?
+C: 
+C: Do you like this recommendation?
+U: No.
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes.
+C: 
+C: Would you want another recommendation then?
+U: Yes, another one please.
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: No, but I guess that's okay even if it's not a romantic movie.
+C: 
+C: Do you like this recommendation?
+U: Sure.
+C: 
+C: Bye! Please click the next button to proceed.
+

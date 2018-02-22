@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-13-05-55-57"},"cryptID":"$1$YEvKJ..P$5BIfE6yoBqChSDxMOqcPH1","userID":"5a82edf588fc7","turkID":"A1GKEEI844CEKI","survey":{"q1":"0","q2":"4","q3":"5","q4":"I like that it was fast and also seemed to get what I was saying"},"rating":["3","3","3","3","3","3","3"]}

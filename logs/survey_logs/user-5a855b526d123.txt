@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-02-08-14"},"cryptID":"$1$AFp5oQAz$uAsP2b92f9jGBVeNy4qs41","userID":"5a855b526d123","turkID":"A3GW3MPLVGG7PZ","survey":{"q1":"0","q2":"4","q3":"4","q4":"THE CONVO SEEMED A LITTLE RUSHED BUT IT WAS FIND IT GOT ME WHAT I NEEDED"},"rating":["3","3","3","3","3","3","3"]}

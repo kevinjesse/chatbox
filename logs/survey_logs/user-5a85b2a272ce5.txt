@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-08-21-30"},"cryptID":"$1$Z5My5oPq$wb31md5e18DT8CPvcRHg9\/","userID":"5a85b2a272ce5","turkID":"A2HHK2B1GUH9GX","survey":{"q1":"1","q2":"3","q3":"4","q4":"I don't think the chatbot took into account my answers, like what MPAA rating I wanted to see."},"rating":["3","3","3","3","3","3","3","3","3"]}

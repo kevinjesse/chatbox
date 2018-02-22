@@ -1,0 +1,87 @@
+User:	5a828ede7d5f6;		Timestamp:	2018-02-12 23:09:23.935990
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: action
+C: Who would you like to see starring in a movie?
+U: arnold swartzeneggar
+C: Who is your favorite director?
+U: don't know
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about The Terminator (1984)? 
+C: The Terminator stars Adam Greenberg, Mark Goldblatt, Brad Fiedel, Paul Winfield, Linda Hamilton, William Wisher Jr., Gale Anne Hurd, Michael Biehn, James Cameron, Arnold Schwarzenegger and is directed by James Cameron, Gale Anne Hurd, William Wisher Jr..
+C: This film is 107 minutes long. It is an action and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a82907ea8bfe;		Timestamp:	2018-02-12 23:16:30.082490
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: comedy
+C: Tell me some actors or actresses you like.
+U: will ferral
+C: Who is your favorite director?
+U: ben stiller
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a82981bcfdb6;		Timestamp:	2018-02-12 23:48:41.050851
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: horror
+C: Can you tell me some actors or actresses you like?
+U: ryan gosling, charlize theron
+C: Who is your favorite director?
+U: james cameron
+C: Tell me what MPAA rating should this movie have.
+C: I'm thinking about what you might like.
+U: ok
+C: I'm thinking about what you might like.
+U: r
+C: The Exorcist stars Owen Roizman, Evan A. Lottman, Bill Malley, Ellen Burstyn, Lee J. Cobb, Linda Blair, William Friedkin, Norman Gay, Max von Sydow, William Peter Blatty and is directed by William Peter Blatty.
+C: How about The Exorcist (1973)? 
+C: This film is 122 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

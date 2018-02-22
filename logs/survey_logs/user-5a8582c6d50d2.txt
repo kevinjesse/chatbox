@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-05-00-34"},"cryptID":"$1$85OXYGvT$GQz.17pDDHTv6pffjWmPd1","userID":"5a8582c6d50d2","turkID":"A4ZPIPBDO624H","survey":{"q1":"1","q2":"3","q3":"4","q4":"I thought the chatbot was really direct and somewhat unsocial. "},"rating":["3","2","3","3","3","3","3"]}

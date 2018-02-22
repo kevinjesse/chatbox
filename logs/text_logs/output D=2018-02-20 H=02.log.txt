@@ -1,0 +1,28 @@
+User:	5a8bf7f25a3b5;		Timestamp:	2018-02-20 02:28:30.610601
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+C: Who would you like to see starring in a movie?
+U: Action
+C: Can you tell me which director you like?
+C: What MPAA rating should this movie be?
+U: mature
+C: I'm thinking about what you might like.
+U: Harvey Weinstein
+C: How about Unstoppable (2010)? 
+U: Denzel Washington
+C: This film is 98 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Unstoppable stars Mimi Rogers, Denzel Washington, Alex Young, Julie Yorn, Rosario Dawson, Chris Pine, Ethan Suplee, Tony Scott, Mark Bomback, Eric McLeod and is directed by Mark Bomback.
+C: Have you watched this movie before?
+C: Would you want another recommendation then?
+C: How about The Siege (1998)? 
+C: The Siege stars Denzel Washington, Roger Deakins, Bruce Willis, Lynda Obst, Tony Shalhoub, Annette Bening, Graeme Revell, Lawrence Wright, Menno Meyjes, Edward Zwick and is directed by Lawrence Wright, Menno Meyjes, Edward Zwick.
+C: This film is 116 minutes long. It is an action and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

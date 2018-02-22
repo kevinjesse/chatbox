@@ -1,0 +1,87 @@
+User:	5a8c53fb9ade7;		Timestamp:	2018-02-20 09:00:28.439588
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: Fantasy
+C: Tell me your actor/actress preferences.
+U: Brendan Fraser
+C: Can you tell me which director you like?
+U: Stanley Kubrick
+C: Tell me what MPAA rating should this movie have.
+U: R
+C: I'm thinking about what you might like.
+C: How about The City of Lost Children (1995)? 
+C: The City of Lost Children stars Marc Caro, Gilles Adrien, Félicie Dutertre, Dominique Pinon, Guillaume Laurant, María Victoria Hebrero, Judith Vittet, Jean-Pierre Jeunet, Daniel Emilfork, Ron Perlman and is directed by Gilles Adrien, Jean-Pierre Jeunet, Marc Caro, Guillaume Laurant.
+C: This film is 112 minutes long. It is a fantasy and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8c53a75e57c;		Timestamp:	2018-02-20 09:00:54.145574
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: Romance
+C: Tell me some actors or actresses you like.
+U: Hugh Jackman, Tom Cruise, Pierce Brosnan
+C: Tell me some directors that you like.
+U: Any
+C: What MPAA rating should this movie be?
+U: PG13
+C: I'm thinking about what you might like.
+C: How about Pretty Woman (1990)? 
+C: Pretty Woman stars J.F. Lawton, Charles Minsky, James Newton Howard, Laura San Giacomo, Steven Reuther, Jason Alexander, Julia Roberts, Richard Gere, Arnon Milchan, Garry Marshall and is directed by J.F. Lawton.
+C: This film is 119 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: No.
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8c5d8709a4c;		Timestamp:	2018-02-20 09:42:07.681481
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: Science fiction
+C: Who would you like to see starring in a movie?
+U: Tom Cruise
+C: Can you tell me which director you like?
+U: Steven Spielsberg
+C: What should the MPAA rating for this movie be?
+U: 4.0 or higher
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

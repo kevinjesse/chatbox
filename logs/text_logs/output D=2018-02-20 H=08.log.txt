@@ -1,0 +1,41 @@
+User:	5a8c53886aa54;		Timestamp:	2018-02-20 08:59:25.977835
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: comedy
+C: Tell me some actors or actresses you like.
+U: joe rogan
+C: Who is your favorite director?
+U: eli roth
+C: What MPAA rating should this movie be?
+U: r
+C: I'm thinking about what you might like.
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

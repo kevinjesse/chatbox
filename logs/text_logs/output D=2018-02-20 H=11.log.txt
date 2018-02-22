@@ -1,0 +1,64 @@
+User:	5a8c6ff3149e6;		Timestamp:	2018-02-20 11:00:37.016330
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: Comedy
+C: Tell me some actors or actresses you like.
+U: Brad Pitt, Benicio Del Toro
+C: Tell me some directors that you like.
+U: Steven Speilberg
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Snatch (2000)? 
+C: Snatch stars Matthew Vaughn, Dennis Farina, Jon Harris, Jason Statham, John Murphy, Brad Pitt, Benicio Del Toro, Guy Ritchie, Hugo Luczyc-Wyhowski, Tim Maurice-Jones and is directed by Guy Ritchie.
+C: This film is 104 minutes long. It is a comedy and crime movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8c78430cae6;		Timestamp:	2018-02-20 11:35:53.211777
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Horror
+C: Who are your favorite actors or actresses?
+U: none
+C: Tell me some directors that you like.
+U: wes craven
+C: What MPAA rating should this movie be?
+U: r
+C: I'm thinking about what you might like.
+C: How about Halloween II (1981)? 
+C: Halloween II stars Debra Hill, Charles Cyphers, Alan Howarth, Mark Goldblatt, Dean Cundey, Jeffrey Kramer, Rick Rosenthal, Donald Pleasence, Jamie Lee Curtis, John Carpenter and is directed by John Carpenter, Debra Hill.
+C: This film is 92 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about The Exorcist (1973)? 
+C: The Exorcist stars Owen Roizman, Evan A. Lottman, Bill Malley, Ellen Burstyn, Lee J. Cobb, Linda Blair, William Friedkin, Norman Gay, Max von Sydow, William Peter Blatty and is directed by William Peter Blatty.
+C: This film is 122 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about A Nightmare on Elm Street (1984)? 
+C: A Nightmare on Elm Street stars Robert Englund, Rick Shaine, John Saxon, Jacques Haitkin, Robert Shaye, Heather Langenkamp, Johnny Depp, Charles Bernstein, Wes Craven, Patrick McMahon and is directed by Wes Craven.
+C: This film is 91 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

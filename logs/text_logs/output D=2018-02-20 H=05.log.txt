@@ -1,0 +1,32 @@
+User:	5a8c1bbc21b3b;		Timestamp:	2018-02-20 05:01:00.177067
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: action, drama
+C: Can you tell me some actors or actresses you prefer to watch?
+U: sylvester stallone, sandra bullock
+C: Tell me a director you prefer.
+U: not sure
+C: What MPAA rating should this movie be?
+U: doesn't matter
+C: I'm thinking about what you might like.
+C: How about Jane Eyre (2011)? 
+C: Jane Eyre stars Moira Buffini, Dario Marianelli, Jamie Bell, Su Elliot, Mia Wasikowska, Michael Fassbender, Cary Fukunaga, Paul Trijbits, Alison Owen, Charlotte Brontë and is directed by Charlotte Brontë, Moira Buffini.
+C: This film is 120 minutes long. It is a drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Miss Congeniality (2000)? 
+C: Miss Congeniality stars Ed Shearmur, Benjamin Bratt, Candice Bergen, Sandra Bullock, Donald Petrie, Caryn Lucas, László Kovács, Marc Lawrence, Michael Caine, Katie Ford and is directed by Marc Lawrence, Katie Ford, Caryn Lucas.
+C: This film is 109 minutes long. It is an action, comedy and crime movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -1,0 +1,100 @@
+User:	5a88bcbf66f9a;		Timestamp:	2018-02-17 15:39:23.345121
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: family, fantasy, drama
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Julia Roberts selena gomez
+C: Tell me a director you prefer.
+U: I'm not sure
+C: What MPAA rating should this movie be?
+U: Adults 
+C: I'm thinking about what you might like.
+C: How about Labyrinth (1986)? 
+U: ok
+C: Labyrinth stars Eric Rattray, Terry Jones, Dennis Lee, Shelley Thompson, Trevor Jones, Alex Thomson, David Bowie, Toby Froud, Jim Henson, Jennifer Connelly and is directed by Dennis Lee, Jim Henson, Terry Jones.
+C: This film is 101 minutes long. It is an adventure, family and fantasy movie, and is rated PG.
+C: Have you watched this movie before?
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a88bde3a1db6;		Timestamp:	2018-02-17 15:44:41.816993
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: Sci-Fi, fantasy, comedy
+C: Who would you like to see starring in a movie?
+U: Uhh I wouldn't care
+C: Can you tell me which director you like?
+U: Spielberg is good
+C: What MPAA rating should this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about The City of Lost Children (1995)? 
+C: The City of Lost Children stars Marc Caro, Gilles Adrien, Félicie Dutertre, Dominique Pinon, Guillaume Laurant, María Victoria Hebrero, Judith Vittet, Jean-Pierre Jeunet, Daniel Emilfork, Ron Perlman and is directed by Gilles Adrien, Jean-Pierre Jeunet, Marc Caro, Guillaume Laurant.
+C: This film is 112 minutes long. It is a fantasy and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Ghost in the Shell (1995)? 
+C: Ghost in the Shell stars Akio Ôtsuka, Iemasa Kayumi, Ken Matsumoto, Kazunori Itô, Mitsuhisa Ishikawa, Shirow Masamune, Kôichi Yamadera, Mamoru Oshii, Atsuko Tanaka, Ken Iyadomi and is directed by Shirow Masamune, Kazunori Itô.
+C: This film is 83 minutes long. It is an action, animation and crime movie, and is rated NR.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Army of Darkness (1992)? 
+C: Army of Darkness stars Sam Raimi, Ivan Raimi, Ian Abercrombie, Marcus Gilbert, Embeth Davidtz, Rob Tapert, Bruce Campbell, Joseph LoDuca, Bill Pope, Bob Murawski and is directed by Sam Raimi, Ivan Raimi.
+C: This film is 81 minutes long. It is a comedy and horror movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Beetlejuice (1988)? 
+C: Beetlejuice stars Michael Bender, Michael McDowell, Warren Skaaren, Tim Burton, Larry Wilson, Alec Baldwin, Annie McEnroe, Richard Hashimoto, Michael Keaton, Geena Davis and is directed by Michael McDowell, Larry Wilson, Warren Skaaren.
+C: This film is 92 minutes long. It is a comedy and fantasy movie, and is rated PG.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Dogma (1999)? 
+C: Dogma stars Matt Damon, Scott Mosier, Robert Holtzman, Ben Affleck, Kevin Smith, Linda Fiorentino, Howard Shore, Bud Cort, Robert D. Yeoman and is directed by Kevin Smith.
+C: This film is 130 minutes long. It is an adventure, comedy and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Trainspotting (1996)? 
+C: Trainspotting stars Ewen Bremner, John Hodge, Irvine Welsh, Brian Tufano, Andrew Macdonald, Jonny Lee Miller, Masahiro Hirakubo, Danny Boyle, Ewan McGregor, Kevin McKidd and is directed by John Hodge, Irvine Welsh.
+C: This film is 94 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: sure
+C: 
+C: Bye! Please click the next button to proceed.
+

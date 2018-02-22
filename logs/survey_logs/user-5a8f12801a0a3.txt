@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-10-58-37"},"cryptID":"$1$876z0w1f$YumM1gr2qEF0c5HQyu8yC1","userID":"5a8f12801a0a3","turkID":"A358YR7MWC6LRH","survey":{"q1":"1","q2":"3","q3":"3","q4":"I thought it odd i told it a director and actor that work together plenty and it went to neither of them in its suggestion."},"rating":["3","3","3","3","3","3","3"]}

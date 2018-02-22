@@ -1,0 +1,77 @@
+User:	5a8c310235cb0;		Timestamp:	2018-02-20 06:40:08.861786
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Sci-fi
+C: Can you tell me some actors or actresses you prefer to watch?
+U: no prefernce
+C: Who is your favorite director?
+U: hitchcock
+C: Tell me what MPAA rating should this movie have.
+U: doesn't matter
+C: I'm thinking about what you might like.
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+U: no\
+C: 
+C: Do you like this recommendation?
+U: no it's for kids
+C: 
+C: How about Irreversible (2002)? 
+C: Irreversible stars Jo Prestia, Thomas Bangalter, Alain Juteau, Albert Dupontel, Monica Bellucci, Christophe Rossignon, Vincent Cassel, Benoît Debie, Gaspar Noé and is directed by Gaspar Noé.
+C: This film is 97 minutes long. It is a crime, drama and mystery movie, and is rated NC-17.
+C: Have you watched this movie before?
+U: no too provacative
+C: 
+C: Do you like this recommendation?
+U: too provacative
+C: 
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no too violent
+C: 
+C: How about Yojimbo (1961)? 
+C: Yojimbo stars Masaru Satô, Ryûzô Kikushima, Kazuo Miyagawa, Yôko Tsukasa, Toshirô Mifune, Yoshirô Muraki, Tatsuya Nakadai, Eijirô Tôno, Akira Kurosawa and is directed by Akira Kurosawa, Ryûzô Kikushima.
+C: This film is 110 minutes long. It is an action, drama and thriller movie, and is rated NR.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Audition (1999)? 
+C: Audition stars Takashi Miike, Satoshi Fukushima, Akemi Suyama, Daisuke Tengan, Eihi Shiina, Kôji Endô, Ryû Murakami, Ryo Ishibashi, Tetsu Sawaki, Jun Kunimura and is directed by Ryû Murakami, Daisuke Tengan.
+C: This film is 115 minutes long. It is a drama, horror and mystery movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Porco Rosso (1992)? 
+C: Porco Rosso stars Joe Hisaishi, Bunshi Katsura Vi, Hayao Miyazaki, Atsushi Okui, Shûichirô Moriyama, Tsunehiko Kamijô, Tokiko Katô, Rick Dempsey, Toshio Suzuki, Mark Henley and is directed by Hayao Miyazaki.
+C: This film is 94 minutes long. It is an adventure, animation and comedy movie, and is rated PG.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: one more please
+C: 
+C: How about Infernal Affairs (2002)? 
+C: Infernal Affairs stars Felix Chong, Ronald Ng, Wai-Keung Lau, Eric Tsang, Alan Mak, Anthony Chau-Sang Wong, Kwong Wing Chan, Tony Chiu-Wai Leung, Yiu-Fai Lai, Andy Lau and is directed by Alan Mak, Felix Chong.
+C: This film is 101 minutes long. It is a crime, mystery and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

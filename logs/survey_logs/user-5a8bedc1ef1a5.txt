@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-01-46-13"},"cryptID":"$1$Yxp5qHun$IgbVDfUwm.Ze7oakEfr4z\/","userID":"5a8bedc1ef1a5","turkID":"A142ZRU284W9O","survey":{"q1":"1","q2":"4","q3":"3","q4":"It didn't feel natural, and it said goodbye too early."},"rating":["3","3","3","3","3","3","1"]}

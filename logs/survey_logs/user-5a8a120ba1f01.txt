@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-15-56-26"},"cryptID":"$1$lBiX59wE$7SBCK3CCayU71Y2FMJoDJ\/","userID":"5a8a120ba1f01","turkID":"A2O2Q0LVWOWJ1G","survey":{"q1":"0","q2":"4","q3":"5","q4":"The language they responded with was clear and natural. I felt comfortable engaging with the chatbot."},"rating":["3","3","3","3","3","3","3","3","3"]}

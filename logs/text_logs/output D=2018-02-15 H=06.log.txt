@@ -1,0 +1,114 @@
+User:	5a85947394eac;		Timestamp:	2018-02-15 06:12:44.453862
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: I like sci-fi, dystopian films
+C: Tell me some actors or actresses you like.
+U: chris pratt, mary elizabeth winstead, simon pegg
+C: Who is your favorite director?
+U: Edgar Wright
+C: What should the MPAA rating for this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a859548bbf3c;		Timestamp:	2018-02-15 06:13:25.458805
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: Drama
+C: Tell me some actors or actresses you like.
+U: Al Pacino
+C: Who is your favorite director?
+U: Quentin Tarantino
+C: Tell me what MPAA rating should this movie have.
+U: R
+C: I'm thinking about what you might like.
+C: How about Natural Born Killers (1994)? 
+C: Natural Born Killers stars Oliver Stone, Don Murphy, Quentin Tarantino, Rodney Dangerfield, Woody Harrelson, Richard Rutowski, Juliette Lewis, Jane Hamsher, David Veloz, Tom Sizemore and is directed by Quentin Tarantino, David Veloz, Richard Rutowski, Oliver Stone.
+C: This film is 118 minutes long. It is a crime and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Reservoir Dogs (1992)? 
+C: Reservoir Dogs stars Andrzej Sekula, Quentin Tarantino, Chris Penn, Michael Madsen, Harvey Keitel, Sally Menke, David Wasco, Lawrence Bender, Tim Roth, Roger Avary and is directed by Quentin Tarantino, Roger Avary.
+C: This film is 99 minutes long. It is a crime, drama and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a859ce83f76f;		Timestamp:	2018-02-15 06:47:08.685894
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Comedy
+C: Who are your favorite actors or actresses?
+U: Adam Sandler
+C: Tell me some directors that you like.
+U: Unsure
+C: What should the MPAA rating for this movie be?
+U: PG
+C: I'm thinking about what you might like.
+C: How about Caddyshack (1980)? 
+C: Caddyshack stars Chevy Chase, Ted Knight, Brian Doyle-Murray, Johnny Mandel, Harold Ramis, Douglas Kenney, William C. Carruth, Rodney Dangerfield, Bill Murray, Stevan Larner and is directed by Brian Doyle-Murray, Harold Ramis, Douglas Kenney.
+C: This film is 98 minutes long. It is a comedy and sport movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Yes
+C: 
+C: How about Coffee and Cigarettes (2003)? 
+C: Coffee and Cigarettes stars Jim Stark, Jason Kliot, Demetra J. MacBride, Rudd Simmons, Bill Murray, Roberto Benigni, Cassis Birgit Staudt, Jim Jarmusch, RZA, Tom Waits and is directed by Jim Jarmusch.
+C: This film is 95 minutes long. It is a comedy, drama and music movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Galaxy Quest (1999)? 
+C: Galaxy Quest stars David Newman, Tony Shalhoub, Tim Allen, Alan Rickman, Charles Newirth, Dean Parisot, Mark Johnson, Robert Gordon, Sigourney Weaver, David Howard and is directed by David Howard, Robert Gordon.
+C: This film is 102 minutes long. It is an adventure, comedy and sci-fi movie, and is rated PG.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

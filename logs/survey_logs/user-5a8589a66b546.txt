@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-05-27-15"},"cryptID":"$1$Cmc\/PzXG$3HY.LKUJ.ANTysES7aOk6.","userID":"5a8589a66b546","turkID":"A2UF2FRGVW4T89","survey":{"q1":"1","q2":"2","q3":"5","q4":"It was not the type of genre that I requested.\r\n"},"rating":["3","3","3","3","3","3","3","3","3"]}

@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-09-00-20"},"cryptID":"$1$G39FAjYE$d2G6lWHE5w1cYzEoziTH2.","userID":"5a8c53886aa54","turkID":"A2UHMLMFCP9J72","survey":{"q1":"0","q2":"5","q3":"5","q4":"i liked that the chatbot chose some of my favorite movies. "},"rating":["3","3","3","3","3","3","3","3","3","3","3"]}

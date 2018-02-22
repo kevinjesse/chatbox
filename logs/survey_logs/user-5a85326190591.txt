@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-14-23-14-10"},"cryptID":"$1$SxrOi7Am$ybfLcHQ4pUCoN7\/oSsEEK.","userID":"5a85326190591","turkID":"A22QD6M0A2C77C","survey":{"q1":"1","q2":"4","q3":"4","q4":"It was very responsive which I enjoyed, but it didn't seem to be very interactive with it's dialog choices."},"rating":["3","3","3","3","3","3","3"]}

@@ -1,0 +1,55 @@
+User:	5a82e9232a495;		Timestamp:	2018-02-13 05:34:42.144292
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: Documentary
+C: Who would you like to see starring in a movie?
+U: All
+C: Who is your favorite director?
+U: None
+C: Tell me what MPAA rating should this movie have.
+U: any
+C: I'm thinking about what you might like.
+C: How about Fahrenheit 9/11 (2004)? 
+C: Fahrenheit 9/11 stars Stevie Wonder, Jim Czarnecki, George W. Bush, Michael Moore, Kurt Engfehr, Woody Richman, Jeff Gibbs, Ben Affleck, Kathleen Glynn, Chris Seward and is directed by Michael Moore.
+C: This film is 122 minutes long. It is a documentary, drama and war movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Super Size Me (2004)? 
+C: Super Size Me stars Chemeeka Walker, Scott Ambrozy, Morgan Spurlock, Julie Bob Lombardi, Steve Horowitz, Daryl Isaacs, Stela Georgieva, Dania Abu-Rmaileh and is directed by Morgan Spurlock.
+C: This film is 100 minutes long. It is a comedy, documentary and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a82edf588fc7;		Timestamp:	2018-02-13 05:55:16.617227
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: History
+C: Who are your favorite actors or actresses?
+U: Denzel washington, Tera Patrick
+C: Tell me a director you prefer.
+U: Not sure
+C: What should the MPAA rating for this movie be?
+U: R
+C: I'm thinking about what you might like.
+C: How about Remember the Titans (2000)? 
+C: Remember the Titans stars Jerry Bruckheimer, Philippe Rousselot, Gregory Allen Howard, Ryan Hurst, Trevor Rabin, Will Patton, Wood Harris, Boaz Yakin, Chad Oman, Denzel Washington and is directed by Gregory Allen Howard.
+C: This film is 113 minutes long. It is a biography, drama and sport movie, and is rated PG.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

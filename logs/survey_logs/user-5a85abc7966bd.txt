@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-07-53-31"},"cryptID":"$1$tyUrA1JH$0m37fxsBnEEaW0O5FaFKA\/","userID":"5a85abc7966bd","turkID":"A3SKEW89V5S0DI","survey":{"q1":"1","q2":"2","q3":"2","q4":"The results given were nowhere near my specifications from the beginning."},"rating":["3","3","3","3","3","3","3","3","3","3","3","3","3"]}

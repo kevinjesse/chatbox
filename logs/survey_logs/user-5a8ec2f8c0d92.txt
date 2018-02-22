@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-05-20-59"},"cryptID":"$1$ZU8ASmb.$kG6Bpg4ersnf5I5clylwO\/","userID":"5a8ec2f8c0d92","turkID":"A7TUG10LNB586","survey":{"q1":"1","q2":"4","q3":"2","q4":"Recommendations were not necessarily in line with answers I gave."},"rating":["3","2","3","3","2","3","2","3","2","3","3"]}

@@ -1,0 +1,66 @@
+User:	5a88d1e09ddd0;		Timestamp:	2018-02-17 17:10:05.596179
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: Comedy
+C: Can you tell me some actors or actresses you like?
+U: I like Will Ferrill.
+C: Tell me a director you prefer.
+U: Frank Coraci
+C: What should the MPAA rating for this movie be?
+U: PG-13 or R
+C: I'm thinking about what you might like.
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: Office Space is hilarious.  I have seen it many times.
+C: 
+U: Yes, great movie.
+C: 
+C: Would you want another recommendation then?
+U: Yes.
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a88d2fd3eda4;		Timestamp:	2018-02-17 17:15:18.413700
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: i really like comedy
+C: Tell me some actors or actresses you like.
+U: I like Denzel Washington and Julia Roberts
+C: Who is your favorite director?
+U: Stephen Spielberg
+C: Tell me what MPAA rating should this movie have.
+U: what movie?
+C: I'm thinking about what you might like.
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I have not ever seen it
+C: 
+C: Do you like this recommendation?
+U: It has some big name actors so perhaps.
+C: 
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: e Tommy Boy! I have seen it!
+C: 
+C: Do you like this recommendation?
+U: yes!
+C: 
+C: Bye! Please click the next button to proceed.
+

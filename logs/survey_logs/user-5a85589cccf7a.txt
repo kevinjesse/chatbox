@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-01-56-14"},"cryptID":"$1$7CZjPyrk$TeI7g8xjEX0mDEyZ7NEfl\/","userID":"5a85589cccf7a","turkID":"A1MT1OXZGY8RJ2","survey":{"q1":"0","q2":"4","q3":"5","q4":"I didnt care about the director. Other people might though"},"rating":["3","3","1","3","3","3","3"]}

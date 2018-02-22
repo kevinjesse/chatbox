@@ -1,0 +1,273 @@
+User:	5a8ead338ae0a;		Timestamp:	2018-02-22 04:13:11.741803
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: comedia
+C: Who are your favorite actors or actresses?
+U: adam sandler
+C: Tell me some directors that you like.
+U: woody allen
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: pg-13
+C: I'm thinking about what you might like.
+C: How about Tommy Boy (1995)? 
+C: Tommy Boy stars Chris Farley, David Newman, Terry Turner, Brian Dennehy, David Spade, Victor J. Kemper, Peter Segal, Lorne Michaels, Bo Derek, Bonnie Turner and is directed by Bonnie Turner, Terry Turner.
+C: This film is 97 minutes long. It is an adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes please
+C: 
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: not
+C: 
+C: Would you want another recommendation then?
+U: with that it seems good
+C: 
+C: How about Castle in the Sky (1986)? 
+C: Castle in the Sky stars Joe Hisaishi, James Van Der Beek, Hayao Miyazaki, Anna Paquin, Hirokata Takahashi, Isao Takahata, Yoshihiro Kasahara, Mark Hamill, Jonathan Swift, Cloris Leachman and is directed by Hayao Miyazaki, Jonathan Swift.
+C: This film is 125 minutes long. It is an adventure, animation and family movie, and is rated PG.
+C: Have you watched this movie before?
+U: not
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Snatch (2000)? 
+C: Snatch stars Matthew Vaughn, Dennis Farina, Jon Harris, Jason Statham, John Murphy, Brad Pitt, Benicio Del Toro, Guy Ritchie, Hugo Luczyc-Wyhowski, Tim Maurice-Jones and is directed by Guy Ritchie.
+C: This film is 104 minutes long. It is a comedy and crime movie, and is rated R.
+C: Have you watched this movie before?
+U: yes very good
+C: 
+C: Would you want another recommendation then?
+U: not thanks
+C: 
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes I saw her
+C: 
+C: Would you want another recommendation then?
+U: I would like only that you give me my verification code
+C: 
+C: How about Ocean's Eleven (2001)? 
+C: Ocean's Eleven stars Jack Golden Russell, Steven Soderbergh, George Clayton Johnson, Brad Pitt, Julia Roberts, Matt Damon, Charles Lederer, George Clooney, Harry Brown, Ted Griffin and is directed by George Clayton Johnson, Jack Golden Russell, Harry Brown, Charles Lederer, Ted Griffin.
+C: This film is 116 minutes long. It is a crime and thriller movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: not thanks
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: not thanks
+C: 
+C: Would you want another recommendation then?
+U: code
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: y code
+C: 
+C: Would you want another recommendation then?
+U: my code
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: my code please
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: ot
+C: 
+C: Would you want another recommendation then?
+U: not
+C: 
+C: How about Commando (1985)? 
+C: Commando stars Matthew Weisman, Rae Dawn Chong, Mark L. Lester, James Horner, Vernon Wells, Arnold Schwarzenegger, Steven E. de Souza, Joel Silver, Dan Hedaya, Jeph Loeb and is directed by Jeph Loeb, Matthew Weisman, Steven E. de Souza.
+C: This film is 90 minutes long. It is an action, adventure and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: code
+C: 
+C: Would you want another recommendation then?
+U: turkID
+C: 
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: YES
+C: 
+C: Would you want another recommendation then?
+U: OKEY
+C: 
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: SI
+C: 
+C: Would you want another recommendation then?
+U: NO
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eb44ed596c;		Timestamp:	2018-02-22 04:16:44.066863
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: I like romantic movie
+C: Who would you like to see starring in a movie?
+U: jenifer lopez
+C: Who is your favorite director?
+U: woody alen
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Battle Royale (2000)? 
+C: Battle Royale stars Tatsuya Fujiwara, Kimio Kataoka, Koushun Takami, Chie Kobayashi, Kenta Fukasaku, Tarô Yamamoto, Aki Maeda, Toshio Nabeshima, Kinji Fukasaku, Takeshi Kitano and is directed by Koushun Takami, Kenta Fukasaku.
+C: This film is 114 minutes long. It is an adventure, drama and sci-fi movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eb44f33efa;		Timestamp:	2018-02-22 04:21:16.264143
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: terror
+C: Can you tell me some actors or actresses you like?
+U: Teresa Palmer
+C: Can you tell me which director you like?
+U: David Sandberg
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Spider-Man 2 (2004)? 
+C: Spider-Man 2 stars Miles Millar, Alfred Gough, Steve Ditko, Stan Lee, Sam Raimi, Michael Chabon, James Franco, Alfred Molina, Kirsten Dunst, Tobey Maguire and is directed by Stan Lee, Steve Ditko, Alfred Gough, Miles Millar, Michael Chabon, Alvin Sargent.
+C: This film is 127 minutes long. It is an action and adventure movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: Lights Out
+C: 
+C: How about The Mummy Returns (2001)? 
+C: The Mummy Returns stars Stephen Sommers, Sean Daniel, Brendan Fraser, Arnold Vosloo, Bob Ducsay, James Jacks, Adrian Biddle, John Hannah, Alan Silvestri, Rachel Weisz and is directed by Stephen Sommers.
+C: This film is 130 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: Lights Out
+C: 
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8eb50442458;		Timestamp:	2018-02-22 04:21:28.072169
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+U: love
+C: Who are your favorite actors or actresses?
+U: jennifer aniston
+C: Tell me some directors that you like.
+U: tim bulton
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: 5
+C: I'm thinking about what you might like.
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ebb97828bd;		Timestamp:	2018-02-22 04:48:54.046040
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Fantastic
+C: Can you tell me some actors or actresses you like?
+U: Nicolas Kadge, Bred Pitt
+C: Tell me some directors that you like.
+U: Dgordg Lucas
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Fight Club (1999)? 
+C: Fight Club stars Zach Grenier, Meat Loaf, Art Linson, Jim Uhls, Ross Grayson Bell, David Fincher, Brad Pitt, Ceán Chaffin, Chuck Palahniuk, Edward Norton and is directed by Chuck Palahniuk, Jim Uhls.
+C: This film is 139 minutes long. It is a drama movie, and is rated R.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: Not
+C: 
+C: How about Seven Years in Tibet (1997)? 
+C: Seven Years in Tibet stars John H. Williams, John Williams, Becky Johnston, Heinrich Harrer, Jean-Jacques Annaud, Mako, Iain Smith, BD Wong, David Thewlis, Brad Pitt and is directed by Heinrich Harrer, Becky Johnston.
+C: This film is 136 minutes long. It is an adventure, biography and drama movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Yes
+C: 
+C: Would you want another recommendation then?
+U: No
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8ebbf545a99;		Timestamp:	2018-02-22 04:51:29.846911
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: Sholay
+C: Can you tell me some actors or actresses you like?
+U: Amitabh Bachhan , Hema malini
+C: Who is your favorite director?
+U: Satyajit Ray
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: G
+C: I'm thinking about what you might like.
+C: How about The Sound of Music (1965)? 
+C: The Sound of Music stars George Hurdalek, Julie Andrews, Russel Crouse, Howard Lindsay, Maria von Trapp, Ernest Lehman, Robert Wise, Richard Haydn, Eleanor Parker, Christopher Plummer and is directed by George Hurdalek, Howard Lindsay, Russel Crouse, Ernest Lehman, Maria von Trapp.
+C: This film is 174 minutes long. It is a biography, drama and family movie, and is rated G.
+C: Have you watched this movie before?
+U: I have watched sound of music 
+C: 
+C: Do you like this recommendation?
+U: yes 
+C: 
+C: Bye! Please click the next button to proceed.
+

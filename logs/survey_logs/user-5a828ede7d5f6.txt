@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-12-23-10-45"},"cryptID":"$1$31656EPL$XRZjq6N.pN6CIFAsaYDmf\/","userID":"5a828ede7d5f6","turkID":"A2653BIPJKEMRK","survey":{"q1":"1","q2":"4","q3":"5","q4":"I liked that the chatbot didn't add anything extra to the conversation. It was very to the point."},"rating":["3","3","3","3","3","3","3","3","3"]}

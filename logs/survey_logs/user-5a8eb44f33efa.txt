@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-04-25-54"},"cryptID":"$1$Olqi1pG6$WvlEtvDhOsK1KeuvUIQ7j.","userID":"5a8eb44f33efa","turkID":"Fire19","survey":{"q1":"0","q2":"3","q3":"3","q4":"I found it very funny, although I was not very successful in recommendations about movies related to the genre \"terror\""},"rating":["3","3","3","3","2","3","3","3","1","3","2"]}

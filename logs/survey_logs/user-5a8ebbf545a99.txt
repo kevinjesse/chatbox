@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-04-54-21"},"cryptID":"$1$RsGDoy0Q$cImZt7EhgBH9x5HMyspgw\/","userID":"5a8ebbf545a99","turkID":"37304809","survey":{"q1":"0","q2":"5","q3":"3","q4":"Nice experience and love it ."},"rating":["3","3","3","3","3","3","3"]}

@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-02-29-26"},"cryptID":"$1$459\/wzjo$6.zblHDIXG7RCFpd1V6yK1","userID":"5a8bf7f25a3b5","turkID":"AR5OPTTGMTI9S","survey":{"q1":"1","q2":"5","q3":"5","q4":"It's great. I was surprised that it found a movie that met my exact specifications. I think it's perfect as it is so no suggestions."},"rating":["3","3","3","3","3","3","3"]}

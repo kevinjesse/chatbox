@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-18-22-15-09"},"cryptID":"$1$xTE8zf5n$yQW2WeBu\/mHWBd8D9f3On1","userID":"5a8a6a70bdec4","turkID":"A2KXARDIOGJL8T","survey":{"q1":"1","q2":"1","q3":"3","q4":"Didn't recommend any movies with my favorite actors in them or directors."},"rating":["3","3","3","3","2","3","2","3","2","3","2","3","3"]}

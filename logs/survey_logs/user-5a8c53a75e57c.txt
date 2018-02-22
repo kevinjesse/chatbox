@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-20-09-03-38"},"cryptID":"$1$rBfAXNiZ$2n4GY.K9Y\/rWGfBfuFEtN1","userID":"5a8c53a75e57c","turkID":"A374STD2W8N1U8","survey":{"q1":"0","q2":"4","q3":"5","q4":"I liked that it asked what actors I liked so it could more accurately recommend a movie. I don't like that it recommended a movie above what I wanted."},"rating":["3","3","3","3","3","3","3"]}

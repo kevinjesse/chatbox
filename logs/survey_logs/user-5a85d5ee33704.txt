@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-10-51-35"},"cryptID":"$1$gF86G35i$IeVJSnfeFSioN09ZLqbVL.","userID":"5a85d5ee33704","turkID":"ARTSG66V2MOJ6","survey":{"q1":"1","q2":"5","q3":"5","q4":"I like that the chatbot gets to the point, and is precise. I have no other questions or suggestions."},"rating":["3","3","3","3","3","3","3","3","3"]}

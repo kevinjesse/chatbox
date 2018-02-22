@@ -1,0 +1,23 @@
+User:	5a8c3df881a40;		Timestamp:	2018-02-20 07:26:38.242076
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of movies do you want?
+U: comedy
+C: Tell me your actor/actress preferences.
+U: seth rogan
+C: Who is your favorite director?
+U: the coen brothers
+C: Tell me what MPAA rating should this movie have.
+U: r
+C: I'm thinking about what you might like.
+C: How about Office Space (1999)? 
+C: Office Space stars Tim Suhrstedt, David Rennie, Michael Rotenberg, Mike Judge, Ajay Naidu, David Herman, John Frizzell, Daniel Rappaport, Jennifer Aniston, Ron Livingston and is directed by Mike Judge.
+C: This film is 89 minutes long. It is a comedy movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

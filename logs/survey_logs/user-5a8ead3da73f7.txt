@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-03-54-06"},"cryptID":"$1$xO9zuhh\/$GFtWyGdWk.rRA.KRRMtlC.","userID":"5a8ead3da73f7","turkID":"Eduardo07","survey":{"q1":"0","q2":"4","q3":"4","q4":"no me gusta que que especifique un genero, actor y director y se vaya por otra direccion"},"rating":["3","3","3","3","1","3","3","2","3","3"]}

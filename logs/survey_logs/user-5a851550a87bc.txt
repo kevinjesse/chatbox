@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-14-21-10-31"},"cryptID":"$1$HT4sVR6O$SFt4pvxN3bP4adc0IjDob0","userID":"5a851550a87bc","turkID":"A12SMSQ6D5227J","survey":{"q1":"1","q2":"2","q3":"4","q4":"The chatbot didn't understand at all that I wanted a romantic movie and kept suggesting comedies."},"rating":["3","3","2","3","3","3","3","3","3","3","3"]}

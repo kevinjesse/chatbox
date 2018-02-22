@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-05-47-38"},"cryptID":"$1$GlzOHZd6$0rwaIqKUWMzPrSsBF1Siq\/","userID":"5a858e4807365","turkID":"A13VIJ7G997ZCY","survey":{"q1":"1","q2":"2","q3":"3","q4":"It offered me Happy Gilmore twice, and then veered from my genre and rating."},"rating":["3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3"]}

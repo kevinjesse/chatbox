@@ -1,0 +1,109 @@
+User:	5a8b275f694af;		Timestamp:	2018-02-19 11:40:18.248092
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: psychological thrillers
+C: Who would you like to see starring in a movie?
+U: leonardo dicaprio
+C: Tell me a director you prefer.
+U: steven spielberg
+C: What should the MPAA rating for this movie be?
+U: r
+C: I'm thinking about what you might like.
+C: How about Happy Gilmore (1996)? 
+C: Happy Gilmore stars Julie Bowen, Frances Bay, Arthur Albert, Christopher McDonald, Robert Simonds, Adam Sandler, Dennis Dugan, Mark Mothersbaugh, Tim Herlihy, Jeff Gourson and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 92 minutes long. It is a comedy and sport movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Billy Madison (1995)? 
+C: Billy Madison stars John Gilroy, Tamra Davis, Tim Herlihy, Bridgette Wilson-Sampras, Bradley Whitford, Robert Simonds, Randy Edelman, Victor Hammer, Darren McGavin, Adam Sandler and is directed by Tim Herlihy, Adam Sandler.
+C: This film is 89 minutes long. It is a comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Mallrats (1995)? 
+C: Mallrats stars Jason Lee, Ira Newborn, Scott Mosier, James Jacks, Sean Daniel, Shannen Doherty, Jeremy London, Claire Forlani, Kevin Smith, David Klein and is directed by Kevin Smith.
+C: This film is 94 minutes long. It is a comedy and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Spanglish (2004)? 
+C: Spanglish stars Richard Marks, Richard Sakai, Hans Zimmer, Adam Sandler, Julie Ansell, Paz Vega, James L. Brooks, Cloris Leachman, John Seale, Téa Leoni and is directed by James L. Brooks.
+C: This film is 131 minutes long. It is a comedy, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Hotel Rwanda (2004)? 
+C: Hotel Rwanda stars Afro Celt Sound System, Rupert Gregson-Williams, Xolani Mali, Sophie Okonedo, A. Kitman Ho, Andrea Guerra, Joaquin Phoenix, Keir Pearson, Don Cheadle, Terry George and is directed by Keir Pearson, Terry George.
+C: This film is 121 minutes long. It is a biography, drama and history movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8b299ae0d37;		Timestamp:	2018-02-19 11:48:35.205104
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: horror
+C: Who are your favorite actors or actresses?
+U: nicole kidman
+C: Tell me some directors that you like.
+U: stephen king
+C: Tell me what MPAA rating should this movie have.
+U: r
+C: I'm thinking about what you might like.
+C: How about Halloween II (1981)? 
+C: Halloween II stars Debra Hill, Charles Cyphers, Alan Howarth, Mark Goldblatt, Dean Cundey, Jeffrey Kramer, Rick Rosenthal, Donald Pleasence, Jamie Lee Curtis, John Carpenter and is directed by John Carpenter, Debra Hill.
+C: This film is 92 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about The Exorcist (1973)? 
+C: The Exorcist stars Owen Roizman, Evan A. Lottman, Bill Malley, Ellen Burstyn, Lee J. Cobb, Linda Blair, William Friedkin, Norman Gay, Max von Sydow, William Peter Blatty and is directed by William Peter Blatty.
+C: This film is 122 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about A Nightmare on Elm Street (1984)? 
+C: A Nightmare on Elm Street stars Robert Englund, Rick Shaine, John Saxon, Jacques Haitkin, Robert Shaye, Heather Langenkamp, Johnny Depp, Charles Bernstein, Wes Craven, Patrick McMahon and is directed by Wes Craven.
+C: This film is 91 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

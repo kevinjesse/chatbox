@@ -1,0 +1,23 @@
+User:	5a85326190591;		Timestamp:	2018-02-14 23:12:18.301386
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: horror
+C: Can you tell me some actors or actresses you prefer to watch?
+U: tom hanks
+C: Who is your favorite director?
+U: george lucas
+C: Tell me what MPAA rating should this movie have.
+U: r
+C: I'm thinking about what you might like.
+C: How about Halloween II (1981)? 
+C: Halloween II stars Debra Hill, Charles Cyphers, Alan Howarth, Mark Goldblatt, Dean Cundey, Jeffrey Kramer, Rick Rosenthal, Donald Pleasence, Jamie Lee Curtis, John Carpenter and is directed by John Carpenter, Debra Hill.
+C: This film is 92 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no ill watch again
+C: 
+C: Bye! Please click the next button to proceed.
+

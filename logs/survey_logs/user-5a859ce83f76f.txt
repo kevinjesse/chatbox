@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-15-06-48-26"},"cryptID":"$1$dEkliFDn$zw5car6arakg8K\/XR\/bfA0","userID":"5a859ce83f76f","turkID":"A3A8P4UR9A0DWQ","survey":{"q1":"1","q2":"5","q3":"5","q4":"It had a quick response time. This would be great for trying to find something to watch."},"rating":["3","3","3","3","1","3","1","3","3","3","3"]}

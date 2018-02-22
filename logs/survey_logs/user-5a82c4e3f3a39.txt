@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-13-03-02-22"},"cryptID":"$1$6JNpjOFg$oU1FujfJ1A9Pjd9NbBaRU1","userID":"5a82c4e3f3a39","turkID":"A53VYIFCCASOA","survey":{"q1":"0","q2":"4","q3":"4","q4":"i like that the bot is very fast"},"rating":["3","3","3","3","3","3","3","3","3"]}

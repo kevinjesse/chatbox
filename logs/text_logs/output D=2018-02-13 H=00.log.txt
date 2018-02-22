@@ -1,0 +1,48 @@
+User:	5a82a304bdf17;		Timestamp:	2018-02-13 00:35:10.036250
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: horror
+C: Tell me some actors or actresses you like.
+U: Liam Neeson
+C: Who is your favorite director?
+U: Weinstein
+C: What should the MPAA rating for this movie be?
+U: 5
+C: I'm thinking about what you might like.
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a82a304bdf17;		Timestamp:	2018-02-13 00:35:13.422706
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: horror
+C: Tell me some actors or actresses you like.
+U: Liam Neeson
+C: Who is your favorite director?
+U: Weinstein
+C: What should the MPAA rating for this movie be?
+U: 5
+C: I'm thinking about what you might like.
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+U: k
+C: 
+

@@ -13,32 +13,31 @@ cur = database_connect.db_connect()
 state2entity_map ={'genre': 'genre', 'role': 'role', 'mpaa':'mpaa', 'title': 'title', 'rating': 'rating',
                        'actor':'person', 'director': 'person', 'year': 'year', 'tell': 'tell' , 'bye': 'bye'}
 
+
 # state2tablerow = {'genre': ('title','genres'), 'role': 'role', 'mpaa':('title','mpaa'), 'title': 'title', 'rating': 'rating',
 #                        'actor':('stars', 'principalcast'), 'director': 'person', 'year': 'year'}
 
 
-
-
-def ctrl(state, userCache, user_tconst):
+def filter_candidates(state: str, user_cache, user_tconst):
     backup_tconst = user_tconst
     match = True
-    #print "Filter movie ctrl"
+    # print("Filter movie query")
     try:
 
         # if userCache[state2entity_map[state]] is None:
         #     return user_tconst
 
-        if userCache[state] is None:
-            #print "userCache state is None"
+        if user_cache[state] is None:
+            print("userCache state is None")
             return user_tconst, match
         # Write query -  would like to do this in generic form but each query has specific joins and rows.
         sqlstring = ''
         if state == 'genre':
-            sqlstring += """SELECT tconst FROM title WHERE genres LIKE '%""" + userCache['genre'][0] + """%'"""
-            if len(userCache['genre']) > 1:
-                for gen in userCache['genre'][1:]:
+            sqlstring += """SELECT tconst FROM title WHERE genres LIKE '%""" + user_cache['genre'][0] + """%'"""
+            if len(user_cache['genre']) > 1:
+                for gen in user_cache['genre'][1:]:
                     sqlstring+= """ AND genres LIKE '%""" + gen + """%'"""
-            print sqlstring
+            print(sqlstring)
             cur.execute(sqlstring)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
@@ -46,12 +45,12 @@ def ctrl(state, userCache, user_tconst):
 
 
         elif state == 'actor':
-            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """'"""
-            if len(userCache[state]) > 1:
-                for more in userCache[state][1:]:
+            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + user_cache[state][0] + """'"""
+            if len(user_cache[state]) > 1:
+                for more in user_cache[state][1:]:
                     sqlstring+=""" OR primaryname = '""" + more + """' """
-            print sqlstring
-            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(userCache[state]))
+            print(sqlstring)
+            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(user_cache[state]))
             cur.execute(sqlstring)
             rows = cur.fetchall()
 
@@ -60,12 +59,12 @@ def ctrl(state, userCache, user_tconst):
             names=[r[0] for r in rows]
 
             sqlstringm = """SELECT tconst FROM stars WHERE principalcast LIKE '%""" + names[0] + """%' """
-            print names
+            print(names[:10])
             for each in names:
                 sqlstringm += """ AND principalcast LIKE '%""" + each + """%'"""
             # sqlstringm += """AND principalcast LIKE '%""" + nm + """%' """
 
-            print sqlstringm
+            print(sqlstringm)
             cur.execute(sqlstringm)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
@@ -76,12 +75,12 @@ def ctrl(state, userCache, user_tconst):
             # cur.execute(sqlstring)
             # rows = cur.fetchall()
             # nm = rows[0][0]
-            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """'"""
-            if len(userCache[state]) > 1:
-                for more in userCache[state][1:]:
+            sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + user_cache[state][0] + """'"""
+            if len(user_cache[state]) > 1:
+                for more in user_cache[state][1:]:
                     sqlstring+=""" OR primaryname = '""" + more + """' """
-            print sqlstring
-            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(userCache[state]))
+            print(sqlstring)
+            sqlstring +=  """ ORDER BY nconst ASC LIMIT """ + str(len(user_cache[state]))
             cur.execute(sqlstring)
             rows = cur.fetchall()
             if not rows:
@@ -96,11 +95,11 @@ def ctrl(state, userCache, user_tconst):
             #     nm = rows[0][0]
             #     sqlstringm += """AND directors LIKE '%""" + nm + """%' """
 
-            print names
+            print(names[:10])
             for each in names:
                 sqlstringm += """ AND directors LIKE '%""" + each + """%'"""
 
-            print sqlstringm
+            print(sqlstringm)
             cur.execute(sqlstringm)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
@@ -112,22 +111,27 @@ def ctrl(state, userCache, user_tconst):
             #return user_tconst
 
         elif state == 'mpaa':
-            sqlstring += """SELECT tconst FROM title WHERE mpaa LIKE '%""" + userCache['mpaa'][0] + """%'"""
-            if len(userCache['mpaa']) > 1:
-                for mpaa in userCache['mpaa'][1:]:
+            sqlstring += """SELECT tconst FROM title WHERE mpaa LIKE '%""" + user_cache['mpaa'][0] + """%'"""
+            if len(user_cache['mpaa']) > 1:
+                for mpaa in user_cache['mpaa'][1:]:
                     """ AND mpaa LIKE '%""" + mpaa + """%'"""
             cur.execute(sqlstring)
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
-            print tconst_list
-            print sqlstring
+            print(tconst_list[:10])
+            print(sqlstring)
         else:
             # IF STATE IS NOT IMPLEMENTED JUST RETURN what we started with
             # for now just return user_tconst
-            return user_tconst ,match
-    except KeyError, IndexError:
-        # Error with states while developing, ignore this filter round
-        print "Error filter movies; {}".format(KeyError)
+            return user_tconst, match
+
+        # TODO: This might change our research assumptions
+        if len(tconst_list) <= 0:
+            tconst_list = backup_tconst
+        return tconst_list, match
+    except KeyError:
+        # Error with states while developing, ignore this filter_candidates round
+        print("Error filter_candidates movies; {}".format(KeyError))
         tconst_list = backup_tconst
         match = False
 

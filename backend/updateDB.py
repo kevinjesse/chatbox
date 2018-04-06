@@ -3,17 +3,17 @@
 # @email kevin.r.jesse@gmail.com
 #
 
+import re
+
 import database_connect
 import requests
-import re
-from pprint import pprint
+
 cur = database_connect.db_connect()
 def fetch():
     """
     This function will update from TMD to my database now playing
     :return:
     """
-    import operator
     sqlstring = """SELECT api_key FROM api WHERE api_type='tmd'"""
     cur.execute(sqlstring)
     rows = cur.fetchall()
@@ -24,7 +24,7 @@ def fetch():
     sqlstring = """SELECT tconst FROM title WHERE mpaa IS NULL OR plot IS NULL OR prodco IS NULL"""
     cur.execute(sqlstring)
     movies = cur.fetchall()
-    print len(movies)
+    print(len(movies))
     temp_limit = 0
 
     for each in movies:
@@ -61,10 +61,10 @@ def fetch():
                     mpaa_rating = each_dict['release_dates'][0]['certification']
 
         sqlstring = """UPDATE title SET plot ='""" + mov_json['overview'].replace("'","''") + """', mpaa ='""" + mpaa_rating +"""' , prodco = '""" + productionco + """' WHERE tconst = '""" + imdbid +"""'"""
-        print sqlstring
+        print(sqlstring)
         cur.execute(sqlstring)
-        print
-        print
+        print()
+        print()
 
 
 

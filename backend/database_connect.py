@@ -18,5 +18,5 @@ def db_connect():
         cur = conn.cursor()
         cur.itersize = 10000
     except:
-        print "[ERROR] couldn't connect to the database"
+        print("[ERROR] couldn't connect to the database")
     return cur

@@ -10,14 +10,14 @@ def loadSide():
             full_user = pickle.load(fp)
 
     except IOError as e:
-        print ("Cannot load files")
+        print("Cannot load files")
         exit(1)
     userSideReduce = dict()
-    #We loaded our userSideDict but we need to filter out our irrelevant side data
+    #We loaded our userSideDict but we need to filter_candidates out our irrelevant side data
     count = 0
     for user, user_val in full_user.iteritems():
         count += 1
-        print count
+        print(count)
         for sideType, freqDict in user_val.iteritems():
             top5 = sorted(freqDict, key=freqDict.get, reverse=True)[:5]
             full_user[user][sideType] = top5
@@ -33,5 +33,5 @@ try:
         #json.dump(userSideTop5, f)
 
 except IOError as e:
-    print ("Cannot write files")
+    print("Cannot write files")
     exit(1)

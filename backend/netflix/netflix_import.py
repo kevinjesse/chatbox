@@ -1,11 +1,11 @@
 import pickle
+
 import matplotlib
-import copy
 import numpy as np
+from scipy.io import mmwrite
 from scipy.sparse import coo_matrix
-from scipy.io import mmwrite, mmread
+
 matplotlib.use('Agg')
-from matplotlib import pyplot as plt
 import database_connect
 
 cur = database_connect.db_connect()
@@ -105,12 +105,12 @@ both = list(set(movie_names).intersection(set(names)))
 both = list(set(movie_names).intersection(set(names)))
 sizeofboth = len(both)
 user_set = dict()
-print "HERE"
-print both
+print("HERE")
+print(both)
 for mov in both:
     id = netflix_set[mov]
     text_file = "mv_" + id.zfill(7) + ".txt"
-    print text_file
+    print(text_file)
     with open("./training_set/" + text_file, "r") as f:
         next(f)
         for i, l in enumerate(f):
@@ -183,7 +183,7 @@ net_table = np.zeros((len(movielist),len(userlist)))
 for mov in movielist:
     row = movielist.index(mov)
     text_file = "mv_" + mov.zfill(7) + ".txt"
-    print text_file
+    print(text_file)
     with open("./training_set/" + text_file, "r") as f:
         next(f)
         for i, l in enumerate(f):
@@ -193,13 +193,13 @@ for mov in movielist:
             try:
                 col = userlist.index(user_id)
                 user_rate = userrow[1].strip()
-                print "adding "+ user_rate +" at row " +str(row) + ", col " + str(col)
+                print("adding "+ user_rate +" at row " +str(row) + ", col " + str(col))
                 net_table[row][col] = user_rate
             except ValueError as e:
                 continue
 
 sparse = coo_matrix(net_table)
-print sparse
+print(sparse)
 mmwrite("sparse.mm", sparse)
 try:
     with open("userlist.txt", 'wb') as f:

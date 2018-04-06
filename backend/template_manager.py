@@ -2,13 +2,15 @@
 # @author amchau@ucdavis.edu
 #
 
-from xml.etree import cElementTree
 import random
+from enum import Enum
+from xml.etree import cElementTree
 
 xmlpath = "resource/template/template.xml"
 
 
-class State:
+class State(Enum):
+    INTRO = 'intro'
     MOVIE = 'movies'
     GENRE = 'genre'
     ACTOR = 'actor'
@@ -32,7 +34,7 @@ def init_resources():
     xml = cElementTree.parse(xmlpath).getroot()
 
 
-def get_sentence(state, is_dynamic, replacement=None):
+def get_sentence(state: State, is_dynamic: bool=False, replacement=None) -> str:
     """
     The method that generates a sentence from the template for the AI to speak.
     :type state: string. NOTE: please use the class State for consistency.
@@ -48,7 +50,7 @@ def get_sentence(state, is_dynamic, replacement=None):
 
     elem_questions = list(xml.iterfind(
         "state[@type='{}']/{}/question_group[@type='root']/".format(
-            state, is_dynamic_string
+            state.value, is_dynamic_string
         )))
 
     return __get_question_string(elem_questions, is_dynamic, replacement)

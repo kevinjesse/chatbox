@@ -7,10 +7,12 @@
 Loader loads the configuration settings for parts of speech and loads the questions for Qlib
 """
 
-import nltk
-from collections import defaultdict
 import json
 import os.path as path
+from collections import defaultdict
+
+import nltk
+
 
 #old default weights nounw=.8, adjw=1, numw=.8, verbbw=.6, verbw=.2, pverbw=.2,whw=.1
 def LoadLanguageResource(nounw=.8, adjw=1, numw=.8, verbbw=.6, verbw=.2, pverbw=.2,whw=.1):

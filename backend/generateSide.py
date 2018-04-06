@@ -1,10 +1,11 @@
 
-import pickle
-import database_connect
-from movieCtrl import actorsbyID, directorsbyID
-from scipy.sparse import coo_matrix
-from scipy.io import mmwrite, mmread
 import json
+import pickle
+
+import database_connect
+from movieCtrl import actorsbyID
+from scipy.io import mmread
+from scipy.sparse import coo_matrix
 
 cur = database_connect.db_connect()
 
@@ -53,7 +54,7 @@ def fillSideDict(sparse, sideDict):
         #Only do if we havent seen this movie
 
         if i != lastmov:
-            print (str(i) + ":" + str(movies[i]))
+            print(str(i) + ":" + str(movies[i]))
             netflixid = movies[i]
 
             #init 5 fields
@@ -106,7 +107,7 @@ def fillFullSideMovieDict():
         #Only do if we havent seen this movie
 
         if i != lastmov:
-            print (str(i) + ":" + str(movies[i]))
+            print(str(i) + ":" + str(movies[i]))
             netflixid = movies[i]
 
             #init 5 fields
@@ -141,10 +142,10 @@ def howManyReviewsInSparse(sparse_fav):
             count[j] = 1
 
     smallcount = sorted(count.items(), key=lambda (k, v): v, reverse=True)
-    print "SMALL"
-    print smallcount[-1]
-    print "BIG"
-    print smallcount[0]
+    print("SMALL")
+    print(smallcount[-1])
+    print("BIG")
+    print(smallcount[0])
 
 sparse_fav = sparse_favorite()
 sideDict = initSideDict()

@@ -1,4 +1,3 @@
-import database_connect
 import requests
 
 
@@ -7,7 +6,6 @@ def fetch():
     This function will update from TMD to my database now playing
     :return:
     """
-    import operator
     api_key = '166c772e6b94241f893e94b22f874c02'
     url = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + api_key + "&language=en-US&page=1"
     r = requests.get(url)
@@ -54,8 +52,8 @@ def fetch():
                 imdbid + """','""" + mov_json['title'] + """','""" + mov_json['original_title'] + """','""" + year + """','""" + genreStr + \
                 """','""" + mov_json['overview'].replace("'","''") + """','""" + mpaa_rating  + """','""" +\
                 mov_json['production_companies'][0]['name'].replace("'","''") + """','""" + mov_json['runtime'] +"""')"""
-            print sqlstring
-            print
+            print(sqlstring)
+            print()
 
         #DONT FORGET RATINGS TABLE!
 

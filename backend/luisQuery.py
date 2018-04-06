@@ -3,8 +3,11 @@
 # @email kevin.r.jesse@gmail.com
 #
 
-import requests
 import database_connect
+import requests
+import logging
+from typing import Tuple
+
 cur = database_connect.db_connect()
 
 sqlstring = """SELECT api_key FROM api WHERE api_type='luisid'"""
@@ -25,10 +28,10 @@ rows = cur.fetchall()
 bing_key= rows[0][0]
 
 
-def ctrl(text):
+def query(text: str) -> Tuple[str, str, str]:
     url = base_url + app_id + '?subscription-key=' + sub_key + '&spellCheck=true&bing-spell-check-subscription-key=' \
           + bing_key +'&verbose=true&timezoneOffset=0&q=' + text.strip()
-    print url
+    # print('luisQuery:', url)
     r = requests.get(url)
     if r.status_code != 200:
         return None

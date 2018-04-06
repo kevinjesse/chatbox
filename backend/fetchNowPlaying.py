@@ -7,10 +7,11 @@
 Fetch Now Playing adds all the information necessary to populate the database for this weeks list of movies now playing
 """
 
+import re
+
 import database_connect
 import requests
-import re
-from pprint import pprint
+
 cur = database_connect.db_connect()
 
 def fetch():
@@ -18,7 +19,6 @@ def fetch():
     This function will update from TMD to my database now playing
     :return:
     """
-    import operator
     sqlstring = """SELECT api_key FROM api WHERE api_type='tmd'"""
     cur.execute(sqlstring)
     rows = cur.fetchall()
@@ -85,16 +85,16 @@ def fetch():
                 imdbid + """','""" + mov_json['title'].replace("'","''") + """','""" + mov_json['original_title'].replace("'","''") + """','""" + year + """','""" + genreStr + \
                 """','""" + mov_json['overview'].replace("'","''") + """','""" + mpaa_rating  + """','""" +\
                  productionco + """','""" + str(mov_json['runtime']) +"""')"""
-            print sqlstring
+            print(sqlstring)
             cur.execute(sqlstring)
 
             #Ratings table insert
             sqlstring = """INSERT INTO ratings (tconst, averagerating, numvotes) VALUES ('""" + imdbid + """','""" + str(mov_json['vote_average']) + \
                         """','""" + str(mov_json['vote_count'])+"""')"""
-            print sqlstring
+            print(sqlstring)
             cur.execute(sqlstring)
-            print
-            print
+            print()
+            print()
 
 
 if __name__ == "__main__":

@@ -1,8 +1,7 @@
 import json
 import os.path
-from datetime import datetime
 import threading
-import time
+from datetime import datetime
 
 # ChatLogger
 

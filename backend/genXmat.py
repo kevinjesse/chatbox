@@ -1,12 +1,11 @@
 import json
 import pickle
-import numpy as np
-from scipy.sparse import coo_matrix
-from scipy.io import mmwrite, mmread
-import database_connect
 import sys
-import psutil
-import gc
+
+import database_connect
+import numpy as np
+from scipy.io import mmwrite
+from scipy.sparse import coo_matrix
 
 userSideTop5 = {}
 
@@ -32,7 +31,7 @@ except IOError as e:
 cur = database_connect.db_connect()
 
 if len(sys.argv) == 0:
-    print "Please specify mode: genre, actor, director, mpaa, or all"
+    print("Please specify mode: genre, actor, director, mpaa, or all")
     exit(1)
 
 mode = str(sys.argv[1])
@@ -40,7 +39,7 @@ modes = ["genre", "actor", "director", "mpaa"]
 mymode = []
 
 if mode not in modes and mode != "all":
-    print "Please specify mode: genre, actor, director, mpaa, or all"
+    print("Please specify mode: genre, actor, director, mpaa, or all")
     exit(1)
 
 
@@ -78,7 +77,7 @@ for mode in mymode:
         userinfo = userSideTop5[user][mode]
         for item in userinfo:
             npgen[userlist.index(user)][modelist.index(item)] = 1
-        print user
+        print(user)
         #print psutil.virtual_memory()
 
     sparse = coo_matrix(npgen)
@@ -89,8 +88,8 @@ for mode in mymode:
     for movieid in range(0,len(movielist)):
         movieinfo = movieSide[str(movieid)][mode]
         for item in movieinfo:
-            print item
+            print(item)
             npgen[movieid][modelist.index(item)] = 1
-        print movieid
+        print(movieid)
     sparse = coo_matrix(npgen)
     mmwrite("sparseY" + mode + ".mm", sparse)

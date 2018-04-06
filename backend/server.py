@@ -3,22 +3,26 @@
 # @email kevin.r.jesse@gmail.com
 #
 
-import socket
-import threading
-import dialogueCtrl as dCtrl
-from dialogueCtrl import dialogueCtrl, initResources, dialogueIdle
 import json
+import socket
 import sys
-import time
+import threading
 import traceback
+import time
+
+import dialogue_manager as dCtrl
+from dialogue_manager import dialogueCtrl, initResources, dialogueIdle
+
 debug = False
 passive = {}
+
 
 def chatbox_socket():
     if debug:
         return 13120
     else:
         return 13113
+
 
 class ThreadingServer(object):
     """
@@ -39,7 +43,11 @@ class ThreadingServer(object):
         while True:
             client, address = self.sock.accept()
             client.settimeout(60)
-            threading.Thread(target = self.listenToClient,args = (client,address)).start()
+            try:
+                threading.Thread(target = self.listenToClient,args = (client,address)).start()
+                # while True: time.sleep(1)
+            except (KeyboardInterrupt, SystemExit):
+                pass
 
     def listenToClient(self, client, address):
         size = 2048
@@ -61,13 +69,13 @@ class ThreadingServer(object):
                         # elif data == "passive":
                         #     client.send('')
                         # else:
-                        print "data: {}".format(data)
+                        print("data: {}".format(data))
                         # if data == "log":
                         #     pass
 
                         #signal = None
 
-                        response, userid, passiveLen, signal = dialogueCtrl(data)
+                        response, userid, passiveLen, signal = dialogueCtrl(data.decode())
                         # print response, userid, passiveLen, signal
                         # TODO: This is a bad idea but it works
                         if response == dCtrl.end_dialogue:
@@ -75,19 +83,19 @@ class ThreadingServer(object):
 
                         #change to JSON
                         responseJson = json.dumps({'response': response, 'userid': userid, 'signal': signal, 'passiveLen': passiveLen})
-                        print responseJson
+                        print(responseJson)
                         #time.sleep(1)
                         #print "I'm pushing! \n{}\n".format(responseJson)
-                        client.send(responseJson)
+                        client.send(responseJson.encode())
                         if signal != "listen":
                             dialogueIdle(userid, debug)
 
                     except Exception as e:
                         exc_type, exc_value, exc_traceback = sys.exc_info()
-                        traceback.print_tb(exc_traceback, limit=1,)
+                        traceback.print_tb(exc_traceback, limit=1)
                         traceback.print_exc()
                 else:
-                    raise error('Client disconnected')
+                    raise Exception('Client disconnected')
             except:
                 client.close()
                 return False
@@ -98,7 +106,7 @@ if __name__ == "__main__":
     initResources()
     if 'debug' in sys.argv:
         debug = True
-        print "Running in debug mode. (socket: {})".format(chatbox_socket())
+        print("Running in debug mode. (socket: {})".format(chatbox_socket()))
     while True:
         ThreadingServer('localhost',chatbox_socket()).listen()
         # dpret, active = dialoguePassive()

@@ -31,4 +31,4 @@ def entdata(state, entities):
 def detect(state, entities):
     answered = False
     answered = entdata(state, entities)
-    print answered
+    print(answered)

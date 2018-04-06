@@ -19,9 +19,11 @@ Luis intent assigns the entities to the user cache and processes the intents
 #     return userCache
 
 import re
+
 from nltk.stem.snowball import SnowballStemmer
 
-def genre_spellcheck(userinput):
+
+def genre_spellcheck(user_input):
     stemmer = SnowballStemmer('english')
 
     genre_core = ['action', 'adventure', 'animation', 'biography', 'comedy', 'crime', 'documentary', 'drama',
@@ -34,36 +36,36 @@ def genre_spellcheck(userinput):
     genre_stem['funny'] = 'comedy'
     genre_stem['love'] = 'romance'
 
-    userinput = userinput.lower()
-    if userinput in genre_stem:
-        return genre_stem[userinput]
+    user_input = user_input.lower()
+    if user_input in genre_stem:
+        return genre_stem[user_input]
     else:
-        parsedinput = stemmer.stem(userinput)[:5]
-        output = genre_stem[parsedinput] if parsedinput in genre_stem else userinput
+        parsedinput = stemmer.stem(user_input)[:5]
+        output = genre_stem[parsedinput] if parsedinput in genre_stem else user_input
         return output
 
 
-def ctrl(state, intent, entities, userCache):
+def map_intent(state: str, intent, entities, user_cache):
     from pprint import pprint
-    print
+    print()
     pprint(intent)
-    print
+    print()
     pprint(entities)
-    print
+    print()
     answered = True
     entity_map = {'Entertainment.ContentRating': 'mpaa', 'Entertainment.Genre': 'genre', 'Entertainment.Role': 'role',
-                  'Entertainment.Title':'title', 'Entertainment.UserRating':'rating', 'Entertainment.Person': 'person',
-                  'builtin.datetimeV2.duration': 'duration', 'builtin.datetimeV2.daterange': 'year',
+                  'Entertainment.Title': 'title', 'Entertainment.UserRating': 'rating', 'Entertainment.Person':
+                  'person', 'builtin.datetimeV2.duration': 'duration', 'builtin.datetimeV2.daterange': 'year',
                   }
-    state2entity_map ={'genre': 'genre', 'role': 'role', 'mpaa':'mpaa', 'title': 'title', 'rating': 'rating',
-                       'actor':'person', 'director': 'person', 'year': 'year'}
+    state2entity_map = {'genre': 'genre', 'role': 'role', 'mpaa': 'mpaa', 'title': 'title', 'rating': 'rating',
+                        'actor': 'person', 'director': 'person', 'year': 'year'}
 
     # elif intent['intent']=='Year':
     #     #default by setting year to
     if intent['intent'] == 'NoPreference' or intent['intent'] == 'Yes' or intent['intent'] == 'No':
         answered = True
-        userCache['satisfied'] = intent['intent']
-        return userCache, answered
+        user_cache['satisfied'] = intent['intent']
+        return user_cache, answered
     
     for ent in entities:
         dataType = entity_map[ent['type']]
@@ -73,7 +75,7 @@ def ctrl(state, intent, entities, userCache):
 
         if dataType == 'year' or dataType == 'duration':
             #for now we will do nothing with year and duration
-            userCache[dataType] = year(ent)
+            user_cache[dataType] = year(ent)
         elif dataType == 'mpaa':
             pg13 = re.match('[Pp][Gg]\s*[-]?\s*13', ent['entity'].lower())
             nc17 = re.match('[Nn][Cc]\s*[-]?\s*17', ent['entity'].lower())
@@ -85,22 +87,22 @@ def ctrl(state, intent, entities, userCache):
             # this is to create two categories one for actor and director instead of people
             dataType = state
         elif dataType == 'genre':
-            print 'genre_input: ' + ent['entity']
+            print('genre_input: ' + ent['entity'])
             input_genre = genre_spellcheck(ent['entity'])
-            print 'genre_output: ' + input_genre
+            print('genre_output: ' + input_genre)
             ent['entity'] = input_genre
 
-        if userCache[dataType]:
-            if ent['entity'] not in userCache[state]:
-                userCache[dataType].append(str(ent['entity']))
+        if user_cache[dataType]:
+            if ent['entity'] not in user_cache[state]:
+                user_cache[dataType].append(str(ent['entity']))
         else:
-            userCache[dataType] = [str(ent['entity'])]
+            user_cache[dataType] = [str(ent['entity'])]
 
         # if intent['intent'] == 'None':
         #     return userCache, answered
 
-    print userCache
-    return userCache, answered
+    print(user_cache)
+    return user_cache, answered
 
 #Implement scoring and this can be a follow up function that could be a series of binary questions.
 def year(entity):

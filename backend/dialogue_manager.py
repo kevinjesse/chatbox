@@ -23,24 +23,20 @@ from template_manager import State
 
 cur = database_connect.db_connect()
 
-state = {}
-history = {}
-textHistory = {}
-recommend = {}
-cache_results = {}
-curr_movie = {}
-titles_user = {}
-active = False
-nomatch = {}
-movie_with_ratings = {}
-q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
-has_recommended_movie = False
-passiveResp = {}
-scoreweights = np.array([.2, .2, .2, .2, .2])
-
-end_dialogue = "Bye! Message me anytime you want a new movie recommendation!"
-notperfect_string = "There is no exact match for what was specified, so I will try my best!"
-no_recommendation = "I'm sorry but there is no recommendation that can be made with your criteria."
+# state = {}
+# history = {}
+# textHistory = {}
+# recommend = {}
+# cache_results = {}
+# curr_movie = {}
+# titles_user = {}
+# active = False
+# nomatch = {}
+# movie_with_ratings = {}
+# q_order = ['genre', 'actor', 'director', 'mpaa', 'tell']
+# has_recommended_movie = False
+# passiveResp = {}
+# scoreweights = np.array([.2, .2, .2, .2, .2])
 
 
 class User:
@@ -74,24 +70,9 @@ class User:
                 self._current_state_id -= 1
             return self.current_state
 
-        def to_tell(self):
-            self._current_state_id = User.States.possible_states.index(State.TELL)
-            return self.current_state
-
-        def to_tell1(self):
-            self._current_state_id = User.States.possible_states.index(State.TELL1)
-            return self.current_state
-
-        def to_tell1_5(self):
-            self._current_state_id = User.States.possible_states.index(State.TELL1_5)
-            return self.current_state
-
-        def to_tell2(self):
-            self._current_state_id = User.States.possible_states.index(State.TELL2)
-            return self.current_state
-
-        def to_bye(self):
-            self._current_state_id = User.States.possible_states.index(State.BYE)
+        def to_state(self, state: State) -> State:
+            if state in User.States.possible_states:
+                self._current_state_id = User.States.possible_states.index(state)
             return self.current_state
 
         def reset(self) -> State:
@@ -175,7 +156,7 @@ class DialogueManager:
 
             user.movie_with_ratings = tellCtrl.sort_by_rating(user.movie_candidates)
             responses += tellCtrl.to_text(user.movie_with_ratings)
-            user.state.to_tell1()
+            user.state.to_state(State.TELL1)
             responses += [template_manager.get_sentence(state=user.state.current_state)]
 
         elif user.state.current_state is State.TELL1:
@@ -184,9 +165,9 @@ class DialogueManager:
                                                 entities=entity, user_cache=user.cached_results)
 
             if user.cached_results['satisfied'] == 'Yes':  # if watched recommendation before
-                user.state.to_tell1_5()
+                user.state.to_state(State.TELL1_5)
             else:
-                user.state.to_tell2()
+                user.state.to_state(State.TELL2)
             responses = [template_manager.get_sentence(state=user.state.current_state)]
 
         elif user.state.current_state is State.TELL1_5:
@@ -198,14 +179,14 @@ class DialogueManager:
                 user.movie_with_ratings.pop(0)
                 if not user.movie_with_ratings:
                     responses = [no_recommendation, end_dialogue]
-                    user.state.to_bye()
+                    user.state.to_state(State.BYE)
                 else:
                     responses = tellCtrl.to_text(user.movie_with_ratings)
-                    user.state.to_tell1()
+                    user.state.to_State(State.TELL1)
                     responses += [template_manager.get_sentence(state=user.state.current_state)]
             else:
                 responses = [end_dialogue]
-                user.state.to_bye()
+                user.state.to_state(State.BYE)
 
         elif user.state.current_state is State.TELL2:
             query, intent, entity = luisQuery.query(input_text)
@@ -214,12 +195,12 @@ class DialogueManager:
 
             if user.cached_results['satisfied'] == 'Yes':
                 responses = [end_dialogue]
-                user.state.to_bye()
+                user.state.to_state(State.BYE)
             else:
                 user.movie_with_ratings.pop(0)
                 if not user.movie_with_ratings:
                     responses = [no_recommendation, end_dialogue]
-                    user.state.to_bye()
+                    user.state.to_state(State.BYE)
                 else:
                     responses = tellCtrl.to_text(user.movie_with_ratings)
                     user.state.to_tell1()
@@ -335,7 +316,10 @@ def initResources():
     titles = []
 
     # Load question library
-    template_manager.init_resources()
+    try:
+        template_manager.init_resources()
+    except Exception as e:
+        raise e
 
     # Init list of candidate movies - (relatively new 9-20-17)
     sqlstring = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""

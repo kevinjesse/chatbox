@@ -85,5 +85,8 @@ def send_message(recipient_id, response: list):
 
 
 if __name__ == '__main__':
-    dialogue_manager.initResources()
-    app.run(host='0.0.0.0', port=20100)
+    try:
+        dialogue_manager.initResources()
+        app.run(host='0.0.0.0', port=20100)
+    except Exception as e:
+        print(e)

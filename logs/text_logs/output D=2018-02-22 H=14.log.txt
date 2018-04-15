@@ -1,0 +1,367 @@
+User:	5a8f4046e4422;		Timestamp:	2018-02-22 14:13:31.074066
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Please tell me your movie genre preferences.
+C: Tell me some actors or actresses you like.
+U: kate hudson
+C: Tell me a director you prefer.
+U: stephen king
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+U: horror
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Halloween II (1981)? 
+C: Halloween II stars Debra Hill, Charles Cyphers, Alan Howarth, Mark Goldblatt, Dean Cundey, Jeffrey Kramer, Rick Rosenthal, Donald Pleasence, Jamie Lee Curtis, John Carpenter and is directed by John Carpenter, Debra Hill.
+C: This film is 92 minutes long. It is a horror movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f459d3d740;		Timestamp:	2018-02-22 14:37:00.215101
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: horror
+C: Who would you like to see starring in a movie?
+U: paul ruebens
+C: Can you tell me which director you like?
+U: no
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about The Last House on the Left (2009)? 
+C: The Last House on the Left stars Dennis Iliadis, Marianne Maddalena, Carl Ellsworth, Wes Craven, Tony Goldwyn, Michael Bowen, Garret Dillahunt, Monica Potter, Adam Alleca, Sean S. Cunningham and is directed by Adam Alleca, Carl Ellsworth, Wes Craven.
+C: This film is 110 minutes long. It is a crime, horror and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: no i have not watched it
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f462134bea;		Timestamp:	2018-02-22 14:38:17.165847
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: Action
+C: Who would you like to see starring in a movie?
+U: Hulk
+C: Can you tell me which director you like?
+U: I am not sure
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Unstoppable (2010)? 
+C: Unstoppable stars Mimi Rogers, Denzel Washington, Alex Young, Julie Yorn, Rosario Dawson, Chris Pine, Ethan Suplee, Tony Scott, Mark Bomback, Eric McLeod and is directed by Mark Bomback.
+C: This film is 98 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: Good choice
+C: 
+C: Would you want another recommendation then?
+U: No thanks
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f465f62476;		Timestamp:	2018-02-22 14:40:35.180194
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: drama and action please
+C: Who are your favorite actors or actresses?
+U: tom cruise, Brad Pitt, Angelina Jolie
+C: Tell me some directors that you like.
+U: Michael Bay
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: PG-13 or R
+C: I'm thinking about what you might like.
+C: How about Troy (2004)? 
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f465384675;		Timestamp:	2018-02-22 14:40:49.029031
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: Comedy
+C: Who would you like to see starring in a movie?
+U: Will Ferrell
+C: Tell me a director you prefer.
+U: Steven Spielberg
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: PG
+C: I'm thinking about what you might like.
+C: How about Caddyshack (1980)? 
+C: Caddyshack stars Chevy Chase, Ted Knight, Brian Doyle-Murray, Johnny Mandel, Harold Ramis, Douglas Kenney, William C. Carruth, Rodney Dangerfield, Bill Murray, Stevan Larner and is directed by Brian Doyle-Murray, Harold Ramis, Douglas Kenney.
+C: This film is 98 minutes long. It is a comedy and sport movie, and is rated R.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: No
+C: 
+C: How about Coffee and Cigarettes (2003)? 
+C: Coffee and Cigarettes stars Jim Stark, Jason Kliot, Demetra J. MacBride, Rudd Simmons, Bill Murray, Roberto Benigni, Cassis Birgit Staudt, Jim Jarmusch, RZA, Tom Waits and is directed by Jim Jarmusch.
+C: This film is 95 minutes long. It is a comedy, drama and music movie, and is rated R.
+C: Have you watched this movie before?
+C: 
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Troy (2004)? 
+U: No
+C: Troy stars Homer, Brad Pitt, Eric Bana, Orlando Bloom, Julian Glover, Wolfgang Petersen, David Benioff, Diana Rathbun, Colin Wilson, James Horner and is directed by Homer, David Benioff.
+C: This film is 163 minutes long. It is an action, drama and history movie, and is rated R.
+C: Have you watched this movie before?
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f46b0377b1;		Timestamp:	2018-02-22 14:40:49.552251
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: comedy
+C: Tell me your actor/actress preferences.
+U: christopher walken
+C: Tell me some directors that you like.
+U: roman polanski
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: r
+C: I'm thinking about what you might like.
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f460928da9;		Timestamp:	2018-02-22 14:43:25.831386
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: Documentries
+C: Tell me some actors or actresses you like.
+U: Tom Hanks, julia Roberts, meryl Streep
+C: Who is your favorite director?
+U: Lorne Michaels
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: pg-13 or R
+C: I'm thinking about what you might like.
+C: How about Fahrenheit 9/11 (2004)? 
+C: Fahrenheit 9/11 stars Stevie Wonder, Jim Czarnecki, George W. Bush, Michael Moore, Kurt Engfehr, Woody Richman, Jeff Gibbs, Ben Affleck, Kathleen Glynn, Chris Seward and is directed by Michael Moore.
+C: This film is 122 minutes long. It is a documentary, drama and war movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Caddyshack (1980)? 
+C: Caddyshack stars Chevy Chase, Ted Knight, Brian Doyle-Murray, Johnny Mandel, Harold Ramis, Douglas Kenney, William C. Carruth, Rodney Dangerfield, Bill Murray, Stevan Larner and is directed by Brian Doyle-Murray, Harold Ramis, Douglas Kenney.
+C: This film is 98 minutes long. It is a comedy and sport movie, and is rated R.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes pleas
+C: 
+C: How about Coffee and Cigarettes (2003)? 
+C: Coffee and Cigarettes stars Jim Stark, Jason Kliot, Demetra J. MacBride, Rudd Simmons, Bill Murray, Roberto Benigni, Cassis Birgit Staudt, Jim Jarmusch, RZA, Tom Waits and is directed by Jim Jarmusch.
+C: This film is 95 minutes long. It is a comedy, drama and music movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: I said NO. I've not seen it, and I don't want to.
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Little Shop of Horrors (1986)? 
+C: Little Shop of Horrors stars Howard Ashman, Charles B. Griffith, Rick Moranis, Miles Goodman, Vincent Gardenia, Ellen Greene, Roger Corman, Levi Stubbs, David Geffen, Frank Oz and is directed by Howard Ashman, Roger Corman, Charles B. Griffith.
+C: This film is 94 minutes long. It is a comedy, family and musical movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f481ed298f;		Timestamp:	2018-02-22 14:48:01.366234
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: drama
+C: Can you tell me some actors or actresses you prefer to watch?
+U: jhonny deep
+C: Tell me a director you prefer.
+U: nothing
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: r
+C: I'm thinking about what you might like.
+C: How about Dancer in the Dark (2000)? 
+C: Dancer in the Dark stars David Morse, Robby Müller, Vibeke Windeløv, Karl Júlíusson, François Gédigier, Peter Stormare, Björk, Molly Marlene Stensgaard, Lars von Trier, Catherine Deneuve and is directed by Lars von Trier.
+C: This film is 140 minutes long. It is a crime, drama and musical movie, and is rated R.
+C: Have you watched this movie before?
+U: yes, i like film
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Fear and Loathing in Las Vegas (1998)? 
+C: Fear and Loathing in Las Vegas stars Michael Lee Gogin, Tod Davies, Patrick Cassavetti, Hunter S. Thompson, Johnny Depp, Terry Gilliam, Tobey Maguire, Tony Grisoni, Alex Cox, Benicio Del Toro and is directed by Hunter S. Thompson, Terry Gilliam, Tony Grisoni, Tod Davies, Alex Cox.
+C: This film is 118 minutes long. It is an adventure, comedy and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about The Basketball Diaries (1995)? 
+C: The Basketball Diaries stars Leonardo DiCaprio, Lorraine Bracco, Marilyn Sokol, Graeme Revell, Scott Kalvert, James Madio, Liz Heller, Bryan Goluboff, Jim Carroll, John Bard Manulis and is directed by Jim Carroll, Bryan Goluboff.
+C: This film is 102 minutes long. It is a biography, crime and drama movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes, i like
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f4955d6033;		Timestamp:	2018-02-22 14:52:55.590274
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Tell me a movie genre you prefer?
+U: action
+C: Who would you like to see starring in a movie?
+U: will smith
+C: Can you tell me which director you like?
+U: stevens spilberg
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: pg
+C: I'm thinking about what you might like.
+C: How about Men in Black II (2002)? 
+C: Men in Black II stars Lara Flynn Boyle, Robert Gordon, Barry Sonnenfeld, Will Smith, Walter F. Parkes, Tommy Lee Jones, Rip Torn, Lowell Cunningham, Barry Fanaro, Laurie MacDonald and is directed by Lara Flynn Boyle, Robert Gordon, Barry Sonnenfeld, Will Smith, Walter F. Parkes, Tommy Lee Jones, Rip Torn, Lowell Cunningham, Barry Fanaro, Laurie MacDonald.
+C: This film is 88 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+
+User:	5a8f495a4eb0c;		Timestamp:	2018-02-22 14:53:05.211352
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Can you tell me what movie genres you like?
+U: action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: will smith
+C: Tell me some directors that you like.
+U: stevens spilberg
+C: What MPAA rating should this movie be? (eg. PG-13, R, G)
+U: pg
+C: I'm thinking about what you might like.
+C: How about Men in Black II (2002)? 
+C: Men in Black II stars  and is directed by Lowell Cunningham, Robert Gordon, Barry Fanaro.
+C: This film is 88 minutes long. It is an action, adventure and comedy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

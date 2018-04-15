@@ -1,0 +1,7 @@
+
+ndcg_cost = zeros(length(5:5:100));
+step = 5;
+for i = 5:step:10
+    fprintf("ON DCG of %d", i)
+    ndcg_cost(i/step) = trainDCG(i);
+end

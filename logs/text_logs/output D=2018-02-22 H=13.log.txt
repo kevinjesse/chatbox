@@ -1,0 +1,32 @@
+User:	5a8f3a674c385;		Timestamp:	2018-02-22 13:50:26.125792
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What's your favorite movie genre?
+U: drama
+C: Can you tell me some actors or actresses you prefer to watch?
+U: Jacky Chen
+C: Tell me a director you prefer.
+U: whatever
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: How about Breaking the Waves (1996)? 
+C: Breaking the Waves stars Peter Asmussen, Robby Müller, Vibeke Windeløv, Peter Aalbæk Jensen, David Pirie, Lars von Trier, Jean-Marc Barr, Katrin Cartlidge, Stellan Skarsgård, Emily Watson and is directed by Lars von Trier, Peter Asmussen, David Pirie.
+C: This film is 159 minutes long. It is a drama and romance movie, and is rated R.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: no
+C: 
+C: How about The Sea Inside (2004)? 
+C: The Sea Inside stars Javier Bardem, Alejandro Amenábar, Lola Dueñas, Belén Rueda, Mabel Rivera, Mateo Gil, Javier Aguirresarobe, Fernando Bovaira, Benjamín Fernández and is directed by Alejandro Amenábar, Mateo Gil.
+C: This film is 125 minutes long. It is a biography, drama and romance movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

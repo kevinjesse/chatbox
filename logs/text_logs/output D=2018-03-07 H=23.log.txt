@@ -1,0 +1,22 @@
+User:	5aa0e67bcf75d;		Timestamp:	2018-03-07 23:33:42.976957
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genres of movies do you like?
+U: action movies
+C: Tell me your actor/actress preferences.
+U: James
+C: Tell me some directors that you like.
+U: Jackson'
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: R
+C: I'm thinking about what you might like.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+U: no
+C: 
+C: Bye! Please click the next button to proceed.
+

@@ -1,0 +1,32 @@
+User:	5a98c3b720ab2;		Timestamp:	2018-03-01 19:26:00.233074
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: action
+C: Can you tell me some actors or actresses you prefer to watch?
+U: jason
+C: Can you tell me which director you like?
+U: james
+C: What should the MPAA rating for this movie be? (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Unstoppable (2010)? 
+C: Unstoppable stars Mimi Rogers, Denzel Washington, Alex Young, Julie Yorn, Rosario Dawson, Chris Pine, Ethan Suplee, Tony Scott, Mark Bomback, Eric McLeod and is directed by Mark Bomback.
+C: This film is 98 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: yes
+C: 
+C: Would you want another recommendation then?
+U: yes
+C: 
+C: How about Van Helsing (2004)? 
+C: Van Helsing stars Stephen Sommers, Hugh Jackman, Shuler Hensley, Kate Beckinsale, Richard Roxburgh, Jim May, Kelly Matsumoto, Allen Daviau, Alan Silvestri, Bob Ducsay and is directed by Stephen Sommers.
+C: This film is 131 minutes long. It is an action, adventure and fantasy movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: no
+C: 
+C: Do you like this recommendation?
+U: yes
+C: 
+C: Bye! Please click the next button to proceed.
+

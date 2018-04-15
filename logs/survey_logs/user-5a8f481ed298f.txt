@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-14-48-48"},"cryptID":"$1$HFodD4eN$bvYQitiUCffPIurpiw8xx\/","userID":"5a8f481ed298f","turkID":"stgocom","survey":{"q1":"0","q2":"4","q3":"3","q4":"nothing"},"rating":["3","3","3","3","3","3","3","3","3","3","3"]}

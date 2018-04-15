@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-14-41-50"},"cryptID":"$1$9ObL.WHn$GoSukThZd8b18DXna8Atr\/","userID":"5a8f465f62476","turkID":"7398771","survey":{"q1":"0","q2":"5","q3":"5","q4":"Chatbot was fast and accurate."},"rating":["3","3","3","3","3","3","3"]}

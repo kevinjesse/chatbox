@@ -1,0 +1,23 @@
+User:	5a9716b69986f;		Timestamp:	2018-02-28 12:54:30.328727
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: action genre
+C: Tell me your actor/actress preferences.
+U: Jason
+C: Tell me a director you prefer.
+U: James
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Unstoppable (2010)? 
+C: Unstoppable stars Mimi Rogers, Denzel Washington, Alex Young, Julie Yorn, Rosario Dawson, Chris Pine, Ethan Suplee, Tony Scott, Mark Bomback, Eric McLeod and is directed by Mark Bomback.
+C: This film is 98 minutes long. It is an action and thriller movie, and is rated PG-13.
+C: Have you watched this movie before?
+U: No
+C: 
+C: Do you like this recommendation?
+U: Yes
+C: 
+C: Bye! Please click the next button to proceed.
+

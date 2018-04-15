@@ -1,0 +1,23 @@
+User:	5a8fb13810a50;		Timestamp:	2018-02-22 22:15:27.944379
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+C: What genre of films do you like to see?
+U: action
+C: Who are your favorite actors or actresses?
+U: tom cruise
+C: Who is your favorite director?
+U: quentin tarantino
+C: Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
+U: PG-13
+C: I'm thinking about what you might like.
+C: How about Sin City (2005)? 
+C: Sin City stars Clive Owen, Jessica Alba, Elizabeth Avellan, John Debney, Robert Rodriguez, Bruce Willis, Quentin Tarantino, Graeme Revell, Frank Miller, Mickey Rourke and is directed by Frank Miller.
+C: This film is 124 minutes long. It is a crime and thriller movie, and is rated R.
+C: Have you watched this movie before?
+U: no 
+C: 
+C: Do you like this recommendation?
+U: ohh yes
+C: 
+C: Bye! Please click the next button to proceed.
+

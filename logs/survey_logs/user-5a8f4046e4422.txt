@@ -1,0 +1,1 @@
+{"metadata":{"date":"2018-02-22-14-14-17"},"cryptID":"$1$GQ3gw8y4$gdfloAoVV3Ibj0AQO7Xd41","userID":"5a8f4046e4422","turkID":"A3MS21UJPMHLK0","survey":{"q1":"0","q2":"4","q3":"4","q4":"I like that it's instantameous and you can keep getting recommendations"},"rating":["3","3","3","3","3","3","3","3","3"]}

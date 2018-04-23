@@ -51,17 +51,17 @@ else:
 for mode in mymode:
     if mode =="genre":
         sqlstring = """SELECT genre FROM tmd_genres ORDER BY genre ASC"""
-        # cur.execute(sqlstring)
+        # cur.execute(sql_string)
         # rows = cur.fetchall()
         # modelist = [row[0] for row in rows]
     elif mode =="actor" or mode == "director":
         sqlstring = """SELECT primaryname FROM name ORDER BY primaryname ASC"""
-        # cur.execute(sqlstring)
+        # cur.execute(sql_string)
         # row = cur.fetchall()
         # modelist = [name[0] for name in row]
     elif mode == "mpaa":
         sqlstring = """SELECT DISTINCT mpaa from title ORDER BY mpaa ASC"""
-        # cur.execute(sqlstring)
+        # cur.execute(sql_string)
         # row = cur.fetchall()
         # modelist = [name[0] for name in row]
 

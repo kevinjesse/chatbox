@@ -17,8 +17,8 @@ api_key = rows[0][0]
 #initialize smaller name list for memory constraint
 # names = {}
 # cur.execute("SET statement_timeout = '10s'")
-# sqlstring = """SELECT nconst, primaryname FROM name LIMIT 800000"""
-# cur.execute(sqlstring)
+# sql_string = """SELECT nconst, primaryname FROM name LIMIT 800000"""
+# cur.execute(sql_string)
 # rows = cur.fetchall()
 # for name in rows:
 #     names[name[0]] = name[1]
@@ -55,7 +55,7 @@ def moviebyID(movieID):
                                                                                    "''") + """', mpaa = '""" + mpaa_rating + \
                     """', prodco ='""" + mov_json['production_companies'][0]['name'].replace("'",
                                                                                              "''") + """' WHERE tconst='""" + movieID + """' RETURNING *"""
-        # print sqlstring
+        # print sql_string
         cur.execute(sqlstring)
         rows = cur.fetchall()
     return rows[0]
@@ -64,9 +64,9 @@ def moviebyID(movieID):
 # def actorsbyID(alist):
 #     actornamelist = []
 #     for actor in alist:
-#         sqlstring = """SELECT primaryname FROM name WHERE nconst='""" + actor + """' LIMIT 1"""
-#         print sqlstring
-#         cur.execute(sqlstring)
+#         sql_string = """SELECT primaryname FROM name WHERE nconst='""" + actor + """' LIMIT 1"""
+#         print sql_string
+#         cur.execute(sql_string)
 #         rows = cur.fetchall()
 #         actornamelist.append(rows[0][0])
 #     return actornamelist
@@ -76,12 +76,12 @@ def actorsbyID(alist):
     alistval = ["('"+str(alist[i])+"' ," + str(i+1) + ")" for i in range(0, len(alist))]
     aliststr = """, """.join(alistval)
     actornamelist = []
-    #sqlstring = """SELECT primaryname FROM name WHERE nconst IN(""" + aliststr + """) ORDER BY (nconst,""" + aliststr +""")"""
-    #sqlstring = """SELECT primaryname FROM name WHERE nconst = ANY (VALUES """ + aliststr + """) ORDER BY (nconst,""" + alistord + """)"""
+    #sql_string = """SELECT primaryname FROM name WHERE nconst IN(""" + aliststr + """) ORDER BY (nconst,""" + aliststr +""")"""
+    #sql_string = """SELECT primaryname FROM name WHERE nconst = ANY (VALUES """ + aliststr + """) ORDER BY (nconst,""" + alistord + """)"""
     #SELECT name.primaryname FROM name join ( VALUES 88340',9),('nm0000620',10)) as x (nconst, ordering) on name.nconst = x.nconst order by x.ordering
     sqlstring = """SELECT primaryname FROM name join (VALUES """ + aliststr + """) AS X (nconst, ordering) ON name.nconst = X.nconst ORDER BY X.ordering """
     # print
-    # print sqlstring
+    # print sql_string
     # print
     cur.execute(sqlstring)
     rows = cur.fetchall()

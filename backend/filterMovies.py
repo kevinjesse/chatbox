@@ -69,10 +69,10 @@ def filter_candidates(state: str, user_cache, user_tconst):
             rows = cur.fetchall()
             tconst_list = [tconst[0] for tconst in rows]
 
-        #print sqlstring
+        #print sql_string
         elif state == 'director':
-            # sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """' ORDER BY nconst ASC LIMIT 1"""
-            # cur.execute(sqlstring)
+            # sql_string = """SELECT nconst FROM name WHERE primaryname = '""" + userCache[state][0] + """' ORDER BY nconst ASC LIMIT 1"""
+            # cur.execute(sql_string)
             # rows = cur.fetchall()
             # nm = rows[0][0]
             sqlstring = """SELECT nconst FROM name WHERE primaryname = '""" + user_cache[state][0] + """'"""
@@ -89,8 +89,8 @@ def filter_candidates(state: str, user_cache, user_tconst):
 
             sqlstringm = """SELECT tconst FROM crew WHERE directors LIKE '%""" + names[0] + """%' """
             # for act in userCache[state][1:]:
-            #     sqlstring = """SELECT nconst FROM name WHERE primaryname LIKE '%""" + act + """%' ORDER BY nconst ASC LIMIT 1"""
-            #     cur.execute(sqlstring)
+            #     sql_string = """SELECT nconst FROM name WHERE primaryname LIKE '%""" + act + """%' ORDER BY nconst ASC LIMIT 1"""
+            #     cur.execute(sql_string)
             #     rows = cur.fetchall()
             #     nm = rows[0][0]
             #     sqlstringm += """AND directors LIKE '%""" + nm + """%' """

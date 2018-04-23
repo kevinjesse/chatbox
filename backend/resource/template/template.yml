@@ -31,6 +31,10 @@ utterances:
     - Tell me what MPAA rating should this movie have. (eg. PG-13, R, G)
   thinking:
     - I'm thinking about what you might like.
+  tell:
+    - How about {movie_name} ({movie_year})?
+    - {movie_name} stars {actors} and is directed by {directors}.
+    - The film is {movie_length} long. It is a {genre} movie, and is rated {MPAA}.
   has_watched:
     - Have you watched this movie before?
   has_watched_response:
@@ -48,3 +52,5 @@ messages:
     - There is no exact match for what was specified, so I will try my best!
   no_recommendation:
     - I'm sorry but there is no recommendation that can be made with your criteria.
+  do_not_understand:
+    - I'm sorry, but I don't understand your answer.

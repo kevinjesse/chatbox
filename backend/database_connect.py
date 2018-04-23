@@ -10,11 +10,18 @@ all inserts, updates, and deletes will be enforced atomically
 
 import psycopg2
 
+
 def db_connect():
     cur = None
     try:
-        conn = psycopg2.connect("dbname='postgres' user='postgres' host='localhost' password='2251'", connect_timeout=30)
-        conn.autocommit = True #Auto commit must be on if you want changes to be immediate for insert/update
+        conn = psycopg2.connect(
+            database='postgres',
+            user='postgres',
+            password='2251',
+            host='localhost',
+            connect_timeout=30
+        )
+        conn.autocommit = True  # Auto commit must be on if you want changes to be immediate for insert/update
         cur = conn.cursor()
         cur.itersize = 10000
     except:

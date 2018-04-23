@@ -85,15 +85,15 @@ def fillSideDict(sparse, sideDict):
             if v:
                 for val in v:
                     try:
-                        #print sideDict[users[j]][k]
+                        #print sideDict[current_users[j]][k]
                         sideDict[users[j]][k][val] += 1
                     except KeyError as e:
-                        #sideDict[users[j]][k] = dict()
+                        #sideDict[current_users[j]][k] = dict()
                         sideDict[users[j]][k][val] = 1
-                #sideDict[users[j]][k].extend(v)
+                #sideDict[current_users[j]][k].extend(v)
                 #NO DUP
                 #make each a dictionary and only append top 5 for each category
-                #sideDict[users[j]][k] = sideDict[users[j]][k] + list(set(sideDict[users[j]][k]) - set(v))
+                #sideDict[current_users[j]][k] = sideDict[current_users[j]][k] + list(set(sideDict[current_users[j]][k]) - set(v))
 
     return sideDict, movieSideDict
 

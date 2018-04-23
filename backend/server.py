@@ -11,7 +11,7 @@ import traceback
 import time
 
 import dialogue_manager as dCtrl
-from dialogue_manager import dialogueCtrl, initResources, dialogueIdle
+from dialogue_manager import dialogueCtrl, init_resources, dialogueIdle
 
 debug = False
 passive = {}
@@ -103,7 +103,7 @@ class ThreadingServer(object):
 
 
 if __name__ == "__main__":
-    initResources()
+    init_resources()
     if 'debug' in sys.argv:
         debug = True
         print("Running in debug mode. (socket: {})".format(chatbox_socket()))

@@ -18,8 +18,8 @@ a = None
 def init(tconst):
     map_array= []
     n = 0
-    # sqlstring = """SELECT tconst FROM title"""
-    # cur.execute(sqlstring)
+    # sql_string = """SELECT tconst FROM title"""
+    # cur.execute(sql_string)
     # rows = cur.fetchall()
     # for each in rows:
     #     map_array.append(each[0])
@@ -142,8 +142,8 @@ def find (tconst, user_pref):
 # def init():
 #     map_array= []
 #     n = 0
-#     sqlstring = """SELECT tconst FROM title"""
-#     cur.execute(sqlstring)
+#     sql_string = """SELECT tconst FROM title"""
+#     cur.execute(sql_string)
 #     rows = cur.fetchall()
 #     for each in rows:
 #         map_array.append(each[0])
@@ -156,8 +156,8 @@ def find (tconst, user_pref):
 #     if genres is not None:
 #         total = len(genres)
 #         for genre in genres:
-#             sqlstring = """SELECT tconst FROM title WHERE genres LIKE '%""" + genre + """%'"""
-#             cur.execute(sqlstring)
+#             sql_string = """SELECT tconst FROM title WHERE genres LIKE '%""" + genre + """%'"""
+#             cur.execute(sql_string)
 #             rows = cur.fetchall()
 #             for tconst in rows:
 #                 try:
@@ -168,18 +168,18 @@ def find (tconst, user_pref):
 #
 # def mpaascore(mscores, mmap, mpaa):
 #     if mpaa is not None:
-#         sqlstring = """SELECT tconst FROM title WHERE mpaa ='""" + mpaa[0] +"""'"""
+#         sql_string = """SELECT tconst FROM title WHERE mpaa ='""" + mpaa[0] +"""'"""
 #         for each in mpaa[1:]:
-#             sqlstring += """OR mpaa='""" + each + """'"""
-#         cur.execute(sqlstring)
+#             sql_string += """OR mpaa='""" + each + """'"""
+#         cur.execute(sql_string)
 #         rows = cur.fetchall()
 #         for tconst in rows:
 #             mscores[mmap.index(tconst[0])][1] = 1
 #     return mscores
 #
 # def ratingsscore(mscores, mmap) :
-#     sqlstring = """SELECT title.tconst, averagerating FROM title INNER JOIN ratings ON title.tconst = ratings.tconst"""
-#     cur.execute(sqlstring)
+#     sql_string = """SELECT title.tconst, averagerating FROM title INNER JOIN ratings ON title.tconst = ratings.tconst"""
+#     cur.execute(sql_string)
 #     rows = cur.fetchall()
 #     for row in rows:
 #         try:
@@ -193,13 +193,13 @@ def find (tconst, user_pref):
 # def actorscore(mscores, mmap, people):
 #     if people is not None:
 #         for actor in people:
-#             sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ actor + """' LIMIT 1"""
-#             cur.execute(sqlstring)
+#             sql_string = """SELECT nconst FROM name WHERE primaryname ='"""+ actor + """' LIMIT 1"""
+#             cur.execute(sql_string)
 #             row = cur.fetchall()
 #             if row:
 #                 nconst = row[0][0]
-#                 sqlstring = """SELECT tconst, principalcast FROM stars WHERE principalcast LIKE '%""" + nconst + """%'"""
-#                 cur.execute(sqlstring)
+#                 sql_string = """SELECT tconst, principalcast FROM stars WHERE principalcast LIKE '%""" + nconst + """%'"""
+#                 cur.execute(sql_string)
 #                 rows = cur.fetchall()
 #                 #iterate through rows scoring the position of the actor in principal cast and
 #                 #storing in the mscores of tconst
@@ -222,13 +222,13 @@ def find (tconst, user_pref):
 # def directorscore(mscores, mmap, people):
 #     if people is not None:
 #         for director in people:
-#             sqlstring = """SELECT nconst FROM name WHERE primaryname ='"""+ director + """' LIMIT 1"""
-#             cur.execute(sqlstring)
+#             sql_string = """SELECT nconst FROM name WHERE primaryname ='"""+ director + """' LIMIT 1"""
+#             cur.execute(sql_string)
 #             row = cur.fetchall()
 #             if row:
 #                 nconst = row[0][0]
-#                 sqlstring = """SELECT tconst, directors FROM crew WHERE directors LIKE '%""" + nconst + """%'"""
-#                 cur.execute(sqlstring)
+#                 sql_string = """SELECT tconst, directors FROM crew WHERE directors LIKE '%""" + nconst + """%'"""
+#                 cur.execute(sql_string)
 #                 rows = cur.fetchall()
 #                 for moviedirtup in rows:
 #                     dirlist = moviedirtup[1].split(" ")
@@ -255,8 +255,8 @@ def find (tconst, user_pref):
     # to see what total score should be. principal cast has a max
     # length of 10 stars
     # m = 0
-    # sqlstring = """SELECT directors FROM crew"""
-    # cur.execute(sqlstring)
+    # sql_string = """SELECT directors FROM crew"""
+    # cur.execute(sql_string)
     # rows = cur.fetchall()
     # for each in rows:
     #     starlist = each[0].split(" ")

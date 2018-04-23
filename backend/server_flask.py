@@ -2,7 +2,7 @@ import logging
 import json
 from flask import Flask, request, jsonify
 
-import dialogue_manager as dm
+import dialogue_manager
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -11,7 +11,7 @@ logging.basicConfig(
 
 app = Flask(__name__)
 
-dialogue_manager = dm.DialogueManager()
+dm = dialogue_manager.DialogueManager(api_type='mturk')
 
 
 @app.route('/chatbox-rewrite', methods=['GET', 'POST'])
@@ -19,12 +19,12 @@ def receive_message():
     data = request.get_json(force=True)
 
     if data.get('action') == 'kill':
-        dialogue_manager.end_user_session(data.get('id'))
+        dm.end_user_session(data.get('id'))
         return jsonify({
             'killed': True
         })
 
-    responses = dialogue_manager.utterance(data.get('id'), data)
+    responses = dm.utterance(data.get('id'), data)
     print('received message:', responses)
     return jsonify({
         'responses': responses
@@ -32,7 +32,7 @@ def receive_message():
 
 
 def init_resources():
-    dm.initResources()
+    dialogue_manager.init_resources()
 
 
 if __name__ == '__main__':

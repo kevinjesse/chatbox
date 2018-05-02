@@ -13,9 +13,13 @@ import matlab.engine
 import movieCtrl
 import matlab
 eng = matlab.engine.start_matlab()
-eng.cd(r'dirtyIMC_code')
-N = mmread("./dirtyIMC_code/sparseN.mm.mtx")
+eng.cd(r'dirtyIMC_code_online')
+N = mmread("./dirtyIMC_code_online/sparseN.mm.mtx")
 reclist = []
+recvalues = []
+X= []
+U = []
+V = []
 # M = np.array(mmread("./dirtyIMC_code/Mgenre.mm.mtx"))
 # Y = mmread("./dirtyIMC_code/sparseYgenre.mm.mtx").todense()
 # M = mmread("./dirtyIMC_code/M.mm.mtx").todense()
@@ -87,7 +91,8 @@ def translateDialogue(mode,userCache):
         for item in userlist :
             # print item
             try:
-                npgen[modelist.index(item)] = 1.0/(len(userlist)*3)
+                #npgen[modelist.index(item)] = 1.0/(len(userlist)*3) # for all 3
+                npgen[modelist.index(item)] = 1.0 / (len(userlist))#just genre)
             except Exception as e:
                 print e
                 continue
@@ -111,25 +116,54 @@ def train():
 
 def test(X):
     print X
-    SN = eng.test2(matlab.double(X),nargout=1)
-    return SN
+    value, rank = eng.test2(matlab.double(X),nargout=2)
+    return rank, value
 
 def computeRow(userCache):
+    global X
     XG = translateDialogue("genre", userCache)
-    XA = translateDialogue("actor", userCache)
-    XM = translateDialogue("mpaa", userCache)
-    # print test(XG+XA[:275]+XM)
-    return test(XG+XM+XA)[0]
+    # XA = translateDialogue("actor", userCache)
+    # XM = translateDialogue("mpaa", userCache)
+    X = XG
+    return test(XG)
 
 def recommend(userCache):
-    global reclist
-    Z = map(int, computeRow(userCache))
-    reclist = Z
-    #print Z
+    global reclist, recvalues
+    rank, value = computeRow(userCache)
+    reclist = map(int, rank[0])
+    recvalues = map(int, value[0])
     #Z = computeRow(userCache)[0]
     #Z[:] = [int((np.int_(x))) - 1 for x in Z] #make 0 indexed
     #Z[:] = [x - 1 for x in Z]  # make 0 indexed
-    return Z
+    return reclist
+
+def online_recommend():
+    global X, U, V, recvalues, reclist
+    # print recvalues
+    recvalues, reclist, U, V = eng.online_train(matlab.double(recvalues), matlab.double(U),
+                                                matlab.double(V), matlab.double(X), nargout=4)
+
+    reclist = map(int, reclist[0])
+    recvalues = map(float, recvalues[0])
+    # U = map(int, reclist[0])
+    # V = map(float, recvalues[0])
+
+    print reclist[0:10]
+    print recvalues[0:10]
+
+    return reclist
+
+def dislike(index):
+    global recvalues
+    for each in index:
+        recvalues[each-1] = -100
+        reclist.pop()
+
+def like(index):
+    global recvalues
+    for each in index:
+        recvalues[each-1] = 1
+        reclist.pop()
 
 def recommendationText(i):
     output = []
@@ -189,9 +223,38 @@ def addUser(X):
     print type(X)
 
 
-# userCache = {'mpaa': [], 'satisfied': u'NoPreference', 'actor': [], 'director': [], 'person': [], 'genre': ['comedy',]}
-# t = recommend(userCache)
-# print t
+userCache = {'mpaa': [], 'satisfied': u'NoPreference', 'actor': [], 'director': [], 'person': [], 'genre': ['comedy',]}
+t = recommend(userCache)
+print t[:2]
+dislike(t[:1])
+t = online_recommend()
+dislike(t[:1])
+t = online_recommend()
+dislike(t[:1])
+t = online_recommend()
+dislike(t[:1])
+t = online_recommend()
+dislike(t[:1])
+t = online_recommend()
+dislike(t[:1])
+# t = online_recommend()
+# dislike(t[:1])
+# t = online_recommend()
+# dislike(t[:1])
+# t = online_recommend()
+# dislike(t[:1])
+# t = online_recommend()
+
+# dislike(t[:10])
+# online_recommend()
+# dislike(t[:10])
+# online_recommend()
+# dislike(t[:10])
+# online_recommend()
+# dislike(t[:10])
+# online_recommend()
+# dislike(t[:10])
+# online_recommend()
 # print recommendationText(t[0])
 
 

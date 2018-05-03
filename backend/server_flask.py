@@ -17,22 +17,32 @@ dm = dialogue_manager.DialogueManager(api_type='mturk')
 @app.route('/chatbox-rewrite', methods=['GET', 'POST'])
 def receive_message():
     data = request.get_json(force=True)
+    utterance = parse_input(data)
+    print(utterance)
+    return utterance
 
-    if data.get('action') == 'kill':
-        dm.end_user_session(data.get('id'))
+
+def parse_input(json: dict):
+    if json.get('action') == 'kill':
+        dm.end_user_session(json.get('id'))
         return jsonify({
             'killed': True
         })
 
-    responses = dm.utterance(data.get('id'), data)
-    print('received message:', responses)
-    return jsonify({
-        'responses': responses
-    })
+    id = json.get('id')
+
+    if id is not None:
+        print('received text:', json.get('text'))
+        responses = dm.utterance(user_id=id, message=json)
+        return jsonify({
+            'responses': responses
+        })
+    else:
+        return None
 
 
 def init_resources():
-    dialogue_manager.init_resources()
+    dialogue_manager.init_resources(mode='messenger')
 
 
 if __name__ == '__main__':

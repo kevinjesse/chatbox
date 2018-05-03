@@ -1,8 +1,11 @@
 utterances:
   intro:
-    - >
-      Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some
-      questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+    0:
+      - >
+        Hi, I'm Chatbot. I'm trying to give better movie recommendations than Netflix can. We will start with some
+        questions to figure out your interests. Then I will give you a movie available on Netflix to watch!
+    1:
+      - Welcome back! Last time you have wanted {pref_history}. Do you want something similar?
   movies:
     - Tell me a movie that you like?
   genre:
@@ -32,9 +35,9 @@ utterances:
   thinking:
     - I'm thinking about what you might like.
   tell:
-    - How about {movie_name} ({movie_year})?
-    - {movie_name} stars {actors} and is directed by {directors}.
-    - The film is {movie_length} long. It is a {genre} movie, and is rated {MPAA}.
+    - "How about {movie_name} ({movie_year})?"
+    - "{movie_name} stars {actors} and is directed by {directors}."
+    - "The film is {movie_length} long. It is a {genre} movie, and is rated {MPAA}."
   has_watched:
     - Have you watched this movie before?
   has_watched_response:
@@ -42,11 +45,17 @@ utterances:
       - Would you want another recommendation then?
     no:
       - Do you like this recommendation?
+  is_satisfied:
+    - Do you like this movie?
+    - What do you think of this movie?
+    - Is this movie recommendation satisfactory?
   bye:
     messenger:
       - Bye! Message me anytime you want a new movie recommendation!
     mturk:
       - Bye! Click the next button to proceed.
+    cobot:
+      - Awesome! Glad you like the movie!
 messages:
   not_perfect:
     - There is no exact match for what was specified, so I will try my best!

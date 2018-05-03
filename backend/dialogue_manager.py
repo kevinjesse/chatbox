@@ -11,57 +11,39 @@ Controls the dialogue chatbox. Dialogue control is called from server.py
 from enum import Enum
 
 import database_connect
-import filterMovies
 import luis
-import tellCtrl
 import template_manager
-from template_manager import State
 
 cur = database_connect.db_connect()
 
+# Global Flags
 
-class MoviePreferences(Enum):
-    # 'genre': None, 'person': None, 'mpaa': None, 'actor': None, 'director': None
-    GENRE = 'genre'
-    ACTOR = 'actor'
-    DIRECTOR = 'director'
-    MPAA = 'mpaa'
+# server_mode = 'messenger'
 
 
-class User:
+def init_resources(mode: str):
+    global server_mode
+    server_mode = mode
 
-    class SessionData:
-        def __init__(self):
-            self.movie_preferences = {
-                MoviePreferences.GENRE: [],
-                MoviePreferences.ACTOR: [],
-                MoviePreferences.DIRECTOR: [],
-                MoviePreferences.MPAA: []
-            }
+    global titles
+    titles = []
 
-            # NOTE: Do not modify this, use new_recommendation instead
-            self.recommendations = []
+    # Load question library
+    try:
+        template_manager.init_resources()
+        luis.init_resource()
+    except Exception as e:
+        raise e
 
-        def new_recommendation(self, movie, has_watched_before: bool=None, is_satisfied: bool=None):
-            self.recommendations.append({
-                'movie': movie, 'has_watched_before': has_watched_before, 'is_satisfied': is_satisfied
-            })
+    # Init list of candidate movies - (relatively new 9-20-17)
+    sqlstring = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
+    cur.execute(sqlstring)
+    rows = cur.fetchall()
+    for mov in rows:
+        titles.append(mov[0])
 
-        def edit_last_recommendation(self, has_watched_before: bool=None, is_satisfied:bool=None):
-            if has_watched_before is not None:
-                self.recommendations[-1]['has_watched_before'] = has_watched_before
-            if is_satisfied is not None:
-                self.recommendations[-1]['is_satisfied'] = is_satisfied
-
-    def __init__(self, user_id):
-        self.state = DialogueManager.States()
-        self.user_id = user_id
-
-        # TODO: Load session data
-        self.session_data = User.SessionData()
-
-        self.movie_candidates = []
-        self.movie_with_ratings = []
+    print("[OK] Initialization of resources.")
+    return
 
 
 class DialogueManager:
@@ -80,6 +62,17 @@ class DialogueManager:
 
         def __init__(self):
             self._current_state_id = 0
+            if server_mode == 'cobot':
+                DialogueManager.States.possible_states = [
+                    State.INTRO,
+                    State.GENRE,
+                    State.ACTOR,
+                    State.DIRECTOR,
+                    State.MPAA,
+                    State.TELL,
+                    State.IS_SATISFIED,  # cobot only state that just ask if user likes this movie
+                    State.BYE
+                ]
 
         @property
         def current_state(self) -> State:
@@ -104,173 +97,253 @@ class DialogueManager:
             self._current_state_id = 0
             return self.current_state
 
-    def __init__(self, api_type):
+    def __init__(self, api_type: str):
         self.current_users = {}
-        self.api_type = api_type
+        self.mode = api_type
 
     def end_user_session(self, user_id):
         # user = self.current_users.get(user_id)
         # user.state.reset()
-        self.current_users.pop(user_id)
+        # print("end user session", self.current_users)
+        if user_id in self.current_users:
+            user = self.current_users.get(user_id)
+            user.chatbot_usage_count = 0
+            self.current_users.pop(user_id)
 
-    def utterance(self, user_id, message: dict) -> list:
-
-        # obtain a user object that represents the current user
-        if user_id not in self.current_users:
-            self.current_users[user_id] = User(user_id)
-        user = self.current_users[user_id]
-
-        # parsing the incoming message
-        input_text = message.get('text')
-
-        # start of the conversation
-        print('current state: ', user.state.current_state)
-
-        responses = []
-
-        if user.state.current_state == State.INTRO:
-            responses = [
-                template_manager.get_sentence(
-                    dialogue_type=template_manager.DialogueType.UTTERANCES,
-                    state=user.state.current_state
-                ),
-                template_manager.get_sentence(
-                    dialogue_type=template_manager.DialogueType.UTTERANCES,
-                    state=user.state.next()
-                )
-            ]
-
-            user.movie_candidates = titles
-
-        # side information collection
-        elif user.state.current_state in [State.GENRE,
-                                          State.ACTOR,
-                                          State.DIRECTOR,
-                                          State.MPAA]:
-            query, intent, entities = luis.query(input_text)
-
-            answered = luis.parse_entities(
-                current_state=user.state.current_state,
-                luis_intent=intent,
-                luis_entities=entities,
-                user_session=user.session_data
-            )
-
-            print('user_session_data', user.session_data)
-
-            if not answered:
-                responses = [template_manager.get_sentence(
-                    dialogue_type=template_manager.DialogueType.MESSAGES,
-                    options='do_not_understand'
-                )]
-            else:
-                user.movie_candidates = filterMovies.filter_candidates(
-                    state=user.state.current_state.value,
-                    user_cache=user.cached_results,
-                    user_tconst=user.movie_candidates
-                )[0]
-                print('movie candidates:\n', len(user.movie_candidates))
-
-                # move to the next state
-                # if at the last info collection state, shift to thinking
-                # TODO: Migrate thinking from a state to a message
-                user.state.next()
-                responses = [
-                    template_manager.get_sentence(state=user.state.current_state)
-                ]
-
-        # get movie recommendation
-        print('user_session_data', user.session_data)
-
-        # output recommendation
-        if user.state.current_state is State.TELL:  # Actually telling the movie
-
-            user.movie_with_ratings = tellCtrl.sort_by_rating(user.movie_candidates)
-            movie, response = tellCtrl.to_text(user.movie_with_ratings)
-            responses += response
-            user.session_data.new_recommendation(movie=movie)
-
-            user.state.to_state(State.HAS_WATCHED)
-            responses += [template_manager.get_sentence(state=user.state.current_state)]
-
-        elif user.state.current_state in [State.HAS_WATCHED,
-                                          State.HAS_WATCHED_RESPONSE]:  # ask if user has seen movie
-            _, intent, _ = luis.query(input_text)
-            answer = luis.parse_yes_no(luis_intent=intent)
-
-            if answer is None or luis.LuisYesNo.NO_PREF:
-                responses += [
-                    template_manager.get_sentence(
-                        dialogue_type=template_manager.DialogueType.MESSAGES,
-                        options='do_not_understand'
-                    ),
-                    template_manager.get_sentence(
-                        dialogue_type=template_manager.DialogueType.UTTERANCES,
-                        state=user.state.current_state
-                    )
-                ]
-
-            else:
-                if user.state.current_state is State.HAS_WATCHED:
-                    if answer is luis.LuisYesNo.YES:
-                        user.session_data.edit_last_recommendation(has_watched_before=True)
-                        user.state.to_state(State.HAS_WATCHED_RESPONSE)
-                        responses += [template_manager.get_sentence(
-                            dialogue_type=template_manager.DialogueType.UTTERANCES,
-                            state=user.state.current_state,
-                            options='yes'
-                        )]
-                    elif answer is luis.LuisYesNo.NO:
-                        user.session_data.edit_last_recommendation(has_watched_before=False)
-                        user.state.to_state(State.HAS_WATCHED_RESPONSE)
-                        responses += [template_manager.get_sentence(
-                            dialogue_type=template_manager.DialogueType.UTTERANCES,
-                            state=user.state.current_state,
-                            options='no'
-                        )]
-
-                elif user.state.current_state is State.HAS_WATCHED_RESPONSE:
-                    has_watched_before = user.session_data.recommendations[-1]['has_watched_before']
-                    if (has_watched_before and answer is luis.LuisYesNo.NO) or \
-                            (not has_watched_before and answer is luis.LuisYesNo.YES):
-                        user.session_data.edit_last_recommendation(is_satisfied=True)
-                        responses = [template_manager.get_sentence(
-                            dialogue_type=template_manager.DialogueType.UTTERANCES,
-                            state=State.BYE,
-                            options=self.api_type
-                        )]
-                        user.state.to_state(State.BYE)
-
-                    else:
-                        user.session_data.edit_last_recommendation(is_satisfied=False)
-                        user.state.to_state(State.TELL)
-                        user.movie_with_ratings.pop(0)
-                        if user.movie_with_ratings:
-                            responses = tellCtrl.to_text(user.movie_with_ratings)
-                            user.state.to_State(State.HAS_WATCHED)
-                            responses += [template_manager.get_sentence(
-                                dialogue_type=template_manager.DialogueType.UTTERANCES,
-                                state=user.state.current_state
-                            )]
-                        else:
-                            responses = [
-                                template_manager.get_sentence(
-                                    dialogue_type=template_manager.DialogueType.MESSAGES,
-                                    options='no_recommendation'
-                                ),
-                                template_manager.get_sentence(
-                                    dialogue_type=template_manager.DialogueType.UTTERANCES,
-                                    state=State.BYE,
-                                    options=self.api_type
-                                )
-                            ]
-                            user.state.to_state(State.BYE)
-
-        if user.state.current_state is State.BYE:
-            self.end_user_session(user_id)
-
-        print('RESPONSES:\n', responses)
-        return responses
+    # def utterance(self, user_id: str, message: dict) -> list:
+    #
+    #     # obtain a user object that represents the current user
+    #     if user_id not in self.current_users:
+    #         self.current_users[user_id] = User(user_id)
+    #     user = self.current_users[user_id]
+    #
+    #     # print("Current users", self.current_users)
+    #
+    #     # parsing the incoming message
+    #     input_text = message.get('text')
+    #     if input_text is None or '':
+    #         return ['']
+    #
+    #     # start of the conversation
+    #     print('current state: ', user.state.current_state)
+    #
+    #     responses = []
+    #
+    #     print('server_mode: ', server_mode)
+    #
+    #     if user.state.current_state == State.INTRO:
+    #         if user.chatbot_usage_count > 0:
+    #             responses = [
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.current_state
+    #                 ),
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.next()
+    #                 )
+    #             ] if server_mode != 'cobot' else [
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.next()
+    #                 )
+    #             ]
+    #         else:
+    #             responses = [
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     usage_count=1,
+    #                     state=user.state.current_state
+    #                 )
+    #             ]
+    #             user.state.next()
+    #         print(responses)
+    #
+    #         user.movie_candidates = titles
+    #
+    #     # side information collection
+    #     elif user.state.current_state in [State.GENRE,
+    #                                       State.ACTOR,
+    #                                       State.DIRECTOR,
+    #                                       State.MPAA]:
+    #         query, intent, entities = luis.query(input_text)
+    #
+    #         answered = luis.parse_entities(
+    #             current_state=user.state.current_state,
+    #             luis_intent=intent,
+    #             luis_entities=entities,
+    #             user_session=user.session_data
+    #         )
+    #         print("answered", answered)
+    #         print('user_session_data', user.session_data.movie_preferences)
+    #
+    #         if not answered:
+    #             responses = [template_manager.get_sentence(
+    #                 dialogue_type=template_manager.DialogueType.MESSAGES,
+    #                 options='do_not_understand'
+    #             )]
+    #         else:
+    #             movie_candidates = movie_manager.filter_candidates(
+    #                 state=user.state.current_state.value,
+    #                 user_session_data=user.session_data,
+    #                 movie_candidates=user.movie_candidates
+    #             )
+    #             if movie_candidates is not None:
+    #                 print("setting movie candidates", len(movie_candidates))
+    #                 user.movie_candidates = movie_candidates
+    #
+    #             print('movie candidates:\n', len(user.movie_candidates))
+    #
+    #             # move to the next state
+    #             # if at the last info collection state, shift to thinking
+    #             # TODO: Migrate thinking from a state to a message
+    #             user.state.next()
+    #             responses = [
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.current_state
+    #                 )
+    #             ]
+    #
+    #     if user.state.current_state is State.THINKING:
+    #         user.state.next()
+    #
+    #     # get movie recommendation
+    #     print('user_session_data', user.session_data)
+    #
+    #     # output recommendation
+    #     if user.state.current_state is State.TELL:  # Actually telling the movie
+    #
+    #         user.movie_with_ratings = tellCtrl.sort_by_rating(user.movie_candidates)
+    #         movie, response = tellCtrl.to_text(user.movie_with_ratings)
+    #         responses = response
+    #         user.session_data.new_recommendation(movie=movie)
+    #
+    #         user.state.to_state(State.HAS_WATCHED if self.mode != 'cobot' else State.IS_SATISFIED)
+    #         responses += [template_manager.get_sentence(
+    #             dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #             state=user.state.current_state
+    #         )]
+    #
+    #     elif user.state.current_state in [State.HAS_WATCHED,
+    #                                       State.HAS_WATCHED_RESPONSE]:  # ask if user has seen movie
+    #         _, intent, _ = luis.query(input_text)
+    #         answer = luis.parse_yes_no(luis_intent=intent)
+    #         print("luis yes no answer", answer)
+    #
+    #         if answer is None or answer is luis.LuisYesNo.NO_PREF:
+    #             # print("dshfoihsdfiosdh")
+    #             responses += [
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.MESSAGES,
+    #                     options='do_not_understand'
+    #                 ),
+    #                 template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.current_state
+    #                 )
+    #             ]
+    #
+    #         else:
+    #             if user.state.current_state is State.HAS_WATCHED:
+    #                 if answer is luis.LuisYesNo.YES:
+    #                     user.session_data.edit_last_recommendation(has_watched_before=True)
+    #                     user.state.to_state(State.HAS_WATCHED_RESPONSE)
+    #                     responses += [template_manager.get_sentence(
+    #                         dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                         state=user.state.current_state,
+    #                         options='yes'
+    #                     )]
+    #                 elif answer is luis.LuisYesNo.NO:
+    #                     user.session_data.edit_last_recommendation(has_watched_before=False)
+    #                     user.state.to_state(State.HAS_WATCHED_RESPONSE)
+    #                     responses += [template_manager.get_sentence(
+    #                         dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                         state=user.state.current_state,
+    #                         options='no'
+    #                     )]
+    #
+    #             elif user.state.current_state is State.HAS_WATCHED_RESPONSE:
+    #                 has_watched_before = user.session_data.recommendations[-1]['has_watched_before']
+    #                 if (has_watched_before and answer is luis.LuisYesNo.NO) or \
+    #                         (not has_watched_before and answer is luis.LuisYesNo.YES):
+    #                     user.session_data.edit_last_recommendation(is_satisfied=True)
+    #                     responses = [template_manager.get_sentence(
+    #                         dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                         state=State.BYE,
+    #                         options=self.mode
+    #                     )]
+    #                     user.state.to_state(State.BYE)
+    #
+    #                 else:
+    #                     user.session_data.edit_last_recommendation(is_satisfied=False)
+    #                     user.state.to_state(State.TELL)
+    #                     user.movie_with_ratings.pop(0)
+    #                     if user.movie_with_ratings:
+    #                         responses = tellCtrl.to_text(user.movie_with_ratings)
+    #                         user.state.to_State(State.HAS_WATCHED)
+    #                         responses += [template_manager.get_sentence(
+    #                             dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                             state=user.state.current_state
+    #                         )]
+    #                     else:
+    #                         responses = [
+    #                             template_manager.get_sentence(
+    #                                 dialogue_type=template_manager.DialogueType.MESSAGES,
+    #                                 options='no_recommendation'
+    #                             ),
+    #                             template_manager.get_sentence(
+    #                                 dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                                 state=State.BYE,
+    #                                 options=self.mode
+    #                             )
+    #                         ]
+    #                         user.state.to_state(State.BYE)
+    #
+    #     elif user.state.current_state is State.IS_SATISFIED:
+    #         _, intent, _ = luis.query(input_text)
+    #         answer = luis.parse_yes_no(luis_intent=intent)
+    #
+    #         if answer is luis.LuisYesNo.YES:
+    #             user.session_data.edit_last_recommendation(is_satisfied=True)
+    #             user.state.to_state(State.BYE)
+    #             print("Is satisfied yes", user.state.current_state)
+    #             responses += [template_manager.get_sentence(
+    #                 dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                 state=State.BYE,
+    #                 options=self.mode
+    #             )]
+    #         elif answer is luis.LuisYesNo.NO:
+    #             user.session_data.edit_last_recommendation(is_satisfied=False)
+    #             user.state.to_state(State.TELL)
+    #             user.movie_with_ratings.pop(0)
+    #             if user.movie_with_ratings:
+    #                 responses = tellCtrl.to_text(user.movie_with_ratings)
+    #                 user.state.to_State(State.IS_SATISFIED)
+    #                 responses += [template_manager.get_sentence(
+    #                     dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                     state=user.state.current_state
+    #                 )]
+    #             else:
+    #                 responses = [
+    #                     template_manager.get_sentence(
+    #                         dialogue_type=template_manager.DialogueType.MESSAGES,
+    #                         options='no_recommendation'
+    #                     ),
+    #                     template_manager.get_sentence(
+    #                         dialogue_type=template_manager.DialogueType.UTTERANCES,
+    #                         state=State.BYE,
+    #                         options=self.mode
+    #                     )
+    #                 ]
+    #                 user.state.to_state(State.BYE)
+    #
+    #     if user.state.current_state is State.BYE:
+    #         self.end_user_session(user_id)
+    #         # user.chatbot_usage_count += 1
+    #
+    #     print('RESPONSES:\n', responses)
+    #     return responses
 
     def get_movies(self, user_id):
         pass
@@ -369,26 +442,7 @@ class DialogueManager:
 #         return '', userid, passiveResp[userid].qsize(), None
 
 
-def init_resources():
-    global titles
-    titles = []
 
-    # Load question library
-    try:
-        template_manager.init_resources()
-        luis.init_resource()
-    except Exception as e:
-        raise e
-
-    # Init list of candidate movies - (relatively new 9-20-17)
-    sqlstring = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
-    cur.execute(sqlstring)
-    rows = cur.fetchall()
-    for mov in rows:
-        titles.append(mov[0])
-
-    print("[OK] Initialization of resources.")
-    return
 
 
 # # def listen(userid):

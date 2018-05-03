@@ -7,66 +7,38 @@ import yaml
 from enum import Enum
 from typing import Optional
 
-# xmlpath = "resource/template/template.xml"
 ymlpath = 'resource/template/template.yml'
 
-
-class DialogueType(Enum):
-    MESSAGES = 'messages'
-    UTTERANCES = 'utterances'
-
-
-class State(Enum):
-    INTRO = 'intro'
-    MOVIE = 'movies'  # not in use
-    GENRE = 'genre'
-    ACTOR = 'actor'
-    DIRECTOR = 'director'
-    MPAA = 'mpaa'
-    RATING = 'rating'  # not in use
-    THINKING = 'thinking'
-    HAS_WATCHED = 'has_watched'
-    HAS_WATCHED_RESPONSE = 'has_watched_response'
-    BYE = 'bye'
+yml: dict = None
 
 
 def init_resources():
     global yml
     try:
-        yml = yaml.load(ymlpath)
+        f = open(ymlpath, 'r')
+        yml = yaml.load(f)
     except yaml.YAMLError as e:
         raise e
 
 
-def get_sentence(dialogue_type: DialogueType, state: State=None, options: str=None) -> Optional[str]:
-    """
-    Get sentence from the sentence yml data structure.
-    :param dialogue_type: Choose the specific dialogue type. See the class and the yml
-    :param state: the state for utterances dialogue_type
-    :param options: extra options
-    :return: str of utterance
-    """
-    if dialogue_type.value not in yml:
-        return None
-    utterances = yml.get(dialogue_type.value)
+def get_sentence(dialogue_type: str,
+                 state: str=None,
+                 options: str=None,
+                 returning_count: int=0,
+                 return_all=False):
 
-    if dialogue_type is DialogueType.UTTERANCES:
-        if state is State.HAS_WATCHED_RESPONSE:
-            question_group = utterances.get(state.value, {}).get(options)
-        else:
-            question_group = utterances.get(state.value)
+    utterance = yml[dialogue_type]
 
-        if question_group is None:
-            return None
+    if state is not None:
+        utterance = utterance[state]
 
-        return random.choice(question_group)
+    if options is not None:
+        utterance = utterance[options]
 
-    elif dialogue_type is DialogueType.MESSAGES:
-        question_group = utterances.get(options)
-    else:
-        return None
+    if type(utterance) is dict:
+        utterance = utterance[returning_count]
 
-    return random.choice(question_group)
+    return random.choice(utterance) if not return_all else utterance
 
 
 

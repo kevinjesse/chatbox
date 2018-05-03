@@ -121,6 +121,7 @@ def parse_entities(current_state: State, luis_intent, luis_entities, user_sessio
 
 def parse_yes_no(luis_intent):
     try:
+        print("parse yes no", luis_intent.get('intent'))
         return LuisYesNo(luis_intent.get('intent'))
     except ValueError:
         return None

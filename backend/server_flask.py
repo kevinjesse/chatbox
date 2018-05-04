@@ -3,15 +3,15 @@ import json
 from flask import Flask, request, jsonify
 
 import dialogue_manager
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s %(module)s %(name)s.%(funcName)s +%(lineno)s: %(levelname)-8s [%(process)d] %(message)s',
-)
+#
+# logging.basicConfig(
+#     level=logging.DEBUG,
+#     format='%(asctime)s %(module)s %(name)s.%(funcName)s +%(lineno)s: %(levelname)-8s [%(process)d] %(message)s',
+# )
 
 app = Flask(__name__)
 
-dm = dialogue_manager.DialogueManager(api_type='mturk')
+dm = dialogue_manager.DialogueManager()
 
 
 @app.route('/chatbox-rewrite', methods=['GET', 'POST'])

@@ -41,9 +41,9 @@ utterances:
   has_watched:
     - Have you watched this movie before?
   has_watched_response:
-    yes:
+    'yes':
       - Would you want another recommendation then?
-    no:
+    'no':
       - Do you like this recommendation?
   is_satisfied:
     - Do you like this movie?

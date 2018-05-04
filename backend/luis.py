@@ -15,7 +15,6 @@ import requests
 from nltk.stem.snowball import SnowballStemmer
 
 import database_connect
-from template_manager import State
 
 base_url = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/"
 api_keys = {}
@@ -43,12 +42,12 @@ def query(text: str) -> Tuple[str, str, str]:
         'subscription-key': api_keys['luis'],
         'spellCheck': True,
         'bing-spell-check-subscription-key': api_keys['bing1'],
-        'verbose': True,
+        'verbose': False,
         'timezoneOffset': 0,
         'q': text.strip()
     })
     if r.status_code != 200:
-        return None
+        return None, None, None
     json = r.json()
     return json['query'], json['topScoringIntent'], json['entities']
 
@@ -75,8 +74,7 @@ def genre_spellcheck(user_input):
         return output
 
 
-def parse_entities(current_state: State, luis_intent, luis_entities, user_session) -> bool:
-    from dialogue_manager import MoviePreferences
+def parse_entities(current_state: str, luis_intent, luis_entities, user_session) -> bool:
     # TODO: Better is_answered detection
     is_answered = True
 
@@ -97,14 +95,14 @@ def parse_entities(current_state: State, luis_intent, luis_entities, user_sessio
             input_genre = genre_spellcheck(entity['entity'])
             print('genre_output: {}'.format(input_genre))
 
-            user_session.movie_preferences[MoviePreferences.GENRE].append(input_genre)
+            user_session.movie_preferences['genre'].append(input_genre)
 
         elif entity_type == 'person':
             input_name = entity['entity'].title()
-            if current_state is State.ACTOR:
-                user_session.movie_preferences[MoviePreferences.ACTOR].append(input_name)
-            elif current_state is State.DIRECTOR:
-                user_session.movie_preferences[MoviePreferences.DIRECTOR].append(input_name)
+            if current_state is 'actor':
+                user_session.movie_preferences['actor'].append(input_name)
+            elif current_state is 'director':
+                user_session.movie_preferences['director'].append(input_name)
 
         elif entity_type == 'mpaa':
             pg13 = re.match('[Pp][Gg]\s*[-]?\s*13', entity['entity'].lower())
@@ -114,14 +112,14 @@ def parse_entities(current_state: State, luis_intent, luis_entities, user_sessio
             elif nc17:
                 input_mpaa = 'NC-17'
             input_mpaa = entity['entity'].upper()
-            user_session.movie_preferences[MoviePreferences.MPAA].append(input_mpaa)
+            user_session.movie_preferences['mpaa'].append(input_mpaa)
 
     return is_answered
 
 
 def parse_yes_no(luis_intent):
     try:
-        print("parse yes no", luis_intent.get('intent'))
+        # print("parse yes no", luis_intent.get('intent'))
         return LuisYesNo(luis_intent.get('intent'))
     except ValueError:
         return None
@@ -141,12 +139,12 @@ def _entity_type_from_luis_entity(luis_entity: str) -> Optional[str]:
     return entity_map.get(luis_entity)
 
 
-def _luis_entity_from_state(state: State) -> Optional[str]:
+def _luis_entity_from_state(state: str) -> Optional[str]:
     state_to_entity_map = {
         'genre': 'genre', 'role': 'role', 'mpaa': 'mpaa', 'title': 'title', 'rating': 'rating',
         'actor': 'person', 'director': 'person', 'year': 'year'
     }
-    return state_to_entity_map.get(state.value)
+    return state_to_entity_map.get(state)
 
 
 def map_intent(state: str, intent, entities, user_cache):

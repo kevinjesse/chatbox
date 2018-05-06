@@ -7,7 +7,7 @@ import random
 
 import candidates
 import database_connect
-import movieCtrl
+import moviedb
 import numpy as np
 
 cur = database_connect.db_connect()
@@ -34,7 +34,7 @@ def ctrl(cache_results, titles_user, scoreweights, history):
     # output = []
     # # not sure why this occasionally excepts keyerror from movieWith Score
     # if movieWithScore:
-    #     data = movieCtrl.moviebyID(movieWithScore[0][0])
+    #     data = movieCtrl.movie_by_id(movieWithScore[0][0])
     #     print data
     #     # process directors and actors into readable for output
     #     output.append("How about " + data[1] + " (" + data[
@@ -42,8 +42,8 @@ def ctrl(cache_results, titles_user, scoreweights, history):
     #     if len(data) > 10:
     #         dlist = data[12].split(' ')
     #         alist = data[14].split(' ')
-    #         actorNameList = movieCtrl.actorsbyID(alist)
-    #         directorNameList = movieCtrl.actorsbyID(dlist)
+    #         actorNameList = movieCtrl.actors_by_id(alist)
+    #         directorNameList = movieCtrl.actors_by_id(dlist)
     #         output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
     #                       ", ".join(directorNameList) + ".")
     #     output.append("This film is {} minutes long. It is {} {} movie, and is rated {}.".format(
@@ -77,7 +77,7 @@ def to_text(movieWithScore):
         tie = [movie[0] for movie in movieWithScore if movieWithScore[0][1] == movie[1]]
         movieID = random.choice(tie)
 
-        data = movieCtrl.moviebyID(movieID)
+        data = moviedb.movie_by_id(movieID)
         print(data)
         # process directors and actors into readable for output
         output.append("How about " + data[1] + " (" + data[
@@ -85,8 +85,8 @@ def to_text(movieWithScore):
         if len(data) > 10:
             dlist = data[12].split(' ')
             alist = data[14].split(' ')
-            actorNameList = movieCtrl.actorsbyID(alist)
-            directorNameList = movieCtrl.actorsbyID(dlist)
+            actorNameList = moviedb.actors_by_id(alist)
+            directorNameList = moviedb.actors_by_id(dlist)
             output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
                           ", ".join(directorNameList) + ".")
         output.append("This film is {} minutes long. It is {} {} movie, and is rated {}.".format(

@@ -8,43 +8,33 @@
 Controls the dialogue chatbox. Dialogue control is called from server.py
 """
 
-from enum import Enum
-
 import database_connect
 import luis
-import tellCtrl
-import template_manager
-import movie_manager
+import movie_manager as mm
+import template_manager as tm
+import user_manager as um
 from state_manager import StateManager, State
-from user_manager import User, SessionData
 
 cur = database_connect.db_connect()
 
 # Global Flags
 
 server_mode = 'messenger'
+hypothesis = 'online'
 
 
-def init_resources(mode: str):
-    global server_mode
+def init_resources(mode: str, mode_hypothesis: str):
+    global server_mode, hypothesis
     server_mode = mode
-
-    global titles
-    titles = []
+    hypothesis = mode_hypothesis
 
     # Load question library
     try:
-        template_manager.init_resources()
+        tm.init_resources()
+        mm.init_resources()
         luis.init_resource()
     except Exception as e:
         raise e
-
-    # Init list of candidate movies - (relatively new 9-20-17)
-    sqlstring = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
-    cur.execute(sqlstring)
-    rows = cur.fetchall()
-    for mov in rows:
-        titles.append(mov[0])
 
     print("[OK] Initialization of resources.")
     return
@@ -55,33 +45,44 @@ class DialogueManager:
     def __init__(self):
         self.current_users = {}
         self.possible_states = [
-                State(name='intro', next_state=lambda: 'genre'),
-                State(name='genre', next_state=lambda: 'actor'),
-                State(name='actor', next_state=lambda: 'director'),
-                State(name='director', next_state=lambda: 'mpaa'),
-                State(name='mpaa', next_state=lambda: 'thinking'),
-                State(name='thinking', next_state=lambda: 'tell'),
+            State(name='intro', next_state=lambda: 'genre'),
+            State(name='genre', next_state=lambda: 'actor'),
+            State(name='actor', next_state=lambda: 'director'),
+            State(name='director', next_state=lambda: 'mpaa'),
+            State(name='mpaa', next_state=lambda: 'thinking'),
+            State(name='thinking', next_state=lambda: 'tell')
+        ]
+        if hypothesis == 'online':
+            self.possible_states += [
+                State(name='tell', next_state=lambda: 'good_recommendation'),
+                State(name='good_recommendation', next_state=lambda is_good: 'has_watched' if is_good else 'thinking')
+            ]
+        elif hypothesis == 'mf':
+            self.possible_states += [
                 State(name='tell', next_state=lambda: 'has_watched'),
-                State(name='has_watched',
-                      next_state=lambda has_watched: 'has_watched_yes' if has_watched else 'has_watched_no'),
-                State(name='has_watched_yes',
-                      next_state=lambda want_new_rec: 'thinking' if want_new_rec else 'bye',
-                      template_sentence_query={
-                          'state': 'has_watched_response',
-                          'options': 'yes'
-                      }),
-                State(name='has_watched_no',
-                      next_state=lambda like_movie: 'bye' if like_movie else 'thinking',
-                      template_sentence_query={
-                          'state': 'has_watched_response',
-                          'options': 'no'
-                      }),
-                State(name='movie_pop_check',
-                      next_state=lambda has_next_movie: 'tell' if has_next_movie else 'bye'),
-                State(name='bye', next_state=lambda: None,
-                      template_sentence_query={
-                          'options': server_mode
-                      })
+            ]
+
+        self.possible_states += [
+            State(name='has_watched',
+                  next_state=lambda has_watched: 'has_watched_yes' if has_watched else 'has_watched_no'),
+            State(name='has_watched_yes',
+                  next_state=lambda want_new_rec: 'thinking' if want_new_rec else 'bye',
+                  template_sentence_query={
+                      'state': 'has_watched_response',
+                      'options': 'yes'
+                  }),
+            State(name='has_watched_no',
+                  next_state=lambda like_movie: 'bye' if like_movie else 'thinking',
+                  template_sentence_query={
+                      'state': 'has_watched_response',
+                      'options': 'no'
+                  }),
+            State(name='movie_pop_check',
+                  next_state=lambda has_next_movie: 'tell' if has_next_movie else 'bye'),
+            State(name='bye', next_state=lambda: None,
+                  template_sentence_query={
+                      'options': server_mode
+                  })
         ]
 
     def end_user_session(self, user_id):
@@ -104,8 +105,10 @@ class DialogueManager:
 
         # obtain a user object that represents the current user
         if user_id not in self.current_users:
-            self.current_users[user_id] = User(user_id, StateManager(self.possible_states))
-        user: User = self.current_users[user_id]
+            self.current_users[user_id] = um.User(user_id,
+                                                  state_manager=StateManager(self.possible_states),
+                                                  mode_hypothesis=hypothesis)
+        user: um.User = self.current_users[user_id]
 
         print("current state:", user.states.current_state.name)
 
@@ -115,7 +118,7 @@ class DialogueManager:
             # print(user.states.current_state.template_sentence_query)
             responses = [user.states.current_state.utterance(),
                          user.states.next_state().utterance()]  # genre
-            user.session_data.movie_candidates = titles
+            print('movie candidates:\n', len(user.current_session.movie_manager.movie_candidates))
 
         elif user.states.current_state.name in ['genre', 'actor', 'director', 'mpaa']:
             query, intent, entities = luis.query(input_text)
@@ -124,26 +127,24 @@ class DialogueManager:
                 current_state=user.states.current_state.name,
                 luis_intent=intent,
                 luis_entities=entities,
-                user_session=user.session_data
+                user_session=user.current_session
             )
             print("answered", answered)
-            print('user_session_data', user.session_data.movie_preferences)
+            print('user_session_data', user.current_session.movie_preferences)
 
             if not answered:
-                responses = [template_manager.get_sentence(
+                responses = [tm.get_sentence(
                     dialogue_type='messages', options='do_not_understand'
                 )]
             else:
-                movie_candidates = movie_manager.filter_candidates(
-                    state=user.states.current_state.name,
-                    user_session_data=user.session_data,
-                    movie_candidates=user.session_data.movie_candidates
-                )
-                if movie_candidates is not None:
-                    print("setting movie candidates", len(movie_candidates))
-                    user.movie_candidates = movie_candidates
+                if hypothesis == 'cf':
+                    user.current_session.movie_manager.filter_candidates(
+                        state=user.states.current_state.name,
+                    )
+                    if user.current_session.movie_manager.movie_candidates:
+                        print("setting movie candidates", len(user.current_session.movie_manager.movie_candidates))
 
-                print('movie candidates:\n', len(user.movie_candidates))
+                    print('movie candidates:\n', len(user.current_session.movie_manager.movie_candidates))
 
                 user.states.next_state()
                 responses = user.states.current_state.utterance()
@@ -153,72 +154,82 @@ class DialogueManager:
             user.states.next_state()
 
         if user.states.current_state.name == 'tell':
-            user.movies_with_ratings = tellCtrl.sort_by_rating(user.movie_candidates)
-            movie, response = tellCtrl.to_text(user.movies_with_ratings)
-
-            responses = response
-            user.session_data.new_recommendation(movie=movie)
+            if hypothesis == 'cf':
+                movie, response = user.current_session.movie_manager.utterance()
+                responses = response
+                user.current_session.new_recommendation(movie=movie)
+            elif hypothesis == 'mf':
+                user.current_session.movie_manager.matrix_recommend()
 
             user.states.next_state()
             responses += [user.states.current_state.utterance()]
 
-        elif user.states.current_state.name in ['has_watched', 'has_watched_yes', 'has_watched_no']:
+        elif user.states.current_state.name in ['good_recommendation',
+                                                'has_watched',
+                                                'has_watched_yes',
+                                                'has_watched_no']:
             _, intent, _ = luis.query(input_text)
             answer = luis.parse_yes_no(luis_intent=intent)
             print("luis yes no answer", answer)
 
             if answer is None or answer is luis.LuisYesNo.NO_PREF:
-                # print("dshfoihsdfiosdh")
-                responses = [template_manager.get_sentence(dialogue_type='messages',
-                                                           options='do_not_understand'),
+                responses = [tm.get_sentence(dialogue_type='messages',
+                                             options='do_not_understand'),
                              user.states.current_state.utterance()]
 
             else:
-                if user.states.current_state.name == 'has_watched':
+                if user.states.current_state.name == 'good_recommendation':
                     if answer is luis.LuisYesNo.YES:
-                        user.session_data.edit_last_recommendation(has_watched_before=True)
+                        user.current_session.edit_last_recommendation(good_recommendation=True)
+                        # TODO: get new movie
+                        user.states.next_state(is_good=True)
+                        responses = user.states.current_state.utterance()
+                    elif answer is luis.LuisYesNo.NO:
+                        user.current_session.edit_last_recommendation(good_recommendation=False)
+                        # TODO: get new movie
+                        user.states.next_state(is_good=False)
+                        responses = user.states.current_state.utterance()
+                elif user.states.current_state.name == 'has_watched':
+                    if answer is luis.LuisYesNo.YES:
+                        user.current_session.edit_last_recommendation(has_watched_before=True)
                         user.states.next_state(has_watched=True)
                         responses = user.states.current_state.utterance()
                     elif answer is luis.LuisYesNo.NO:
-                        user.session_data.edit_last_recommendation(has_watched_before=False)
+                        user.current_session.edit_last_recommendation(has_watched_before=False)
                         user.states.next_state(has_watched=False)
                         responses = user.states.current_state.utterance()
                 elif user.states.current_state.name == 'has_watched_yes':
                     if answer is luis.LuisYesNo.YES:
-                        user.session_data.edit_last_recommendation(is_satisfied=False)
+                        user.current_session.edit_last_recommendation(is_satisfied=False)
                         user.states.next_state(want_new_rec=True)
                         # responses = user.states.current_state.utterance()
                     elif answer is luis.LuisYesNo.NO:
-                        user.session_data.edit_last_recommendation(is_satisfied=True)
+                        user.current_session.edit_last_recommendation(is_satisfied=True)
                         user.states.next_state(want_new_rec=False)
                         responses = user.states.current_state.utterance()
                 elif user.states.current_state.name == 'has_watched_no':
                     if answer is luis.LuisYesNo.YES:
-                        user.session_data.edit_last_recommendation(is_satisfied=True)
+                        user.current_session.edit_last_recommendation(is_satisfied=True)
                         user.states.next_state(like_movie=True)
                         responses = user.states.current_state.utterance()
                     elif answer is luis.LuisYesNo.NO:
-                        user.session_data.edit_last_recommendation(is_satisfied=False)
+                        user.current_session.edit_last_recommendation(is_satisfied=False)
                         user.states.next_state(like_movie=False)
                         # responses = user.states.current_state.utterance()
 
         if user.states.current_state.name == 'thinking':
             if user.states.current_state.previous_state in ['has_watched_yes', 'has_watched_no']:
-                user.movies_with_ratings.pop(0)
-                if user.movies_with_ratings:
+                user.current_session.movie_manager.movies_with_ratings.pop(0)
+                if user.current_session.movie_manager.movies_with_ratings:
                     user.states.next_state()
                 else:
-                    responses += [template_manager.get_sentence(dialogue_type='messages', options='no_recommendation'),
+                    responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
                                   user.states.to_state('bye').utterance()]
 
         if user.states.current_state == 'bye':
             self.end_user_session(user_id)
 
         return [responses] if type(responses) is str else responses
-
-
-
-
 
     # def utterance(self, user_id: str, message: dict) -> list:
     #
@@ -458,7 +469,6 @@ class DialogueManager:
     def get_movies(self, user_id):
         pass
 
-
 # # dialogueCtrl() controls dialogue flow with socket
 # def dialogueCtrl(input_json):
 #     """
@@ -550,9 +560,6 @@ class DialogueManager:
 #     except ValueError as e:
 #         print("dialogueCtrl: {}".format(e))
 #         return '', userid, passiveResp[userid].qsize(), None
-
-
-
 
 
 # # def listen(userid):

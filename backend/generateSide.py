@@ -3,7 +3,7 @@ import json
 import pickle
 
 import database_connect
-from movieCtrl import actorsbyID
+from moviedb import actors_by_id
 from scipy.io import mmread
 from scipy.sparse import coo_matrix
 
@@ -68,8 +68,8 @@ def fillSideDict(sparse, sideDict):
             cur.execute(sqlstring)
             row = cur.fetchone()
             movieSideDict[i]['genre'] = row[4].split(" ")
-            movieSideDict[i]['actor'] = actorsbyID(row[11].split(" "))
-            movieSideDict[i]['director'] = actorsbyID(row[13].split(" "))
+            movieSideDict[i]['actor'] = actors_by_id(row[11].split(" "))
+            movieSideDict[i]['director'] = actors_by_id(row[13].split(" "))
             movieSideDict[i]['mpaa'] = row[6]
 
 
@@ -121,8 +121,8 @@ def fillFullSideMovieDict():
             cur.execute(sqlstring)
             row = cur.fetchone()
             movieSideDict[i]['genre'] = row[4].split(" ")
-            movieSideDict[i]['actor'] = actorsbyID(row[11].split(" "))
-            movieSideDict[i]['director'] = actorsbyID(row[13].split(" "))
+            movieSideDict[i]['actor'] = actors_by_id(row[11].split(" "))
+            movieSideDict[i]['director'] = actors_by_id(row[13].split(" "))
             movieSideDict[i]['mpaa'] = [row[6]]
             #print movieSideDict[i]
 

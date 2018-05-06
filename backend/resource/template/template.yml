@@ -37,7 +37,9 @@ utterances:
   tell:
     - "How about {movie_name} ({movie_year})?"
     - "{movie_name} stars {actors} and is directed by {directors}."
-    - "The film is {movie_length} long. It is a {genre} movie, and is rated {MPAA}."
+    - "The film is {movie_length} long. It is {genre} movie, and is rated {mpaa}."
+  good_recommendation:
+    - Is this a good recommendation?
   has_watched:
     - Have you watched this movie before?
   has_watched_response:

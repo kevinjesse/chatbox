@@ -9,167 +9,197 @@ Filter movies reduces the available movies based on the dialogue selections
 import random
 
 import database_connect
-import movieCtrl
+import moviedb
+import matrix_fact
 import user_manager as um
 
+from typing import TYPE_CHECKING, Dict, List, Any
+
 cur = database_connect.db_connect()
+
+titles = []
+
+
+def init_resources():
+    global titles
+    try:
+        # Init list of candidate movies - (relatively new 9-20-17)
+        sql_string = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
+        cur.execute(sql_string)
+        rows = cur.fetchall()
+        for mov in rows:
+            titles.append(mov[0])
+    except Exception as e:
+        raise e
 
 
 class MovieManager:
 
-    def __init__(self):
-        movie_candidates = []
+    def __init__(self, session_data: um.SessionData):
+        self.session = session_data
+        self.movie_candidates = titles
+        self.movies_with_ratings = []
 
+    def filter_candidates(self, state: str) -> bool:
 
-def filter_candidates(state: str, user_session_data: um.SessionData, movie_candidates: list):
-
-    if state == 'genre' and len(user_session_data.movie_preferences['genre']) > 0:
-        sql_string = "SELECT tconst FROM title WHERE {}".format(
-            " AND ".join(
-                ["genres LIKE '%{genre}%'".format(genre=i)
-                    for i in user_session_data.movie_preferences['genre']]
-            )
-        )
-        cur.execute(sql_string)
-        rows = cur.fetchall()
-        movies = [tconst[0] for tconst in rows]
-
-    elif state == 'actor' and len(user_session_data.movie_preferences['actor']) > 0:
-        sql_string = (
-            "SELECT nconst FROM name WHERE {} ".format(
-                " OR ".join(
-                    ["primaryname = '{actor}'".format(actor=i)
-                     for i in user_session_data.movie_preferences['actor']]
-                )
-            ) + "ORDER BY nconst ASC LIMIT {}".format(
-                str(len(user_session_data.movie_preferences['actor']))
-            )
-        )
-        cur.execute(sql_string)
-        rows = cur.fetchall()
-
-        if not rows:
-            return None
-
-        names = [r[0] for r in rows]
-
-        sql_string = (
-            "SELECT tconst FROM stars WHERE {} ".format(
+        if state == 'genre' and len(self.session.movie_preferences['genre']) > 0:
+            sql_string = "SELECT tconst FROM title WHERE {}".format(
                 " AND ".join(
-                    ["principalcast LIKE '%{actor}%'".format(actor=i)
-                     for i in names[:10]]
+                    ["genres LIKE '%{genre}%'".format(genre=i)
+                     for i in self.session.movie_preferences['genre']]
                 )
             )
-        )
+            cur.execute(sql_string)
+            rows = cur.fetchall()
+            movies = [tconst[0] for tconst in rows]
 
-        cur.execute(sql_string)
-        rows = cur.fetchall()
-        movies = [tconst[0] for tconst in rows]
+        elif state == 'actor' and len(self.session.movie_preferences['actor']) > 0:
+            sql_string = (
+                    "SELECT nconst FROM name WHERE {} ".format(
+                        " OR ".join(
+                            ["primaryname = '{actor}'".format(actor=i)
+                             for i in self.session.movie_preferences['actor']]
+                        )
+                    ) + "ORDER BY nconst ASC LIMIT {}".format(
+                str(len(self.session.movie_preferences['actor']))
+            )
+            )
+            cur.execute(sql_string)
+            rows = cur.fetchall()
 
-    elif state == 'director' and len(user_session_data.movie_preferences['director']) > 0:
+            if not rows:
+                return False
+
+            names = [r[0] for r in rows]
+
+            sql_string = (
+                "SELECT tconst FROM stars WHERE {} ".format(
+                    " AND ".join(
+                        ["principalcast LIKE '%{actor}%'".format(actor=i)
+                         for i in names[:10]]
+                    )
+                )
+            )
+
+            cur.execute(sql_string)
+            rows = cur.fetchall()
+            movies = [tconst[0] for tconst in rows]
+
+        elif state == 'director' and len(self.session.movie_preferences['director']) > 0:
+            sql_string = (
+                    "SELECT nconst FROM name WHERE {} ".format(
+                        " OR ".join(
+                            ["primaryname = '{director}'".format(director=i)
+                             for i in self.session.movie_preferences['director']]
+                        )
+                    ) + "ORDER BY nconst ASC LIMIT {}".format(
+                str(len(self.session.movie_preferences['director']))
+            )
+            )
+            cur.execute(sql_string)
+            rows = cur.fetchall()
+
+            if not rows:
+                return False
+
+            names = [r[0] for r in rows]
+
+            sql_string = (
+                "SELECT tconst FROM crew WHERE {} ".format(
+                    " AND ".join(
+                        ["directors LIKE '%{director}%'".format(director=i)
+                         for i in names[:10]]
+                    )
+                )
+            )
+
+            cur.execute(sql_string)
+            rows = cur.fetchall()
+            movies = [tconst[0] for tconst in rows]
+
+        elif state == 'mpaa' and len(self.session.movie_preferences['mpaa']) > 0:
+            sql_string = (
+                "SELECT tconst FROM title WHERE {} ".format(
+                    " AND ".join(
+                        ["mpaa LIKE '%{mpaa}%'".format(mpaa=i)
+                         for i in self.session.movie_preferences['mpaa']]
+                    )
+                )
+            )
+            cur.execute(sql_string)
+            rows = cur.fetchall()
+
+            movies = [tconst[0] for tconst in rows]
+
+        else:
+            return False
+
+        if len(movies) <= 0:
+            return False
+
+        candidates = list(set(self.movie_candidates).intersection(movies))
+        if len(candidates) != 0:  # the new list has nothing
+            # print("len(candidates) != 0")
+            self.movie_candidates = candidates
+            return True
+        else:
+            # print("len(candidatelist) == 0 using backup")
+            return False
+
+    def matrix_recommend(self):
+        recommendation = matrix_fact.recommend(self.session.movie_preferences)
+        print("!!! recommendation: \n", recommendation)
+
+    def sort_candidates(self):
         sql_string = (
-            "SELECT nconst FROM name WHERE {} ".format(
-                " OR ".join(
-                    ["primaryname = '{director}'".format(director=i)
-                     for i in user_session_data.movie_preferences['director']]
-                )
-            ) + "ORDER BY nconst ASC LIMIT {}".format(
-                str(len(user_session_data.movie_preferences['director']))
-            )
-        )
-        cur.execute(sql_string)
-        rows = cur.fetchall()
-
-        if not rows:
-            return None
-
-        names = [r[0] for r in rows]
-
-        sql_string = (
-            "SELECT tconst FROM crew WHERE {} ".format(
-                " AND ".join(
-                    ["directors LIKE '%{director}%'".format(director=i)
-                     for i in names[:10]]
-                )
-            )
-        )
+                "SELECT averagerating FROM ratings join (VALUES {alis})" +
+                "AS X (tconst, ordering) ON ratings.tconst = X.tconst ORDER BY X.ordering"
+        ).format(alis=", ".join(["('{}', {})".format(str(m), str(i + 1))
+                                 for i, m in enumerate(self.movie_candidates)]))
 
         cur.execute(sql_string)
         rows = cur.fetchall()
-        movies = [tconst[0] for tconst in rows]
+        self.movies_with_ratings = sorted(zip(self.movie_candidates, rows),
+                                          key=lambda tup: tup[1],
+                                          reverse=True)
+        print("movies_with_ratings", len(self.movies_with_ratings))
+        return self.movies_with_ratings
 
-    elif state == 'mpaa' and len(user_session_data.movie_preferences['mpaa']) > 0:
-        sql_string = (
-            "SELECT tconst FROM title WHERE {} ".format(
-                " AND ".join(
-                    ["mpaa LIKE '%{mpaa}%'".format(mpaa=i)
-                     for i in user_session_data.movie_preferences['mpaa']]
-                )
-            )
-        )
-        cur.execute(sql_string)
-        rows = cur.fetchall()
+    def utterance(self):
+        movie_with_score = self.sort_candidates()
+        if movie_with_score:
+            tie = [movie[0] for movie in movie_with_score if movie_with_score[0][1] == movie[1]]
+            movie_id = random.choice(tie)
 
-        movies = [tconst[0] for tconst in rows]
+            movie = moviedb.movie_by_id(movie_id)
+            print("Movie data:", movie)
+            # process directors and actors into readable for output
+            import template_manager as tm
 
-    else:
-        return None
+            sentences: List[str] = tm.get_sentence(dialogue_type='utterances', state='tell', return_all=True)
 
-    if len(movies) <= 0:
-        return None
+            sentences[0] = sentences[0].format(movie_name=movie['primarytitle'], movie_year=movie['startyear'])
+            sentences[1] = sentences[1].format(
+                movie_name=movie['primarytitle'],
+                actors=', '.join(
+                    [i for i in (moviedb.actors_by_id(movie['principalcast'].split(' ')) or ['<no actors>'])]
+                ),
+                directors=', '.join(
+                    [i for i in (moviedb.actors_by_id(movie['directors'].split(' ')) or ['<no directors>'])]
+                ))
+            sentences[2] = sentences[2].format(
+                movie_length=movie['runtimeminutes'],
+                genre="{article} {genres}".format(
+                   article="an" if movie['genres'][0].lower() in ['a', 'e', 'i', 'o', 'u'] else "a",
+                   genres=movie['genres'].replace(' ', ',', movie['genres'].count(' ') - 1)
+                                         .replace(' ', ' and ')
+                                         .replace(',', ', ')
+                ),
+                mpaa=movie['mpaa'])
 
-    candidates = list(set(movie_candidates).intersection(movies))
-    if len(candidates) != 0:  # the new list has nothing
-        # print("len(candidates) != 0")
-        return candidates
-    else:
-        # print("len(candidatelist) == 0 using backup")
-        return None
-
-
-def sort_candidates(movie_candidates):
-    sql_string = (
-        "SELECT averagerating FROM ratings join (VALUES {alis})" +
-        "AS X (tconst, ordering) ON ratings.tconst = X.tconst ORDER BY X.ordering"
-    ).format(alis=", ".join(["('{}', {})".format(str(m), str(i+1))
-                             for i, m in enumerate(movie_candidates)]))
-
-    cur.execute(sql_string)
-    rows = cur.fetchall()
-    movies_with_ratings = sorted(zip(movie_candidates, rows), key=lambda tup: tup[1],
-                             reverse=True)
-    print("movies_with_ratings", len(movies_with_ratings))
-    return movies_with_ratings
-
-
-def movie_to_utterance(movie_with_score):
-    output = []
-    if movie_with_score:
-        tie = [movie[0] for movie in movie_with_score if movie_with_score[0][1] == movie[1]]
-        movie_id = random.choice(tie)
-
-        data = movieCtrl.moviebyID(movie_id)
-        print(data)
-        # process directors and actors into readable for output
-        output.append("How about " + data[1] + " (" + data[
-            3] + ")? ")
-        if len(data) > 10:
-            dlist = data[12].split(' ')
-            alist = data[14].split(' ')
-            actorNameList = movieCtrl.actorsbyID(alist)
-            directorNameList = movieCtrl.actorsbyID(dlist)
-            output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
-                          ", ".join(directorNameList) + ".")
-        output.append("This film is {} minutes long. It is {} {} movie, and is rated {}.".format(
-            data[8],
-            "an" if any(v in data[4][:1].lower() for v in ['a','e','i','o','u']) else "a",
-            data[4].replace(" ", ",", data[4].count(" ") - 1) \
-                .replace(" ", " and ") \
-                .replace(",", ", "),
-            data[6]
-        ))
-    return output
-
+            return movie, sentences
+        else:
+            return None, None
 
 # def filter_candidates(state: str, user_cache, user_tconst):
 #     backup_tconst = user_tconst

@@ -42,7 +42,7 @@ def parse_input(json: dict):
 
 
 def init_resources():
-    dialogue_manager.init_resources(mode='messenger')
+    dialogue_manager.init_resources(mode='messenger', mode_hypothesis='cf')
 
 
 if __name__ == '__main__':

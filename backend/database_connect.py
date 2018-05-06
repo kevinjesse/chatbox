@@ -9,9 +9,10 @@ all inserts, updates, and deletes will be enforced atomically
 """
 
 import psycopg2
+import psycopg2.extras
 
 
-def db_connect():
+def db_connect(dict_result=False):
     cur = None
     try:
         conn = psycopg2.connect(
@@ -22,7 +23,7 @@ def db_connect():
             connect_timeout=30
         )
         conn.autocommit = True  # Auto commit must be on if you want changes to be immediate for insert/update
-        cur = conn.cursor()
+        cur = conn.cursor() if not dict_result else conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         cur.itersize = 10000
     except:
         print("[ERROR] couldn't connect to the database")

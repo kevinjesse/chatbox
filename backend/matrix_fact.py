@@ -46,8 +46,8 @@ def translate_dialogue(mode, movie_preferences):
     else:
         mymode = [mode]
 
-    user_list: List[str] = []
-    mode_list: List[str] = []
+    user_list = []
+    mode_list = []
     if mode == "genre":
         sql_string = "SELECT genre FROM tmd_genres ORDER BY genre ASC"
         cur.execute(sql_string)
@@ -128,8 +128,8 @@ def compute_row(movie_preferences):
 def recommend(movie_preferences):
     global rec_list, rec_values
     rank, value = compute_row(movie_preferences)
-    rec_list = map(int, rank[0])
-    rec_values = map(int, value[0])
+    rec_list = list(map(int, rank[0]))
+    rec_values = list(map(int, value[0]))
     # Z = compute_row(movie_preferences)[0]
     # Z[:] = [int((np.int_(x))) - 1 for x in Z] #make 0 indexed
     # Z[:] = [x - 1 for x in Z]  # make 0 indexed
@@ -142,8 +142,8 @@ def online_recommend():
     rec_values, rec_list, U, V = eng.online_train(matlab.double(rec_values), matlab.double(U),
                                                   matlab.double(V), matlab.double(X), nargout=4)
 
-    rec_list = map(int, rec_list[0])
-    rec_values = map(float, rec_values[0])
+    rec_list = list(map(int, rec_list[0]))
+    rec_values = list(map(float, rec_values[0]))
     # U = map(int, reclist[0])
     # V = map(float, rec_values[0])
 
@@ -187,34 +187,36 @@ def recommendation_text(i):
             tconst = rows[0]
             break
 
-    data = moviedb.movie_by_id(tconst)
-    # process directors and actors into readable for output
-    output.append("How about " + data[1] + " (" + data[
-        3] + ")? ")
-    space = ""
-    rating = ""
-    if len(data) > 10:
-        dlist = data[12].split(' ')
-        alist = data[14].split(' ')
-        if not data[6]:
-            space = " not"
-            rating = "yet"
-        else:
-            rating = data[6]
-        actorNameList = moviedb.actors_by_id(alist)
-        directorNameList = moviedb.actors_by_id(dlist)
-        output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
-                      ", ".join(directorNameList) + ".")
-    output.append("This film is {} minutes long. It is {} {} movie, and is{} rated {}.".format(
-        data[8],
-        "an" if any(v in data[4][:1].lower() for v in ['a', 'e', 'i', 'o', 'u']) else "a",
-        data[4].replace(" ", ",", data[4].count(" ") - 1) \
-            .replace(" ", " and ") \
-            .replace(",", ", "),
-        space,
-        rating
-    ))
-    return output, i
+    return tconst, i
+
+    # data = moviedb.movie_by_id(tconst)
+    # # process directors and actors into readable for output
+    # output.append("How about " + data[1] + " (" + data[
+    #     3] + ")? ")
+    # space = ""
+    # rating = ""
+    # if len(data) > 10:
+    #     dlist = data[12].split(' ')
+    #     alist = data[14].split(' ')
+    #     if not data[6]:
+    #         space = " not"
+    #         rating = "yet"
+    #     else:
+    #         rating = data[6]
+    #     actorNameList = moviedb.actors_by_id(alist)
+    #     directorNameList = moviedb.actors_by_id(dlist)
+    #     output.append(data[1] + " stars " + ", ".join(actorNameList) + " and is directed by " + \
+    #                   ", ".join(directorNameList) + ".")
+    # output.append("This film is {} minutes long. It is {} {} movie, and is{} rated {}.".format(
+    #     data[8],
+    #     "an" if any(v in data[4][:1].lower() for v in ['a', 'e', 'i', 'o', 'u']) else "a",
+    #     data[4].replace(" ", ",", data[4].count(" ") - 1) \
+    #         .replace(" ", " and ") \
+    #         .replace(",", ", "),
+    #     space,
+    #     rating
+    # ))
+    # return output, i
 
 
 def add_user(X):

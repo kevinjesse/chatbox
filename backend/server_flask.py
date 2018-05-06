@@ -1,5 +1,6 @@
 import logging
 import json
+import argparse
 from flask import Flask, request, jsonify
 
 import dialogue_manager
@@ -8,6 +9,13 @@ import dialogue_manager
 #     level=logging.DEBUG,
 #     format='%(asctime)s %(module)s %(name)s.%(funcName)s +%(lineno)s: %(levelname)-8s [%(process)d] %(message)s',
 # )
+
+parser = argparse.ArgumentParser()
+parser.add_argument("mode")
+parser.add_argument("hypothesis")
+parser.add_argument("-p", "--port", action="store_true")
+args = parser.parse_args()
+
 
 app = Flask(__name__)
 
@@ -42,7 +50,7 @@ def parse_input(json: dict):
 
 
 def init_resources():
-    dialogue_manager.init_resources(mode='messenger', mode_hypothesis='cf')
+    dialogue_manager.init_resources(mode=args.mode, mode_hypothesis=args.hypothesis)
 
 
 if __name__ == '__main__':

@@ -43,8 +43,8 @@ class SessionData:
 
 class User:
 
-    states: sm.StateManager
-    current_session: SessionData
+    # states: sm.StateManager
+    # current_session: SessionData
 
     def __init__(self, user_id, state_manager: sm.StateManager, mode_hypothesis: str):
         self.states = state_manager

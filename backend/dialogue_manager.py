@@ -31,7 +31,7 @@ def init_resources(mode: str, mode_hypothesis: str):
     # Load question library
     try:
         tm.init_resources()
-        mm.init_resources()
+        mm.init_resources(mode_hypothesis=hypothesis)
         luis.init_resource()
     except Exception as e:
         raise e
@@ -108,7 +108,7 @@ class DialogueManager:
             self.current_users[user_id] = um.User(user_id,
                                                   state_manager=StateManager(self.possible_states),
                                                   mode_hypothesis=hypothesis)
-        user: um.User = self.current_users[user_id]
+        user = self.current_users[user_id]
 
         print("current state:", user.states.current_state.name)
 
@@ -154,12 +154,9 @@ class DialogueManager:
             user.states.next_state()
 
         if user.states.current_state.name == 'tell':
-            if hypothesis == 'cf':
-                movie, response = user.current_session.movie_manager.utterance()
-                responses = response
-                user.current_session.new_recommendation(movie=movie)
-            elif hypothesis == 'mf':
-                user.current_session.movie_manager.matrix_recommend()
+            movie, response = user.current_session.movie_manager.utterance()
+            responses = response
+            user.current_session.new_recommendation(movie=movie)
 
             user.states.next_state()
             responses += [user.states.current_state.utterance()]

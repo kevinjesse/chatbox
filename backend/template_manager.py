@@ -9,7 +9,7 @@ from typing import Optional
 
 yml_path = 'resource/template/template.yml'
 
-yml: dict = None
+yml = None
 
 
 def init_resources():

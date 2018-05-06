@@ -18,10 +18,12 @@ from typing import TYPE_CHECKING, Dict, List, Any
 cur = database_connect.db_connect()
 
 titles = []
+hypothesis = 'cf'
 
 
-def init_resources():
-    global titles
+def init_resources(mode_hypothesis: str):
+    global titles, hypothesis
+    hypothesis = mode_hypothesis
     try:
         # Init list of candidate movies - (relatively new 9-20-17)
         sql_string = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
@@ -39,6 +41,7 @@ class MovieManager:
         self.session = session_data
         self.movie_candidates = titles
         self.movies_with_ratings = []
+        self._last_rec_id = 0
 
     def filter_candidates(self, state: str) -> bool:
 
@@ -149,8 +152,12 @@ class MovieManager:
     def matrix_recommend(self):
         recommendation = matrix_fact.recommend(self.session.movie_preferences)
         print("!!! recommendation: \n", recommendation)
+        self.movies_with_ratings = recommendation
 
-    def sort_candidates(self):
+        tconst, self._last_rec_id = matrix_fact.recommendation_text(self._last_rec_id)
+        return tconst
+
+    def cf_recommend(self):  # cf_recommend
         sql_string = (
                 "SELECT averagerating FROM ratings join (VALUES {alis})" +
                 "AS X (tconst, ordering) ON ratings.tconst = X.tconst ORDER BY X.ordering"
@@ -166,17 +173,22 @@ class MovieManager:
         return self.movies_with_ratings
 
     def utterance(self):
-        movie_with_score = self.sort_candidates()
-        if movie_with_score:
+        if hypothesis == 'cf':
+            movie_with_score = self.cf_recommend()
             tie = [movie[0] for movie in movie_with_score if movie_with_score[0][1] == movie[1]]
             movie_id = random.choice(tie)
+        elif hypothesis == 'mf':
+            movie_id = self.matrix_recommend()
+        else:
+            return
+        if movie_id:
 
             movie = moviedb.movie_by_id(movie_id)
             print("Movie data:", movie)
             # process directors and actors into readable for output
             import template_manager as tm
 
-            sentences: List[str] = tm.get_sentence(dialogue_type='utterances', state='tell', return_all=True)
+            sentences = tm.get_sentence(dialogue_type='utterances', state='tell', return_all=True)
 
             sentences[0] = sentences[0].format(movie_name=movie['primarytitle'], movie_year=movie['startyear'])
             sentences[1] = sentences[1].format(

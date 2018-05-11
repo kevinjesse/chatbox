@@ -20,10 +20,18 @@ cur = database_connect.db_connect()
 # Global Flags
 
 server_mode = 'messenger'
-hypothesis = 'online'
+hypothesis = None
 
 
 def init_resources(mode: str, mode_hypothesis: str):
+    """
+    The old initResource()
+    :param mode: string that specifies if bot should run for 'messenger' or 'mturk',
+    changes some of the utterances.
+    :param mode_hypothesis: 'cf' for criteria filtering, 'mf' for matrix factorization,
+    'online' for online learning
+    :return: None
+    """
     global server_mode, hypothesis
     server_mode = mode
     hypothesis = mode_hypothesis
@@ -36,11 +44,19 @@ def init_resources(mode: str, mode_hypothesis: str):
     except Exception as e:
         raise e
 
-    print("[OK] Initialization of resources.")
+    print("[OK] Initialization of resources. (mode: {}, hypothesis: {})".format(server_mode, hypothesis))
     return
 
 
 class DialogueManager:
+    """
+    Dialogue Manager was the dialogueCtrl. Manages and keep tracks of dialogue flow. User concurrency is managed
+    by the self.current_users dict which identifies user based on their userid.
+
+    States are setup via StateManager, which dialoguManager implements what each state should do.
+    """
+
+    # TODO: use asyncio to implement threading concurrency
 
     def __init__(self):
         self.current_users = {}
@@ -57,9 +73,9 @@ class DialogueManager:
                 State(name='tell', next_state=lambda: 'good_recommendation'),
                 State(name='good_recommendation', next_state=lambda is_good: 'has_watched' if is_good else 'thinking')
             ]
-        elif hypothesis == 'mf':
+        elif hypothesis in ['mf', 'cf']:
             self.possible_states += [
-                State(name='tell', next_state=lambda: 'has_watched'),
+                State(name='tell', next_state=lambda: 'has_watched')
             ]
 
         self.possible_states += [
@@ -77,8 +93,6 @@ class DialogueManager:
                       'state': 'has_watched_response',
                       'options': 'no'
                   }),
-            State(name='movie_pop_check',
-                  next_state=lambda has_next_movie: 'tell' if has_next_movie else 'bye'),
             State(name='bye', next_state=lambda: None,
                   template_sentence_query={
                       'options': server_mode
@@ -86,6 +100,11 @@ class DialogueManager:
         ]
 
     def end_user_session(self, user_id):
+        """
+        Function to remove a user from the self.current_user. Used to reset user utterances
+        :param user_id: user_id
+        :return: None
+        """
         # user = self.current_users.get(user_id)
         # user.state.reset()
         # print("end user session", self.current_users)
@@ -95,6 +114,15 @@ class DialogueManager:
             self.current_users.pop(user_id)
 
     def utterance(self, user_id: str, message: dict) -> list:
+
+        """
+        Main function called to get the next utterance. Change here to implement equivalent of
+        run() for each state.
+        :param user_id: user id
+        :param message: the raw json that is gotten from outside. json needs to have 'text',
+        'id', 'actions'
+        :return: [utterances]
+        """
 
         # parsing the incoming message
         input_text = message.get('text')
@@ -175,53 +203,73 @@ class DialogueManager:
                              user.states.current_state.utterance()]
 
             else:
+                answer_bool = None
+                if answer is luis.LuisYesNo.YES:
+                    answer_bool = True
+                elif answer is luis.LuisYesNo.NO:
+                    answer_bool = False
+                else:
+                    exit(1)
+
                 if user.states.current_state.name == 'good_recommendation':
-                    if answer is luis.LuisYesNo.YES:
-                        user.current_session.edit_last_recommendation(good_recommendation=True)
-                        # TODO: get new movie
-                        user.states.next_state(is_good=True)
-                        responses = user.states.current_state.utterance()
-                    elif answer is luis.LuisYesNo.NO:
-                        user.current_session.edit_last_recommendation(good_recommendation=False)
-                        # TODO: get new movie
-                        user.states.next_state(is_good=False)
-                        responses = user.states.current_state.utterance()
+                    user.current_session.edit_last_recommendation(good_recommendation=answer_bool)
+                    if not answer_bool:
+                        # TODO: update with online learning
+                        pass
+                    user.states.next_state(is_good=answer_bool)
+                    responses = user.states.current_state.utterance()
+
                 elif user.states.current_state.name == 'has_watched':
-                    if answer is luis.LuisYesNo.YES:
-                        user.current_session.edit_last_recommendation(has_watched_before=True)
-                        user.states.next_state(has_watched=True)
-                        responses = user.states.current_state.utterance()
-                    elif answer is luis.LuisYesNo.NO:
-                        user.current_session.edit_last_recommendation(has_watched_before=False)
-                        user.states.next_state(has_watched=False)
-                        responses = user.states.current_state.utterance()
+                    user.current_session.edit_last_recommendation(has_watched_before=answer_bool)
+                    user.states.next_state(has_watched=answer_bool)
+                    responses = user.states.current_state.utterance()
+
                 elif user.states.current_state.name == 'has_watched_yes':
-                    if answer is luis.LuisYesNo.YES:
-                        user.current_session.edit_last_recommendation(is_satisfied=False)
-                        user.states.next_state(want_new_rec=True)
-                        # responses = user.states.current_state.utterance()
-                    elif answer is luis.LuisYesNo.NO:
-                        user.current_session.edit_last_recommendation(is_satisfied=True)
-                        user.states.next_state(want_new_rec=False)
+                    user.current_session.edit_last_recommendation(is_satisfied=not answer_bool)
+                    user.states.next_state(want_new_rec=answer_bool)
+                    if not answer_bool:
                         responses = user.states.current_state.utterance()
+
                 elif user.states.current_state.name == 'has_watched_no':
-                    if answer is luis.LuisYesNo.YES:
-                        user.current_session.edit_last_recommendation(is_satisfied=True)
-                        user.states.next_state(like_movie=True)
+                    user.current_session.edit_last_recommendation(is_satisfied=answer_bool)
+                    user.states.next_state(like_movie=answer_bool)
+                    if answer_bool:
                         responses = user.states.current_state.utterance()
-                    elif answer is luis.LuisYesNo.NO:
-                        user.current_session.edit_last_recommendation(is_satisfied=False)
-                        user.states.next_state(like_movie=False)
-                        # responses = user.states.current_state.utterance()
 
         if user.states.current_state.name == 'thinking':
-            if user.states.current_state.previous_state in ['has_watched_yes', 'has_watched_no']:
-                user.current_session.movie_manager.movies_with_ratings.pop(0)
+            if user.states.previous_state in ['has_watched_yers', 'has_watched_no']:
+                if not user.current_session.movie_manager.is_first_recommendation:
+                    user.current_session.movie_manager.next_recommendation()
                 if user.current_session.movie_manager.movies_with_ratings:
+                    # TODO: Have state auto loop back instead of posting tell here
                     user.states.next_state()
+
+                    movie, response = user.current_session.movie_manager.utterance()
+                    responses += response
+                    user.current_session.new_recommendation(movie=movie)
+
+                    user.states.next_state()
+                    # responses += [user.states.current_state.utterance()]
                 else:
                     responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
                                   user.states.to_state('bye').utterance()]
+            elif user.states.previous_state == 'good_recommendation':
+                user.current_session.movie_manager.online_dislike()
+                if user.current_session.movie_manager.online_rec_index < \
+                   len(user.current_session.movie_manager.movies_with_ratings):
+                    user.states.next_state()
+                    movie, response = user.current_session.movie_manager.utterance()
+                    responses = response
+                    user.current_session.new_recommendation(movie=movie)
+
+                    user.states.next_state()
+                    # responses += [user.states.current_state.utterance()]
+                else:
+                    responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
+                                  user.states.to_state('bye').utterance()]
+            else:
+                responses = user.states.current_state.utterance()
+                user.states.next_state()
 
         if user.states.current_state == 'bye':
             self.end_user_session(user_id)
@@ -463,8 +511,8 @@ class DialogueManager:
     #     print('RESPONSES:\n', responses)
     #     return responses
 
-    def get_movies(self, user_id):
-        pass
+    # def get_movies(self, user_id):
+    #     pass
 
 # # dialogueCtrl() controls dialogue flow with socket
 # def dialogueCtrl(input_json):

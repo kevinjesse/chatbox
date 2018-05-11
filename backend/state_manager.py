@@ -8,7 +8,6 @@ class State:
         self.name = name
         self.next_state = next_state
         self.template_sentence_query = kwargs.get('template_sentence_query', {})
-        self.previous_state = kwargs.get('previous_state')
 
     def __str__(self):
         return self.name
@@ -34,14 +33,20 @@ class StateManager:
     def __init__(self, possible_states: List[State]):
         self.possible_states = {state.name: state for state in possible_states}
         self._current_state = possible_states[0].name
+        self._previous_state = self._current_state
 
     @property
     def current_state(self) -> State:
         return self.possible_states[self._current_state]
 
+    @property
+    def previous_state(self) -> str:
+        return self._previous_state
+
     def next_state(self, **kwargs) -> State:
         next_state_str = self.current_state.next_state(**kwargs)
         if next_state_str is not None:
+            self._previous_state = self._current_state
             self._current_state = next_state_str
         return self.current_state
 

@@ -17,9 +17,8 @@ except IOError as e:
     exit()
 
 np.set_printoptions(threshold='nan')
-eng = matlab.engine.start_matlab()
-eng.cd(r'dirtyIMC_code_online')
-N = mmread("./dirtyIMC_code_online/sparseN.mm.mtx")
+eng = None
+N = None
 rec_list = []
 rec_values = []
 X = []
@@ -31,6 +30,13 @@ V = []
 # X = mmread("./dirtyIMC_code/XR.mm.mtx").todense()
 
 cur = database_connect.db_connect()
+
+
+def start_engine():
+    global eng, N
+    eng = matlab.engine.start_matlab()
+    eng.cd(r'dirtyIMC_code_online')
+    N = mmread("./dirtyIMC_code_online/sparseN.mm.mtx")
 
 
 def translate_dialogue(mode, movie_preferences):
@@ -144,7 +150,7 @@ def online_recommend():
 
     rec_list = list(map(int, rec_list[0]))
     rec_values = list(map(float, rec_values[0]))
-    # U = map(int, reclist[0])
+    # U = map(int, rec_list[0])
     # V = map(float, rec_values[0])
 
     print(rec_list[0:10])
@@ -171,13 +177,13 @@ def recommendation_text(i):
     output = []
     global rec_list
     tconst = None
-    print(i)
+    print("recommendation text", i)
     for ind in range(i, len(rec_list)):
         i = ind
         id = rec_list[ind]
-        print(id)
-        print(movielist[id])
-        sql_string = "SELECT tconst FROM title WHERE netflixid ='{}'".format(str(movielist[int(id) - 1]))
+        print("rec_list id", id)
+        print("movie_list id", movielist[id])
+        sql_string = "SELECT tconst FROM title WHERE netflixid ='{}'".format(movielist[int(id) - 1])
         print(sql_string)
         cur.execute(sql_string)
         rows = cur.fetchone()

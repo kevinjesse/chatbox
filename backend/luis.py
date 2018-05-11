@@ -3,10 +3,6 @@
 # @email kevin.r.jesse@gmail.com
 #
 
-"""
-Luis intent assigns the entities to the user cache and processes the intents
-"""
-
 import re
 import enum
 from typing import Tuple, Optional
@@ -26,8 +22,11 @@ class LuisYesNo(enum.Enum):
     NO = 'No'
 
 
-# initialize
 def init_resource():
+    """
+    Initialize luis module. Fetch api keys to Luis.
+    :return: None
+    """
     global api_keys
     try:
         cur = database_connect.db_connect()
@@ -38,6 +37,11 @@ def init_resource():
 
 
 def query(text: str) -> Tuple[str, str, str]:
+    """
+    Convenience func to query Luis
+    :param text: user utterances
+    :return:
+    """
     r = requests.get(url=base_url + api_keys['luisid'], params={
         'subscription-key': api_keys['luis'],
         'spellCheck': True,
@@ -53,6 +57,11 @@ def query(text: str) -> Tuple[str, str, str]:
 
 
 def genre_spellcheck(user_input):
+    """
+    Custom spellchecking
+    :param user_input: user input text
+    :return: corrected text
+    """
     stemmer = SnowballStemmer('english')
 
     genre_core = ['action', 'adventure', 'animation', 'biography', 'comedy', 'crime', 'documentary', 'drama',
@@ -75,6 +84,15 @@ def genre_spellcheck(user_input):
 
 
 def parse_entities(current_state: str, luis_intent, luis_entities, user_session) -> bool:
+    """
+    Used to parse json returned from Luis. Takes in user.SessionData object and modify its
+    content directly to save what's being parsed.
+    :param current_state: current dialogue state
+    :param luis_intent:
+    :param luis_entities:
+    :param user_session: user.SessionData
+    :return: bool indicating if Luis detects a valid response
+    """
     # TODO: Better is_answered detection
     is_answered = True
 
@@ -118,6 +136,11 @@ def parse_entities(current_state: str, luis_intent, luis_entities, user_session)
 
 
 def parse_yes_no(luis_intent):
+    """
+    Using Luis to detect if user is saying Yes, No, or something unintelligeable
+    :param luis_intent: luis_intent json
+    :return: Enum.LuisYesNo
+    """
     try:
         # print("parse yes no", luis_intent.get('intent'))
         return LuisYesNo(luis_intent.get('intent'))

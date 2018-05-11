@@ -25,6 +25,9 @@ def init_resources(mode_hypothesis: str):
     global titles, hypothesis
     hypothesis = mode_hypothesis
     try:
+        if hypothesis != 'cf':
+            matrix_fact.start_engine()
+
         # Init list of candidate movies - (relatively new 9-20-17)
         sql_string = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
         cur.execute(sql_string)
@@ -41,7 +44,9 @@ class MovieManager:
         self.session = session_data
         self.movie_candidates = titles
         self.movies_with_ratings = []
+        self.is_first_recommendation = True
         self._last_rec_id = 0
+        self.online_rec_index = 0
 
     def filter_candidates(self, state: str) -> bool:
 
@@ -149,12 +154,45 @@ class MovieManager:
             # print("len(candidatelist) == 0 using backup")
             return False
 
-    def matrix_recommend(self):
-        recommendation = matrix_fact.recommend(self.session.movie_preferences)
-        print("!!! recommendation: \n", recommendation)
-        self.movies_with_ratings = recommendation
+    def next_recommendation(self):
+        print("!!!\n", self.movies_with_ratings[:10])
+        # if hypothesis == 'cf':
+        self.movies_with_ratings.pop(0)
+        self.is_first_recommendation = False
 
-        tconst, self._last_rec_id = matrix_fact.recommendation_text(self._last_rec_id)
+    def online_dislike(self):
+        matrix_fact.dislike(self.online_rec_index)
+        self.online_rec_index += 1
+        self.online_recommend()
+
+    def online_recommend(self):
+        if self.is_first_recommendation:
+            recommendation = matrix_fact.online_recommend()
+            # print("!!! recommendation: \n", recommendation)
+            self.movies_with_ratings = recommendation
+        print("???\n", self.movies_with_ratings[:10])
+
+        tconst, i = matrix_fact.recommendation_text(self._last_rec_id)
+        print("mysterious i", self._last_rec_id, i)
+        self._last_rec_id = i
+
+        self.is_first_recommendation = False
+
+        return tconst
+
+    def matrix_recommend(self):
+        if self.is_first_recommendation:
+            recommendation = matrix_fact.recommend(self.session.movie_preferences)
+            # print("!!! recommendation: \n", recommendation)
+            self.movies_with_ratings = recommendation
+        print("???\n", self.movies_with_ratings[:10])
+
+        tconst, i = matrix_fact.recommendation_text(self._last_rec_id)
+        print("mysterious i", self._last_rec_id, i)
+        self._last_rec_id = i
+
+        self.is_first_recommendation = False
+
         return tconst
 
     def cf_recommend(self):  # cf_recommend
@@ -170,25 +208,30 @@ class MovieManager:
                                           key=lambda tup: tup[1],
                                           reverse=True)
         print("movies_with_ratings", len(self.movies_with_ratings))
+
+        self.is_first_recommendation = False
+
         return self.movies_with_ratings
 
     def utterance(self):
         if hypothesis == 'cf':
-            movie_with_score = self.cf_recommend()
+            movie_with_score = self.cf_recommend() if self.is_first_recommendation else self.movies_with_ratings
             tie = [movie[0] for movie in movie_with_score if movie_with_score[0][1] == movie[1]]
             movie_id = random.choice(tie)
-        elif hypothesis == 'mf':
-            movie_id = self.matrix_recommend()
+        elif hypothesis in ['mf', 'online']:
+            movie_id = self.matrix_recommend()  # if self.is_first_recommendation else self.movies_with_ratings
+        # elif hypothesis == 'online':
+        #     movie_id = self.online_recommend()
         else:
             return
         if movie_id:
-
+            print(movie_id)
             movie = moviedb.movie_by_id(movie_id)
-            print("Movie data:", movie)
+            print("Movie returning:", movie['primarytitle'])
             # process directors and actors into readable for output
             import template_manager as tm
 
-            sentences = tm.get_sentence(dialogue_type='utterances', state='tell', return_all=True)
+            sentences = tm.get_sentence(dialogue_type='utterances', state='tell', return_all=True).copy()
 
             sentences[0] = sentences[0].format(movie_name=movie['primarytitle'], movie_year=movie['startyear'])
             sentences[1] = sentences[1].format(
@@ -208,6 +251,8 @@ class MovieManager:
                                          .replace(',', ', ')
                 ),
                 mpaa=movie['mpaa'])
+
+            print("sentences", sentences)
 
             return movie, sentences
         else:

@@ -13,13 +13,13 @@ import dialogue_manager
 parser = argparse.ArgumentParser()
 parser.add_argument("mode")
 parser.add_argument("hypothesis")
-parser.add_argument("-p", "--port", action="store_true")
+parser.add_argument("-p", "--port", action="store", dest="port")
 args = parser.parse_args()
 
 
 app = Flask(__name__)
 
-dm = dialogue_manager.DialogueManager()
+dm = None
 
 
 @app.route('/chatbox-rewrite', methods=['GET', 'POST'])
@@ -50,9 +50,11 @@ def parse_input(json: dict):
 
 
 def init_resources():
+    global dm
     dialogue_manager.init_resources(mode=args.mode, mode_hypothesis=args.hypothesis)
+    dm = dialogue_manager.DialogueManager()
 
 
 if __name__ == '__main__':
     init_resources()
-    app.run(host='0.0.0.0', port=20000)
+    app.run(host='0.0.0.0', port=20000 if args.port is None else args.port)

@@ -26,6 +26,15 @@ def get_sentence(dialogue_type: str,
                  options: str=None,
                  returning_count: int=0,
                  return_all=False):
+    """
+    Read template.yml to get a random sentences based on the input param
+    :param dialogue_type: see yml
+    :param state:
+    :param options:
+    :param returning_count:
+    :param return_all:
+    :return:
+    """
 
     print(dialogue_type, state, options, returning_count, return_all)
 

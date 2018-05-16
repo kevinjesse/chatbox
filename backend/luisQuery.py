@@ -9,7 +9,7 @@
 #
 # import database_connect
 #
-# cur = database_connect.db_connect()
+# cur = database_connect.connect()
 #
 # sql_string = "SELECT api_key FROM api WHERE api_type='luisid'"
 # cur.execute(sql_string)
@@ -36,5 +36,5 @@
 #     r = requests.get(url)
 #     if r.status_code != 200:
 #         return None
-#     json = r.json()
-#     return json['query'], json['topScoringIntent'], json['entities']
+#     to_dict = r.to_dict()
+#     return to_dict['query'], to_dict['topScoringIntent'], to_dict['entities']

@@ -10,10 +10,10 @@ from scipy.sparse import coo_matrix
 userSideTop5 = {}
 
 try:
-    with open("userSideTop5.json", 'rb') as outfile:
+    with open("userSideTop5.to_dict", 'rb') as outfile:
         #userSideTop5 = pickle.load(outfile)
         userSideTop5 = json.load(outfile)
-    with open("movieSideDict.json", 'rb') as outfile:
+    with open("movieSideDict.to_dict", 'rb') as outfile:
         movieSide = json.load(outfile)
         #movieSide = pickle.load(outfile)
     with open("netflix/userlist.txt", "rb") as fp:  # Unpickling
@@ -25,10 +25,10 @@ except IOError as e:
 
 #Some capatibility issues between unicode and utf-8
 # new = {k: unicode(v).encode("utf-8") for k,v in userSideTop5.iteritems()}
-# with open("userSideTop5UTF.json", 'w') as outfile:
-#     json.dump(new, outfile)
+# with open("userSideTop5UTF.to_dict", 'w') as outfile:
+#     to_dict.dump(new, outfile)
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 if len(sys.argv) == 0:
     print("Please specify mode: genre, actor, director, mpaa, or all")

@@ -7,7 +7,7 @@ from moviedb import actors_by_id
 from scipy.io import mmread
 from scipy.sparse import coo_matrix
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 sidefields= ['genre', 'actor', 'director', 'mpaa']
 
@@ -166,12 +166,12 @@ sideDict = initSideDict()
 # with open("userSideDict.txt", 'r') as f:
 #     userSideDict = pickle.load(f)
 #
-# with open("userSideDict.json", 'w') as outfile:
-#     json.dump(userSideDict, outfile)
+# with open("userSideDict.to_dict", 'w') as outfile:
+#     to_dict.dump(userSideDict, outfile)
 ##################
 
 
 #For full dictionary
 movieSideDict = fillFullSideMovieDict()
-with open("movieSideDict.json", 'wb') as f:
+with open("movieSideDict.to_dict", 'wb') as f:
     json.dump(movieSideDict, f)

@@ -17,7 +17,7 @@ logging.basicConfig(
 )
 
 app = Flask(__name__)
-tokens = json.load(open(os.path.join(APP_STATIC, 'tokens.json')))
+tokens = json.load(open(os.path.join(APP_STATIC, 'tokens.to_dict')))
 ACCESS_TOKEN = tokens['ACCESS_TOKEN']
 VERIFY_TOKEN = tokens['VERIFY_TOKEN']
 bot = Bot(ACCESS_TOKEN)
@@ -37,7 +37,7 @@ def receive_message():
     else:
         # get whatever message a user sent the bot
         output = request.get_json()
-        print('json', output)
+        print('to_dict', output)
         for event in output['entry']:
             messaging = event['messaging']
             for message in messaging:

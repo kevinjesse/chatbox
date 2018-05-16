@@ -1,10 +1,16 @@
+import json
+import time
 from typing import List
 
 import state_manager as sm
+import history_manager as hm
 
 
 class SessionData:
     def __init__(self, mode_hypothesis: str):
+        # History
+        self.conversation = []
+
         self.movie_preferences = {
             'genre': [],
             'actor': [],
@@ -40,23 +46,49 @@ class SessionData:
         if is_satisfied is not None:
             self.recommendations[-1]['is_satisfied'] = is_satisfied
 
+    def insert_dialogue(self, sayer: str, utterance):
+        self.conversation.append((sayer, utterance, time.time()))
+
+    def to_dict(self) -> dict:
+        return {
+            'dialogue': [
+                {
+                    'timestamp': timestamp,
+                    'sayer': sayer,
+                    'utterance': utterance
+                } for sayer, utterance, timestamp in self.conversation
+            ],
+            'movie_preferences': self.movie_preferences,
+            'recommendations': self.recommendations
+        }
+
 
 class User:
 
     # states: sm.StateManager
     # current_session: SessionData
 
-    def __init__(self, user_id, state_manager: sm.StateManager, mode_hypothesis: str):
+    def __init__(self, user_id, state_manager: sm.StateManager, mode: str, mode_hypothesis: str):
         self.states = state_manager
         self.user_id = user_id
+        self.mode = mode
+        self.mode_hypothesis = mode_hypothesis
 
         # TODO: Load session data
-        self.current_session = SessionData(mode_hypothesis=mode_hypothesis)
-        self.chatbot_usage_count = 0
+        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis)
+        self.last_session = hm.last_user_history(self.user_id)
 
-    # @property
-    # def states(self) -> sm.StateManager:
-    #     return self._state_manager
+    def end_session(self):
+        self._save_log()
+        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis)
+
+    def _save_log(self):
+        hm.save_user_history(
+            user_id=self.user_id,
+            conversation=self.current_session.to_dict(),
+            mode=self.mode,
+            mode_hypothesis=self.mode_hypothesis
+        )
 
 
 class UserManager:

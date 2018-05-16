@@ -46,7 +46,7 @@ def __appendToJsonFile(history, userid):
     except Exception:
         pass
 
-    file_name = "{}.json".format(userid)
+    file_name = "{}.to_dict".format(userid)
 
     with open(os.path.join(log_directory, file_name), "a+") as log_file:
         log_file.write("{}\n".format(session.json()))

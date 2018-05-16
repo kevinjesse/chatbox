@@ -9,7 +9,7 @@ for each row (movie)
 """
 
 import database_connect
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 import numpy as np
 np.set_printoptions(threshold='nan')
@@ -133,7 +133,7 @@ def find (tconst, user_pref):
 
 
 # import database_connect
-# cur = database_connect.db_connect()
+# cur = database_connect.connect()
 #
 # import numpy as np
 # np.set_printoptions(threshold='nan')

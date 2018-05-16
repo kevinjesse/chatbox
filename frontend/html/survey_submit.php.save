@@ -47,8 +47,8 @@
     $fn = $_SERVER['DOCUMENT_ROOT']
     echo $fn;
     $file = fopen($fn, "a+") or die("Could not open survey_log file.");
-    $json = json_encode($json_array);
-    fwrite($file, $json);
+    $to_dict = json_encode($json_array);
+    fwrite($file, $to_dict);
     fwrite($file, "\n");
     fclose($file);
 ?>

@@ -10,7 +10,7 @@ import database_connect
 import moviedb
 import numpy as np
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 
 def ctrl(cache_results, titles_user, scoreweights, history):

@@ -59,7 +59,7 @@ class ThreadingServer(object):
                     # print data
                     try:
                         # Test for clicking next button on chatbox.php
-                        #js = json.loads(data);
+                        #js = to_dict.loads(data);
                         #if js["getJson"] == True:
 
 

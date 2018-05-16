@@ -15,12 +15,12 @@ import template_manager as tm
 import user_manager as um
 from state_manager import StateManager, State
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 # Global Flags
 
-server_mode = 'messenger'
-hypothesis = None
+server_mode = ''
+hypothesis = ''
 
 
 def init_resources(mode: str, mode_hypothesis: str):
@@ -110,6 +110,7 @@ class DialogueManager:
         # print("end user session", self.current_users)
         if user_id in self.current_users:
             user = self.current_users.get(user_id)
+            user.end_session()
             user.chatbot_usage_count = 0
             self.current_users.pop(user_id)
 
@@ -119,7 +120,7 @@ class DialogueManager:
         Main function called to get the next utterance. Change here to implement equivalent of
         run() for each state.
         :param user_id: user id
-        :param message: the raw json that is gotten from outside. json needs to have 'text',
+        :param message: the raw to_dict that is gotten from outside. to_dict needs to have 'text',
         'id', 'actions'
         :return: [utterances]
         """
@@ -135,10 +136,18 @@ class DialogueManager:
         if user_id not in self.current_users:
             self.current_users[user_id] = um.User(user_id,
                                                   state_manager=StateManager(self.possible_states),
+                                                  mode=server_mode,
                                                   mode_hypothesis=hypothesis)
         user = self.current_users[user_id]
 
         print("current state:", user.states.current_state.name)
+
+        # save user input into user.SessionData for logs
+        if message.get('action') is None:
+            user.current_session.insert_dialogue(
+                sayer='U',
+                utterance=input_text
+            )
 
         responses = []
 
@@ -194,6 +203,7 @@ class DialogueManager:
                                                 'has_watched_yes',
                                                 'has_watched_no']:
             _, intent, _ = luis.query(input_text)
+            print("DSFIjosdifsoifdj", intent)
             answer = luis.parse_yes_no(luis_intent=intent)
             print("luis yes no answer", answer)
 
@@ -237,7 +247,7 @@ class DialogueManager:
                         responses = user.states.current_state.utterance()
 
         if user.states.current_state.name == 'thinking':
-            if user.states.previous_state in ['has_watched_yers', 'has_watched_no']:
+            if user.states.previous_state in ['has_watched_yes', 'has_watched_no']:
                 if not user.current_session.movie_manager.is_first_recommendation:
                     user.current_session.movie_manager.next_recommendation()
                 if user.current_session.movie_manager.movies_with_ratings:
@@ -274,8 +284,14 @@ class DialogueManager:
         if user.states.current_state == 'bye':
             self.end_user_session(user_id)
 
-        return [responses] if type(responses) is str else responses
+        final_response = [responses] if type(responses) is str else responses
 
+        user.current_session.insert_dialogue(
+            sayer='C',
+            utterance=final_response
+        )
+
+        return final_response
     # def utterance(self, user_id: str, message: dict) -> list:
     #
     #     # obtain a user object that represents the current user
@@ -521,7 +537,7 @@ class DialogueManager:
 #     """
 #     try:
 #         global state, history, textHistory, data, cache_results, curr_movie, scoreweights, passiveResp
-#         js = json.loads(input_json)
+#         js = to_dict.loads(input_json)
 #         userid = js['id']
 #         text = js['text']
 #         mode = js['mode'] == "true"
@@ -654,7 +670,7 @@ class DialogueManager:
 #             movie_with_ratings[userid] = tellCtrl.sort_by_rating(titles_user[userid])
 #             movie_with_ratings[userid]
 #             outputlist = tellCtrl.to_text(movie_with_ratings[userid])
-#             # TODO: Workaround for the out of order bug, by making it a single json response
+#             # TODO: Workaround for the out of order bug, by making it a single to_dict response
 #             # outputString = "<br><br>".join(outputlist)
 #             for each in outputlist:
 #                 # print "Each: \n{}".format(each)

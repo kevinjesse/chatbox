@@ -2,11 +2,12 @@
 # @author Kevin Jesse
 # @email kevin.r.jesse@gmail.com
 #
+import psycopg2.sql as sql
 
 import database_connect
 import requests
 
-cur = database_connect.db_connect(dict_result=True)
+cur = database_connect.connect(dict_result=True)
 
 cur.execute("SELECT api_key FROM api WHERE api_type='tmd'")
 api_key = cur.fetchone()['api_key']
@@ -18,9 +19,13 @@ def movie_by_id(movie_id: str):
     :param movie_id:
     :return:
     """
-    sql_string = "SELECT * FROM title INNER JOIN crew ON title.tconst=crew.tconst INNER JOIN stars ON title.tconst = " \
-                 "stars.tconst WHERE mpaa IS NOT NULL AND title.tconst = '{movie_id}'".format(movie_id=movie_id)
-    cur.execute(sql_string)
+    sql_string = "SELECT * FROM title " \
+                 "INNER JOIN crew ON title.tconst = crew.tconst " \
+                 "INNER JOIN stars on title.tconst = stars.tconst " \
+                 "WHERE mpaa IS NOT NULL AND title.tconst = %s"
+
+    cur.execute(sql_string, (movie_id, ))
+
     row = cur.fetchone()
     if not row:
         url = "https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}".format(movie_id=movie_id,
@@ -41,26 +46,40 @@ def movie_by_id(movie_id: str):
                 if v == 'US':
                     mpaa_rating = each_dict['release_dates'][0]['certification']
         # pprint(mov_json)
-        sql_string = "UPDATE title SET plot = '{}', mpaa = '{}', prodco = '{}' WHERE tconst = '{}' RETURNING *".format(
+        sql_string = "UPDATE title SET plot = %s, mpaa = %s, prodco = %s WHERE tconst = %s RETURNING *"
+        cur.execute(sql_string, (
             mov_json['overview'].replace("'", "''"),
             mpaa_rating,
             mov_json['production_companies'][0]['name'].replace("'", "''"),
             movie_id
-        )
+        ))
 
-        # print(sql_string)
-        cur.execute(sql_string)
         row = cur.fetchone()
     return row
 
 
 def actors_by_id(actors):
-    actors_str = ", ".join(["('{}', {})".format(a, i + 1) for i, a in enumerate(actors)])
-
-    sql_string = "SELECT primaryname FROM name join (VALUES {actors}) AS X (nconst, ordering) ON name.nconst = " \
-                 "X.nconst ORDER BY X.ordering".format(actors=actors_str)
-    # print(sql_string)
+    sql_string = sql.SQL(
+        "SELECT primaryname FROM name JOIN (%s) AS X (nconst, ordering) ON name.nconst = X.nconst "
+        "ORDER BY X.ordering"
+    ).format(
+        sql.SQL("VALUES ") +
+        sql.SQL(', ').join([sql.SQL("({}, {})").format(sql.Literal(actor), sql.Literal(i + 1))
+                            for i, actor in enumerate(actors)])
+    )
     cur.execute(sql_string)
+
+    # cur.execute(sql_string, (
+    #     tuple((actor, i + 1) for i, actor in enumerate(actors)),
+    # ))
+    # cur.mogrify(sql_string, (
+    #     tuple((actor, i + 1) for i, actor in enumerate(actors)),
+    # ))
+    execute_str = cur.mogrify(sql_string, (
+        tuple((actor, i + 1) for i, actor in enumerate(actors)),
+    ))
+    print(execute_str)
+
     rows = cur.fetchall()
     # print('actors', rows)
     return [person['primaryname'] for person in rows] if rows else None

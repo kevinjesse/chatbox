@@ -8,7 +8,7 @@ import re
 import database_connect
 import requests
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 def fetch():
     """
     This function will update from TMD to my database now playing

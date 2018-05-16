@@ -30,7 +30,7 @@ try:
     import json
     with open("userSideTop5.txt", 'wb') as f:
         pickle.dump(userSideTop5, f)
-        #json.dump(userSideTop5, f)
+        #to_dict.dump(userSideTop5, f)
 
 except IOError as e:
     print("Cannot write files")

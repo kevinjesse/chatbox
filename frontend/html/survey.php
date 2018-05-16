@@ -37,7 +37,7 @@
             </div>
 
             <?php
-            $log_file = dirname(__FILE__, 3) . '/logs/json_logs/' . $_GET["id"] . '.json';
+            $log_file = dirname(__FILE__, 3) . '/logs/json_logs/' . $_GET["id"] . '.to_dict';
             //$jsonLog = file_get_contents($log_file);
             $jsonLog = escapeshellarg($log_file);
             $jsonLog = `tail -n 1 $jsonLog`;

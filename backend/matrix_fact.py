@@ -29,7 +29,7 @@ V = []
 # M = mmread("./dirtyIMC_code/M.mm.mtx").todense()
 # X = mmread("./dirtyIMC_code/XR.mm.mtx").todense()
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 
 
 def start_engine():
@@ -183,9 +183,8 @@ def recommendation_text(i):
         id = rec_list[ind]
         print("rec_list id", id)
         print("movie_list id", movielist[id])
-        sql_string = "SELECT tconst FROM title WHERE netflixid ='{}'".format(movielist[int(id) - 1])
-        print(sql_string)
-        cur.execute(sql_string)
+        sql_string = "SELECT tconst FROM title WHERE netflixid = %s"
+        cur.execute(sql_string, (movielist[int(id) - 1], ))
         rows = cur.fetchone()
         if rows:
             print("GOT A MOVIE, BREAKING")

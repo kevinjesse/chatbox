@@ -8,7 +8,7 @@ from scipy.sparse import coo_matrix
 matplotlib.use('Agg')
 import database_connect
 
-cur = database_connect.db_connect()
+cur = database_connect.connect()
 netflix_set = {}
 movie_names = set()
 titles = set()

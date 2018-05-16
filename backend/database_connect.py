@@ -12,7 +12,7 @@ import psycopg2
 import psycopg2.extras
 
 
-def db_connect(dict_result=False):
+def connect(dict_result=False):
     cur = None
     try:
         conn = psycopg2.connect(

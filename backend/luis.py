@@ -29,7 +29,7 @@ def init_resource():
     """
     global api_keys
     try:
-        cur = database_connect.db_connect()
+        cur = database_connect.connect()
         cur.execute("SELECT api_type, api_key FROM api")
         api_keys = dict(cur.fetchall())
     except Exception as e:
@@ -51,8 +51,10 @@ def query(text: str) -> Tuple[str, str, str]:
         'q': text.strip()
     })
     if r.status_code != 200:
+        print("LUIS status code: ", r.status_code)
         return None, None, None
     json = r.json()
+    print("Luis to_dict:", json)
     return json['query'], json['topScoringIntent'], json['entities']
 
 
@@ -85,7 +87,7 @@ def genre_spellcheck(user_input):
 
 def parse_entities(current_state: str, luis_intent, luis_entities, user_session) -> bool:
     """
-    Used to parse json returned from Luis. Takes in user.SessionData object and modify its
+    Used to parse to_dict returned from Luis. Takes in user.SessionData object and modify its
     content directly to save what's being parsed.
     :param current_state: current dialogue state
     :param luis_intent:
@@ -138,12 +140,13 @@ def parse_entities(current_state: str, luis_intent, luis_entities, user_session)
 def parse_yes_no(luis_intent):
     """
     Using Luis to detect if user is saying Yes, No, or something unintelligeable
-    :param luis_intent: luis_intent json
+    :param luis_intent: luis_intent to_dict
     :return: Enum.LuisYesNo
     """
     try:
-        # print("parse yes no", luis_intent.get('intent'))
-        return LuisYesNo(luis_intent.get('intent'))
+        print("parse yes no", luis_intent.get('intent'))
+        intent = luis_intent.get('intent')
+        return LuisYesNo(intent)
     except ValueError:
         return None
 

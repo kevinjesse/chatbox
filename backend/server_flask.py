@@ -98,4 +98,4 @@ def init_resources():
 
 if __name__ == '__main__':
     init_resources()
-    app.run(host='0.0.0.0', port=20000 if args.port is None else args.port)
+    app.run(host='0.0.0.0', port=20000 if args.port is None else args.port, threaded=True)

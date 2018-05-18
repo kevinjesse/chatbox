@@ -321,7 +321,7 @@ class DialogueManager:
             utterance=final_response
         )
 
-        return final_response
+        return user.states.current_state.name, final_response
     # def utterance(self, user_id: str, message: dict) -> list:
     #
     #     # obtain a user object that represents the current user

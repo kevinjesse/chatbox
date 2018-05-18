@@ -176,6 +176,10 @@ $UUID = uniqid();
 
             var responses = response['responses'];
 
+            if (response['state'] === 'bye') {
+                $('#buttonCtrlForm').css('display', 'block');
+            }
+
             for (var i in responses) {
                 insertAI(responses[i]);
             }

@@ -20,9 +20,13 @@
 </section>
 
 <section id="form">
-    <form name="survey" method="POST" action="survey_submit.php" onsubmit="return validateForm();" accept-charset="UTF-8">
+    <form name="survey" method="POST" action="http://interaction.cs.ucdavis.edu:20000/chatbox/api/survey_submit"
+          onsubmit="return
+    validateForm
+    ();" accept-charset="UTF-8">
         <input type="hidden" name="userID" value="<?php echo $_GET["id"]?>">
         <input type="hidden" name="cryptID" value="<?php echo @crypt($_GET["id"]) ?>">
+        <input type="hidden" name="timestamp" value="<?php echo time() ?>">
         <fieldset class="section" name="turkID">
             <label for="turkid-input">Your Turk ID:</label>
             <input type="text" name="turkID" id="turkid-input" required>
@@ -65,11 +69,12 @@
 
 //            echo var_dump($response);
 
-            $dialogue = json_decode($response, true)["result"];
+            $responseJson = json_decode($response, true);
+            $dialogue = $responseJson["result"];
 
-            echo var_dump($dialogue);
+//            echo var_dump($dialogue);
 
-
+            echo '<input type="hidden" name="convoID" value="' . $responseJson['convo_id'] . '">';
             echo '<input type="hidden" name="history-count" value="' . ceil(count($dialogue) / 2.0) . '">';
 
             for($i = 0; $i < ceil(count($dialogue) / 2.0); $i++) {

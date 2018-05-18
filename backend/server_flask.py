@@ -1,6 +1,7 @@
 import argparse
+import os
 from pprint import pprint
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import flask_cors
 
 import dialogue_manager
@@ -17,7 +18,7 @@ parser.add_argument("-p", "--port", action="store", dest="port")
 args = parser.parse_args()
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.abspath('../frontend/html'))
 flask_cors.CORS(app)
 
 dm = None
@@ -55,9 +56,10 @@ def parse_input(json: dict):
             responses = dm.utterance_silent(user_id=id, message=json)
         else:
             print('received text:', json.get('text'))
-            responses = dm.utterance(user_id=id, message=json)
+            state, responses = dm.utterance(user_id=id, message=json)
         return jsonify({
-            'responses': responses
+            'responses': responses,
+            'state': state
         })
     else:
         return None
@@ -77,6 +79,15 @@ def request_database():
 def _fetch_dialogue(user_id: str) -> dict:
     import history_manager as hm
     return hm.last_user_history(user_id=user_id)
+
+
+@app.route('/chatbox/api/survey_submit', methods=['POST'])
+def survey_submit():
+    data = request.form.to_dict()
+    # print(data)
+    import history_manager as hm
+    hm.save_user_survey(data)
+    return render_template('survey_submit.html', validation_code=data.get('cryptID'))
 
 
 def init_resources():

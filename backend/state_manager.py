@@ -52,6 +52,7 @@ class StateManager:
 
     def to_state(self, state: str):
         if state in self.possible_states:
+            self._previous_state = self.current_state
             self._current_state = state
             return self.current_state
         else:

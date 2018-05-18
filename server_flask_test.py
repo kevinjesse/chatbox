@@ -2,7 +2,8 @@ import requests
 import time
 from pprint import pprint
 
-url = "http://interaction.cs.ucdavis.edu:20000/chatbox-rewrite"
+url = "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main"
+url_h = "http://interaction.cs.ucdavis.edu:20000/chatbox/api/db"
 
 r = requests.session()
 
@@ -23,6 +24,7 @@ id = "server_flask_test_100"
 
 def common_query():
     out = r.post(url, json=post_json('intro', "", id, 'ping'))
+    print(out.request)
     pprint(out.json())
     time.sleep(sleep)
 
@@ -76,14 +78,34 @@ def kill_query():
     pprint(out.json())
 
 
-common_query()
-not_seen_not_like_movie_query()
-not_seen_like_movie_query()
-kill_query()
+def rec_query():
+    out = r.post(url, json={
+        'id': id,
+        'action': None,
+        'preferences': {
+            'genre': [],
+            'actor': [],
+            'director': [],
+            'mpaa': []
+        }
+    })
+    pprint(out.json())
 
 
-if '__name__' == '__main__':
+def default_test():
     common_query()
     not_seen_not_like_movie_query()
     not_seen_like_movie_query()
     kill_query()
+
+
+def history_test():
+    out = r.post(url_h, json={
+        'fetch_item': 'dialogue',
+        'id': '5afe5152e6ff7'
+    })
+    pprint(out.json())
+
+
+history_test()
+

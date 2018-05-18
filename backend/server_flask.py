@@ -1,7 +1,7 @@
-import logging
-import json
 import argparse
+from pprint import pprint
 from flask import Flask, request, jsonify
+import flask_cors
 
 import dialogue_manager
 #
@@ -18,15 +18,26 @@ args = parser.parse_args()
 
 
 app = Flask(__name__)
+flask_cors.CORS(app)
 
 dm = None
 
 
-@app.route('/chatbox-rewrite', methods=['GET', 'POST'])
+@app.route('/chatbox/api/main', methods=['GET'])
+def test():
+    print(request.args)
+    return jsonify({
+        'response': "GET CONNECTION SUCCESS"
+    })
+
+
+@app.route('/chatbox/api/main', methods=['POST'])
+# @flask_cors.cross_origin()
 def receive_message():
     data = request.get_json(force=True)
     utterance = parse_input(data)
-    print(utterance)
+    print("sending message")
+    pprint(utterance)
     return utterance
 
 
@@ -40,13 +51,32 @@ def parse_input(json: dict):
     id = json.get('id')
 
     if id is not None:
-        print('received text:', json.get('text'))
-        responses = dm.utterance(user_id=id, message=json)
+        if args.mode == 'reconly':
+            responses = dm.utterance_silent(user_id=id, message=json)
+        else:
+            print('received text:', json.get('text'))
+            responses = dm.utterance(user_id=id, message=json)
         return jsonify({
             'responses': responses
         })
     else:
         return None
+
+
+@app.route('/chatbox/api/db', methods=['POST'])
+def request_database():
+    data = request.get_json(force=True)
+    if data.get('fetch_item') == 'dialogue':
+        result = _fetch_dialogue(data.get('id'))
+        return jsonify({
+            'result': result.get('dialogue'),
+            'convo_id': result.get('convo_id')
+        })
+
+
+def _fetch_dialogue(user_id: str) -> dict:
+    import history_manager as hm
+    return hm.last_user_history(user_id=user_id)
 
 
 def init_resources():

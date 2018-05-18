@@ -60,7 +60,7 @@ def movie_by_id(movie_id: str):
 
 def actors_by_id(actors):
     sql_string = sql.SQL(
-        "SELECT primaryname FROM name JOIN (%s) AS X (nconst, ordering) ON name.nconst = X.nconst "
+        "SELECT primaryname FROM name JOIN ({}) AS X (nconst, ordering) ON name.nconst = X.nconst "
         "ORDER BY X.ordering"
     ).format(
         sql.SQL("VALUES ") +

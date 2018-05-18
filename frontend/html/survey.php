@@ -37,22 +37,47 @@
             </div>
 
             <?php
-            $log_file = dirname(__FILE__, 3) . '/logs/json_logs/' . $_GET["id"] . '.to_dict';
-            //$jsonLog = file_get_contents($log_file);
-            $jsonLog = escapeshellarg($log_file);
-            $jsonLog = `tail -n 1 $jsonLog`;
-            $log = json_decode($jsonLog, true);
+            $url_db = "localhost:20000/chatbox/api/db";
 
-            $history = $log['history'];
+            $ch = curl_init($url_db);
 
-            echo '<input type="hidden" name="history-count" value="' . count($history) . '">';
+//            echo "info" . curl_getinfo($ch);
+            // Setup request to send json via POST.
+            $payload = json_encode( array(
+                    'fetch_item' => 'dialogue',
+                    'id' => $_GET["id"]
+            ) );
+            curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
+            curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+            // Return response instead of printing.
+            curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            // Send request.
+            $response = curl_exec($ch);
 
-            for($i = 0; $i < count($history); $i++) {
+            if(curl_errno($ch)){
+                echo 'Curl error: ' . curl_error($ch);
+            }
+
+            curl_close($ch);
+
+//            echo "<p>response: " . $response . "</p>";
+
+//            echo var_dump($response);
+
+            $dialogue = json_decode($response, true)["result"];
+
+            echo var_dump($dialogue);
+
+
+            echo '<input type="hidden" name="history-count" value="' . ceil(count($dialogue) / 2.0) . '">';
+
+            for($i = 0; $i < ceil(count($dialogue) / 2.0); $i++) {
                 echo '<fieldset class="question" name="rating-q' . ($i + 1) . '">';
                 echo '<div class="turn"><h1>Turn ' . ($i + 1) . '</h1></div>';
                 echo '<div class="chat-entry">';
                 echo '<h2>Computer:</h2>';
-                $cResponse = $history[$i]['c'];
+                $cResponse = $dialogue[$i * 2]['utterance'];
                 if (count($cResponse) === 0) {
                     echo '<p class="did-not-respond">The chatbot did not respond</p>';
                 } else {
@@ -64,14 +89,19 @@
 
                 echo '<div class="chat-entry">';
                 echo '<h2>You:</h2>';
-                $uResponse = $history[$i]['u'];
+                $uResponse = $dialogue[$i * 2 + 1]['utterance'];
                 if (count($uResponse) === 0) {
                     echo '<p class="did-not-respond">You did not respond.</p>';
                 } else {
-                    for($u = 0; $u < count($uResponse); $u++) {
-                        echo '<p>' . $uResponse[$u] . '</p>';
-                    }
+                    echo '<p>' . $uResponse . '</p>';
                 }
+//                if (count($uResponse) === 0) {
+//                    echo '<p class="did-not-respond">You did not respond.</p>';
+//                } else {
+//                    for($u = 0; $u < count($uResponse); $u++) {
+//                        echo '<p>' . $uResponse[$u] . '</p>';
+//                    }
+//                }
                 echo '</div>';
 
                 echo '<h2>Your rating:</h2>';

@@ -52,7 +52,7 @@ class MovieManager:
     def filter_candidates(self, state: str) -> bool:
 
         if state == 'genre' and len(self.session.movie_preferences['genre']) > 0:
-            sql_string = sql.SQL("SELECT tconst FROM title WHERE %s").format(
+            sql_string = sql.SQL("SELECT tconst FROM title WHERE {}").format(
                 sql.SQL(' AND ').join(
                     [sql.SQL("genres LIKE '%%%s%%'").format(item)
                      for item in self.session.movie_preferences['genre']]
@@ -64,9 +64,9 @@ class MovieManager:
             movies = [tconst[0] for tconst in rows]
 
         elif state == 'actor' and len(self.session.movie_preferences['actor']) > 0:
-            sql_string = sql.SQL("SELECT nconst FROM name WHERE %s ORDER BY nconst ASC LIMIT %s").format(
+            sql_string = sql.SQL("SELECT nconst FROM name WHERE {} ORDER BY nconst ASC LIMIT {}").format(
                 sql.SQL(" OR ").join(
-                    [sql.SQL("primaryname = %s").format(actor)
+                    [sql.SQL("primaryname = {}").format(sql.Literal(actor))
                      for actor in self.session.movie_preferences['actor']]
                 ),
                 sql.Literal(len(self.session.movie_preferences['actor']))
@@ -79,9 +79,9 @@ class MovieManager:
 
             names = [r[0] for r in rows]
 
-            sql_string = sql.SQL("SELECT tconst FROM stars WHERE %s").format(
+            sql_string = sql.SQL("SELECT tconst FROM stars WHERE {}").format(
                 sql.SQL(" AND ").join(
-                    [sql.SQL("principalcast LIKE '%%%s%%").format(actor)
+                    [sql.SQL("principalcast LIKE {}").format(sql.Literal('%' + actor + '%'))
                      for actor in names[:10]]
                 )
             )
@@ -91,9 +91,9 @@ class MovieManager:
             movies = [tconst[0] for tconst in rows]
 
         elif state == 'director' and len(self.session.movie_preferences['director']) > 0:
-            sql_string = sql.SQL("SELECT nconst FROM name WHERE %s ORDER BY nconst ASC LIMIT %s").format(
+            sql_string = sql.SQL("SELECT nconst FROM name WHERE {} ORDER BY nconst ASC LIMIT {}").format(
                 sql.SQL(" OR ").join(
-                    [sql.SQL("primaryname = %s").format(actor)
+                    [sql.SQL("primaryname = {}").format(sql.Literal(actor))
                      for actor in self.session.movie_preferences['director']]
                 ),
                 sql.Literal(len(self.session.movie_preferences['director']))
@@ -107,9 +107,9 @@ class MovieManager:
 
             names = [r[0] for r in rows]
 
-            sql_string = sql.SQL("SELECT tconst FROM stars WHERE %s").format(
+            sql_string = sql.SQL("SELECT tconst FROM stars WHERE {}").format(
                 sql.SQL(" AND ").join(
-                    [sql.SQL("directors LIKE '%%%s%%").format(director)
+                    [sql.SQL("directors LIKE {}").format(sql.Literal('%' + director + '%'))
                      for director in names[:10]]
                 )
             )
@@ -119,9 +119,9 @@ class MovieManager:
             movies = [tconst[0] for tconst in rows]
 
         elif state == 'mpaa' and len(self.session.movie_preferences['mpaa']) > 0:
-            sql_string = sql.SQL("SELECT tconst FROM title WHERE %s").format(
+            sql_string = sql.SQL("SELECT tconst FROM title WHERE {}").format(
                 sql.SQL(" AND ").join(
-                    [sql.SQL("mpaa LIKE '%%%s%%").format(mpaa)
+                    [sql.SQL("mpaa LIKE {}").format(sql.Literal('%' + mpaa + '%'))
                      for mpaa in self.session.movie_preferences['mpaa']]
                 )
             )
@@ -189,7 +189,7 @@ class MovieManager:
 
     def cf_recommend(self):  # cf_recommend
         sql_string = sql.SQL(
-            "SELECT averagerating FROM ratings JOIN (%s) AS X (tconst, ordering) ON ratings.tconst = X.tconst "
+            "SELECT averagerating FROM ratings JOIN ({}) AS X (tconst, ordering) ON ratings.tconst = X.tconst "
             "ORDER BY X.ordering"
         ).format(
             sql.SQL("VALUES ") +
@@ -232,19 +232,17 @@ class MovieManager:
             sentences[1] = sentences[1].format(
                 movie_name=movie['primarytitle'],
                 actors=_list_to_comma_with_and(
-                    (moviedb.actors_by_id(movie['principalcast'].split(' ')) or ['<no actors>'])
+                    moviedb.actors_by_id(movie['principalcast'].split(' ') or ['<no actors>']), limit=5
                 ),
                 directors=_list_to_comma_with_and(
-                    (moviedb.actors_by_id(movie['directors'].split(' ')) or ['<no directors>'])
+                    moviedb.actors_by_id(movie['directors'].split(' ') or ['<no directors>']), limit=5
                 )
             )
             sentences[2] = sentences[2].format(
                 movie_length=movie['runtimeminutes'],
                 genre="{article} {genres}".format(
-                   article="an" if movie['genres'][0].lower() in ['a', 'e', 'i', 'o', 'u'] else "a",
-                   genres=movie['genres'].replace(' ', ',', movie['genres'].count(' ') - 1)
-                                         .replace(' ', ' and ')
-                                         .replace(',', ', ')
+                   article="an" if movie['genres'][0].lower() in 'aeiou' else "a",
+                   genres=_list_to_comma_with_and(movie['genres'].split())
                 ),
                 mpaa=movie['mpaa'])
 

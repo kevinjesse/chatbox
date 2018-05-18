@@ -31,10 +31,13 @@ def save_user_history(user_id: str, conversation: dict, mode: str, mode_hypothes
             'dialogue': dialogue
         })
 
+        print("saving user history to database")
+
 
 def last_user_history(user_id: str) -> dict:
     sql_string = "SELECT * FROM users.convo_log WHERE user_id = %s ORDER BY timestamp DESC LIMIT 1"
 
     cur.execute(sql_string, (user_id,))
     history = cur.fetchone()
-    print(history)
+    # print(history)
+    return history

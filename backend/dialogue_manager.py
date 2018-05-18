@@ -7,6 +7,7 @@
 """
 Controls the dialogue chatbox. Dialogue control is called from server.py
 """
+from typing import Tuple, List
 
 import database_connect
 import luis
@@ -111,10 +112,37 @@ class DialogueManager:
         if user_id in self.current_users:
             user = self.current_users.get(user_id)
             user.end_session()
-            user.chatbot_usage_count = 0
+            # user.chatbot_usage_count = 0
             self.current_users.pop(user_id)
 
-    def utterance(self, user_id: str, message: dict) -> list:
+    def utterance_silent(self, user_id: str, message: dict) -> dict:
+        # sanitize user input
+        preferences = message.get('preferences')
+
+        if preferences is None:
+            return {
+                'error': 'empty preferences'
+            }
+
+        if user_id not in self.current_users:
+            self.current_users[user_id] = um.User(user_id,
+                                                  state_manager=StateManager(self.possible_states),
+                                                  mode=server_mode,
+                                                  mode_hypothesis=hypothesis)
+
+        user = self.current_users[user_id]
+
+        user.current_session.movie_preferences['genre'] = preferences['genre']
+        user.current_session.movie_preferences['actor'] = preferences['actor']
+        user.current_session.movie_preferences['director'] = preferences['director']
+        user.current_session.movie_preferences['mpaa'] = preferences['mpaa']
+
+        movie, _ = user.current_session.movie_manager.utterance()
+        user.current_session.new_recommendation(movie)
+
+        return user.current_session.recommendations[0]
+
+    def utterance(self, user_id: str, message: dict) -> Tuple[str, List[str]]:
 
         """
         Main function called to get the next utterance. Change here to implement equivalent of
@@ -125,25 +153,27 @@ class DialogueManager:
         :return: [utterances]
         """
 
-        # parsing the incoming message
-        input_text = message.get('text')
-        if input_text is None or '':
-            return ['']
-
         # get utterance based on state
 
         # obtain a user object that represents the current user
         if user_id not in self.current_users:
-            self.current_users[user_id] = um.User(user_id,
-                                                  state_manager=StateManager(self.possible_states),
-                                                  mode=server_mode,
-                                                  mode_hypothesis=hypothesis)
+            self.current_users[user_id] = um.User(
+                user_id=user_id,
+                state_manager=StateManager(self.possible_states),
+                mode=server_mode,
+                mode_hypothesis=hypothesis
+            )
         user = self.current_users[user_id]
 
         print("current state:", user.states.current_state.name)
 
+        # parsing the incoming message
+        input_text = message.get('text')
+        if input_text is None or '':
+            return user.states.current_state.name, ['']
+
         # save user input into user.SessionData for logs
-        if message.get('action') is None:
+        if message.get('action') == 'utterance':
             user.current_session.insert_dialogue(
                 sayer='U',
                 utterance=input_text
@@ -203,7 +233,7 @@ class DialogueManager:
                                                 'has_watched_yes',
                                                 'has_watched_no']:
             _, intent, _ = luis.query(input_text)
-            print("DSFIjosdifsoifdj", intent)
+            # print("DSFIjosdifsoifdj", intent)
             answer = luis.parse_yes_no(luis_intent=intent)
             print("luis yes no answer", answer)
 
@@ -259,14 +289,14 @@ class DialogueManager:
                     user.current_session.new_recommendation(movie=movie)
 
                     user.states.next_state()
-                    # responses += [user.states.current_state.utterance()]
+                    responses += [user.states.current_state.utterance()]
                 else:
                     responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
                                   user.states.to_state('bye').utterance()]
             elif user.states.previous_state == 'good_recommendation':
                 user.current_session.movie_manager.online_dislike()
                 if user.current_session.movie_manager.online_rec_index < \
-                   len(user.current_session.movie_manager.movies_with_ratings):
+                        len(user.current_session.movie_manager.movies_with_ratings):
                     user.states.next_state()
                     movie, response = user.current_session.movie_manager.utterance()
                     responses = response

@@ -3,7 +3,7 @@
  * @author kevin.r.jesse@gmail.com
  */
 
-session_start();
+//session_start();
 #ini_set('display_errors', 1);
 #ini_set('display_startup_errors', 1);
 #error_reporting(E_ALL);
@@ -12,6 +12,7 @@ session_start();
 //}
 
 $UUID = uniqid();
+
 ?>
 
 <html>
@@ -19,6 +20,7 @@ $UUID = uniqid();
     <title>Chatbox</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/chat.css">
+<!--	<script src="chatbox.js"></script>-->
     <script src="css/jquery.js"></script>
 </head>
 <body>
@@ -50,7 +52,7 @@ $UUID = uniqid();
     var d, m, s;
     var id = <?php echo json_encode($UUID);?>;
     var listen = false;
-    $(window).onload = sendChatText("", false);
+    $(window).onload = sendChatText("", 'ping');
     //$(window).onunload = sendKill();
     $(document).ready(function () {
         $('#btnSend').click(function () {
@@ -66,7 +68,24 @@ $UUID = uniqid();
                 type: "GET",
                 url: "/submit-base.php?action=getJson&UUID="+ encodeURIComponent(id)
             });*/
-            location.href = "survey.php?id="+ encodeURIComponent(id);
+            var request = $.ajax({
+                type: "POST",
+                url: "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main",
+                data: JSON.stringify({
+                    text: "",
+                    id: id,
+                    action: "kill"
+                }),
+                error: function(e) {
+                    console.log(e);
+                },
+                dataType: "json",
+                contentType: "application/json"
+            });
+            request.done(function (response) {
+                console.log(response);
+                location.href = "survey.php?id="+ encodeURIComponent(id);
+            })
         };
 
         var position = $('.chat').offset();
@@ -88,11 +107,12 @@ $UUID = uniqid();
 
     function enterPress(e) {
         if (e.keyCode === 13) {
+            // console.log("Enter pressed.");
             e.preventDefault(); // Ensure it is only this code that rusn
             var chatInput = $('#chatInput').val();
             if (chatInput != "") {
                 insertMessage(chatInput);
-                sendChatText(chatInput, false);
+                sendChatText(chatInput);
                 $('#chatInput').val(null);
             }
         }
@@ -133,20 +153,35 @@ $UUID = uniqid();
         }
     }
 
-    function sendChatText(chatText, mode) {
-        var request;
-        var chatInput = chatText;
-        request = $.ajax({
-            type: "GET",
-            url: "submit-base.php?action=submit&UUID="+ encodeURIComponent(id) +"&chattext=" + encodeURIComponent(chatInput) +"&mode="+mode
+    function sendChatText(chatText, action = 'utterance') {
+        var request = $.ajax({
+            type: "POST",
+            url: "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main",
+            data: JSON.stringify({
+                text: chatText,
+                id: id,
+                action: action
+            }),
+            error: function(e) {
+                console.log(e);
+            },
+            dataType: "json",
+            contentType: "application/json"
         });
         request.done(function (response) {
-            respJSON = JSON.parse(response);
-
             console.log(response);
+            // respJSON = JSON.parse(response);
+
+            // console.log(response);
+
+            var responses = response['responses'];
+
+            for (var i in responses) {
+                insertAI(responses[i]);
+            }
 
 
-            insertAI(respJSON['response']);
+            // insertAI(respJSON['response']);
 
             //if (listen === false) {
              ////////   listen = true;
@@ -159,37 +194,43 @@ $UUID = uniqid();
 
     }
 
-    function listener() {
-        var request;
-        if (listen === false) {
-            listen = true;
-            request = $.ajax({
-                type: "GET",
-                url: "submit-base.php?action=submit&UUID=" + encodeURIComponent(id) + "&chattext=" + encodeURIComponent('') + "&mode=" + true
-            });
-            request.done(function (response) {
-                respJSON = JSON.parse(response);
-
-                console.log(response);
-
-                insertAI(respJSON['response']);
-                //if (listen === false) {
-                ////////   listen = true;
-
-                //sendChatText('', listen);
-
-                //}
-                listen = false;
-                if (respJSON['signal'] === "end") {
-                    document.getElementById('buttonCtrlForm').style.display = "block"
-                }
-            });
-
-        }
-        //listen = false;
-
-    }
+    // function listener() {
+    //     var request;
+    //     if (listen === false) {
+    //         listen = true;
+    //         request = $.ajax({
+    //             type: "GET",
+    //             url: "localhost:20000/chatbox-rewrite/",
+    //             data: {
+    //                 'text': '',
+    //                 'id': '',
+    //                 'action': ''
+    //             }
+    //             url: "submit-base.php?action=submit&UUID=" + encodeURIComponent(id) + "&chattext=" + encodeURIComponent('') + "&mode=" + true
+    //         });
+    //         request.done(function (response) {
+    //             respJSON = JSON.parse(response);
+    //
+    //             console.log(response);
+    //
+    //             insertAI(respJSON['response']);
+    //             //if (listen === false) {
+    //             ////////   listen = true;
+    //
+    //             //sendChatText('', listen);
+    //
+    //             //}
+    //             listen = false;
+    //             if (respJSON['signal'] === "end") {
+    //                 document.getElementById('buttonCtrlForm').style.display = "block"
+    //             }
+    //         });
+    //
+    //     }
+    //     //listen = false;
+    //
+    // }
 //
-setInterval(function() {listener();}, 2000);
+// setInterval(function() {listener();}, 2000);
 
 </script>

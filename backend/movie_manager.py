@@ -109,7 +109,7 @@ class MovieManager:
 
             sql_string = sql.SQL("SELECT tconst FROM stars WHERE {}").format(
                 sql.SQL(" AND ").join(
-                    [sql.SQL("directors LIKE {}").format(sql.Literal('%' + director + '%'))
+                    [sql.SQL("principalcast LIKE {}").format(sql.Literal('%' + director + '%'))
                      for director in names[:10]]
                 )
             )

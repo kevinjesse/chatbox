@@ -12,6 +12,15 @@
             return true;
         }
     </script>
+    <?php
+        $configJSON = json_decode(file_get_contents('config.json'), true);
+        $c_port = 20000;
+        if ($configJSON["is_prod"] === true) {
+            $c_port = $configJSON["port"];
+        } else {
+            $c_port = $configJSON["port_test"];
+        }
+    ?>
 </head>
 
 <body>
@@ -20,10 +29,9 @@
 </section>
 
 <section id="form">
-    <form name="survey" method="POST" action="http://interaction.cs.ucdavis.edu:20000/chatbox/api/survey_submit"
-          onsubmit="return
-    validateForm
-    ();" accept-charset="UTF-8">
+    <form name="survey" method="POST"
+          action=<?php echo "http://interaction.cs.ucdavis.edu:" . $c_port . "/chatbox/api/survey_submit" ?>
+          onsubmit="return validateForm ();" accept-charset="UTF-8">
         <input type="hidden" name="userID" value="<?php echo $_GET["id"]?>">
         <input type="hidden" name="cryptID" value="<?php echo @crypt($_GET["id"]) ?>">
         <input type="hidden" name="timestamp" value="<?php echo time() ?>">
@@ -41,7 +49,7 @@
             </div>
 
             <?php
-            $url_db = "localhost:20000/chatbox/api/db";
+            $url_db = "localhost:" . $c_port . "/chatbox/api/db";
 
             $ch = curl_init($url_db);
 
@@ -170,6 +178,7 @@
 
 
             <input type="submit" name="submit-survey" value="Submit">
+        </fieldset>
     </form>
 </section>
 </body>

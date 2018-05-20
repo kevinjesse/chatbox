@@ -48,9 +48,19 @@ $UUID = uniqid();
 </body>
 </html>
 
+<!--<script type="text/json" src="config.json"></script>-->
 <script type="text/javascript">
     var d, m, s;
     var id = <?php echo json_encode($UUID);?>;
+
+    var configJSON = <?php echo file_get_contents("config.json"); ?>;
+    var port = "20000";
+    if (configJSON["is_prod"]) {
+        port = configJSON["port"];
+    } else {
+        port = configJSON["port_test"];
+    }
+
     var listen = false;
     $(window).onload = sendChatText("", 'ping');
     //$(window).onunload = sendKill();
@@ -70,7 +80,7 @@ $UUID = uniqid();
             });*/
             var request = $.ajax({
                 type: "POST",
-                url: "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main",
+                url: "http://interaction.cs.ucdavis.edu:" + port + "/chatbox/api/main",
                 data: JSON.stringify({
                     text: "",
                     id: id,
@@ -156,7 +166,7 @@ $UUID = uniqid();
     function sendChatText(chatText, action = 'utterance') {
         var request = $.ajax({
             type: "POST",
-            url: "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main",
+            url: "http://interaction.cs.ucdavis.edu:" + port + "/chatbox/api/main",
             data: JSON.stringify({
                 text: chatText,
                 id: id,
@@ -169,7 +179,7 @@ $UUID = uniqid();
             contentType: "application/json"
         });
         request.done(function (response) {
-            console.log(response);
+            // console.log(response);
             // respJSON = JSON.parse(response);
 
             // console.log(response);

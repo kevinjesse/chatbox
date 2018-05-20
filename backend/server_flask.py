@@ -1,5 +1,6 @@
 import argparse
 import os
+import json
 from pprint import pprint
 from flask import Flask, request, jsonify, render_template
 import flask_cors
@@ -15,6 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("mode")
 parser.add_argument("hypothesis")
 parser.add_argument("-p", "--port", action="store", dest="port")
+parser.add_argument("-d", "--prod", action="store_true")
 args = parser.parse_args()
 
 
@@ -98,4 +100,29 @@ def init_resources():
 
 if __name__ == '__main__':
     init_resources()
-    app.run(host='0.0.0.0', port=20000 if args.port is None else args.port, threaded=True)
+
+    config = None
+    config_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.json')
+    try:
+        f = open(config_dir, 'r')
+        config = json.load(f)
+    except Exception as e:
+        print(e)
+        exit(1)
+
+    if args.port:
+        port = args.port
+    elif args.prod:
+        port = config['port']
+        with open(config_dir, 'w') as f:
+            config['is_prod'] = True
+            json.dump(config, f)
+    elif not args.prod and args.prod is not None:
+        port = config['port-test']
+        with open(config_dir, 'w') as f:
+            config['is_prod'] = False
+            json.dump(config, f)
+    else:
+        port = 20000
+
+    app.run(host='0.0.0.0', port=port, threaded=True)

@@ -46,7 +46,7 @@ utterances:
     'yes':
       - Would you want another recommendation then?
     'no':
-      - Do you like this recommendation?
+      - Would you watch this movie?
   is_satisfied:
     - Do you like this movie?
     - What do you think of this movie?

@@ -9,10 +9,10 @@ Fetch Now Playing adds all the information necessary to populate the database fo
 
 import re
 
-import database_connect
+import database
 import requests
 
-cur = database_connect.connect()
+cur = database.connector()
 
 def fetch():
     """

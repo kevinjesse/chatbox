@@ -9,14 +9,14 @@ Controls the dialogue chatbox. Dialogue control is called from server.py
 """
 from typing import Tuple, List
 
-import database_connect
+import database
 import luis
 import movie_manager as mm
 import template_manager as tm
 import user_manager as um
 from state_manager import StateManager, State
 
-cur = database_connect.connect()
+cur = database.connector()
 
 # Global Flags
 

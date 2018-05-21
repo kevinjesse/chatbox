@@ -9,14 +9,12 @@ Filter movies reduces the available movies based on the dialogue selections
 import random
 import psycopg2.sql as sql
 
-import database_connect
+import database
 import moviedb
 import matrix_fact
 import user_manager as um
 
 from typing import List
-
-cur = database_connect.connect()
 
 titles = []
 hypothesis = 'cf'
@@ -31,6 +29,7 @@ def init_resources(mode_hypothesis: str):
 
         # Init list of candidate movies - (relatively new 9-20-17)
         sql_string = """SELECT tconst FROM title WHERE netflixid IS NOT NULL"""
+        cur = database.connector()
         cur.execute(sql_string)
         rows = cur.fetchall()
         for mov in rows:
@@ -59,6 +58,7 @@ class MovieManager:
                 )
             )
 
+            cur = database.connector()
             cur.execute(sql_string)
             rows = cur.fetchall()
             movies = [tconst[0] for tconst in rows]
@@ -71,6 +71,7 @@ class MovieManager:
                 ),
                 sql.Literal(len(self.session.movie_preferences['actor']))
             )
+            cur = database.connector()
             cur.execute(sql_string)
             rows = cur.fetchall()
 
@@ -99,6 +100,7 @@ class MovieManager:
                 sql.Literal(len(self.session.movie_preferences['director']))
             )
 
+            cur = database.connector()
             cur.execute(sql_string)
             rows = cur.fetchall()
 
@@ -126,7 +128,7 @@ class MovieManager:
                 )
             )
 
-            cur.execute(sql_string)
+            cur = database.connector().execute(sql_string)
             rows = cur.fetchall()
 
             movies = [tconst[0] for tconst in rows]
@@ -197,6 +199,7 @@ class MovieManager:
                                 for i, movie in enumerate(self.movie_candidates)])
         )
 
+        cur = database.connector()
         cur.execute(sql_string)
         rows = cur.fetchall()
         self.movies_with_ratings = sorted(zip(self.movie_candidates, rows),

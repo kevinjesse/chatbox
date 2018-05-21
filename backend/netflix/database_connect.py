@@ -4,7 +4,7 @@
 #
 
 """
-Database Connect serves to connect to the database postgres, as the master user. Autocommit has been turned on so
+Database Connect serves to connector to the database postgres, as the master user. Autocommit has been turned on so
 all inserts, updates, and deletes will be enforced atomically
 """
 
@@ -18,5 +18,5 @@ def db_connect():
         cur = conn.cursor()
         #cur.itersize = 10000
     except:
-        print("[ERROR] couldn't connect to the database")
+        print("[ERROR] couldn't connector to the database")
     return cur

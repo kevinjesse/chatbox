@@ -3,9 +3,9 @@ import os.path
 import json
 import datetime
 
-from backend import database_connect
+from backend import database
 
-cur = database_connect.connect(dict_result=True)
+cur = database.connector(dict_result=True)
 
 
 def get_rec_check(user_id: str):

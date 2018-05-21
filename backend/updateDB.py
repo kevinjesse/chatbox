@@ -5,10 +5,10 @@
 
 import re
 
-import database_connect
+import database
 import requests
 
-cur = database_connect.connect()
+cur = database.connector()
 def fetch():
     """
     This function will update from TMD to my database now playing

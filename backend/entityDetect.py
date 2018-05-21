@@ -7,8 +7,8 @@
 Entity detect fetches the data of the entity described based on what the table and column. Not being used 9-29-17
 """
 
-import database_connect
-cur = database_connect.connect()
+import database
+cur = database.connector()
 
 entity2table = {'genre':('title', 'genres'), 'actor':('name', 'primaryname') ,
                 'director': ('name', 'primaryname'), 'mpaa': ('title', 'mpaa'),}

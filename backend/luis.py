@@ -10,7 +10,7 @@ from typing import Tuple, Optional
 import requests
 from nltk.stem.snowball import SnowballStemmer
 
-import database_connect
+import database
 
 base_url = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/"
 api_keys = {}
@@ -29,7 +29,7 @@ def init_resource():
     """
     global api_keys
     try:
-        cur = database_connect.connect()
+        cur = database.connector()
         cur.execute("SELECT api_type, api_key FROM api")
         api_keys = dict(cur.fetchall())
     except Exception as e:

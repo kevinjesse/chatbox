@@ -1,8 +1,8 @@
 from datetime import datetime
-import database_connect
+import database
 from psycopg2.extras import Json
 
-cur = database_connect.connect(dict_result=True)
+cur = database.connector(dict_result=True)
 no_write = False
 
 

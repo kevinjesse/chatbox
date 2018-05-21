@@ -8,8 +8,8 @@ Candidates creates the scoring metrics and evaluates each features. This means n
 for each row (movie)
 """
 
-import database_connect
-cur = database_connect.connect()
+import database
+cur = database.connector()
 
 import numpy as np
 np.set_printoptions(threshold='nan')
@@ -133,7 +133,7 @@ def find (tconst, user_pref):
 
 
 # import database_connect
-# cur = database_connect.connect()
+# cur = database_connect.connector()
 #
 # import numpy as np
 # np.set_printoptions(threshold='nan')

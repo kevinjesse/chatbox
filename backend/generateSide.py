@@ -2,12 +2,12 @@
 import json
 import pickle
 
-import database_connect
+import database
 from moviedb import actors_by_id
 from scipy.io import mmread
 from scipy.sparse import coo_matrix
 
-cur = database_connect.connect()
+cur = database.connector()
 
 sidefields= ['genre', 'actor', 'director', 'mpaa']
 

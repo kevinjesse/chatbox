@@ -2,7 +2,7 @@ import json
 import pickle
 import sys
 
-import database_connect
+import database
 import numpy as np
 from scipy.io import mmwrite
 from scipy.sparse import coo_matrix
@@ -28,7 +28,7 @@ except IOError as e:
 # with open("userSideTop5UTF.to_dict", 'w') as outfile:
 #     to_dict.dump(new, outfile)
 
-cur = database_connect.connect()
+cur = database.connector()
 
 if len(sys.argv) == 0:
     print("Please specify mode: genre, actor, director, mpaa, or all")

@@ -6,9 +6,9 @@ from scipy.io import mmwrite
 from scipy.sparse import coo_matrix
 
 matplotlib.use('Agg')
-import database_connect
+import database
 
-cur = database_connect.connect()
+cur = database.connector()
 netflix_set = {}
 movie_names = set()
 titles = set()

@@ -118,7 +118,7 @@ if __name__ == '__main__':
             config['is_prod'] = True
             json.dump(config, f)
     elif not args.prod and args.prod is not None:
-        port = config['port-test']
+        port = config['port_test']
         with open(config_dir, 'w') as f:
             config['is_prod'] = False
             json.dump(config, f)

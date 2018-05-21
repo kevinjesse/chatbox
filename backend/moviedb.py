@@ -4,13 +4,12 @@
 #
 import psycopg2.sql as sql
 
-import database_connect
+import database
 import requests
 
-cur = database_connect.connect(dict_result=True)
-
-cur.execute("SELECT api_key FROM api WHERE api_type='tmd'")
-api_key = cur.fetchone()['api_key']
+api_cur = database.connector(dict_result=True)
+api_cur.execute("SELECT api_key FROM api WHERE api_type='tmd'")
+api_key = api_cur.fetchone()['api_key']
 
 
 def movie_by_id(movie_id: str):
@@ -24,6 +23,7 @@ def movie_by_id(movie_id: str):
                  "INNER JOIN stars on title.tconst = stars.tconst " \
                  "WHERE mpaa IS NOT NULL AND title.tconst = %s"
 
+    cur = database.connector(dict_result=True)
     cur.execute(sql_string, (movie_id, ))
 
     row = cur.fetchone()
@@ -67,6 +67,7 @@ def actors_by_id(actors):
         sql.SQL(', ').join([sql.SQL("({}, {})").format(sql.Literal(actor), sql.Literal(i + 1))
                             for i, actor in enumerate(actors)])
     )
+    cur = database.connector(dict_result=True)
     cur.execute(sql_string)
 
     # cur.execute(sql_string, (
@@ -75,10 +76,10 @@ def actors_by_id(actors):
     # cur.mogrify(sql_string, (
     #     tuple((actor, i + 1) for i, actor in enumerate(actors)),
     # ))
-    execute_str = cur.mogrify(sql_string, (
-        tuple((actor, i + 1) for i, actor in enumerate(actors)),
-    ))
-    print(execute_str)
+    # execute_str = cur.mogrify(sql_string, (
+    #     tuple((actor, i + 1) for i, actor in enumerate(actors)),
+    # ))
+    # print(execute_str)
 
     rows = cur.fetchall()
     # print('actors', rows)

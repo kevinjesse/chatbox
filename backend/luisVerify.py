@@ -1,6 +1,6 @@
 
-import database_connect
-cur = database_connect.connect()
+import database
+cur = database.connector()
 
 def ctrl(user_cache):
     

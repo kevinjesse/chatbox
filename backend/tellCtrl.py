@@ -6,11 +6,11 @@
 import random
 
 import candidates
-import database_connect
+import database
 import moviedb
 import numpy as np
 
-cur = database_connect.connect()
+cur = database.connector()
 
 
 def ctrl(cache_results, titles_user, scoreweights, history):

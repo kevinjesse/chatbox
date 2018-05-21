@@ -9,7 +9,7 @@
 #
 # import database_connect
 #
-# cur = database_connect.connect()
+# cur = database_connect.connector()
 #
 # sql_string = "SELECT api_key FROM api WHERE api_type='luisid'"
 # cur.execute(sql_string)

@@ -1,6 +1,6 @@
 from scipy.sparse import csr_matrix
 from scipy.io import mmwrite, mmread
-import database_connect
+import database
 import numpy as np
 import decimal
 import array as arr
@@ -29,8 +29,6 @@ V = []
 # M = mmread("./dirtyIMC_code/M.mm.mtx").todense()
 # X = mmread("./dirtyIMC_code/XR.mm.mtx").todense()
 
-cur = database_connect.connect()
-
 
 def start_engine():
     global eng, N
@@ -56,6 +54,7 @@ def translate_dialogue(mode, movie_preferences):
     mode_list = []
     if mode == "genre":
         sql_string = "SELECT genre FROM tmd_genres ORDER BY genre ASC"
+        cur = database.connector()
         cur.execute(sql_string)
         rows = cur.fetchall()
         mode_list = [row[0] for row in rows]
@@ -73,6 +72,7 @@ def translate_dialogue(mode, movie_preferences):
                 user_list = mode_list
     elif mode == "mpaa":
         sql_string = "SELECT DISTINCT mpaa from title"
+        cur = database.connector()
         cur.execute(sql_string)
         rows = cur.fetchall()
         mode_list = [row[0] for row in rows]
@@ -184,7 +184,7 @@ def recommendation_text(i):
         print("rec_list id", id)
         print("movie_list id", movielist[id])
         sql_string = "SELECT tconst FROM title WHERE netflixid = %s"
-        cur.execute(sql_string, (movielist[int(id) - 1], ))
+        cur = database.connector().execute(sql_string, (movielist[int(id) - 1], ))
         rows = cur.fetchone()
         if rows:
             print("GOT A MOVIE, BREAKING")

@@ -1,22 +1,22 @@
 
-% function [M, XR, YR] = train2()
+function [] = train3extend(side)
 part_timer = zeros(1,10);
 tic; 
-
-TmpX = full(mmread("sparseXgenre.mm.mtx"));
-TmpY = full(mmread("sparseYgenre.mm.mtx"));
+if side == "genre"
+    TmpX = full(mmread("sparseXgenre.mm.mtx"));
+    TmpY = full(mmread("sparseYgenre.mm.mtx"));
+end
 % 
-TmpXb = full(mmread("sparseXactor.mm.mtx"));
-TmpYb = full(mmread("sparseYactor.mm.mtx"));
+if side == "actor"
+    TmpX = full(mmread("sparseXactor.mm.mtx"));
+    TmpY = full(mmread("sparseYactor.mm.mtx"));
+end
 
-TmpXa = full(mmread("sparseXmpaa.mm.mtx"));
-%TmpX = [TmpX TmpXa]./2;
-TmpYa = full(mmread("sparseYmpaa.mm.mtx"));
-%TmpY = [TmpY TmpYa]./2;
+if side == "mpaa"
+    TmpX = full(mmread("sparseXmpaa.mm.mtx"));
+    TmpY = full(mmread("sparseYmpaa.mm.mtx"));
+end
 
-
-%TmpX = vertcat(TmpX, TmpX);
-%TmpY = vertcat(TmpY, TmpY, TmpY, TmpY);
 
 TmpX(isnan(TmpX))=0; TmpX(isinf(TmpX))=0;
 TmpY(isnan(TmpY))=0; TmpY(isinf(TmpY))=0;
@@ -40,7 +40,7 @@ optX = X(:,1:dim);
 optY = Y(:,1:dim);
 
 % Perturb feature X and Y
-feature_perturb = 0.2;
+feature_perturb = 0.4;
 replace_dim = ceil(feature_perturb*k);
 X = optX;
 %X(:,1:replace_dim) = Xorth(:,1:replace_dim);
@@ -217,24 +217,26 @@ fprintf("\n\nBest Test Ratio: %f with lambda %f\n", best_ratioTest, lambda(best_
 M = UU*SS*VV';
 
 CC = X*M*Y';
-filename = strcat("CC",".mm.mtx");
+filename = strcat("CC-",side,".mm.mtx");
 mmwrite(filename,CC);
-filename = strcat("U",".mm.mtx");
+filename = strcat("U-",side,".mm.mtx");
 mmwrite(filename,UU);
-filename = strcat("V",".mm.mtx");
+filename = strcat("V-",side,".mm.mtx");
 mmwrite(filename,VV);
-filename = strcat("M",".mm.mtx");
+filename = strcat("M-",side,".mm.mtx");
 mmwrite(filename,M);
-filename = strcat("XR",".mm.mtx");
+filename = strcat("XR-",side,".mm.mtx");
 mmwrite(filename,XR);
-filename = strcat("YR",".mm.mtx");
+filename = strcat("YR-",side,".mm.mtx");
 mmwrite(filename,YR);
-filename = strcat("Y",".mm.mtx");
+filename = strcat("Y-",side,".mm.mtx");
 mmwrite(filename,Y);
-filename = strcat("X",".mm.mtx");
+filename = strcat("X-",side,".mm.mtx");
 mmwrite(filename,X);
+% % filename = strcat("S-",side,".mm.mtx");
+% % mmwrite(filename,X);
 
-filename = strcat("workspace", string(datetime('now')),'.mat');
+filename = strcat("workspace-",side, string(datetime('now')),'.mat');
 save(filename);
 
 final = toc

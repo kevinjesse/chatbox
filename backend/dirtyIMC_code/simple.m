@@ -39,7 +39,7 @@ lambda_ratio = zeros(folds,length(lambda));
 %do dirty IMC for each fold
 for part = start:folds
     
-    %determine the indexes of the fold and get the training and test
+    %determine the indexes of the fold and get the training and predict
     %portions for each matrix Observed (R matrix) and X matrix
     if part == start
         ObsFold = ObsShuf(start*partsize+1:folds*partsize,:);
@@ -61,7 +61,7 @@ for part = start:folds
         XFoldTest = XShuf((part-1)*partsize+1:(part)*partsize, :);
     end
     
-    %get ideal dcg with test set
+    %get ideal dcg with predict set
     [~,ci] = sort(ObsFoldTest, 2, 'descend');
     rel = m-ci;
     ObsDCG_R = dcg(rel,ci); 
@@ -73,7 +73,7 @@ for part = start:folds
            %do dirty IMC on training set
            [UU SS VV U S V] = dirtyIMC(ObsFold, XFold, Y, lambda(a), lambda1(b));
            
-           %get completed from test
+           %get completed from predict
            Completed =  XFoldTest*UU*SS*VV'*Y';
             
            %get dcg with completed

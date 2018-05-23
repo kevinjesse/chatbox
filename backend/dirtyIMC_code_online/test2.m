@@ -1,11 +1,11 @@
 function [N, SN] = test2(X)
     size(X)
-    XR = full(mmread("XR.mm.mtx"));
-    YR = full(mmread("Y.mm.mtx"));
+    XR = full(mmread("XR-genre.mm.mtx"));
+    YR = full(mmread("Y-genre.mm.mtx"));
 
 %     YR = full(mmread("sparseYactor.mm.mtx"));
 %     YR = YR(:,1:200);
-    M = full(mmread("M.mm.mtx"));
+    M = full(mmread("M-genre.mm.mtx"));
 
     TX = X/XR; %QR = N
     TX(isnan(TX)) = 0;

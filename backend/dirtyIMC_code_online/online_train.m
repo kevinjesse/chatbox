@@ -1,48 +1,67 @@
-%function [J, grad1, grad2] = costFunction(X, Y, R, theta1, theta2, lambda1, lambda2)
-%function [theta1, theta2] = trainLinearReg(XR, YR, R, lambda1, lambda2)
+function [W, H] = online_train(Xg, Xm, Xa, Y_path, R, W_path, H_path)
+load(Y_path);
+load(W_path);
+load(H_path);
 
-function [rate, rank, U, V] = online_train(R, U, V, X)
-% X = full(mmread("X.mm.mtx"));
-% X = X(1,:);
-Y = full(mmread("Y.mm.mtx"));
-
-XR = full(mmread("XR.mm.mtx"));
-X = X/XR; %QR = N
-
-if isempty(U)
-    U = full(mmread("U.mm.mtx"));
-end
-if isempty(V)
-    V = full(mmread("V.mm.mtx"));
-end
-% Obs = mmread("sparseN.mm.mtx");
-% R = full(Obs');
-% R = R(1,:);
-% R = X*U*V*Y';
+gm = Xg(1,:)'*Xm(1,:);
+ga = Xg(1,:)'*Xa(1,:);
+ma = Xm(1,:)'*Xa(1,:);
+gm = gm(:);
+ga = ga(:);
+ma = ma(:);
+X(1,:) = [gm' ga' ma'];
+X(isnan(X)) = 0; X(isinf(X)) = 0;
 
 
-[m, n] = size(R);
 
 l1=.1;
-l2=.1;
-iters = 100;
+l2=.1; 
+lr = .00001;
+
+
+
+precision = .0000001;
+%precision = .0000001;
+iters = 11;
+% iters = 500;
 cost_history = zeros(iters,1);
 
 
-for i = 1:iters
+
+
+
+% for i = 1:iters
+i = 1;
+prev_cost = 1/precision;
+cost = Inf;
+while abs(prev_cost - cost) > precision && (i < iters)
+    prev_cost = cost;
+%     
+%      Wv = online_update_weightsW(X, Y(ind,:), R(ind), W(ind,:), H(ind,:), l1, lr);
+%      Hv = online_update_weightsH(X, Y(ind,:), R(ind), W(ind,:), H(ind,:), l2, lr);
+
+     Wt = online_update_weightsW(X, Y, R, W, H, l1, lr);
+     Ht = online_update_weightsH(X, Y, R, W, H, l2, lr);    
     
-    [U] = online_update_weightsU(X, Y, R, U, V, l1);    
-    [V] = online_update_weightsV(X, Y, R, U, V, l2);    
-    
-    cost = costFunction(X, Y, R, U, V, l1, l2);
+%     Wt = W;
+%     Ht = H;
+%     Wt(ind,:) = Wv;
+%     Ht(ind,:) = Hv;
+    cost = costFunction(X, Y, R, Wt, Ht, l1, l2);
     cost_history(i) = cost;
-    if mod(i,10) == 0
-        fprintf("iter: %d | cost: %d\n", i, cost);
+%     if mod(i,10) == 0
+    fprintf("iter: %d | cost: %d\n", i, cost);
+    %end
+    if cost > prev_cost
+        disp("here")
+        break
     end
+    W= Wt;
+    H= Ht;
+    i= i+ 1;    
+    
 end
 
-rate = X*U*V*Y';
-[~,rank] = sort(R, 2, 'descend');
 %[J, grad1, grad2] = costFunction(X, Y, R, theta1, theta2, lambda1, lambda2);
 
 %function [J, grad1, grad2] = costFunction(X, Y, R, t1, t2, lambda1, lambda2)

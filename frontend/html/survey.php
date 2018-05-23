@@ -20,6 +20,7 @@
         } else {
             $c_port = $configJSON["port_test"];
         }
+
     ?>
 </head>
 
@@ -30,7 +31,7 @@
 
 <section id="form">
     <form name="survey" method="POST"
-          action=<?php echo "http://interaction.cs.ucdavis.edu:" . $c_port . "/chatbox/api/survey_submit" ?>
+          action=<?php echo "http://ec2-13-56-8-35.us-west-1.compute.amazonaws.com:" . $c_port . "/chatbox/api/survey_submit" ?>
           onsubmit="return validateForm ();" accept-charset="UTF-8">
         <input type="hidden" name="userID" value="<?php echo $_GET["id"]?>">
         <input type="hidden" name="cryptID" value="<?php echo @crypt($_GET["id"]) ?>">

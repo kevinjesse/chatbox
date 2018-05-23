@@ -7,7 +7,7 @@ import history_manager as hm
 
 
 class SessionData:
-    def __init__(self, mode_hypothesis: str):
+    def __init__(self, user_id: str, mode_hypothesis: str):
         # History
         self.conversation = []
 
@@ -22,7 +22,7 @@ class SessionData:
         self.recommendations = []
 
         import movie_manager as mm
-        self.movie_manager = mm.MovieManager(session_data=self)
+        self.movie_manager = mm.MovieManager(session_data=self, user_id=user_id)
 
     def new_recommendation(self, movie,
                            good_recommendation:bool=None,
@@ -75,12 +75,12 @@ class User:
         self.mode_hypothesis = mode_hypothesis
 
         # TODO: Load session data
-        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis)
+        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis, user_id=user_id)
         self.last_session = hm.last_user_history(self.user_id)
 
     def end_session(self):
         self._save_log()
-        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis)
+        self.current_session = SessionData(mode_hypothesis=self.mode_hypothesis, user_id=self.user_id)
 
     def _save_log(self):
         hm.save_user_history(

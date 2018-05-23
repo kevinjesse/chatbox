@@ -56,7 +56,7 @@ end
 
 for iter = 1:maxit
 	grad = -UX'*R*UY;
-	t = 1;
+	t = .01;
 
 	[tmp_U ss tmp_V] = svd(U*S*V'-t*grad);
     

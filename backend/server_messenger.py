@@ -70,7 +70,7 @@ def get_message(user_id: int, user_input: str):
     return dm.utterance(user_id,
                         message={
                             'action': 'submit',
-                            'id': 'messenger-test-{id}'.format(id=user_id),
+                            'id': 'messenger-predict-{id}'.format(id=user_id),
                             'text': user_input,
                             'mode': False
                         })

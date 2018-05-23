@@ -53,6 +53,10 @@ $UUID = uniqid();
     var d, m, s;
     var id = <?php echo json_encode($UUID);?>;
 
+
+
+
+
     var configJSON = <?php echo file_get_contents("config.json"); ?>;
     var port = "20000";
     if (configJSON["is_prod"]) {
@@ -80,7 +84,8 @@ $UUID = uniqid();
             });*/
             var request = $.ajax({
                 type: "POST",
-                url: "http://interaction.cs.ucdavis.edu:" + port + "/chatbox/api/main",
+                url: "http://ec2-13-56-8-35.us-west-1.compute.amazonaws.com:" + port +
+                "/chatbox/api/main",
                 data: JSON.stringify({
                     text: "",
                     id: id,
@@ -150,11 +155,11 @@ $UUID = uniqid();
 
     function insertAI(resp) {
         if (resp != "") {
-            $('<div class="message loading new"><figure class="avatar"><img src="/lib/chatbox-small.png" ' +
+            $('<div class="message loading new"><figure class="avatar"><img src="lib/chatbox-small.png" ' +
                 '/></figure><span></span></div>').appendTo($('.messages-content'));
             setTimeout(function () {
                 $('.message.loading').remove();
-                $('<div class="message new"><figure class="avatar"><img src="/lib/chatbox-small.png" /></figure>' +
+                $('<div class="message new"><figure class="avatar"><img src="lib/chatbox-small.png" /></figure>' +
                     resp + '</div>').appendTo($('.messages-content')).addClass('new');
                 setDate();
                 scrollDown(1000)
@@ -164,9 +169,11 @@ $UUID = uniqid();
     }
 
     function sendChatText(chatText, action = 'utterance') {
+        $('<div class="message loading new"><figure class="avatar"><img src="lib/chatbox-small.png" ' +
+            '/></figure><span></span></div>').appendTo($('.messages-content'));
         var request = $.ajax({
             type: "POST",
-            url: "http://interaction.cs.ucdavis.edu:" + port + "/chatbox/api/main",
+            url: "http://ec2-13-56-8-35.us-west-1.compute.amazonaws.com:" + port + "/chatbox/api/main",
             data: JSON.stringify({
                 text: chatText,
                 id: id,
@@ -183,6 +190,9 @@ $UUID = uniqid();
             // respJSON = JSON.parse(response);
 
             // console.log(response);
+
+            $('.message.loading').remove();
+
 
             var responses = response['responses'];
 

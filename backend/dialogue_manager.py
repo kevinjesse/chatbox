@@ -278,10 +278,23 @@ class DialogueManager:
 
         if user.states.current_state.name == 'thinking':
             if user.states.previous_state in ['has_watched_yes', 'has_watched_no']:
-                if not user.current_session.movie_manager.is_first_recommendation:
-                    user.current_session.movie_manager.next_recommendation()
-                if user.current_session.movie_manager.movies_with_ratings:
-                    # TODO: Have state auto loop back instead of posting tell here
+                if hypothesis == 'cf':
+                    if not user.current_session.movie_manager.is_first_recommendation:
+                        user.current_session.movie_manager.next_recommendation()
+                    if user.current_session.movie_manager.movies_with_ratings:
+                        # TODO: Have state auto loop back instead of posting tell here
+                        user.states.next_state()
+
+                        movie, response = user.current_session.movie_manager.utterance()
+                        responses += response
+                        user.current_session.new_recommendation(movie=movie)
+
+                        user.states.next_state()
+                        responses += [user.states.current_state.utterance()]
+                    else:
+                        responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
+                                      user.states.to_state('bye').utterance()]
+                else:
                     user.states.next_state()
 
                     movie, response = user.current_session.movie_manager.utterance()
@@ -290,23 +303,16 @@ class DialogueManager:
 
                     user.states.next_state()
                     responses += [user.states.current_state.utterance()]
-                else:
-                    responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
-                                  user.states.to_state('bye').utterance()]
+
             elif user.states.previous_state == 'good_recommendation':
                 user.current_session.movie_manager.online_dislike()
-                if user.current_session.movie_manager.online_rec_index < \
-                        len(user.current_session.movie_manager.movies_with_ratings):
-                    user.states.next_state()
-                    movie, response = user.current_session.movie_manager.utterance()
-                    responses = response
-                    user.current_session.new_recommendation(movie=movie)
+                user.states.next_state()
+                movie, response = user.current_session.movie_manager.utterance()
+                responses = response
+                user.current_session.new_recommendation(movie=movie)
 
-                    user.states.next_state()
-                    # responses += [user.states.current_state.utterance()]
-                else:
-                    responses += [tm.get_sentence(dialogue_type='messages', options='no_recommendation'),
-                                  user.states.to_state('bye').utterance()]
+                user.states.next_state()
+                # responses += [user.states.current_state.utterance()]
             else:
                 responses = user.states.current_state.utterance()
                 user.states.next_state()
@@ -780,7 +786,7 @@ class DialogueManager:
 #
 #
 # def dialogueTest():
-#     print('[OK] Start dialogue test')
+#     print('[OK] Start dialogue predict')
 #     # import pprint
 #     # pp = pprint.PrettyPrinter(depth=6)
 #
@@ -788,7 +794,7 @@ class DialogueManager:
 #     # state["599f6b6e8a3fd"] = ["genre"]
 #     # history["599f6b6e8a3fd"] = []
 #     dialogueCtrl('debug')
-#     print('[OK] End dialogue test')
+#     print('[OK] End dialogue predict')
 #     return
 #
 #

@@ -2,8 +2,10 @@ import requests
 import time
 from pprint import pprint
 
-url = "http://interaction.cs.ucdavis.edu:20000/chatbox/api/main"
-url_h = "http://interaction.cs.ucdavis.edu:20000/chatbox/api/db"
+root = "http://ec2-13-56-8-35.us-west-1.compute.amazonaws.com"
+
+url = root + ":20000/chatbox/api/main"
+url_h = root + ":20000/chatbox/api/db"
 
 r = requests.session()
 
@@ -28,11 +30,11 @@ def common_query():
     pprint(out.json())
     time.sleep(sleep)
 
-    out = r.post(url, json=post_json('genre', "action movies", id, None))
+    out = r.post(url, json=post_json('genre', "comedy movies", id, None))
     pprint(out.json())
     time.sleep(sleep)
 
-    out = r.post(url, json=post_json('actor', "keanu reeves", id, None))
+    out = r.post(url, json=post_json('actor', "tom hanks", id, None))
     pprint(out.json())
     time.sleep(sleep)
 
@@ -46,9 +48,9 @@ def common_query():
 
 
 def not_seen_like_movie_query():
-    # out = r.post(url, to_dict=post_json('tell', "yes", id, None))
-    # pprint(out.to_dict())
-    # time.sleep(sleep)
+    out = r.post(url, json=post_json('tell', "yes", id, None))
+    pprint(out.json())
+    time.sleep(sleep)
 
     out = r.post(url, json=post_json('tell', "No", id, None))
     pprint(out.json())
@@ -60,9 +62,9 @@ def not_seen_like_movie_query():
 
 
 def not_seen_not_like_movie_query():
-    # out = r.post(url, to_dict=post_json('tell', "yes", id, None))
-    # pprint(out.to_dict())
-    # time.sleep(sleep)
+    out = r.post(url, json=post_json('tell', "yes", id, None))
+    pprint(out.json())
+    time.sleep(sleep)
 
     out = r.post(url, json=post_json('tell', "No", id, None))
     pprint(out.json())
@@ -107,5 +109,7 @@ def history_test():
     pprint(out.json())
 
 
-history_test()
+if __name__ == '__main__':
+    default_test()
+    # history_test()
 

@@ -1,1 +1,1 @@
-{"metadata":{"date":"2018-01-04-08-21-46"},"cryptID":"$1$wV04X7Cy$4i37UlglKFBQr8OzctpLr1","userID":"5a4e546d6f00f","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"5","q3":"test","q4":"5"},"rating":["3","3","3","3","3","3"]}
+{"metadata":{"date":"2018-01-04-08-21-46"},"cryptID":"$1$wV04X7Cy$4i37UlglKFBQr8OzctpLr1","userID":"5a4e546d6f00f","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"5","q3":"predict","q4":"5"},"rating":["3","3","3","3","3","3"]}

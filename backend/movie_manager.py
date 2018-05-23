@@ -40,13 +40,14 @@ def init_resources(mode_hypothesis: str):
 
 class MovieManager:
 
-    def __init__(self, session_data: um.SessionData):
+    def __init__(self, user_id: str, session_data: um.SessionData):
         self.session = session_data
         self.movie_candidates = titles
-        self.movies_with_ratings = []
-        self.is_first_recommendation = True
-        self._last_rec_id = 0
-        self.online_rec_index = 0
+        if hypothesis in ['mf', 'online']:
+            self.matrixFact = matrix_fact.MatrixFact(user_id)
+        elif hypothesis in ['cf']:
+            self.movies_with_ratings = []
+            self.is_first_recommendation = True
 
     def filter_candidates(self, state: str) -> bool:
 
@@ -149,43 +150,27 @@ class MovieManager:
             return False
 
     def next_recommendation(self):
-        print("!!!\n", self.movies_with_ratings[:10])
-        # if hypothesis == 'cf':
-        self.movies_with_ratings.pop(0)
-        self.is_first_recommendation = False
+        if hypothesis == 'cf':
+            self.movies_with_ratings.pop(0)
+        elif hypothesis == 'online':
+            # self.matrixFact.dislike()
+            pass
 
     def online_dislike(self):
-        matrix_fact.dislike(self.online_rec_index)
-        self.online_rec_index += 1
-        self.online_recommend()
+        self.matrixFact.dislike()
+        self.matrixFact.online_recommend(self.session.movie_preferences)
 
     def online_recommend(self):
-        if self.is_first_recommendation:
-            recommendation = matrix_fact.online_recommend()
-            # print("!!! recommendation: \n", recommendation)
-            self.movies_with_ratings = recommendation
-        print("???\n", self.movies_with_ratings[:10])
-
-        tconst, i = matrix_fact.recommendation_text(self._last_rec_id)
-        print("mysterious i", self._last_rec_id, i)
-        self._last_rec_id = i
-
-        self.is_first_recommendation = False
+        if self.matrixFact.is_first_recommendation:
+            self.matrixFact.recommend(self.session.movie_preferences)
+        tconst = self.matrixFact.get_movie()
 
         return tconst
 
     def matrix_recommend(self):
-        if self.is_first_recommendation:
-            recommendation = matrix_fact.recommend(self.session.movie_preferences)
-            # print("!!! recommendation: \n", recommendation)
-            self.movies_with_ratings = recommendation
-        print("???\n", self.movies_with_ratings[:10])
-
-        tconst, i = matrix_fact.recommendation_text(self._last_rec_id)
-        print("mysterious i", self._last_rec_id, i)
-        self._last_rec_id = i
-
-        self.is_first_recommendation = False
+        if self.matrixFact.is_first_recommendation:
+            self.matrixFact.recommend(self.session.movie_preferences)
+        tconst = self.matrixFact.get_movie()
 
         return tconst
 
@@ -215,11 +200,11 @@ class MovieManager:
         if hypothesis == 'cf':
             movie_with_score = self.cf_recommend() if self.is_first_recommendation else self.movies_with_ratings
             tie = [movie[0] for movie in movie_with_score if movie_with_score[0][1] == movie[1]]
-            movie_id = random.choice(tie)
-        elif hypothesis in ['mf', 'online']:
+            movie_ihtod = random.choice(tie)
+        elif hypothesis == 'mf':
             movie_id = self.matrix_recommend()  # if self.is_first_recommendation else self.movies_with_ratings
-        # elif hypothesis == 'online':
-        #     movie_id = self.online_recommend()
+        elif hypothesis == 'online':
+            movie_id = self.online_recommend()
         else:
             return
         if movie_id:
@@ -235,10 +220,10 @@ class MovieManager:
             sentences[1] = sentences[1].format(
                 movie_name=movie['primarytitle'],
                 actors=_list_to_comma_with_and(
-                    moviedb.actors_by_id(movie['principalcast'].split(' ') or ['<no actors>']), limit=5
+                    moviedb.actors_by_id(movie['principalcast'].split(' ') or ['<no actors>']), limit=0
                 ),
                 directors=_list_to_comma_with_and(
-                    moviedb.actors_by_id(movie['directors'].split(' ') or ['<no directors>']), limit=5
+                    moviedb.actors_by_id(movie['directors'].split(' ') or ['<no directors>']), limit=0
                 )
             )
             sentences[2] = sentences[2].format(
@@ -251,16 +236,16 @@ class MovieManager:
 
             print("sentences", sentences)
 
-            return movie, sentences
+            return movie, sentences.copy()
         else:
             return None, None
 
 
-def _list_to_comma_with_and(input: List[str], limit: int=0) -> str:
-    if len(input) > limit > 0:
-        return ', '.join(input[:limit]) + ' and more'
-    elif len(input) == 1:
-        return input[0]
+def _list_to_comma_with_and(input_list: List[str], limit: int=0) -> str:
+    if len(input_list) > limit > 0:
+        return ', '.join(input_list[:limit]) + ' and more'
+    elif len(input_list) == 1:
+        return input_list[0]
     else:
-        return ', '.join(input[:-1]) + ' and {}'.format(input[-1])
+        return ', '.join(input_list[:-1]) + ' and {}'.format(input_list[-1])
 

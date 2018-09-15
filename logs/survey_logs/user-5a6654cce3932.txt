@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-13-18-26"},"cryptID":"$1$Mo422Rhk$9Km8vQYTXx.\/WL2nuwkSf1","userID":"5a6654cce3932","turkID":"ARVXIBUCA8WDZ","survey":{"q1":"1","q2":"4","q3":"I liked how quickly it responded and how accurately it responded to what I said.","q4":"4"},"rating":[]}

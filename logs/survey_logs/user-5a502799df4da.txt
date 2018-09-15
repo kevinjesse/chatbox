@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-05-17-37-39"},"cryptID":"$1$C.aGC1DH$F7fhJxra\/hk5DOcjIFdvO1","userID":"5a502799df4da","turkID":"A3OWHW7XYQU52K","survey":{"q1":"1","q2":"4","q3":"Chatbot is good and acts well.    The language is a little uncertain.","q4":"4"},"rating":["3","3","3","3","3","3"]}

@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-18-12-11-51"},"cryptID":"$1$Z21Go6mf$OuyXHlGVHJMKG42QtBllS.","userID":"5a60ff089262d","turkID":"A12R2U6TBB3OOG","survey":{"q1":"1","q2":"5","q3":"It was quick and responsive. The movie it suggested was one that I like very much already.","q4":"5"},"rating":["3","3","3","3","3","3"]}

@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-19-21-03-42"},"cryptID":"$1$VTGW8Tlk$gm0cIYdftIsSQ\/RgIGx0x0","userID":"5a62cc38ea116","turkID":"A70L26UXLTGLC","survey":{"q1":"1","q2":"4","q3":"It asked about genres plural and then didn't recognize them. This is confusing to me and I don't know how to rate this.","q4":"3"},"rating":["2","3","3","3","3","2"]}

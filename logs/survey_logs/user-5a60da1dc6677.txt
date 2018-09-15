@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-18-09-52-04"},"cryptID":"$1$\/SnBmlcL$TZdloSBB88PrL3clGonea0","userID":"5a60da1dc6677","turkID":"AAEZQL4J6CQGM","survey":{"q1":"1","q2":"3","q3":"Some of the times it didnt seem to respond to me. I had to say something again. ","q4":"4"},"rating":["3","3","3","1","3","3","3","3","3","3","3","1"]}

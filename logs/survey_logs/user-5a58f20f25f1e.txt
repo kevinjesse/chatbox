@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-12-09-38-12"},"cryptID":"$1$dqxIrVgy$6jTtsYg\/REliW82gIh3GN0","userID":"5a58f20f25f1e","turkID":"A3696JXTRKL2FI","survey":{"q1":"1","q2":"5","q3":"The chatbot was very very quick, I liked that it was able to take in all the information. ","q4":"5"},"rating":["3","3","3","3","3","2","3","3"]}

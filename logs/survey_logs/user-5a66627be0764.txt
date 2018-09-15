@@ -1,4 +1,0 @@
-{"metadata":{"date":"2018-01-22-14-16-30"},"cryptID":"$1$OkcU9a\/P$fiKh6fo\/9nRWsldhBoWLx1","userID":"5a66627be0764","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"4","q3":"predict","q4":"5"},"rating":["3","3","3","3","3","3"]}
-{"metadata":{"date":"2018-01-22-14-20-31"},"cryptID":"$1$OkcU9a\/P$fiKh6fo\/9nRWsldhBoWLx1","userID":"5a66627be0764","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"4","q3":"predict","q4":"5"},"rating":["3","3","3","3","3","3"]}
-{"metadata":{"date":"2018-01-22-14-21-33"},"cryptID":"$1$OkcU9a\/P$fiKh6fo\/9nRWsldhBoWLx1","userID":"5a66627be0764","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"4","q3":"predict","q4":"5"},"rating":["3","3","3","3","3","3"]}
-{"metadata":{"date":"2018-01-22-14-23-34"},"cryptID":"$1$OkcU9a\/P$fiKh6fo\/9nRWsldhBoWLx1","userID":"5a66627be0764","turkID":"testTurkIDAustin","survey":{"q1":"0","q2":"4","q3":"predict","q4":"5"},"rating":["3","3","3","3","3","3"]}

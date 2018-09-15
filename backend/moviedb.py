@@ -7,9 +7,9 @@ import psycopg2.sql as sql
 import database
 import requests
 
-api_cur = database.connector(dict_result=True)
-api_cur.execute("SELECT api_key FROM api WHERE api_type='tmd'")
-api_key = api_cur.fetchone()['api_key']
+#api_cur = database.connector(dict_result=True)
+#api_cur.execute("SELECT api_key FROM api WHERE api_type='tmd'")
+#api_key = api_cur.fetchone()['api_key']
 
 
 def movie_by_id(movie_id: str):

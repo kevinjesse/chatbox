@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-13-06-23-44"},"cryptID":"$1$sbM5owfv$VFVJpa.QssfIWdgliDsbx.","userID":"5a5a14b4c4a79","turkID":"A218S9QMWS15U","survey":{"q1":"1","q2":"4","q3":"Maybe it could have suggested some movies with my favorite actors in it even if it had a different director than I suggested.","q4":"4"},"rating":["3","3","3","3","3","3"]}

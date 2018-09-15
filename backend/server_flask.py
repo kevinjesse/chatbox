@@ -25,6 +25,13 @@ flask_cors.CORS(app)
 
 dm = None
 
+@app.route("/fs", methods=['POST'])
+def fs():
+    data = request.get_json(silent=True)
+    utterance = parse_input(data)
+    print("sending message")
+    pprint(utterance)
+    return utterance;
 
 @app.route('/chatbox/api/main', methods=['GET'])
 def test():
@@ -76,6 +83,18 @@ def request_database():
             'result': result.get('dialogue'),
             'convo_id': result.get('convo_id')
         })
+
+
+#######add endpoint for freeswitch
+@app.route("/freeswitch", methods=['POST'])
+def module():
+    data = request.get_json(silent=True)
+    utterance = parse_input(data)
+    print("sending message")
+    pprint(utterance)
+    return utterance
+    return jsonify(ed_result)
+#######end of editing
 
 
 def _fetch_dialogue(user_id: str) -> dict:

@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-17-37-07"},"cryptID":"$1$Sq4dOFWp$4TfytDBo\/YUOKERI50DqT.","userID":"5a66909bf2166","turkID":"A26T6O5EFR54A9","survey":{"q1":"1","q2":"3","q3":"Some of the answers seemed out of order, and I don't think chatbot knew what a costume drama was","q4":"4"},"rating":["2","3","3","3","3","2"]}

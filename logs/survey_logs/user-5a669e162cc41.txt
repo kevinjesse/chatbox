@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-18-32-28"},"cryptID":"$1$GGYCtQd.$hXf6G4PSHzzLCbwWz5lCv\/","userID":"5a669e162cc41","turkID":"A2SBN9B6Q3DN2X","survey":{"q1":"0","q2":"5","q3":"i liked that it sounded like a real person. It answered quesstions properly","q4":"5"},"rating":["3","3","3","3","3","3"]}

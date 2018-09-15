@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-03-08-41-46"},"cryptID":"$1$nDLmFozM$RSGc69uaVlUuuf1xg.Oup.","userID":"5a4d06cb0c1df","turkID":"A1JK9LYHN98LHF","survey":{"q1":"0","q2":"3","q3":"I like the chatbot guy. he seems like he would be very intelligent"},"rating":["2","2","2","2","2","2","2","2","3","3"]}

@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-09-18-07"},"cryptID":"$1$CL.gETVT$Jch6aPs.2yvbik7Ddd90D\/","userID":"5a661c36b2311","turkID":"A3C3Q963MQDPGT","survey":{"q1":"0","q2":"5","q3":"I think it did well picking a movie I might like. ","q4":"5"},"rating":["3","3","3","3","3","3"]}

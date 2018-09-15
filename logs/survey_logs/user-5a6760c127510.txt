@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-23-08-39-49"},"cryptID":"$1$SeUz1yuM$tHQIIm7R502tsg2x4g7xs0","userID":"5a6760c127510","turkID":"A147F5PJTHOB8A","survey":{"q1":"1","q2":"4","q3":"The chatbot was surprisingly accurate with my query. The bot did not understand my generes quesry though.","q4":"5"},"rating":["3","2","3","3","3","3"]}

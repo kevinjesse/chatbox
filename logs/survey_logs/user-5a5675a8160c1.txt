@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-10-12-23-03"},"cryptID":"$1$9scWDyiL$J9WB7vn3V8SNyXaA9g17G\/","userID":"5a5675a8160c1","turkID":"A3FJCLBK3HF4PD","survey":{"q1":"0","q2":"5","q3":"I wasn't sure if I was supposed to list multiple actors\/actresses with a comma or separate messages.","q4":"5"},"rating":["3","3","2","3","3","3"]}

@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-03-39-03"},"cryptID":"$1$Zjjw32xO$UjtxdSeypvUcXnRSQi0sW1","userID":"5a65ccc372c49","turkID":"A2KG59JUICJLP0","survey":{"q1":"1","q2":"3","q3":"Easy to use and the language is friendly. No complains, really.","q4":"5"},"rating":["3","3","3","2","3","3","3"]}

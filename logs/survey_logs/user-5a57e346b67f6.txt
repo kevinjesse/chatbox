@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-11-14-23-24"},"cryptID":"$1$GrmZYaj3$mFiRwatP7\/VO4q94nLbux0","userID":"5a57e346b67f6","turkID":"A1A9SUYOFNNR3Y","survey":{"q1":"1","q2":"2","q3":"I would say obviously have it be able to understand I like documentaries. For the most part that really seemed to throw it off. It sort of ignored that.","q4":"3"},"rating":["3","3","2","3","3","3"]}

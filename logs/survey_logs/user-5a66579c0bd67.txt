@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-13-31-11"},"cryptID":"$1$sORoSNj7$PNQfDZ01lmbycqwh2T\/y2.","userID":"5a66579c0bd67","turkID":"AFDC9A6Z60W2Z","survey":{"q1":"1","q2":"1","q3":"His parser was apparently broken.  He asked if his suggestion was satisfactory, but didn't actually give one.","q4":"1"},"rating":[]}

@@ -1,3 +1,0 @@
-{"metadata":{"date":"2018-01-03-09-50-44"},"cryptID":null,"userID":null,"turkID":null,"survey":{"q1":null,"q2":null,"q3":null},"rating":[]}
-{"metadata":{"date":"2018-01-10-13-38-02"},"cryptID":null,"userID":null,"turkID":null,"survey":{"q1":null,"q2":null,"q3":null,"q4":null},"rating":[]}
-{"metadata":{"date":"2018-01-21-13-19-52"},"cryptID":null,"userID":null,"turkID":null,"survey":{"q1":null,"q2":null,"q3":null,"q4":null},"rating":[]}

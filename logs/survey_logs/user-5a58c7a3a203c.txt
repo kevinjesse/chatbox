@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-12-06-37-52"},"cryptID":"$1$g.BT65t\/$v3vYYVOZAK8YQq4Re7Xud0","userID":"5a58c7a3a203c","turkID":"ARLGZWN6W91WD","survey":{"q1":"1","q2":"5","q3":"I liked it all","q4":"3"},"rating":["3","3","3","3","2","3"]}

@@ -11,7 +11,7 @@ import psycopg2.sql as sql
 
 import database
 import moviedb
-import matrix_fact
+#import matrix_fact
 import user_manager as um
 
 from typing import List

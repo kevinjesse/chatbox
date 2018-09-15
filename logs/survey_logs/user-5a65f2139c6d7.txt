@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-22-06-17-44"},"cryptID":"$1$En2RXDNI$m56XexamgqL.gsG\/M825r.","userID":"5a65f2139c6d7","turkID":"AROOCBM042SJD","survey":{"q1":"0","q2":"5","q3":"I liked that the chatbot responded quickly as possible.","q4":"5"},"rating":["3","3","2","3","3","3"]}

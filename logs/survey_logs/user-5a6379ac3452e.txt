@@ -1,1 +1,0 @@
-{"metadata":{"date":"2018-01-20-09-23-25"},"cryptID":"$1$SWf5lBFp$Fr8p2a492LzTSjGRXue\/j.","userID":"5a6379ac3452e","turkID":"A3UDP95JGEX3H1","survey":{"q1":"0","q2":"5","q3":"I like the suggestion it made for a movie. it sounded interesting.","q4":"5"},"rating":["3","2","3","3","3","3"]}

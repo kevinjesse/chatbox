@@ -13,7 +13,6 @@ matlab==0.1
 matplotlib==2.2.3
 nltk==3.3
 numpy==1.15.1
-pkg-resources==0.0.0
 psycopg2==2.7.5
 pyparsing==2.2.0
 python-dateutil==2.7.3

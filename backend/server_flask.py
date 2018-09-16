@@ -19,7 +19,7 @@ parser.add_argument("-p", "--port", action="store", dest="port")
 parser.add_argument("-d", "--prod", action="store_true")
 args = parser.parse_args()
 
-
+import random
 app = Flask(__name__, template_folder=os.path.abspath('../frontend/html'))
 flask_cors.CORS(app)
 
@@ -28,10 +28,13 @@ dm = None
 @app.route("/fs", methods=['POST'])
 def fs():
     data = request.get_json(silent=True)
+    data['id'] = str(random.randint(1,101)) 
+    data['action'] = 'utterance'
     utterance = parse_input(data)
     print("sending message")
-    pprint(utterance)
-    return utterance;
+    print(utterance)
+    return utterance
+	#return utterance;
 
 @app.route('/chatbox/api/main', methods=['GET'])
 def test():
@@ -47,7 +50,7 @@ def receive_message():
     data = request.get_json(force=True)
     utterance = parse_input(data)
     print("sending message")
-    pprint(utterance)
+    print(utterance)
     return utterance
 
 
@@ -66,10 +69,12 @@ def parse_input(json: dict):
         else:
             print('received text:', json.get('text'))
             state, responses = dm.utterance(user_id=id, message=json)
-        return jsonify({
-            'responses': responses,
-            'state': state
-        })
+        pprint(responses)
+        return jsonify(''.join(responses))
+        #return jsonify({
+        #    'responses': responses,
+        #    'state': state
+       # })
     else:
         return None
 
